@@ -1,0 +1,34 @@
+/* Keep wide reference data scrollable without widening the document. */
+table { display: block; max-width: 100%; overflow-x: auto; }
+.footer-bottom-links { flex-wrap: wrap; }
+.grid-3 > *, .calc-wrap > *, .footer-top > * { min-width: 0; }
+.article-card { min-width: 0; max-width: 100%; }
+p, li, h1, h2, h3, .formula-inline { overflow-wrap: anywhere; }
+#coverageForm label { display: flex; flex-direction: column; gap: .4rem; }
+#coverageForm input, #coverageForm select { width: 100%; min-width: 0; padding: .7rem; font: inherit; border: 1px solid #64748b; border-radius: .4rem; }
+#coverageForm button { margin-top: 1rem; }
+:focus-visible { outline: 3px solid #d97706; outline-offset: 3px; }
+.answer-summary { font-size: 1.1rem; line-height: 1.75; padding: 1.25rem; border-left: 4px solid #b45309; background: #fffbeb; margin-bottom: 1.5rem; }
+.article-toc { padding: 1.25rem; background: #f1f5f9; border-radius: 12px; margin: 1.5rem 0; }
+.article-toc ul { margin: .75rem 0 0; padding-left: 1.25rem; }
+.article-toc li { margin: .4rem 0; }
+.article-toc a, .article-card a, .seo-answer a { color: #92400e; text-decoration: underline; text-underline-offset: .15em; }
+.seo-answer p { margin: 1rem 0; }
+.seo-answer h2 { margin-bottom: 1rem; }
+.reference-scroll { max-width: 100%; overflow-x: auto; margin: 1.5rem 0; }
+.reference-scroll table { display: table; min-width: 440px; width: 100%; }
+.reference-scroll caption { text-align: left; font-size: .9rem; padding-bottom: .75rem; color: #475569; }
+.source-note { font-size: .9rem; color: #475569; }
+[id] { scroll-margin-top: 90px; }
+.section-header .label, .ref-table td.highlight { color: #92400e; }
+.section .btn-outline { color: #92400e; border-color: #92400e; }
+.site-footer .footer-brand p, .site-footer .footer-bottom p,
+.site-footer .footer-bottom-links a, .site-footer .footer-col ul a { color: #b8c2d1; }
+.footer-col .footer-label { font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: #b8c2d1; margin-bottom: 1.25rem; }
+.nav-dropdown-col .nav-group-label { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--gold); margin: 0 0 .5rem; padding-bottom: .35rem; border-bottom: 1px solid rgba(255,255,255,.07); }
+.nav-dropdown-col .nav-group-label.mt { margin-top: .9rem; }
+.formula-card h3 { color: #fff; margin-bottom: 1rem; font-size: 1rem; }
+@media (max-width: 480px) {
+  .footer-bottom-links { justify-content: center; gap: .7rem; }
+  .btn { white-space: normal; }
+}

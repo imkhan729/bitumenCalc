@@ -1,0 +1,155 @@
+# ============================================================
+#  BitumenCalc.com — Apache .htaccess
+#  Hostinger Shared Hosting
+# ============================================================
+
+Options -Indexes
+Options +FollowSymLinks
+
+RewriteEngine On
+
+# SEO recovery legacy blog redirects: exact article equivalents.
+RewriteRule ^blog/how-to-calculate-quantity-of-bitumen-for-road/?$ https://www.bitumencalc.com/blog/how-to-calculate-bitumen-quantity-for-road/ [R=301,L]
+RewriteRule ^blog/modified-bitumen-roof-calculator/?$ https://www.bitumencalc.com/blog/modified-bitumen-roofing-calculator/ [R=301,L]
+
+# ── 1. Force HTTPS ──────────────────────────────────────────
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ── 2. Force www (canonical domain) ────────────────────────
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ https://www.bitumencalc.com/$1 [L,R=301]
+
+# Normalize explicit homepage aliases before generic .html removal.
+# THE_REQUEST prevents a loop when Apache internally serves index.html for /.
+RewriteCond %{THE_REQUEST} \s/+index(?:\.html)?(?:[?\s]) [NC]
+RewriteRule ^index(?:\.html)?$ https://www.bitumencalc.com/ [R=301,L]
+
+# ── 3. Remove .html extension (clean URLs) ─────────────────
+# Redirect requests ending in .html to clean URL
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,NE,L]
+
+# Internally serve .html when no file/dir found
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/%{REQUEST_URI}.html -f
+RewriteRule ^(.+?)/?$ /$1.html [L]
+
+# ── 3b. Legacy calculator aliases ──────────────────────────
+# URLs from an earlier site structure. They were still linked from the blog
+# posts (now fixed) and Googlebot has them in its index, so they 301 rather
+# than 404. RedirectMatch with ^...$ anchors, NOT Redirect -- mod_alias
+# Redirect matches on prefix, so "Redirect 301 /road ..." would also swallow
+# /road-construction-calculator/ and anything else starting with /road.
+RedirectMatch 301 ^/calculators/tonnage/?$        /calculators/asphalt-tonnage-calculator/
+RedirectMatch 301 ^/calculators/cost/?$           /calculators/asphalt-cost-calculator/
+RedirectMatch 301 ^/calculators/material/?$       /calculators/asphalt-material-calculator/
+RedirectMatch 301 ^/calculators/metric/?$         /calculators/metric-bitumen-calculator/
+RedirectMatch 301 ^/calculators/radius-circular/?$ /calculators/circular-asphalt-calculator/
+RedirectMatch 301 ^/calculators/repair/?$         /calculators/asphalt-repair-calculator/
+RedirectMatch 301 ^/calculators/road/?$           /calculators/road-asphalt-calculator/
+RedirectMatch 301 ^/calculators/sq-ft-to-tons/?$  /calculators/square-feet-to-tons-calculator/
+RedirectMatch 301 ^/calculators/thickness/?$      /calculators/asphalt-thickness-calculator/
+
+RedirectMatch 301 ^/asphalt-cost-calculator/?$      /calculators/asphalt-cost-calculator/
+RedirectMatch 301 ^/asphalt-material-calculator/?$  /calculators/asphalt-material-calculator/
+RedirectMatch 301 ^/asphalt-thickness-calculator/?$ /calculators/asphalt-thickness-calculator/
+RedirectMatch 301 ^/asphalt-tonnage-calculator/?$   /calculators/asphalt-tonnage-calculator/
+RedirectMatch 301 ^/tack-coat-calculator/?$         /calculators/tack-coat-calculator/
+RedirectMatch 301 ^/road-construction-calculator/?$ /calculators/road-asphalt-calculator/
+
+RedirectMatch 301 ^/cost-calculator/?$  /calculators/asphalt-cost-calculator/
+RedirectMatch 301 ^/material/?$         /calculators/asphalt-material-calculator/
+RedirectMatch 301 ^/millings/?$         /calculators/asphalt-millings-calculator/
+RedirectMatch 301 ^/road/?$             /calculators/road-asphalt-calculator/
+RedirectMatch 301 ^/sq-ft-to-tons/?$    /calculators/square-feet-to-tons-calculator/
+RedirectMatch 301 ^/thickness/?$        /calculators/asphalt-thickness-calculator/
+RedirectMatch 301 ^/tonnage/?$          /calculators/asphalt-tonnage-calculator/
+
+# ── 4. GZIP Compression ────────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE text/javascript
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css text/xml application/xml application/json application/javascript text/javascript image/svg+xml
+</IfModule>
+
+# ── 5. Browser Caching ─────────────────────────────────────
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Images (3 months)
+  ExpiresByType image/jpeg        "access plus 1 year"
+  ExpiresByType image/jpg         "access plus 1 year"
+  ExpiresByType image/png         "access plus 1 year"
+  ExpiresByType image/gif         "access plus 1 year"
+  ExpiresByType image/webp        "access plus 1 year"
+  ExpiresByType image/svg+xml     "access plus 1 year"
+  ExpiresByType image/x-icon      "access plus 1 year"
+
+  # CSS & JS (1 month — versioned with ?v=2)
+  ExpiresByType text/css                    "access plus 1 year"
+  ExpiresByType application/javascript      "access plus 1 year"
+  ExpiresByType text/javascript             "access plus 1 year"
+
+  # Fonts (1 year)
+  ExpiresByType font/woff2        "access plus 1 year"
+  ExpiresByType font/woff         "access plus 1 year"
+  ExpiresByType font/ttf          "access plus 1 year"
+
+  # HTML (10 minutes)
+  # Deliberately short. CSS/JS/images are versioned with ?v=N and safe to cache
+  # for a year, but HTML has no cache-buster, so a long TTL means a content fix
+  # can sit invisible behind the CDN for that long -- including to Googlebot.
+  ExpiresByType text/html         "access plus 10 minutes"
+
+  # XML / Sitemap (1 hour)
+  ExpiresByType application/xml   "access plus 1 hour"
+  ExpiresByType text/xml          "access plus 1 hour"
+</IfModule>
+
+# ── 6. Cache-Control Headers ───────────────────────────────
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(jpg|jpeg|png|gif|webp|ico|svg)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(woff2|woff|ttf)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # HTML must revalidate so the CDN cannot keep serving a superseded page.
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "public, max-age=600, must-revalidate"
+  </FilesMatch>
+
+  # Never cache these two - they are how Google is told what changed.
+  <FilesMatch "^(sitemap\.xml|robots\.txt|ads\.txt)$">
+    Header set Cache-Control "public, max-age=300, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# ── 7. Security Headers ────────────────────────────────────
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options  "nosniff"
+  Header set X-Frame-Options         "SAMEORIGIN"
+  Header set X-XSS-Protection        "1; mode=block"
+  Header set Referrer-Policy         "strict-origin-when-cross-origin"
+  Header set Permissions-Policy      "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# ── 8. Custom Error Pages ──────────────────────────────────
+ErrorDocument 404 /404.html

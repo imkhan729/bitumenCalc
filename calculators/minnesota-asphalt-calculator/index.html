@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<!-- Consent Mode v2 defaults - must execute before any Google tag -->
+<script src="/js/consent.min.js?v=3"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GCYLRZ2PQK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GCYLRZ2PQK');
+</script>
+  <meta name="google-adsense-account" content="ca-pub-6438644207209483" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="msapplication-TileColor" content="#f59e0b" />
+<meta name="theme-color" content="#f59e0b" />
+<title>Minnesota Asphalt Calculator — MnDOT Standards</title>
+  <meta name="description" content="Minnesota asphalt calculator using MnDOT specifications. Cold-climate SPWEA and SPWEB mix presets with USD pricing for Minnesota paving projects." />
+    <meta name="author" content="BitumenCalc" />
+<link rel="canonical" href="https://www.bitumencalc.com/calculators/minnesota-asphalt-calculator/" />
+    <link rel="alternate" hreflang="en" href="https://www.bitumencalc.com/calculators/minnesota-asphalt-calculator/" />
+<meta name="keywords" content="Minnesota asphalt calculator, MnDOT asphalt calculator, Minnesota paving calculator, SPWEA calculator" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://www.bitumencalc.com/calculators/minnesota-asphalt-calculator/" />
+  <meta property="og:title" content="Minnesota Asphalt Calculator — MnDOT Standards" />
+  <meta property="og:description" content="Minnesota asphalt calculator using MnDOT specifications. Cold-climate SPWEA and SPWEB mix presets with USD pricing for Minnesota paving projects." />
+  <meta property="og:image" content="https://www.bitumencalc.com/assets/hero-road.webp" />
+      <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="675" />
+<meta property="og:image:alt" content="BitumenCalc tool and guide preview image" />
+<meta property="og:site_name" content="BitumenCalc" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@BitumenCalc" />
+<meta name="twitter:title" content="Minnesota Asphalt Calculator — MnDOT Standards" />
+  <meta name="twitter:description" content="Minnesota asphalt calculator using MnDOT specifications. Cold-climate SPWEA and SPWEB mix presets with USD pricing for Minnesota paving projects." />
+  <meta name="twitter:image" content="https://www.bitumencalc.com/assets/hero-road.webp" />
+
+    <meta name="twitter:image:alt" content="BitumenCalc tool and guide preview image" />
+<!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.bitumencalc.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://www.bitumencalc.com/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Minnesota Calculator",
+      "item": "https://www.bitumencalc.com/calculators/minnesota-asphalt-calculator/"
+    }
+  ]
+}
+</script>
+
+  <!-- Schema: WebApplication -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Minnesota Asphalt Calculator",
+  "url": "https://www.bitumencalc.com/calculators/minnesota-asphalt-calculator/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Minnesota asphalt calculator using MnDOT specifications. Cold-climate SPWEA and SPWEB mix presets with USD pricing for Minnesota paving projects.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "BitumenCalc",
+    "url": "https://www.bitumencalc.com",
+    "logo": "https://www.bitumencalc.com/assets/logo.svg",
+    "@id": "https://www.bitumencalc.com/#organization"
+  }
+}
+</script>
+<style id="critical-css">:root{--navy:#0b1628;--navy-700:#162240;--gold:#f59e0b;--gold-dark:#d97706;--gold-light:#fde68a;--bg:#f8fafc;--surface:#fff;--border:#e2e8f0;--text:#0b1628;--text-muted:#475569;--grad-gold:linear-gradient(135deg,#f59e0b 0%,#fbbf24 100%);--grad-hero:linear-gradient(150deg,#0b1628 0%,#1a3060 55%,#0b2215 100%);--r-lg:12px;--r-xl:16px;--r-full:9999px}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{font-size:16px}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}img{max-width:100%;height:auto;display:block}a{color:var(--gold);text-decoration:none}.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}.site-header{position:sticky;top:0;z-index:1000;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.07);box-shadow:0 2px 24px rgba(0,0,0,.35)}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem}.nav-logo{display:flex;align-items:center;gap:.65rem;text-decoration:none;flex-shrink:0}.nav-logo-icon{width:40px;height:40px;background:var(--grad-gold);border-radius:var(--r-lg);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:900;color:var(--navy)}.nav-logo-text{font-size:1.15rem;font-weight:800;color:#fff;line-height:1.2}.nav-logo-text span{color:var(--gold)}.nav-links{display:flex;align-items:center;gap:.15rem}.nav-links a{color:rgba(255,255,255,.7);font-size:.875rem;font-weight:500;padding:.5rem .9rem;border-radius:var(--r-full)}.nav-links a.active{color:var(--gold);background:rgba(245,158,11,.1)}.nav-dropdown{position:relative;display:flex;align-items:center}.nav-dropdown-btn{color:rgba(255,255,255,.7);font-size:.875rem;font-weight:500;padding:.5rem .9rem;border-radius:var(--r-full);display:flex;align-items:center;gap:.3rem;background:none;border:0;font-family:inherit}.nav-dropdown-menu{position:absolute;top:calc(100% + .35rem);left:50%;transform:translate(-50%,10px);background:var(--navy-700);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-xl);padding:1.5rem;min-width:700px;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem 2rem;opacity:0;visibility:hidden;pointer-events:none}.nav-toggle{display:none}.mobile-menu{display:none}.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.75rem;border-radius:var(--r-full);font-size:.9rem;font-weight:600;white-space:nowrap;text-decoration:none}.btn-primary{background:var(--grad-gold);color:var(--navy);font-weight:700}.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)}.btn-lg{padding:1.1rem 2.5rem;font-size:1rem}.btn-sm{padding:.5rem 1.2rem;font-size:.82rem}.hero{background-image:url('/assets/hero-road.webp');background-size:cover;background-position:center 40%;background-color:#0b1628;position:relative;overflow:hidden;padding:3rem 0 4rem;height:calc(100vh - 72px);min-height:620px;max-height:900px;display:flex;align-items:center}.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(4,8,18,.65) 0%,rgba(4,8,18,.72) 50%,rgba(4,8,18,.9) 100%);z-index:0}.hero-inner{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1;padding-top:3rem;width:100%}.hero-content{color:#fff;max-width:860px}.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,158,11,.18);border:1px solid rgba(245,158,11,.5);color:var(--gold-light);padding:.35rem 1rem;border-radius:var(--r-full);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem}.hero-title{font-family:'Arial Narrow','Segoe UI Condensed',Impact,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:700;font-size:clamp(2.8rem,4.2vw,4.2rem);line-height:1.1;margin-bottom:1.2rem;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.55);text-align:center}.hero-desc{font-size:1.05rem;color:rgba(255,255,255,.88);margin-bottom:1.8rem;line-height:1.7;text-align:center;text-shadow:0 1px 8px rgba(0,0,0,.4)}.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;justify-content:center}.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.15)}.hero-stat-val{font-size:1.85rem;font-weight:900;color:#fff;line-height:1}.hero-stat-val span{color:var(--gold)}.hero-stat-label{font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;text-transform:uppercase;letter-spacing:.08em}.hero-road{position:absolute;bottom:0;left:0;right:0;height:5px;background:repeating-linear-gradient(90deg,var(--gold) 0,var(--gold) 50px,transparent 50px,transparent 72px);opacity:.65}.page-hero{background:var(--grad-hero);padding:4rem 0 3rem;position:relative;overflow:hidden}.page-hero-inner{position:relative;z-index:1}.page-hero h1{color:#fff;margin-bottom:.75rem;font-size:clamp(2.2rem,5vw,3.75rem);font-weight:800;line-height:1.12}.page-hero p{font-size:1.1rem;color:rgba(255,255,255,.7);max-width:560px}.section{padding:5.5rem 0}.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:2rem}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}@media(max-width:900px){.nav-links,.nav-cta,.nav-dropdown-btn{display:none}.nav-toggle{display:flex;flex-direction:column;gap:5px;padding:.5rem}.nav-toggle span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}.mobile-menu.open{display:block;background:var(--navy-700);border-top:1px solid rgba(255,255,255,.06)}.mobile-menu a{display:block;padding:.9rem 1.5rem;color:rgba(255,255,255,.8);font-weight:500;font-size:.95rem;border-bottom:1px solid rgba(255,255,255,.04)}}@media(max-width:768px){.container{padding:0 1rem}.hero{height:auto;min-height:100svh;padding:2rem 0 3rem}.hero-tag{display:none}.hero-title{font-size:2.1rem;margin-bottom:.85rem}.hero-desc{font-size:.9rem;margin-bottom:1.25rem;line-height:1.6}.hero-actions{gap:.75rem;margin-bottom:1.25rem}.hero-stats{gap:1.25rem;padding-top:1rem}.hero-stat-val{font-size:1.4rem}.hero-stat-label{font-size:.65rem}.grid-3{grid-template-columns:1fr}}</style>
+<link rel="preload" href="/css/style.min.css?v=7" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="/css/style.min.css?v=7" /></noscript>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f59e0b'/><text y='.9em' font-size='80' x='10'>🛣️</text></svg>" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What MnDOT asphalt mix types are used in Minnesota?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MnDOT uses a Superpave designation system where the mix name encodes the design traffic level and aggregate size. For example, SPWEA340B = Superpave Wearing course, Esal level A (lower traffic), 3/4-inch max aggregate, 340-gyration design, B indicates non-RAP. Common mixes include SPWEA240B and SPWEA340B for wearing courses, SPNWB330B for non-wearing base courses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Minnesota's freeze-thaw climate affect pavement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Minnesota experiences 80–100 freeze-thaw cycles per year, which is extremely damaging to pavement. This requires both a flexible soft-grade binder for low-temperature cracking resistance and adequate base thickness to prevent frost heave. MnDOT's pavement design accounts for spring thaw weakening (\"spring load restrictions\" are posted on roads during thaw periods when subgrades are saturated)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does asphalt paving cost in Minnesota?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Minnesota asphalt material prices typically range from $95–$175 per ton. Twin Cities metro (Minneapolis-St. Paul) projects run $95–$150/ton for standard mixes, while northern Minnesota communities pay more due to fewer asphalt plants and longer haul distances. Residential driveway paving typically costs $3–$6 per square foot including labor, and prices peak mid-summer due to high demand."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does the MnDOT mix designation \"SPWEA 230B\" mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MnDOT's mix designations encode key mix properties in a systematic code. For SPWEA230B: SP = Superpave; W = Wearing course (surface layer); E = ESAL traffic level (E = medium, F = high, NW = non-wearing); A = Aggregate gradation/size (A = 9.5mm NMAS, B = 12.5mm NMAS, C = 19mm NMAS); 230 = number of Superpave Gyratory Compactor design gyrations (proxy for traffic level); B = RAP classification (B = no RAP, C = up to 15% RAP, D = up to 25% RAP). So SPWEA230B is a 9.5mm wearing course, no RAP, medium-traffic Superpave mix — the most common surface mix on Minnesota secondary roads and residential streets."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many tons of asphalt do I need for a Minnesota driveway?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A typical Minnesota residential driveway (40 ft × 12 ft = 480 sq ft) with a 2-inch SPWEA240B surface course: 480 × (2/12) × 110 ÷ 2,000 = 4.4 short tons. With 7% waste = order approximately 4.7 tons. If your driveway also needs a 4-inch Class 5 aggregate base (common in freeze-thaw areas), that's a separate granular calculation. Total asphalt for a longer driveway (60 ft × 14 ft at 2 inches) = approximately 6.4 tons. Use the Square Feet Calculator for quick estimates from area dimensions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What RAP percentage does MnDOT allow in asphalt mixes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MnDOT permits and actively encourages the use of Reclaimed Asphalt Pavement (RAP) in new mixes. The allowed RAP content depends on the mix designation's final letter: B = 0% RAP (virgin mix); C = up to 15% RAP; D = up to 25% RAP. At 15–25% RAP content, the aged binder from the reclaimed material contributes to the overall binder, so the virgin binder grade is adjusted (bumped up one grade) to compensate — e.g., from PG 58-34 to PG 52-34. RAP mixes (D designation) typically reduce material cost by $8–$15/ton compared to virgin mixes. MnDOT's Environmental Stewardship Program promotes RAP usage as a sustainable pavement practice. Use the Millings Calculator to estimate RAP quantities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is Minnesota asphalt pavement thicker than in southern states?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Minnesota's severe freeze-thaw climate requires thicker pavement structures for two main reasons. First, frost depth — Minnesota's design frost depth reaches 60–80 inches in northern areas, requiring thick aggregate base layers (12–24 inches of Class 5) to prevent frost heave damage to the pavement surface. Second, spring thaw weakening — when frozen subgrades thaw in spring, they become saturated and lose significant bearing capacity. MnDOT posts spring load restrictions (weight limits) on roads to reduce damage during this period. A typical Minnesota residential street requires 3–4 inches of bituminous surface over 8–12 inches of aggregate base, compared to 2–3 inches surface over 4–6 inches base in warmer southern states like Florida or Texas."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/css/seo-accessibility.css?v=3" />
+<link rel="preload" as="script" href="/js/app.min.js?v=9" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-icon">B</div>
+        <div class="nav-logo-text">Bitumen<span>Calc</span></div>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn">Calculators <span class="nav-dropdown-arrow">▾</span></button>
+          <div class="nav-dropdown-menu">
+            <div class="nav-dropdown-col">
+              <p class="nav-group-label">Regional</p>
+              <a href="/calculators/australia-bitumen-calculator/">Australia</a>
+              <a href="/calculators/canada-bitumen-calculator/">Canada</a>
+              <a href="/calculators/new-zealand-bitumen-calculator/">New Zealand</a>
+              <a href="/calculators/california-asphalt-calculator/">California</a>
+              <a href="/calculators/virginia-asphalt-calculator/">Virginia</a>
+              <a href="/calculators/colorado-asphalt-calculator/">Colorado</a>
+              <a href="/calculators/minnesota-asphalt-calculator/" class="active">Minnesota</a>
+              <a href="/calculators/new-jersey-asphalt-calculator/">New Jersey</a>
+              <a href="/calculators/north-carolina-asphalt-calculator/">North Carolina</a>
+            </div>
+            <div class="nav-dropdown-col">
+              <p class="nav-group-label">Area &amp; Unit Conversion</p>
+              <a href="/calculators/bitumen-square-feet-calculator/">Square Feet</a>
+              <a href="/calculators/square-feet-to-tons-calculator/">Sq Ft to Tons</a>
+              <a href="/calculators/bitumen-square-meters-calculator/">Square Meters</a>
+              <a href="/calculators/bitumen-square-yards-calculator/">Square Yards</a>
+              <a href="/calculators/metric-bitumen-calculator/">Metric</a>
+              <a href="/calculators/asphalt-measurement-calculator/">Measurement</a>
+              <p class="nav-group-label mt" style="margin-top:.9rem;">Thickness / Temp / Radius</p>
+              <a href="/calculators/asphalt-thickness-calculator/">Thickness</a>
+              <a href="/calculators/bitumen-temperature-converter/">Temperature</a>
+              <a href="/calculators/circular-asphalt-calculator/">Radius (Circular)</a>
+            </div>
+            <div class="nav-dropdown-col">
+              <p class="nav-group-label">Material &amp; Quantity</p>
+              <a href="/calculators/asphalt-material-calculator/">Material</a>
+              <a href="/calculators/asphalt-millings-calculator/">Millings (RAP)</a>
+              <a href="/calculators/asphalt-tonnage-calculator/">Tonnage</a>
+              <a href="/calculators/tack-coat-calculator/">Tack Coat</a>
+              <a href="/calculators/road-asphalt-calculator/">Road</a>
+              <a href="/calculators/roofing-bitumen-calculator/">Roofing</a>
+              <a href="/calculators/asphalt-repair-calculator/">Repair</a>
+              <a href="/calculators/asphalt-removal-calculator/">Removal</a>
+              <p style="margin-top:.9rem;" class="nav-group-label">Cost &amp; Rate</p>
+              <a href="/calculators/asphalt-cost-calculator/">Cost Calculator</a>
+              <a href="/calculators/asphalt-application-rate-calculator/">Rate Calculator</a>
+            </div>
+          </div>
+        </div>
+        <a href="/blog/">Blog</a>
+        <a href="/about-us/">About Us</a>
+      </div>
+      <a href="/calculators/" class="btn btn-primary btn-sm nav-cta">All Calculators</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/">🏠 Home</a>
+    <a href="/calculators/">🧮 All Calculators</a>
+    <a href="/calculators/australia-bitumen-calculator/">🇦🇺 Australia</a>
+    <a href="/calculators/canada-bitumen-calculator/">🇨🇦 Canada</a>
+    <a href="/calculators/new-zealand-bitumen-calculator/">🇳🇿 New Zealand</a>
+    <a href="/calculators/california-asphalt-calculator/">🇺🇸 California</a>
+    <a href="/calculators/virginia-asphalt-calculator/">🇺🇸 Virginia</a>
+    <a href="/calculators/bitumen-square-feet-calculator/">📐 Square Feet</a>
+    <a href="/calculators/asphalt-tonnage-calculator/">⚖️ Tonnage</a>
+    <a href="/calculators/asphalt-cost-calculator/">💰 Cost Calculator</a>
+    <a href="/blog/">📝 Blog</a>
+    <a href="/about-us/">ℹ️ About Us</a>
+  </div>
+</header>
+<main id="main-content">
+
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="eyebrow">Regional Calculator</div>
+<h1>Minnesota Asphalt Calculator</h1>
+    <p>Bitumen and aggregate estimation using MnDOT specifications and SPWEA/SPWEB Superpave mix designs for severe cold-climate conditions.</p>
+    <div class="region-meta">
+      <span class="badge badge-orange">MnDOT Standards</span>
+      <span class="badge badge-blue">USD Currency</span>
+      <span class="badge badge-green">Cold-Climate Mix Defaults</span>
+    </div>
+    <div class="breadcrumb">
+      <a href="/">Home</a><span class="sep">/</span>
+      <a href="/calculators/">Calculators</a><span class="sep">/</span>
+      <span>Minnesota</span>
+    </div>
+  </div>
+</section>
+
+<!-- REGIONAL INTRO -->
+<section class="section">
+  <div class="container" style="max-width:820px;">
+    <h2>Calculating Asphalt for Minnesota's Freeze-Thaw Conditions</h2>
+    <p>Minnesota builds pavement for one of the harshest climates in the country. With deep sub-zero winters and a spring thaw that stresses road bases, MnDOT relies on Superpave wearing courses (SPWEA/SPWEB) and soft, low-temperature binders such as PG&nbsp;58-34 that stay flexible in extreme cold. Estimating tonnage accurately matters even more here, because a short paving season leaves little room to correct a shortfall once the plant closes for winter.</p>
+    <p>Split wear and non-wear before you calculate anything. MnDOT wearing courses and the non-wear lifts beneath them carry different binder contents, and a single combined figure will be wrong for both. Run each lift separately and add them.</p>
+<p>Metric or imperial input, converted internally; you get total mix weight, the binder-versus-aggregate breakdown, and a cost. Check density and binder percentages against your MnDOT mix design and allow for compaction and waste before ordering.</p>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="calc-section" id="calculator">
+  <div class="container">
+    <div class="calc-wrap" id="calcResults">
+      <div class="calc-tabs">
+        <button class="calc-tab active">Minnesota Pavement</button>
+      </div>
+      <div class="calc-body">
+        <form class="calc-inputs" id="calcForm" onsubmit="return false;">
+
+          <div class="input-set">
+            <div class="input-set-title">Project Dimensions</div>
+            <div class="field">
+              <label for="length">Length</label>
+              <div class="input-row">
+                <input type="number" id="length" placeholder="e.g. 100" min="0" step="any" />
+                <select id="lengthUnit" style="width:90px;" aria-label="Length unit">
+                  <option value="m" selected>m</option>
+                  <option value="km">km</option>
+                  <option value="ft">ft</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="width">Width</label>
+              <div class="input-row">
+                <input type="number" id="width" placeholder="e.g. 7.5" min="0" step="any" />
+                <select id="widthUnit" style="width:90px;" aria-label="Width unit">
+                  <option value="m" selected>m</option>
+                  <option value="ft">ft</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="thickness">Thickness</label>
+              <div class="input-row">
+                <input type="number" id="thickness" placeholder="e.g. 50" min="0" step="any" />
+                <select id="thicknessUnit" style="width:90px;" aria-label="Thickness unit">
+                  <option value="mm" selected>mm</option>
+                  <option value="cm">cm</option>
+                  <option value="in">in</option>
+                </select>
+              </div>
+              <div class="field-hint">SPWEA 230B wearing course: typically 38–50 mm</div>
+            </div>
+          </div>
+
+          <div class="input-set">
+            <div class="input-set-title">Minnesota Mix Properties</div>
+            <div class="field">
+              <label for="mixType">Mix Type</label>
+              <select id="mixType">
+                <option value="dense" selected>SPWEA 230B (9.5mm)</option>
+                <option value="sma">SPWEA 230C (12.5mm)</option>
+                <option value="hma">SPNWB 230B (Base)</option>
+                <option value="rap">RAP Mix</option>
+                <option value="custom">Custom</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="bitumenContent">Bitumen Content (%)</label>
+              <input type="number" id="bitumenContent" value="5.8" min="1" max="15" step="0.1" />
+              <div class="field-hint">SPWEA 230B typical: 5.5–7.0%</div>
+            </div>
+            <div class="field">
+              <label for="density">Mix Density</label>
+              <div class="input-row">
+                <input type="number" id="density" value="2290" min="1000" max="3000" step="10" />
+                <select id="densityUnit" style="width:110px;" aria-label="Density unit">
+                  <option value="kg/m3" selected>kg/m³</option>
+                  <option value="t/m3">t/m³</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-set">
+            <div class="input-set-title">Cost (USD)</div>
+            <div class="field">
+              <label for="price">Price per Tonne</label>
+              <div class="input-row">
+                <input type="number" id="price" placeholder="e.g. 190" min="0" step="any" />
+                <select id="currency" style="width:90px;" aria-label="Currency">
+                  <option value="USD" selected>USD</option>
+                  <option value="EUR">EUR</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="calc-btn" id="calcBtn">⚡ Calculate</button>
+          <button type="button" class="reset-btn" id="resetBtn">↺ Reset</button>
+        </form>
+
+        <div class="calc-results">
+          <div class="results-header"><h3>Results</h3></div>
+          <div id="results-empty" class="result-placeholder">
+            <div class="placeholder-icon">🏗️</div>
+            <p>Enter dimensions to calculate</p>
+          </div>
+          <div id="results-data">
+            <div class="result-card"><div class="result-card-icon blue">📐</div><div class="result-card-body"><div class="result-card-label">Total Area</div><div class="result-card-value" id="resArea">—</div></div></div>
+            <div class="result-card"><div class="result-card-icon purple">📦</div><div class="result-card-body"><div class="result-card-label">Total Volume</div><div class="result-card-value" id="resVolume">—</div></div></div>
+            <div class="result-card highlighted"><div class="result-card-icon orange">⚖️</div><div class="result-card-body"><div class="result-card-label">Total Mix Weight</div><div class="result-card-value" id="resWeight">—</div><div class="result-card-sub" id="resWeightSub"></div></div></div>
+            <div class="result-card"><div class="result-card-icon orange">🛢️</div><div class="result-card-body"><div class="result-card-label">Bitumen Required</div><div class="result-card-value" id="resBitumen">—</div><div class="result-card-sub" id="resBitumenSub"></div></div></div>
+            <div class="result-card"><div class="result-card-icon blue">🪨</div><div class="result-card-body"><div class="result-card-label">Aggregate Required</div><div class="result-card-value" id="resAggregate">—</div><div class="result-card-sub" id="resAggregateSub"></div></div></div>
+            <div class="result-card" id="resCostCard" style="display:none;"><div class="result-card-icon yellow">💵</div><div class="result-card-body"><div class="result-card-label">Estimated Cost (USD)</div><div class="result-card-value" id="resCost">—</div></div></div>
+            <div class="breakdown-bar">
+              <div class="breakdown-bar-label">Mix Composition</div>
+              <div class="breakdown-track">
+                <div class="breakdown-fill-bitumen" id="bitPctBar" style="width:5.8%;"></div>
+                <div class="breakdown-fill-aggregate"></div>
+              </div>
+              <div class="breakdown-legend">
+                <div class="legend-item"><div class="legend-dot orange"></div><span id="bitLegendPct">5.8% Bitumen</span></div>
+                <div class="legend-item"><div class="legend-dot blue"></div><span id="aggLegendPct">94.2% Aggregate</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MINNESOTA MIX STANDARDS -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Reference</div>
+      <h2>Minnesota Mix Standards</h2>
+      <p>Typical values for common MnDOT pavement mix designs.</p>
+    </div>
+    <table class="ref-table">
+      <thead>
+        <tr>
+          <th>Mix Type</th>
+          <th>Bitumen Content (%)</th>
+          <th>Density (kg/m³)</th>
+          <th>Standard</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>SPWEA 230B (9.5mm)</td><td class="highlight">5.5–7.0</td><td>2270–2360</td><td>MnDOT Section 2360</td></tr>
+        <tr><td>SPWEA 230C (12.5mm)</td><td class="highlight">5.0–6.5</td><td>2280–2370</td><td>MnDOT</td></tr>
+        <tr><td>SPNWB (Base)</td><td class="highlight">4.5–6.0</td><td>2290–2380</td><td>MnDOT base course</td></tr>
+        <tr><td>RAP Mix (25% RAP)</td><td class="highlight">4.5–5.5</td><td>2250–2330</td><td>All districts</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- FORMULA SECTION -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Formula</div>
+      <h2>Minnesota Asphalt Tonnage Formula</h2>
+      <p>MnDOT projects use imperial units. This calculator accepts both imperial and metric inputs, converting to produce accurate short-ton results per MnDOT Section 2360 quantity measurement standards.</p>
+    </div>
+    <div class="formula-inline">
+      Weight (short tons) = Length (ft) × Width (ft) × Thickness (in) ÷ 12 × Density (lb/ft³) ÷ 2,000
+    </div>
+    <div class="grid-3" style="gap:1.5rem;margin-top:2rem;">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Calculate Volume (ft³)</h3>
+        <p>Convert thickness from inches to feet (÷ 12), then multiply all dimensions. <strong>Example:</strong> A 1-mile (5,280 ft) Minnesota county road resurfacing, 24 ft wide, with a 2-inch SPWEA240B wearing course: 5,280 × 24 × (2 ÷ 12) = <strong>21,120 ft³</strong>.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Convert to Short Tons</h3>
+        <p>Multiply volume by density and divide by 2,000. At 145&nbsp;lb/ft³: 21,120 × 145 ÷ 2,000 = <strong>1,531.2 short tons</strong>. Add 7% and order roughly <strong>1,638 tons</strong>. On a mile of road that margin is most of a day's paving, not a rounding error.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Separate Bitumen &amp; Aggregate</h3>
+        <p>Apply the SPWEA mix binder content. At 5.8%: 1,531.2 × 0.058 = <strong>88.8 tons bitumen</strong> (PG 58-34 for most of Minnesota) and 1,531.2 × 0.942 = <strong>1,442.4 tons aggregate</strong>. RAP mixes (up to 25% recycled content) reduce virgin binder requirements — use the <a href="/calculators/asphalt-millings-calculator/">Millings Calculator</a> for RAP projects.</p>
+      </div>
+    </div>
+    <div class="info-box" style="margin-top:2rem;">
+      <span class="info-icon">❄️</span>
+      <div>
+        <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Minnesota Cold-Climate Note</strong>
+        <p style="margin:0;">Minnesota's extreme cold requires very soft binder grades — PG 58-34 for most of the state and PG 52-34 or softer in northern districts (Duluth, Bemidji). These soft grades reduce rutting resistance slightly, so high-traffic Twin Cities metro routes specify PG 64-34 for the combined benefit of cold cracking resistance and moderate rutting performance. Always confirm the applicable grade from MnDOT's binder selection guidance for your specific location and traffic level.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTEXT CARDS -->
+<section class="section-sm" style="background:var(--bg-2);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="info-box">
+        <span class="info-icon">📋</span>
+        <div>
+          <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Standard Reference</strong>
+          <p style="margin:0;font-size:.85rem;">MnDOT Standard Specifications for Construction, Section 2360 (Plant Mixed Bituminous Pavement) with SPWEA/SPWEB Superpave mixes.</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <span class="info-icon">❄️</span>
+        <div>
+          <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Climate Considerations</strong>
+          <p style="margin:0;font-size:.85rem;">Severe continental climate with extreme cold (avg Jan: -16°C) — uses very soft bitumen grades (PG 58-34 to PG 52-34) for low-temperature cracking resistance.</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <span class="info-icon">💰</span>
+        <div>
+          <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Typical MN Costs</strong>
+          <p style="margin:0;font-size:.85rem;">Asphalt in Minnesota typically runs $120–$270/tonne depending on location and season.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATIONS SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Applications</div>
+      <h2>Where Minnesota Asphalt Calculations Are Used</h2>
+      <p>From MnDOT trunk highway resurfacing to rural county road maintenance and Twin Cities commercial development, accurate cold-climate tonnage estimates are critical across Minnesota.</p>
+    </div>
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="pillar-card">
+        <div class="pillar-icon" style="background:var(--gold-50);">🛣️</div>
+        <h3>MnDOT State Trunk Highway Resurfacing</h3>
+        <p>MnDOT district engineers use SPWEA Superpave calculations for annual state highway resurfacing programmes on the 12,000-mile trunk highway system. Twin Cities metro projects on I-35W, I-94, and TH-169 require PG 64-34 polymer-modified mixes for heavy traffic, while outstate projects use standard PG 58-34 at lower cost. Accurate tonnage estimates feed MnDOT's TPEP (Transportation Program) budget planning.</p>
+        <p>Related: <a href="/calculators/asphalt-tonnage-calculator/">Asphalt Tonnage Calculator</a></p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon" style="background:var(--sky-light);">🏞️</div>
+        <h3>Minnesota County Road Maintenance</h3>
+        <p>County highway departments across Minnesota's 87 counties estimate asphalt for CSAH (County State Aid Highway) and county road overlays and mill-and-fill projects. Rural county roads often use SPWEA240B or RAP-containing mixes to manage budget constraints. Spring load restrictions are factored into project timing — paving season runs May to October with optimal conditions July–August.</p>
+        <p>Related: <a href="/calculators/asphalt-repair-calculator/">Asphalt Repair Calculator</a></p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon" style="background:#d1fae5;">🏙️</div>
+        <h3>Twin Cities Metro Commercial Development</h3>
+        <p>Minneapolis-St. Paul area developers and city engineers estimate SPWEA230B quantities for commercial parking lots, retail development, and new subdivision roads. Minnesota's freeze-thaw design requirements mean thicker pavement sections than southern states — typically 4-inch surface over 6-inch aggregate base for commercial lots, increasing total material quantities and project cost significantly.</p>
+        <p>Related: <a href="/calculators/asphalt-cost-calculator/">Asphalt Cost Calculator</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAVING WINDOW -->
+    <section class="section section-alt">
+        <div class="container container-sm">
+            <div class="section-header">
+                <div class="label">Scheduling</div>
+                <h2>The Minnesota paving calendar, and why it changes your order</h2>
+                <p>In a climate like this the season constrains procurement as much as the design does.</p>
+            </div>
+            <div style="overflow-x:auto;">
+            <table class="ref-table">
+                <thead><tr><th>Period</th><th>Typical situation</th><th>Estimating implication</th></tr></thead>
+                <tbody>
+                <tr><td>Spring thaw</td><td>Load restrictions on many routes; saturated bases</td><td>Haul routes and truck loading may be limited, which affects how material arrives more than how much you need</td></tr>
+                <tr><td>Early summer</td><td>Best conditions of the year</td><td>Standard allowances apply; plants are busy, so lead time matters more than margin</td></tr>
+                <tr><td>Late summer</td><td>Warm base, long working day</td><td>Widest roller window; thin lifts are most achievable here</td></tr>
+                <tr><td>Autumn</td><td>Cooling base, shorter days, mat cools faster</td><td>Thin wearing courses get harder to compact; some work gets deferred</td></tr>
+                <tr><td>Winter</td><td>Outside the practical window for most mixes</td><td>Plants close; a shortfall discovered now cannot be topped up until spring</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <p style="margin-top:1.5rem;">The last row is the one that changes behaviour. For most of the year a short order is an inconvenience &mdash; you ring the plant and another load turns up. Late in a Minnesota season it can mean an unfinished surface going into winter, which is a different order of problem.</p>
+            <p>That asymmetry is a reason to carry a slightly heavier waste allowance on late-season work than the 5% you would use in June. Being marginally long costs you the value of the surplus. Being short costs you the season.</p>
+
+        </div>
+    </section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container container-sm">
+    <div class="section-header">
+      <div class="label">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">What MnDOT asphalt mix types are used in Minnesota? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>MnDOT uses a Superpave designation system where the mix name encodes the design traffic level and aggregate size. For example, SPWEA340B = Superpave Wearing course, Esal level A (lower traffic), 3/4-inch max aggregate, 340-gyration design, B indicates non-RAP. Common mixes include SPWEA240B and SPWEA340B for wearing courses, SPNWB330B for non-wearing base courses.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How does Minnesota's freeze-thaw climate affect pavement? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Minnesota experiences 80–100 freeze-thaw cycles per year, which is extremely damaging to pavement. This requires both a flexible soft-grade binder for low-temperature cracking resistance and adequate base thickness to prevent frost heave. MnDOT's pavement design accounts for spring thaw weakening ("spring load restrictions" are posted on roads during thaw periods when subgrades are saturated).</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How much does asphalt paving cost in Minnesota? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Minnesota asphalt material prices typically range from $95–$175 per ton. Twin Cities metro (Minneapolis-St. Paul) projects run $95–$150/ton for standard mixes, while northern Minnesota communities pay more due to fewer asphalt plants and longer haul distances. Residential driveway paving typically costs $3–$6 per square foot including labor, and prices peak mid-summer due to high demand.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What does the MnDOT mix designation "SPWEA 230B" mean? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>MnDOT's mix designations encode key mix properties in a systematic code. For <strong>SPWEA230B</strong>: <strong>SP</strong> = Superpave; <strong>W</strong> = Wearing course (surface layer); <strong>E</strong> = ESAL traffic level (E = medium, F = high, NW = non-wearing); <strong>A</strong> = Aggregate gradation/size (A = 9.5mm NMAS, B = 12.5mm NMAS, C = 19mm NMAS); <strong>230</strong> = number of Superpave Gyratory Compactor design gyrations (proxy for traffic level); <strong>B</strong> = RAP classification (B = no RAP, C = up to 15% RAP, D = up to 25% RAP). So SPWEA230B is a 9.5mm wearing course, no RAP, medium-traffic Superpave mix — the most common surface mix on Minnesota secondary roads and residential streets.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How many tons of asphalt do I need for a Minnesota driveway? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>A typical Minnesota residential driveway (40 ft × 12 ft = 480 sq ft) with a 2-inch SPWEA240B surface course: 480 × (2/12) × 110 ÷ 2,000 = <strong>4.4 short tons</strong>. With 7% waste = order approximately <strong>4.7 tons</strong>. If your driveway also needs a 4-inch Class 5 aggregate base (common in freeze-thaw areas), that's a separate granular calculation. Total asphalt for a longer driveway (60 ft × 14 ft at 2 inches) = approximately <strong>6.4 tons</strong>. Use the <a href="/calculators/bitumen-square-feet-calculator/">Square Feet Calculator</a> for quick estimates from area dimensions.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What RAP percentage does MnDOT allow in asphalt mixes? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>MnDOT permits and actively encourages the use of Reclaimed Asphalt Pavement (RAP) in new mixes. The allowed RAP content depends on the mix designation's final letter: <strong>B</strong> = 0% RAP (virgin mix); <strong>C</strong> = up to 15% RAP; <strong>D</strong> = up to 25% RAP. At 15–25% RAP content, the aged binder from the reclaimed material contributes to the overall binder, so the virgin binder grade is adjusted (bumped up one grade) to compensate — e.g., from PG 58-34 to PG 52-34. RAP mixes (D designation) typically reduce material cost by $8–$15/ton compared to virgin mixes. MnDOT's Environmental Stewardship Program promotes RAP usage as a sustainable pavement practice. Use the <a href="/calculators/asphalt-millings-calculator/">Millings Calculator</a> to estimate RAP quantities.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Why is Minnesota asphalt pavement thicker than in southern states? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Minnesota's severe freeze-thaw climate requires thicker pavement structures for two main reasons. First, <strong>frost depth</strong> — Minnesota's design frost depth reaches 60–80 inches in northern areas, requiring thick aggregate base layers (12–24 inches of Class 5) to prevent frost heave damage to the pavement surface. Second, <strong>spring thaw weakening</strong> — when frozen subgrades thaw in spring, they become saturated and lose significant bearing capacity. MnDOT posts spring load restrictions (weight limits) on roads to reduce damage during this period. A typical Minnesota residential street requires 3–4 inches of bituminous surface over 8–12 inches of aggregate base, compared to 2–3 inches surface over 4–6 inches base in warmer southern states like Florida or Texas.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- REFERENCES -->
+    <section class="section section-alt">
+        <div class="container container-sm">
+            <div class="section-header">
+                <div class="label">References</div>
+                <h2>Specifications behind these numbers</h2>
+                <p>Mix designations, binder grades and densities on this page trace back to the state specification and to the Asphalt Institute. Your district may amend any of it, and your approved Job Mix Formula overrides all of it.</p>
+            </div>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.9rem;">
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://www.dot.state.mn.us/materials/bituminousdocs/Specifications/2011/2360-2011__Final%202-4-2011.pdf" target="_blank" rel="noopener nofollow">MnDOT Specification 2360 — Plant Mixed Asphalt Pavement</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://www.dot.state.mn.us/materials/manuals/bituminous/Minnesota_Department_of_Transportation_Bituminous_Manual.pdf" target="_blank" rel="noopener nofollow">MnDOT <em>Bituminous Manual</em></a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://bookstore.asphaltinstitute.org/catalog/book/ms-2-asphalt-mix-design-methods" target="_blank" rel="noopener nofollow">Asphalt Institute, <em>MS-2 Asphalt Mix Design Methods</em>, 7th edition</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://store.astm.org/d2041_d2041m-19.html" target="_blank" rel="noopener nofollow">ASTM D2041/D2041M-19 — Theoretical Maximum Specific Gravity and Density of Asphalt Mixtures (the Rice test)</a></li>
+            </ul>
+            <p style="margin-top:1.75rem;font-size:.85rem;color:var(--text-muted);">
+                Mix tables checked against the specifications above in <strong>July 2026</strong>.
+                Any cost figures quoted are indicative only and date quickly &mdash; treat them as a
+                sanity check on a quote, never as a quote.
+                See our <a href="/editorial-policy/">editorial policy</a> for how these values are
+                sourced and reviewed, and the <a href="/disclaimer/">disclaimer</a> for the limits of
+                these estimates.
+            </p>
+        </div>
+    </section>
+
+<!-- HOW TO USE -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Guide</div>
+      <h2>How to Use This Calculator</h2>
+    </div>
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Enter Project Dimensions</h3>
+        <p>Input the length, width, and compacted thickness of your asphalt layer. MnDOT uses SPWEA340B (2-inch surface) as a common wearing course. Residential Minnesota driveways typically use 2 inches of SPWEA240B over a 4-inch Class 5 aggregate base to handle freeze-thaw cycles.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Select MnDOT Mix Type</h3>
+        <p>Choose the appropriate MnDOT Superpave mix. Minnesota's extreme cold (-30°F winters) demands soft binder grades — PG 58-34 for most of the state, PG 52-34 or PG 52-40 for northern Minnesota. Metro Twin Cities highways use PG 64-34. Adjust bitumen content to 5.0–6.5% per your project design.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Add Cost &amp; Calculate</h3>
+        <p>Enter the current Minnesota asphalt price per ton (typically $95–$175/ton in the Twin Cities metro). Click Calculate for total asphalt tonnage, materials breakdown, and project cost estimate. Minnesota paving season runs May through October — plan accordingly for project scheduling.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OTHER REGIONS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Other Regions</div>
+      <h2>More Regional Calculators</h2>
+    </div>
+    <div class="dir-grid">
+      <a href="/calculators/canada-bitumen-calculator/" class="dir-card">
+        <div class="dir-card-icon" style="background:#fee2e2;">🇨🇦</div>
+        <div class="dir-card-text"><div class="dir-card-title">Canada</div><div class="dir-card-desc">CSA / MTO · CAD · cold-climate</div></div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+      <a href="/calculators/colorado-asphalt-calculator/" class="dir-card">
+        <div class="dir-card-icon" style="background:#fef9c3;">🇺🇸</div>
+        <div class="dir-card-text"><div class="dir-card-title">Colorado</div><div class="dir-card-desc">CDOT · USD · high-altitude</div></div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+      <a href="/calculators/virginia-asphalt-calculator/" class="dir-card">
+        <div class="dir-card-icon" style="background:#fef9c3;">🇺🇸</div>
+        <div class="dir-card-text"><div class="dir-card-title">Virginia</div><div class="dir-card-desc">VDOT · USD · SM-9.5</div></div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="/calculators/" class="btn btn-outline">View All Calculators →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" style="margin-bottom:.5rem;">
+          <div class="nav-logo-icon">B</div>
+          <div class="nav-logo-text">Bitumen<span>Calc</span></div>
+        </a>
+        <p>Free pavement quantity calculators. Every formula and default value is shown on the page.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Regional</p>
+        <ul>
+          <li><a href="/calculators/australia-bitumen-calculator/">Australia</a></li>
+          <li><a href="/calculators/canada-bitumen-calculator/">Canada</a></li>
+          <li><a href="/calculators/new-zealand-bitumen-calculator/">New Zealand</a></li>
+          <li><a href="/calculators/california-asphalt-calculator/">California</a></li>
+          <li><a href="/calculators/virginia-asphalt-calculator/">Virginia</a></li>
+          <li><a href="/calculators/colorado-asphalt-calculator/">Colorado</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Calculators</p>
+        <ul>
+          <li><a href="/calculators/bitumen-square-feet-calculator/">Square Feet</a></li>
+          <li><a href="/calculators/asphalt-tonnage-calculator/">Tonnage</a></li>
+          <li><a href="/calculators/asphalt-cost-calculator/">Cost Calculator</a></li>
+          <li><a href="/calculators/asphalt-material-calculator/">Material</a></li>
+          <li><a href="/calculators/road-asphalt-calculator/">Road</a></li>
+          <li><a href="/calculators/asphalt-repair-calculator/">Repair</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Company</p>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/calculators/">All Calculators</a></li>
+          <li><a href="/about-us/">About Us</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+        </ul>
+        <p style="margin-top:1.5rem;" class="footer-label">Legal</p>
+        <ul>
+          <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+
+                        <li><a href="/disclaimer/">Disclaimer</a></li>
+                        <li><a href="/editorial-policy/">Editorial Policy</a></li>
+                    </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Bitumen Calculator. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/terms-and-conditions/">Terms</a>
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/contact-us/">Contact</a>
+
+                    <a href="/disclaimer/">Disclaimer</a>
+                    <a href="#" data-consent-open>Cookie Preferences</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+<script src="/js/app.min.js?v=9"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.BitCalc) window.BitCalc.setDefaults({ bitumenContent: 5.8, density: 2290, currency: 'USD' });
+  });
+</script>
+</main>
+</body>
+</html>
+
+
+

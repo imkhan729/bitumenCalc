@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<!-- Consent Mode v2 defaults - must execute before any Google tag -->
+<script src="/js/consent.min.js?v=3"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GCYLRZ2PQK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GCYLRZ2PQK');
+</script>
+  <meta name="google-adsense-account" content="ca-pub-6438644207209483" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="msapplication-TileColor" content="#f59e0b" />
+<meta name="theme-color" content="#f59e0b" />
+<title>Asphalt Thickness Calculator — Pavement Design Depth</title>
+  <meta name="description" content="Calculate required asphalt pavement thickness based on traffic load and subgrade. Determine pavement design depth for roads, driveways, and car parks." />
+    <meta name="author" content="BitumenCalc" />
+<link rel="canonical" href="https://www.bitumencalc.com/calculators/asphalt-thickness-calculator/" />
+    <link rel="alternate" hreflang="en" href="https://www.bitumencalc.com/calculators/asphalt-thickness-calculator/" />
+<meta name="keywords" content="asphalt thickness calculator, pavement thickness calculator, asphalt depth calculator, pavement design" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://www.bitumencalc.com/calculators/asphalt-thickness-calculator/" />
+  <meta property="og:title" content="Asphalt Thickness Calculator — Pavement Design Depth" />
+  <meta property="og:description" content="Calculate required asphalt pavement thickness based on traffic load and subgrade. Determine pavement design depth for roads, driveways, and car parks." />
+  <meta property="og:image" content="https://www.bitumencalc.com/assets/hero-road.webp" />
+      <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="675" />
+<meta property="og:image:alt" content="BitumenCalc tool and guide preview image" />
+<meta property="og:site_name" content="BitumenCalc" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@BitumenCalc" />
+<meta name="twitter:title" content="Asphalt Thickness Calculator — Pavement Design Depth" />
+  <meta name="twitter:description" content="Calculate required asphalt pavement thickness based on traffic load and subgrade. Determine pavement design depth for roads, driveways, and car parks." />
+  <meta name="twitter:image" content="https://www.bitumencalc.com/assets/hero-road.webp" />
+
+    <meta name="twitter:image:alt" content="BitumenCalc tool and guide preview image" />
+<!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.bitumencalc.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://www.bitumencalc.com/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Thickness Calculator",
+      "item": "https://www.bitumencalc.com/calculators/asphalt-thickness-calculator/"
+    }
+  ]
+}
+</script>
+
+  <!-- Schema: WebApplication -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Asphalt Thickness Calculator",
+  "url": "https://www.bitumencalc.com/calculators/asphalt-thickness-calculator/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Calculate required asphalt pavement thickness based on traffic load and subgrade. Determine pavement design depth for roads, driveways, and car parks.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "BitumenCalc",
+    "url": "https://www.bitumencalc.com",
+    "logo": "https://www.bitumencalc.com/assets/logo.svg",
+    "@id": "https://www.bitumencalc.com/#organization"
+  }
+}
+</script>
+<style id="critical-css">:root{--navy:#0b1628;--navy-700:#162240;--gold:#f59e0b;--gold-dark:#d97706;--gold-light:#fde68a;--bg:#f8fafc;--surface:#fff;--border:#e2e8f0;--text:#0b1628;--text-muted:#475569;--grad-gold:linear-gradient(135deg,#f59e0b 0%,#fbbf24 100%);--grad-hero:linear-gradient(150deg,#0b1628 0%,#1a3060 55%,#0b2215 100%);--r-lg:12px;--r-xl:16px;--r-full:9999px}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{font-size:16px}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}img{max-width:100%;height:auto;display:block}a{color:var(--gold);text-decoration:none}.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}.site-header{position:sticky;top:0;z-index:1000;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.07);box-shadow:0 2px 24px rgba(0,0,0,.35)}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem}.nav-logo{display:flex;align-items:center;gap:.65rem;text-decoration:none;flex-shrink:0}.nav-logo-icon{width:40px;height:40px;background:var(--grad-gold);border-radius:var(--r-lg);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:900;color:var(--navy)}.nav-logo-text{font-size:1.15rem;font-weight:800;color:#fff;line-height:1.2}.nav-logo-text span{color:var(--gold)}.nav-links{display:flex;align-items:center;gap:.15rem}.nav-links a{color:rgba(255,255,255,.7);font-size:.875rem;font-weight:500;padding:.5rem .9rem;border-radius:var(--r-full)}.nav-links a.active{color:var(--gold);background:rgba(245,158,11,.1)}.nav-dropdown{position:relative;display:flex;align-items:center}.nav-dropdown-btn{color:rgba(255,255,255,.7);font-size:.875rem;font-weight:500;padding:.5rem .9rem;border-radius:var(--r-full);display:flex;align-items:center;gap:.3rem;background:none;border:0;font-family:inherit}.nav-dropdown-menu{position:absolute;top:calc(100% + .35rem);left:50%;transform:translate(-50%,10px);background:var(--navy-700);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-xl);padding:1.5rem;min-width:700px;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem 2rem;opacity:0;visibility:hidden;pointer-events:none}.nav-toggle{display:none}.mobile-menu{display:none}.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.75rem;border-radius:var(--r-full);font-size:.9rem;font-weight:600;white-space:nowrap;text-decoration:none}.btn-primary{background:var(--grad-gold);color:var(--navy);font-weight:700}.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)}.btn-lg{padding:1.1rem 2.5rem;font-size:1rem}.btn-sm{padding:.5rem 1.2rem;font-size:.82rem}.hero{background-image:url('/assets/hero-road.webp');background-size:cover;background-position:center 40%;background-color:#0b1628;position:relative;overflow:hidden;padding:3rem 0 4rem;height:calc(100vh - 72px);min-height:620px;max-height:900px;display:flex;align-items:center}.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(4,8,18,.65) 0%,rgba(4,8,18,.72) 50%,rgba(4,8,18,.9) 100%);z-index:0}.hero-inner{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1;padding-top:3rem;width:100%}.hero-content{color:#fff;max-width:860px}.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,158,11,.18);border:1px solid rgba(245,158,11,.5);color:var(--gold-light);padding:.35rem 1rem;border-radius:var(--r-full);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem}.hero-title{font-family:'Arial Narrow','Segoe UI Condensed',Impact,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:700;font-size:clamp(2.8rem,4.2vw,4.2rem);line-height:1.1;margin-bottom:1.2rem;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.55);text-align:center}.hero-desc{font-size:1.05rem;color:rgba(255,255,255,.88);margin-bottom:1.8rem;line-height:1.7;text-align:center;text-shadow:0 1px 8px rgba(0,0,0,.4)}.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;justify-content:center}.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.15)}.hero-stat-val{font-size:1.85rem;font-weight:900;color:#fff;line-height:1}.hero-stat-val span{color:var(--gold)}.hero-stat-label{font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;text-transform:uppercase;letter-spacing:.08em}.hero-road{position:absolute;bottom:0;left:0;right:0;height:5px;background:repeating-linear-gradient(90deg,var(--gold) 0,var(--gold) 50px,transparent 50px,transparent 72px);opacity:.65}.page-hero{background:var(--grad-hero);padding:4rem 0 3rem;position:relative;overflow:hidden}.page-hero-inner{position:relative;z-index:1}.page-hero h1{color:#fff;margin-bottom:.75rem;font-size:clamp(2.2rem,5vw,3.75rem);font-weight:800;line-height:1.12}.page-hero p{font-size:1.1rem;color:rgba(255,255,255,.7);max-width:560px}.section{padding:5.5rem 0}.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:2rem}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}@media(max-width:900px){.nav-links,.nav-cta,.nav-dropdown-btn{display:none}.nav-toggle{display:flex;flex-direction:column;gap:5px;padding:.5rem}.nav-toggle span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}.mobile-menu.open{display:block;background:var(--navy-700);border-top:1px solid rgba(255,255,255,.06)}.mobile-menu a{display:block;padding:.9rem 1.5rem;color:rgba(255,255,255,.8);font-weight:500;font-size:.95rem;border-bottom:1px solid rgba(255,255,255,.04)}}@media(max-width:768px){.container{padding:0 1rem}.hero{height:auto;min-height:100svh;padding:2rem 0 3rem}.hero-tag{display:none}.hero-title{font-size:2.1rem;margin-bottom:.85rem}.hero-desc{font-size:.9rem;margin-bottom:1.25rem;line-height:1.6}.hero-actions{gap:.75rem;margin-bottom:1.25rem}.hero-stats{gap:1.25rem;padding-top:1rem}.hero-stat-val{font-size:1.4rem}.hero-stat-label{font-size:.65rem}.grid-3{grid-template-columns:1fr}}</style>
+<link rel="preload" href="/css/style.min.css?v=7" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="/css/style.min.css?v=7" /></noscript>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f59e0b'/><text y='.9em' font-size='80' x='10'>🛣️</text></svg>" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How thick should asphalt be for a driveway?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a residential driveway, a minimum of 2 inches (50 mm) of compacted asphalt surface course is recommended for light passenger vehicles, ideally over a 4-inch (100 mm) compacted aggregate base. For driveways that will see delivery trucks or heavy vehicles, increase to 3 inches (75 mm) of asphalt over a 6-inch base. Areas subject to heavy wheel loads (garbage truck turnarounds, boat trailers) may need a 4-inch (100 mm) asphalt section with a reinforced base."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum thickness for asphalt over concrete?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When overlaying concrete, a minimum 50–75 mm (2–3 inch) asphalt layer is needed to prevent reflection cracking from concrete joints appearing through the new surface. Thicker overlays (75–100 mm) provide better resistance to reflection cracking over time. A stress-relieving interlayer (geotextile or SAMI — stress absorbing membrane interlayer) can be used with thinner overlays to delay crack reflection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does compaction affect asphalt thickness?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Asphalt is typically laid at a loose depth approximately 20–25% greater than the target compacted depth. For a 50 mm compacted layer, you would lay the mix at about 62–65 mm loose depth. The compaction ratio depends on mix type, aggregate gradation, and lift thickness. Proper compaction increases density and reduces air voids, which directly improves durability and waterproofing. Under-compacted asphalt has higher air voids leading to premature oxidation, cracking, and ravelling."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How thick does asphalt need to be for a commercial parking lot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard commercial parking lot for passenger cars typically requires 3 inches (75 mm) of compacted asphalt over a 6-inch (150 mm) compacted aggregate base. For lots that see regular delivery trucks, garbage trucks, or heavy SUVs, increase to 4 inches (100 mm) of asphalt. Loading docks and heavy vehicle areas may require 5–6 inches (125–150 mm) of asphalt. A properly designed subbase is equally important — a good asphalt layer on a poorly prepared base will still fail quickly. Use the Tonnage Calculator to quantify the material for your specified depth."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What thickness of asphalt overlay do I need to resurface a cracked pavement?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A mill-and-fill overlay (removing 1.5–2 inches and replacing) is the standard for moderately cracked pavement. If milling, the overlay thickness typically matches the milled depth — 1.5 to 2 inches (38–50 mm) is common for surface resurfacing. For structural overlays without milling, a minimum of 2 inches (50 mm) is needed, and 3+ inches (75+ mm) is recommended if the existing pavement has moderate to severe structural cracking, or if reflection cracking is a concern. Always address the root cause (drainage, subbase failure) before overlaying to prevent early failure of the new layer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I use delivered plant dockets to verify asphalt thickness on site?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sum the total net weight (in tonnes) from all delivery dockets for a defined paved section. Measure or calculate the area covered (length × average width). Enter the total tonnes, area, and mix density into the reverse calculator above. The resulting thickness is the average theoretical layer depth based on delivered material. Compare this to the specification minimum. Note: this average approach will not detect localised thin areas — physical thickness checks (depth pins, cores, or GPR) are still required for contractual acceptance, but the docket calculation is a powerful first-pass QC check that costs nothing and takes under a minute. Also see the Measurement Converter for unit conversions on international projects."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the maximum single-lift thickness for asphalt paving?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most specifications limit a single asphalt lift to 100–125 mm (4–5 inches) of compacted depth. Above this limit, the rolling equipment cannot achieve adequate density at the bottom of the lift — the top compacts while the bottom remains under-compacted. For thicker pavement structures, multiple lifts are required: a base course lift of 75–100 mm, a binder course lift of 50–75 mm, and a surface course lift of 25–50 mm are typical for a heavy-duty pavement. Each lift is compacted to specification density before the next is placed. Use the Tonnage Calculator to calculate material for each individual lift separately."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/css/seo-accessibility.css?v=3" />
+<link rel="preload" as="script" href="/js/app.min.js?v=9" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-icon">B</div>
+        <div class="nav-logo-text">Bitumen<span>Calc</span></div>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn">Calculators <span class="nav-dropdown-arrow">▾</span></button>
+          <div class="nav-dropdown-menu">
+            <div class="nav-dropdown-col">
+              <p class="nav-group-label">Regional</p>
+              <a href="/calculators/australia-bitumen-calculator/">Australia</a>
+              <a href="/calculators/canada-bitumen-calculator/">Canada</a>
+              <a href="/calculators/new-zealand-bitumen-calculator/">New Zealand</a>
+              <a href="/calculators/california-asphalt-calculator/">California</a>
+              <a href="/calculators/virginia-asphalt-calculator/">Virginia</a>
+              <a href="/calculators/colorado-asphalt-calculator/">Colorado</a>
+              <a href="/calculators/minnesota-asphalt-calculator/">Minnesota</a>
+              <a href="/calculators/new-jersey-asphalt-calculator/">New Jersey</a>
+              <a href="/calculators/north-carolina-asphalt-calculator/">North Carolina</a>
+            </div>
+            <div class="nav-dropdown-col">
+              <p class="nav-group-label">Area &amp; Unit Conversion</p>
+              <a href="/calculators/bitumen-square-feet-calculator/">Square Feet</a>
+              <a href="/calculators/square-feet-to-tons-calculator/">Sq Ft to Tons</a>
+              <a href="/calculators/bitumen-square-meters-calculator/">Square Meters</a>
+              <a href="/calculators/bitumen-square-yards-calculator/">Square Yards</a>
+              <a href="/calculators/metric-bitumen-calculator/">Metric</a>
+              <a href="/calculators/asphalt-measurement-calculator/">Measurement</a>
+              <p style="margin-top:.9rem;" class="nav-group-label">Thickness / Temp / Radius</p>
+              <a href="/calculators/asphalt-thickness-calculator/" class="active">Thickness</a>
+              <a href="/calculators/bitumen-temperature-converter/">Temperature</a>
+              <a href="/calculators/circular-asphalt-calculator/">Radius (Circular)</a>
+            </div>
+            <div class="nav-dropdown-col">
+              <p class="nav-group-label">Material &amp; Quantity</p>
+              <a href="/calculators/asphalt-material-calculator/">Material</a>
+              <a href="/calculators/asphalt-millings-calculator/">Millings (RAP)</a>
+              <a href="/calculators/asphalt-tonnage-calculator/">Tonnage</a>
+              <a href="/calculators/tack-coat-calculator/">Tack Coat</a>
+              <a href="/calculators/road-asphalt-calculator/">Road</a>
+              <a href="/calculators/roofing-bitumen-calculator/">Roofing</a>
+              <a href="/calculators/asphalt-repair-calculator/">Repair</a>
+              <a href="/calculators/asphalt-removal-calculator/">Removal</a>
+              <p style="margin-top:.9rem;" class="nav-group-label">Cost &amp; Rate</p>
+              <a href="/calculators/asphalt-cost-calculator/">Cost Calculator</a>
+              <a href="/calculators/asphalt-application-rate-calculator/">Rate Calculator</a>
+            </div>
+          </div>
+        </div>
+        <a href="/blog/">Blog</a>
+        <a href="/about-us/">About Us</a>
+      </div>
+      <a href="/calculators/" class="btn btn-primary btn-sm nav-cta">All Calculators</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/">🏠 Home</a>
+    <a href="/calculators/">🧮 All Calculators</a>
+    <a href="/calculators/australia-bitumen-calculator/">🇦🇺 Australia</a>
+    <a href="/calculators/canada-bitumen-calculator/">🇨🇦 Canada</a>
+    <a href="/calculators/bitumen-square-feet-calculator/">📐 Square Feet</a>
+    <a href="/calculators/asphalt-tonnage-calculator/">⚖️ Tonnage</a>
+    <a href="/calculators/asphalt-cost-calculator/">💰 Cost Calculator</a>
+    <a href="/blog/">📝 Blog</a>
+    <a href="/about-us/">ℹ️ About Us</a>
+  </div>
+</header>
+<main id="main-content">
+
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="eyebrow">Reverse Calculation</div>
+    <h1>Asphalt Thickness Calculator</h1>
+    <p>Calculate required asphalt layer thickness from known weight/tonnage and area, or calculate forward from dimensions to weight.</p>
+    <div class="region-meta">
+      <span class="badge badge-orange">Reverse Calculation</span>
+      <span class="badge badge-blue">Depth Output</span>
+      <span class="badge badge-green">mm/in Output</span>
+    </div>
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <a href="/calculators/">Calculators</a>
+      <span class="sep">/</span>
+      <span>Thickness</span>
+    </div>
+  </div>
+</section>
+
+<!-- INFO CARDS -->
+<section class="section-sm" style="background:var(--bg-2);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="info-box">
+        <span class="info-icon">🔄</span>
+        <div>
+          <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Reverse Calculation</strong>
+          <p style="margin:0;font-size:.85rem;">When you know how many tonnes were delivered and the area covered, find out what layer depth was actually achieved.</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <span class="info-icon">📐</span>
+        <div>
+          <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Design Thickness</strong>
+          <p style="margin:0;font-size:.85rem;">AASHTO and other design methods specify minimum layer thickness based on traffic loading (ESAL) and subgrade strength (CBR/Mr).</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <span class="info-icon">🏗️</span>
+        <div>
+          <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Common Depths</strong>
+          <p style="margin:0;font-size:.85rem;">Surface course: 40–75 mm (1.5–3 in). Binder course: 50–100 mm (2–4 in). Base course: 75–200 mm (3–8 in).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVERSE CALCULATOR -->
+<section class="calc-section" id="calculator">
+  <div class="container">
+
+    <!-- REVERSE: WEIGHT + AREA → THICKNESS -->
+    <div class="calc-wrap" style="margin-bottom:2rem;">
+      <div class="calc-tabs">
+        <button class="calc-tab active">🔄 Reverse: Weight + Area → Thickness</button>
+      </div>
+      <div class="calc-body">
+        <form class="calc-inputs" id="reverseForm" onsubmit="return false;">
+          <div class="input-set">
+            <div class="input-set-title">Known Delivered Weight</div>
+            <div class="field">
+              <label for="revWeight">Total Weight Delivered</label>
+              <div class="input-row">
+                <input type="number" id="revWeight" placeholder="e.g. 50" min="0" step="any" />
+                <select id="revWeightUnit" style="width:130px;">
+                  <option value="t" selected>metric tonnes</option>
+                  <option value="st">short tons</option>
+                  <option value="kg">kg</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="input-set">
+            <div class="input-set-title">Known Area</div>
+            <div class="field">
+              <label for="revArea">Total Area Covered</label>
+              <div class="input-row">
+                <input type="number" id="revArea" placeholder="e.g. 500" min="0" step="any" />
+                <select id="revAreaUnit" style="width:100px;">
+                  <option value="m2" selected>m²</option>
+                  <option value="sqft">sq ft</option>
+                  <option value="sqyd">sq yd</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="revDensity">Mix Density (kg/m³)</label>
+              <input type="number" id="revDensity" value="2300" min="500" max="4000" step="10" />
+              <div class="field-hint">Standard HMA: 2250–2400 kg/m³</div>
+            </div>
+          </div>
+          <button type="button" class="calc-btn" id="revCalcBtn" onclick="calcReverse()">⚡ Calculate Thickness</button>
+          <button type="button" class="reset-btn" onclick="resetReverse()">↺ Reset</button>
+        </form>
+
+        <div class="calc-results">
+          <div class="results-header"><h3>Thickness Results</h3></div>
+          <div id="rev-empty" class="result-placeholder">
+            <div class="placeholder-icon">📏</div>
+            <p>Enter weight and area to calculate thickness</p>
+          </div>
+          <div id="rev-data" style="display:none;">
+            <div class="result-card highlighted">
+              <div class="result-card-icon orange">📏</div>
+              <div class="result-card-body">
+                <div class="result-card-label">Calculated Thickness</div>
+                <div class="result-card-value" id="revThickMm">—</div>
+                <div class="result-card-sub" id="revThickIn"></div>
+              </div>
+            </div>
+            <div class="result-card">
+              <div class="result-card-icon blue">📐</div>
+              <div class="result-card-body">
+                <div class="result-card-label">Area Used</div>
+                <div class="result-card-value" id="revAreaOut">—</div>
+              </div>
+            </div>
+            <div class="result-card">
+              <div class="result-card-icon purple">⚖️</div>
+              <div class="result-card-body">
+                <div class="result-card-label">Weight Used</div>
+                <div class="result-card-value" id="revWeightOut">—</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FORWARD: DIMENSIONS → WEIGHT -->
+    <div class="calc-wrap">
+      <div class="calc-tabs">
+        <button class="calc-tab active">➡️ Forward: Dimensions → Weight</button>
+      </div>
+      <div class="calc-body">
+        <form class="calc-inputs" id="calcForm" onsubmit="return false;">
+          <div class="input-set">
+            <div class="input-set-title">Project Dimensions</div>
+            <div class="field">
+              <label for="length">Length</label>
+              <div class="input-row">
+                <input type="number" id="length" placeholder="e.g. 50" min="0" step="any" />
+                <select id="lengthUnit" style="width:90px;" aria-label="Length unit">
+                  <option value="m" selected>m</option>
+                  <option value="km">km</option>
+                  <option value="ft">ft</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="width">Width</label>
+              <div class="input-row">
+                <input type="number" id="width" placeholder="e.g. 7.5" min="0" step="any" />
+                <select id="widthUnit" style="width:90px;" aria-label="Width unit">
+                  <option value="m" selected>m</option>
+                  <option value="ft">ft</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="thickness">Thickness</label>
+              <div class="input-row">
+                <input type="number" id="thickness" placeholder="e.g. 50" min="0" step="any" />
+                <select id="thicknessUnit" style="width:90px;" aria-label="Thickness unit">
+                  <option value="mm" selected>mm</option>
+                  <option value="cm">cm</option>
+                  <option value="in">in</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="input-set">
+            <div class="input-set-title">Mix Properties</div>
+            <div class="field">
+              <label for="mixType">Mix Type</label>
+              <select id="mixType">
+                <option value="dense" selected>Dense-Graded HMA</option>
+                <option value="sma">SMA</option>
+                <option value="ogfc">OGFC</option>
+                <option value="custom">Custom</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="bitumenContent">Bitumen Content (%)</label>
+              <input type="number" id="bitumenContent" value="5.5" min="1" max="15" step="0.1" />
+            </div>
+            <div class="field">
+              <label for="density">Mix Density</label>
+              <div class="input-row">
+                <input type="number" id="density" value="2300" min="1000" max="3000" step="10" />
+                <select id="densityUnit" style="width:110px;" aria-label="Density unit">
+                  <option value="kg/m3" selected>kg/m³</option>
+                  <option value="t/m3">t/m³</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="input-set">
+            <div class="input-set-title">Cost (Optional)</div>
+            <div class="field">
+              <label for="price">Price per Tonne</label>
+              <div class="input-row">
+                <input type="number" id="price" placeholder="Optional" min="0" step="any" />
+                <select id="currency" style="width:90px;" aria-label="Currency">
+                  <option value="USD" selected>USD</option>
+                  <option value="AUD">AUD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="GBP">GBP</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="calc-btn" id="calcBtn">⚡ Calculate</button>
+          <button type="button" class="reset-btn" id="resetBtn">↺ Reset</button>
+        </form>
+
+        <div class="calc-results">
+          <div class="results-header"><h3>Results</h3></div>
+          <div id="results-empty" class="result-placeholder">
+            <div class="placeholder-icon">🏗️</div>
+            <p>Enter dimensions to calculate</p>
+          </div>
+          <div id="results-data">
+            <div class="result-card"><div class="result-card-icon blue">📐</div><div class="result-card-body"><div class="result-card-label">Total Area</div><div class="result-card-value" id="resArea">—</div></div></div>
+            <div class="result-card"><div class="result-card-icon purple">📦</div><div class="result-card-body"><div class="result-card-label">Total Volume</div><div class="result-card-value" id="resVolume">—</div></div></div>
+            <div class="result-card highlighted"><div class="result-card-icon orange">⚖️</div><div class="result-card-body"><div class="result-card-label">Total Mix Weight</div><div class="result-card-value" id="resWeight">—</div><div class="result-card-sub" id="resWeightSub"></div></div></div>
+            <div class="result-card"><div class="result-card-icon orange">🛢️</div><div class="result-card-body"><div class="result-card-label">Bitumen Required</div><div class="result-card-value" id="resBitumen">—</div><div class="result-card-sub" id="resBitumenSub"></div></div></div>
+            <div class="result-card"><div class="result-card-icon blue">🪨</div><div class="result-card-body"><div class="result-card-label">Aggregate Required</div><div class="result-card-value" id="resAggregate">—</div><div class="result-card-sub" id="resAggregateSub"></div></div></div>
+            <div class="result-card" id="resCostCard" style="display:none;"><div class="result-card-icon yellow">💵</div><div class="result-card-body"><div class="result-card-label">Estimated Cost</div><div class="result-card-value" id="resCost">—</div></div></div>
+            <div class="breakdown-bar">
+              <div class="breakdown-bar-label">Mix Composition</div>
+              <div class="breakdown-track">
+                <div class="breakdown-fill-bitumen" id="bitPctBar" style="width:5.5%;"></div>
+                <div class="breakdown-fill-aggregate"></div>
+              </div>
+              <div class="breakdown-legend">
+                <div class="legend-item"><div class="legend-dot orange"></div><span id="bitLegendPct">5.5% Bitumen</span></div>
+                <div class="legend-item"><div class="legend-dot blue"></div><span id="aggLegendPct">94.5% Aggregate</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- REFERENCE TABLE -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Reference</div>
+      <h2>Typical Layer Thicknesses by Road Type</h2>
+      <p>Standard pavement layer thicknesses for various road classifications.</p>
+    </div>
+    <table class="ref-table">
+      <thead>
+        <tr>
+          <th>Road Type</th>
+          <th>Surface Course</th>
+          <th>Binder Course</th>
+          <th>Base Course</th>
+          <th>Total Pavement</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Motorway / Freeway</td><td class="highlight">50–75 mm</td><td>75–100 mm</td><td>150–200 mm</td><td>275–375 mm</td></tr>
+        <tr><td>Primary Arterial</td><td class="highlight">50–60 mm</td><td>60–75 mm</td><td>100–150 mm</td><td>210–285 mm</td></tr>
+        <tr><td>Secondary Road</td><td class="highlight">40–50 mm</td><td>50–75 mm</td><td>100–125 mm</td><td>190–250 mm</td></tr>
+        <tr><td>Local Road</td><td class="highlight">30–50 mm</td><td>—</td><td>75–100 mm</td><td>105–150 mm</td></tr>
+        <tr><td>Car Park / Driveway</td><td class="highlight">25–50 mm</td><td>—</td><td>50–100 mm</td><td>75–150 mm</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- FORMULA SECTION -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Formula</div>
+      <h2>Asphalt Thickness Formula</h2>
+      <p>This calculator works in both directions: forward (dimensions → weight) and reverse (weight + area → thickness). The reverse calculation is the unique feature — used on job sites to verify that delivered tonnage achieved the specified depth.</p>
+    </div>
+    <div class="formula-inline">
+      Reverse: Thickness (mm) = Weight (kg) ÷ (Area (m²) × Density (kg/m³)) × 1,000
+    </div>
+    <div class="grid-3" style="gap:1.5rem;margin-top:2rem;">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Reverse Worked Example — Verify Site Delivery</h3>
+        <p>A contractor delivers 85 metric tonnes (85,000 kg) to a 400 m² car park with HMA at 2,350 kg/m³. <strong>Thickness = 85,000 ÷ (400 × 2,350) × 1,000 = 90.4 mm.</strong> The specification requires 75 mm — delivery comfortably meets spec. If only 60 tonnes had been delivered: 60,000 ÷ 940,000 × 1,000 = <strong>63.8 mm — below spec</strong> and requiring a top-up before the crew leaves.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Forward Calculation — Loose vs Compacted</h3>
+        <p>The forward calculation gives compacted thickness. To find the loose paving depth the paver should set, multiply compacted thickness by the compaction factor (typically 1.20–1.25 for dense-graded HMA). For a 50 mm compacted target: paver screed depth = 50 × 1.25 = <strong>62–65 mm loose</strong>. This is why paving crews use the term "pre-compaction depth" on site — the final verified thickness is always the compacted measurement from cores or nuclear density gauges.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Minimum Thickness Rules</h3>
+        <p>Most specifications set a minimum layer thickness relative to mix nominal maximum aggregate size (NMAS): a lift must be at least 3× NMAS. For AC 14 (14 mm NMAS): minimum lift = 42 mm ≈ <strong>45 mm practical minimum</strong>. For AC 20: minimum = 60 mm. Thinner lifts risk poor compaction, aggregate segregation, and rapid pavement failure. Use the <a href="/calculators/asphalt-tonnage-calculator/">Tonnage Calculator</a> to convert the design thickness into a total material order.</p>
+      </div>
+    </div>
+    <div class="info-box" style="margin-top:2rem;">
+      <span class="info-icon">📏</span>
+      <div>
+        <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Thickness vs Tonnage Relationship</strong>
+        <p style="margin:0;">Every 10 mm of additional thickness adds approximately 23.5 kg/m² of asphalt at standard HMA density (2,350 kg/m³). For a 1,000 m² area, each extra 10 mm = 23.5 additional tonnes. This relationship helps project managers quickly assess the cost impact of specification changes or change-order requests for thicker pavement. For full quantity estimation once thickness is confirmed, use the <a href="/calculators/bitumen-square-meters-calculator/">Square Metres Calculator</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATIONS SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Applications</div>
+      <h2>Where the Thickness Calculator Is Used</h2>
+      <p>From delivery verification on site to pavement core analysis in the laboratory — this is the reverse calculation that closes the loop between design and construction.</p>
+    </div>
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="pillar-card">
+        <div class="pillar-icon" style="background:var(--gold-50);">🏗️</div>
+        <h3>Site QC — Verify Delivery Matches Spec</h3>
+        <p>Site engineers and inspectors use the reverse thickness calculation to check that the tonnes delivered by plant dockets match the specified layer depth. When a crew has finished a section, the supervisor enters total delivered tonnes, the paved area, and the mix density to back-calculate whether the achieved depth meets the design minimum. This check catches under-delivery before the next lift is placed on top, making it practically impossible to remediate afterwards. A standard site QC workflow tool on Austroads and VDOT contracts.</p>
+        <p>Related: <a href="/calculators/asphalt-tonnage-calculator/">Tonnage Calculator</a></p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon" style="background:var(--sky-light);">🔬</div>
+        <h3>Laboratory &amp; Core Analysis</h3>
+        <p>Pavement testing laboratories receive core samples drilled from completed pavements to verify as-built thickness and density. Using measured core dimensions and known area, the lab back-calculates density from weighed cores — the reverse of this calculator. Cores typically measure 150 mm diameter; the density is weighed in air, then in water for bulk specific gravity (Gmb). Comparing this to mix design theoretical maximum density (Gmm) gives percentage compaction — the primary QA acceptance criterion on most contracts.</p>
+        <p>Related: <a href="/calculators/metric-bitumen-calculator/">Metric Calculator</a></p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon" style="background:#d1fae5;">📐</div>
+        <h3>Driveway &amp; Small Project Planning</h3>
+        <p>Homeowners and small contractors often have a fixed tonnage available (from a supplier's minimum order or remaining plant stock) and need to know what area they can pave at a specified depth — or what depth a given tonnage will achieve over an existing area. Enter the available tonnes and planned area to get the achievable compacted depth before committing to the order. This avoids under-ordering for a required spec depth or wasting material by over-applying on a small job. See also the <a href="/calculators/asphalt-cost-calculator/">Asphalt Cost Calculator</a>.</p>
+        <p>Related: <a href="/calculators/square-feet-to-tons-calculator/">Sq Ft to Tons Calculator</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED CALCULATORS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Related</div>
+      <h2>Related Calculators</h2>
+    </div>
+    <div class="dir-grid">
+      <a href="/calculators/asphalt-tonnage-calculator/" class="dir-card">
+        <div class="dir-card-icon" style="background:#fef3c7;">⚖️</div>
+        <div class="dir-card-text">
+          <div class="dir-card-title">Tonnage Calculator</div>
+          <div class="dir-card-desc">Calculate asphalt tonnage from dimensions</div>
+        </div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+      <a href="/calculators/bitumen-square-meters-calculator/" class="dir-card">
+        <div class="dir-card-icon" style="background:#e0f2fe;">📐</div>
+        <div class="dir-card-text">
+          <div class="dir-card-title">Square Metres</div>
+          <div class="dir-card-desc">Metric area to tonnage calculator</div>
+        </div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+      <a href="/calculators/asphalt-material-calculator/" class="dir-card">
+        <div class="dir-card-icon" style="background:#f0fdf4;">🪨</div>
+        <div class="dir-card-text">
+          <div class="dir-card-title">Material Calculator</div>
+          <div class="dir-card-desc">Calculate by mix type with presets</div>
+        </div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="/calculators/" class="btn btn-outline">View All Calculators →</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO USE -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Guide</div>
+      <h2>How to Use This Calculator</h2>
+    </div>
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Enter Known Weight &amp; Area</h3>
+        <p>Input the total asphalt weight (in tonnes or kg) that was delivered or remains available, and the area to be paved (length × width, or total area). This reverse calculation solves for the layer thickness — useful when you know your material budget and need to determine what depth is achievable.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Set Mix Density</h3>
+        <p>Enter the compacted density of your asphalt mix. Standard HMA dense-graded mixes are approximately 2300–2400 kg/m³. The calculator uses the formula: Thickness = (Weight ÷ (Area × Density)). For maximum accuracy, use the laboratory-tested compacted density from your mix design data sheet rather than a generic default.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Review Thickness Result</h3>
+        <p>Click Calculate to see the resulting thickness in mm, cm, and inches. This tool is particularly useful for: checking if a delivered quantity is sufficient for the specified thickness, back-calculating achieved thickness from plant delivery dockets, and verifying core sample density against as-built quantities. Compare results to your specification minimum thickness requirements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FURTHER READING -->
+    <section class="section">
+        <div class="container container-sm">
+            <div style="padding-left:1.1rem;border-left:2px solid var(--gold);">
+                <p>Thickness is a design decision before it is an arithmetic one. <a href="/blog/asphalt-thickness-guide/">The thickness guide</a> covers what drives the choice: traffic, subgrade, and why a driveway and a haul road are not the same problem.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container container-sm">
+    <div class="section-header">
+      <div class="label">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">How thick should asphalt be for a driveway? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>For a residential driveway, a minimum of 2 inches (50 mm) of compacted asphalt surface course is recommended for light passenger vehicles, ideally over a 4-inch (100 mm) compacted aggregate base. For driveways that will see delivery trucks or heavy vehicles, increase to 3 inches (75 mm) of asphalt over a 6-inch base. Areas subject to heavy wheel loads (garbage truck turnarounds, boat trailers) may need a 4-inch (100 mm) asphalt section with a reinforced base.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What is the minimum thickness for asphalt over concrete? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>When overlaying concrete, a minimum 50–75 mm (2–3 inch) asphalt layer is needed to prevent reflection cracking from concrete joints appearing through the new surface. Thicker overlays (75–100 mm) provide better resistance to reflection cracking over time. A stress-relieving interlayer (geotextile or SAMI — stress absorbing membrane interlayer) can be used with thinner overlays to delay crack reflection.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How does compaction affect asphalt thickness? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Asphalt is typically laid at a loose depth approximately 20–25% greater than the target compacted depth. For a 50 mm compacted layer, you would lay the mix at about 62–65 mm loose depth. The compaction ratio depends on mix type, aggregate gradation, and lift thickness. Proper compaction increases density and reduces air voids, which directly improves durability and waterproofing. Under-compacted asphalt has higher air voids leading to premature oxidation, cracking, and ravelling.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How thick does asphalt need to be for a commercial parking lot? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>A standard commercial parking lot for passenger cars typically requires 3 inches (75 mm) of compacted asphalt over a 6-inch (150 mm) compacted aggregate base. For lots that see regular delivery trucks, garbage trucks, or heavy SUVs, increase to 4 inches (100 mm) of asphalt. Loading docks and heavy vehicle areas may require 5–6 inches (125–150 mm) of asphalt. A properly designed subbase is equally important — a good asphalt layer on a poorly prepared base will still fail quickly. Use the <a href="/calculators/asphalt-tonnage-calculator/">Tonnage Calculator</a> to quantify the material for your specified depth.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What thickness of asphalt overlay do I need to resurface a cracked pavement? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>A mill-and-fill overlay (removing 1.5–2 inches and replacing) is the standard for moderately cracked pavement. If milling, the overlay thickness typically matches the milled depth — 1.5 to 2 inches (38–50 mm) is common for surface resurfacing. For structural overlays without milling, a minimum of 2 inches (50 mm) is needed, and 3+ inches (75+ mm) is recommended if the existing pavement has moderate to severe structural cracking, or if reflection cracking is a concern. Always address the root cause (drainage, subbase failure) before overlaying to prevent early failure of the new layer.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do I use delivered plant dockets to verify asphalt thickness on site? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Sum the total net weight (in tonnes) from all delivery dockets for a defined paved section. Measure or calculate the area covered (length × average width). Enter the total tonnes, area, and mix density into the reverse calculator above. The resulting thickness is the average theoretical layer depth based on delivered material. Compare this to the specification minimum. Note: this average approach will not detect localised thin areas — physical thickness checks (depth pins, cores, or GPR) are still required for contractual acceptance, but the docket calculation is a powerful first-pass QC check that costs nothing and takes under a minute. Also see the <a href="/calculators/asphalt-measurement-calculator/">Measurement Converter</a> for unit conversions on international projects.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What is the maximum single-lift thickness for asphalt paving? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Most specifications limit a single asphalt lift to 100–125 mm (4–5 inches) of compacted depth. Above this limit, the rolling equipment cannot achieve adequate density at the bottom of the lift — the top compacts while the bottom remains under-compacted. For thicker pavement structures, multiple lifts are required: a base course lift of 75–100 mm, a binder course lift of 50–75 mm, and a surface course lift of 25–50 mm are typical for a heavy-duty pavement. Each lift is compacted to specification density before the next is placed. Use the <a href="/calculators/asphalt-tonnage-calculator/">Tonnage Calculator</a> to calculate material for each individual lift separately.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- REFERENCES -->
+    <section class="section section-alt">
+        <div class="container container-sm">
+            <div class="section-header">
+                <div class="label">References</div>
+                <h2>Sources</h2>
+                <p>Default densities and binder contents on this page are taken from published references, not estimated. Check them against whatever governs your job.</p>
+            </div>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.9rem;">
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://bookstore.asphaltinstitute.org/catalog/book/ms-2-asphalt-mix-design-methods" target="_blank" rel="noopener nofollow">Asphalt Institute, <em>MS-2 Asphalt Mix Design Methods</em>, 7th edition</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://www.asphaltinstitute.org/" target="_blank" rel="noopener nofollow">Asphalt Institute — technical resources and engineering bulletins</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://dot.ca.gov/programs/construction/construction-manual/section-4-39-asphalt-concrete" target="_blank" rel="noopener nofollow">Caltrans, <em>Construction Manual</em> — Section 4-39, Asphalt Concrete</a></li>
+            </ul>
+            <p style="margin-top:1.75rem;font-size:.85rem;color:var(--text-muted);">
+                Reference values last reviewed in <strong>July 2026</strong>.
+                Any cost figures quoted are indicative only and date quickly &mdash; treat them as a
+                sanity check on a quote, never as a quote.
+                See our <a href="/editorial-policy/">editorial policy</a> for how these values are
+                sourced and reviewed, and the <a href="/disclaimer/">disclaimer</a> for the limits of
+                these estimates.
+            </p>
+        </div>
+    </section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" style="margin-bottom:.5rem;">
+          <div class="nav-logo-icon">B</div>
+          <div class="nav-logo-text">Bitumen<span>Calc</span></div>
+        </a>
+        <p>Free pavement quantity calculators. Every formula and default value is shown on the page.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Regional</p>
+        <ul>
+          <li><a href="/calculators/australia-bitumen-calculator/">Australia</a></li>
+          <li><a href="/calculators/canada-bitumen-calculator/">Canada</a></li>
+          <li><a href="/calculators/new-zealand-bitumen-calculator/">New Zealand</a></li>
+          <li><a href="/calculators/california-asphalt-calculator/">California</a></li>
+          <li><a href="/calculators/virginia-asphalt-calculator/">Virginia</a></li>
+          <li><a href="/calculators/colorado-asphalt-calculator/">Colorado</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Calculators</p>
+        <ul>
+          <li><a href="/calculators/bitumen-square-feet-calculator/">Square Feet</a></li>
+          <li><a href="/calculators/asphalt-tonnage-calculator/">Tonnage</a></li>
+          <li><a href="/calculators/asphalt-cost-calculator/">Cost Calculator</a></li>
+          <li><a href="/calculators/asphalt-material-calculator/">Material</a></li>
+          <li><a href="/calculators/road-asphalt-calculator/">Road</a></li>
+          <li><a href="/calculators/asphalt-repair-calculator/">Repair</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Company</p>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/calculators/">All Calculators</a></li>
+          <li><a href="/about-us/">About Us</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+        </ul>
+        <p style="margin-top:1.5rem;" class="footer-label">Legal</p>
+        <ul>
+          <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+
+                        <li><a href="/disclaimer/">Disclaimer</a></li>
+                        <li><a href="/editorial-policy/">Editorial Policy</a></li>
+                    </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Bitumen Calculator. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/terms-and-conditions/">Terms</a>
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/contact-us/">Contact</a>
+
+                    <a href="/disclaimer/">Disclaimer</a>
+                    <a href="#" data-consent-open>Cookie Preferences</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+<script src="/js/app.min.js?v=9"></script>
+<script>
+  function calcReverse() {
+    const weightVal = parseFloat(document.getElementById('revWeight').value);
+    const weightUnit = document.getElementById('revWeightUnit').value;
+    const areaVal = parseFloat(document.getElementById('revArea').value);
+    const areaUnit = document.getElementById('revAreaUnit').value;
+    const density = parseFloat(document.getElementById('revDensity').value);
+
+    if (!weightVal || !areaVal || !density || weightVal <= 0 || areaVal <= 0 || density <= 0) {
+      return;
+    }
+
+    // Convert weight to kg
+    const weightKg = weightUnit === 't' ? weightVal * 1000
+                   : weightUnit === 'st' ? weightVal * 907.185
+                   : weightVal;
+
+    // Convert area to m²
+    const areaSqM = areaUnit === 'sqft' ? areaVal * 0.092903
+                  : areaUnit === 'sqyd' ? areaVal * 0.836127
+                  : areaVal;
+
+    // thickness_m = weight_kg / (area_m2 * density_kg_m3)
+    const thicknessM = weightKg / (areaSqM * density);
+    const thicknessMm = thicknessM * 1000;
+    const thicknessIn = thicknessM / 0.0254;
+
+    document.getElementById('rev-empty').style.display = 'none';
+    document.getElementById('rev-data').style.display = '';
+    document.getElementById('revThickMm').textContent = thicknessMm.toFixed(1) + ' mm';
+    document.getElementById('revThickIn').textContent = thicknessIn.toFixed(2) + ' inches';
+    document.getElementById('revAreaOut').textContent = areaSqM.toFixed(1) + ' m² (' + areaVal.toFixed(1) + ' ' + areaUnit + ')';
+    document.getElementById('revWeightOut').textContent = (weightKg / 1000).toFixed(2) + ' tonnes (' + weightKg.toFixed(0) + ' kg)';
+  }
+
+  function resetReverse() {
+    document.getElementById('revWeight').value = '';
+    document.getElementById('revArea').value = '';
+    document.getElementById('revDensity').value = '2300';
+    document.getElementById('rev-empty').style.display = '';
+    document.getElementById('rev-data').style.display = 'none';
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.BitCalc) {
+      window.BitCalc.setDefaults({ bitumenContent: 5.5, density: 2300 });
+    }
+  });
+</script>
+<!-- SEO-RECOVERY:thickness-answer -->
+<section class="section section-alt seo-answer" id="thickness-answer"><div class="container container-sm"><h2 style="color:var(--text)">Estimate a specified layer, then check the design</h2><p>At a fixed area and density, a 3-inch layer needs 50% more material than a 2-inch layer. Enter the specified compacted thickness for each lift. The calculator estimates quantities; it cannot determine whether a pavement will support a particular traffic load.</p><p>Read the <a href="/blog/asphalt-thickness-guide/">asphalt thickness and lift guide</a> for a two-layer worked example, aggregate-size context and depth-measurement checks. Use the <a href="/blog/asphalt-density-guide/">density guide</a> to keep density and placement condition consistent.</p></div></section>
+<!-- /SEO-RECOVERY:thickness-answer -->
+</main>
+</body>
+</html>
+
+
+
+

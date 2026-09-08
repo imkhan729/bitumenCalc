@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<!-- Consent Mode v2 defaults - must execute before any Google tag -->
+<script src="/js/consent.min.js?v=3"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GCYLRZ2PQK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GCYLRZ2PQK');
+</script>
+    <meta name="google-adsense-account" content="ca-pub-6438644207209483" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="msapplication-TileColor" content="#f59e0b" />
+<meta name="theme-color" content="#f59e0b" />
+<title>North Carolina Asphalt Calculator — NCDOT Mix Estimator</title>
+    <meta name="description" content="Free North Carolina asphalt calculator for NCDOT mix designs. Estimate tonnage, bitumen quantity, and cost for S9.5B, I19.0B, and B25.0B projects." />
+      <meta name="author" content="BitumenCalc" />
+<link rel="canonical" href="https://www.bitumencalc.com/calculators/north-carolina-asphalt-calculator/" />
+      <link rel="alternate" hreflang="en" href="https://www.bitumencalc.com/calculators/north-carolina-asphalt-calculator/" />
+<meta name="keywords" content="North Carolina asphalt calculator, NCDOT asphalt calculator, NC paving calculator, North Carolina bitumen" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+      <meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://www.bitumencalc.com/calculators/north-carolina-asphalt-calculator/" />
+    <meta property="og:title" content="North Carolina Asphalt Calculator — NCDOT Mix Estimator" />
+    <meta property="og:description" content="Built for NCDOT paving jobs. Estimate asphalt tonnage, bitumen, and cost using NCDOT mix presets." />
+    <meta property="og:image" content="https://www.bitumencalc.com/assets/hero-road.webp" />
+        <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="675" />
+<meta property="og:image:alt" content="BitumenCalc tool and guide preview image" />
+<meta property="og:site_name" content="BitumenCalc" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content="@BitumenCalc" />
+<meta name="twitter:title" content="North Carolina Asphalt Calculator — NCDOT Mix Estimator" />
+    <meta name="twitter:description" content="Free NCDOT asphalt estimator for North Carolina projects. Calculate tonnage, bitumen quantity, and cost fast." />
+    <meta name="twitter:image" content="https://www.bitumencalc.com/assets/hero-road.webp" />
+
+      <meta name="twitter:image:alt" content="BitumenCalc tool and guide preview image" />
+<!-- Schema: BreadcrumbList -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.bitumencalc.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://www.bitumencalc.com/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "North Carolina Calculator",
+      "item": "https://www.bitumencalc.com/calculators/north-carolina-asphalt-calculator/"
+    }
+  ]
+}
+</script>
+
+    <!-- Schema: WebApplication -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "North Carolina Asphalt Calculator",
+  "url": "https://www.bitumencalc.com/calculators/north-carolina-asphalt-calculator/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "North Carolina asphalt calculator using NCDOT specifications. S9.5B, I19.0B, and B25.0B mix presets with USD pricing for NC paving projects.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "BitumenCalc",
+    "legalName": "Big Techies",
+    "url": "https://www.bitumencalc.com",
+    "logo": "https://www.bitumencalc.com/assets/logo.svg",
+    "email": "info@bitumencalc.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "New York",
+      "addressRegion": "NY",
+      "addressCountry": "US"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Jimmy",
+      "jobTitle": "Civil and Software Engineer",
+      "url": "https://www.bitumencalc.com/authors/jimmy/"
+    },
+    "@id": "https://www.bitumencalc.com/#organization"
+  }
+}
+</script>
+<style id="critical-css">:root{--navy:#0b1628;--navy-700:#162240;--gold:#f59e0b;--gold-dark:#d97706;--gold-light:#fde68a;--bg:#f8fafc;--surface:#fff;--border:#e2e8f0;--text:#0b1628;--text-muted:#475569;--grad-gold:linear-gradient(135deg,#f59e0b 0%,#fbbf24 100%);--grad-hero:linear-gradient(150deg,#0b1628 0%,#1a3060 55%,#0b2215 100%);--r-lg:12px;--r-xl:16px;--r-full:9999px}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{font-size:16px}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}img{max-width:100%;height:auto;display:block}a{color:var(--gold);text-decoration:none}.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}.site-header{position:sticky;top:0;z-index:1000;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.07);box-shadow:0 2px 24px rgba(0,0,0,.35)}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem}.nav-logo{display:flex;align-items:center;gap:.65rem;text-decoration:none;flex-shrink:0}.nav-logo-icon{width:40px;height:40px;background:var(--grad-gold);border-radius:var(--r-lg);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:900;color:var(--navy)}.nav-logo-text{font-size:1.15rem;font-weight:800;color:#fff;line-height:1.2}.nav-logo-text span{color:var(--gold)}.nav-links{display:flex;align-items:center;gap:.15rem}.nav-links a{color:rgba(255,255,255,.7);font-size:.875rem;font-weight:500;padding:.5rem .9rem;border-radius:var(--r-full)}.nav-links a.active{color:var(--gold);background:rgba(245,158,11,.1)}.nav-dropdown{position:relative;display:flex;align-items:center}.nav-dropdown-btn{color:rgba(255,255,255,.7);font-size:.875rem;font-weight:500;padding:.5rem .9rem;border-radius:var(--r-full);display:flex;align-items:center;gap:.3rem;background:none;border:0;font-family:inherit}.nav-dropdown-menu{position:absolute;top:calc(100% + .35rem);left:50%;transform:translate(-50%,10px);background:var(--navy-700);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-xl);padding:1.5rem;min-width:700px;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem 2rem;opacity:0;visibility:hidden;pointer-events:none}.nav-toggle{display:none}.mobile-menu{display:none}.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.75rem;border-radius:var(--r-full);font-size:.9rem;font-weight:600;white-space:nowrap;text-decoration:none}.btn-primary{background:var(--grad-gold);color:var(--navy);font-weight:700}.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)}.btn-lg{padding:1.1rem 2.5rem;font-size:1rem}.btn-sm{padding:.5rem 1.2rem;font-size:.82rem}.hero{background-image:url('/assets/hero-road.webp');background-size:cover;background-position:center 40%;background-color:#0b1628;position:relative;overflow:hidden;padding:3rem 0 4rem;height:calc(100vh - 72px);min-height:620px;max-height:900px;display:flex;align-items:center}.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(4,8,18,.65) 0%,rgba(4,8,18,.72) 50%,rgba(4,8,18,.9) 100%);z-index:0}.hero-inner{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1;padding-top:3rem;width:100%}.hero-content{color:#fff;max-width:860px}.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,158,11,.18);border:1px solid rgba(245,158,11,.5);color:var(--gold-light);padding:.35rem 1rem;border-radius:var(--r-full);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem}.hero-title{font-family:'Arial Narrow','Segoe UI Condensed',Impact,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:700;font-size:clamp(2.8rem,4.2vw,4.2rem);line-height:1.1;margin-bottom:1.2rem;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.55);text-align:center}.hero-desc{font-size:1.05rem;color:rgba(255,255,255,.88);margin-bottom:1.8rem;line-height:1.7;text-align:center;text-shadow:0 1px 8px rgba(0,0,0,.4)}.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;justify-content:center}.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.15)}.hero-stat-val{font-size:1.85rem;font-weight:900;color:#fff;line-height:1}.hero-stat-val span{color:var(--gold)}.hero-stat-label{font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;text-transform:uppercase;letter-spacing:.08em}.hero-road{position:absolute;bottom:0;left:0;right:0;height:5px;background:repeating-linear-gradient(90deg,var(--gold) 0,var(--gold) 50px,transparent 50px,transparent 72px);opacity:.65}.page-hero{background:var(--grad-hero);padding:4rem 0 3rem;position:relative;overflow:hidden}.page-hero-inner{position:relative;z-index:1}.page-hero h1{color:#fff;margin-bottom:.75rem;font-size:clamp(2.2rem,5vw,3.75rem);font-weight:800;line-height:1.12}.page-hero p{font-size:1.1rem;color:rgba(255,255,255,.7);max-width:560px}.section{padding:5.5rem 0}.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:2rem}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}@media(max-width:900px){.nav-links,.nav-cta,.nav-dropdown-btn{display:none}.nav-toggle{display:flex;flex-direction:column;gap:5px;padding:.5rem}.nav-toggle span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}.mobile-menu.open{display:block;background:var(--navy-700);border-top:1px solid rgba(255,255,255,.06)}.mobile-menu a{display:block;padding:.9rem 1.5rem;color:rgba(255,255,255,.8);font-weight:500;font-size:.95rem;border-bottom:1px solid rgba(255,255,255,.04)}}@media(max-width:768px){.container{padding:0 1rem}.hero{height:auto;min-height:100svh;padding:2rem 0 3rem}.hero-tag{display:none}.hero-title{font-size:2.1rem;margin-bottom:.85rem}.hero-desc{font-size:.9rem;margin-bottom:1.25rem;line-height:1.6}.hero-actions{gap:.75rem;margin-bottom:1.25rem}.hero-stats{gap:1.25rem;padding-top:1rem}.hero-stat-val{font-size:1.4rem}.hero-stat-label{font-size:.65rem}.grid-3{grid-template-columns:1fr}}</style>
+<link rel="preload" href="/css/style.min.css?v=7" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="/css/style.min.css?v=7" /></noscript>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f59e0b'/><text y='.9em' font-size='80' x='10'>🛣️</text></svg>" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What are NCDOT's standard asphalt mix designations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "NCDOT uses Superpave mix design with their own designation system. Common surface mixes are S9.5B (9.5 mm nominal max aggregate, standard traffic) and S9.5C (high-traffic). I19 and I25 are intermediate layer mixes, and B25.0 and B37.5 are base course mixes. The letter suffix (B, C, D) indicates the design traffic level based on ESALs over the design life."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does asphalt cost in North Carolina?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "North Carolina asphalt material prices typically range from $85–$165 per ton. Charlotte metro and Research Triangle (Raleigh-Durham) areas are at the mid-to-high end, while rural western NC mountain areas may run higher due to longer haul distances. Residential driveway paving in NC costs approximately $3–$6 per square foot installed. NCDOT publishes bid results that reflect current market pricing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What warm-mix asphalt technologies does NCDOT allow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "NCDOT has approved Warm Mix Asphalt (WMA) technologies including foamed asphalt, chemical additives (Sasobit, Evotherm), and water-injection systems. WMA is produced at 250–275°F compared to 300–320°F for traditional hot mix, reducing energy consumption, emissions, and binder aging. NCDOT permits WMA use on projects where extended haul distances or nighttime paving conditions make lower mix temperatures advantageous."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between NCDOT S9.5B and S9.5C mix types?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both are NCDOT Superpave surface mixes with a 9.5 mm nominal maximum aggregate size, but the letter suffix indicates the design traffic level. S9.5B is designed for standard traffic (1–10 million ESALs over the design life) and uses a standard PG 64-22 binder — appropriate for residential streets, secondary routes, parking lots, and collector roads. S9.5C is designed for high-traffic roads (10–30 million ESALs) such as primary US routes, urban arterials, and interstates — it requires a stiffer binder (PG 70-22 or polymer-modified PG 64-22) for improved rutting resistance under heavy truck loads and NC's hot summer temperatures. Using S9.5B on a high-traffic route will result in premature rutting. Always confirm the required mix type from the NCDOT plans or a licensed pavement engineer for your specific project."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many tons of asphalt do I need for a North Carolina driveway?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A typical North Carolina residential driveway (40 ft × 12 ft = 480 sq ft) with a standard 2-inch S9.5B surface: 480 × (2/12) × 110 ÷ 2,000 = 4.4 short tons. With 5% waste = order approximately 4.6 tons. NC's milder climate means thinner pavement sections are acceptable compared to northern states — a 2-inch surface over a 4-inch NCDOT ABC (Aggregate Base Course) stone base is standard for most residential driveways. For a wider driveway (14 ft × 60 ft = 840 sq ft at 2 inches) = approximately 7.7 tons. Use the Square Feet Calculator to quickly estimate from area dimensions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What PG binder grades does NCDOT use across different regions?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "North Carolina's climate ranges from the warm coastal Outer Banks to the cool Blue Ridge Mountains, so NCDOT selects binder grades by region. Coastal Plain (Wilmington, New Bern, Outer Banks) — hot summers and mild winters require PG 70-22 on high-traffic routes and PG 64-22 on secondary roads. Piedmont (Charlotte, Raleigh, Greensboro) — the most populous region uses PG 64-22 as standard, with PG 70-22 on interstates and heavily trafficked urban corridors. Mountain (Asheville, Boone, Murphy) — cooler temperatures allow PG 64-22 statewide, with PG 58-28 at higher elevations (>4,000 ft) in the western-most counties. NCDOT's binder grade map and specification guidance should always be consulted for project-specific selection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does North Carolina have rutting problems with asphalt in hot summers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — North Carolina's hot, humid summers (peak pavement temperatures can exceed 140°F in the Piedmont and coastal regions) create real rutting risk on high-traffic roads using standard PG 64-22 mixes. NCDOT addresses this by: (1) mandating PG 70-22 (polymer-modified) on interstates and primary routes in the Piedmont and coastal plain; (2) requiring S9.5C or S12.5C mix design (stiffer, higher gyration count) on heavily trafficked routes; (3) using SMA at some high-stress locations (steep grades, bus stops, intersection approaches) where channelized truck traffic causes severe rutting. Homeowners and commercial property managers should specify S9.5C or a PG 70-22 binder mix for driveways with heavy truck deliveries or bus routes, even though it costs 10–20% more than standard S9.5B."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/css/seo-accessibility.css?v=3" />
+<link rel="preload" as="script" href="/js/app.min.js?v=9" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav-inner">
+                <a href="/" class="nav-logo">
+                    <div class="nav-logo-icon">B</div>
+                    <div class="nav-logo-text">Bitumen<span>Calc</span></div>
+                </a>
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <div class="nav-dropdown">
+                        <button class="nav-dropdown-btn">Calculators <span class="nav-dropdown-arrow">▾</span></button>
+                        <div class="nav-dropdown-menu">
+                            <div class="nav-dropdown-col">
+                                <p class="nav-group-label">Regional</p>
+                                <a href="/calculators/australia-bitumen-calculator/">Australia</a>
+                                <a href="/calculators/canada-bitumen-calculator/">Canada</a>
+                                <a href="/calculators/new-zealand-bitumen-calculator/">New Zealand</a>
+                                <a href="/calculators/california-asphalt-calculator/">California</a>
+                                <a href="/calculators/virginia-asphalt-calculator/">Virginia</a>
+                                <a href="/calculators/colorado-asphalt-calculator/">Colorado</a>
+                                <a href="/calculators/minnesota-asphalt-calculator/">Minnesota</a>
+                                <a href="/calculators/new-jersey-asphalt-calculator/">New Jersey</a>
+                                <a href="/calculators/north-carolina-asphalt-calculator/" class="active">North Carolina</a>
+                            </div>
+                            <div class="nav-dropdown-col">
+                                <p class="nav-group-label">Area &amp; Unit Conversion</p>
+                                <a href="/calculators/bitumen-square-feet-calculator/">Square Feet</a>
+                                <a href="/calculators/square-feet-to-tons-calculator/">Sq Ft to Tons</a>
+                                <a href="/calculators/bitumen-square-meters-calculator/">Square Meters</a>
+                                <a href="/calculators/bitumen-square-yards-calculator/">Square Yards</a>
+                                <a href="/calculators/metric-bitumen-calculator/">Metric</a>
+                                <a href="/calculators/asphalt-measurement-calculator/">Measurement</a>
+                                <p class="nav-group-label mt" style="margin-top:.9rem;">Thickness / Temp / Radius</p>
+                                <a href="/calculators/asphalt-thickness-calculator/">Thickness</a>
+                                <a href="/calculators/bitumen-temperature-converter/">Temperature</a>
+                                <a href="/calculators/circular-asphalt-calculator/">Radius (Circular)</a>
+                            </div>
+                            <div class="nav-dropdown-col">
+                                <p class="nav-group-label">Material &amp; Quantity</p>
+                                <a href="/calculators/asphalt-material-calculator/">Material</a>
+                                <a href="/calculators/asphalt-millings-calculator/">Millings (RAP)</a>
+                                <a href="/calculators/asphalt-tonnage-calculator/">Tonnage</a>
+                                <a href="/calculators/tack-coat-calculator/">Tack Coat</a>
+                                <a href="/calculators/road-asphalt-calculator/">Road</a>
+                                <a href="/calculators/roofing-bitumen-calculator/">Roofing</a>
+                                <a href="/calculators/asphalt-repair-calculator/">Repair</a>
+                                <a href="/calculators/asphalt-removal-calculator/">Removal</a>
+                                <p style="margin-top:.9rem;" class="nav-group-label">Cost &amp; Rate</p>
+                                <a href="/calculators/asphalt-cost-calculator/">Cost Calculator</a>
+                                <a href="/calculators/asphalt-application-rate-calculator/">Rate Calculator</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/blog/">Blog</a>
+                    <a href="/about-us/">About Us</a>
+                </div>
+                <a href="/calculators/" class="btn btn-primary btn-sm nav-cta">All Calculators</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+            </nav>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="/">🏠 Home</a>
+            <a href="/calculators/">🧮 All Calculators</a>
+            <a href="/calculators/australia-bitumen-calculator/">🇦🇺 Australia</a>
+            <a href="/calculators/canada-bitumen-calculator/">🇨🇦 Canada</a>
+            <a href="/calculators/new-zealand-bitumen-calculator/">🇳🇿 New Zealand</a>
+            <a href="/calculators/california-asphalt-calculator/">🇺🇸 California</a>
+            <a href="/calculators/virginia-asphalt-calculator/">🇺🇸 Virginia</a>
+            <a href="/calculators/bitumen-square-feet-calculator/">📐 Square Feet</a>
+            <a href="/calculators/asphalt-tonnage-calculator/">⚖️ Tonnage</a>
+            <a href="/calculators/asphalt-cost-calculator/">💰 Cost Calculator</a>
+            <a href="/blog/">📝 Blog</a>
+            <a href="/about-us/">ℹ️ About Us</a>
+        </div>
+    </header>
+<main id="main-content">
+
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container page-hero-inner">
+            <div class="eyebrow">Regional Calculator</div>
+            <h1>North Carolina Asphalt Calculator</h1>
+            <p>Estimate asphalt tonnage, bitumen quantity, and cost for NCDOT mixes like S9.5B and I19.0B with regional default values.</p>
+            <p>Looking for the <a href="#ncdot-asphalt-index">NCDOT asphalt index and official price sources</a>?</p>
+            <div class="region-meta">
+                <span class="badge badge-orange">NCDOT Standards</span>
+                <span class="badge badge-blue">USD Currency</span>
+                <span class="badge badge-green">S9.5B Mix Defaults</span>
+            </div>
+            <div class="breadcrumb">
+                <a href="/">Home</a><span class="sep">/</span>
+                <a href="/calculators/">Calculators</a><span class="sep">/</span>
+                <span>North Carolina</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGIONAL INTRO -->
+    <section class="section">
+      <div class="container" style="max-width:820px;">
+        <h2>Estimating Asphalt for NCDOT Projects in North Carolina</h2>
+        <p>North Carolina's terrain runs from the Outer Banks to the Appalachians, and its pavement has to cope with humid coastal heat as well as mountain cold. NCDOT specifies Superpave mixes — S9.5 and S12.5 surface courses, I19.0 intermediate and B25.0 base — with PG&nbsp;64-22 as the workhorse binder and stiffer grades on high-volume routes like I-40 and I-85. Getting tonnage right early keeps both resurfacing and new-construction budgets on track.</p>
+        <p>Estimate lift by lift. A thin S9.5 wearing course over an I19.0 or B25.0 base is the standard NC build, and those mixes do not share a binder content or a density. One combined calculation gets both layers wrong.</p>
+<p>Imperial or metric input, converted internally. Results give total weight, the binder and aggregate split, and an estimated cost. Check the figures against the NCDOT-approved Job Mix Formula and include a waste and compaction margin.</p>
+      </div>
+    </section>
+
+    <!-- WORKED EXAMPLE -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="label">Formula</div>
+                <h2>North Carolina Asphalt Tonnage Formula</h2>
+                <p>NCDOT projects use imperial units. This calculator accepts both imperial and metric inputs and converts internally to short tons, consistent with NCDOT Section 610 quantity measurement requirements.</p>
+            </div>
+            <div class="formula-inline">
+                Weight (short tons) = Length (ft) × Width (ft) × Thickness (in) ÷ 12 × Density (lb/ft³) ÷ 2,000
+            </div>
+            <div class="grid-3" style="gap:1.5rem;margin-top:2rem;">
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <h3>Calculate Volume (ft³)</h3>
+                    <p>Convert thickness from inches to feet (÷ 12), then multiply all dimensions. <strong>Example:</strong> A 1,000 ft NC-54 resurfacing section near Chapel Hill, 22 ft wide, with a 1.5-inch S9.5B wearing course: 1,000 × 22 × (1.5 ÷ 12)
+                        = <strong>2,750 ft³</strong>.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <h3>Convert to Short Tons</h3>
+                    <p>Multiply volume by density and divide by 2,000. At 145&nbsp;lb/ft³: 2,750 × 145 ÷ 2,000 = <strong>199.4 short tons</strong>. Add 5% waste and round up = order about <strong>210 tons</strong>. NC's warm climate reduces
+                        compaction variability, so smaller wastage factors apply than in northern states.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <h3>Separate Bitumen &amp; Aggregate</h3>
+                    <p>Apply the S9.5B binder content from the NCDOT job mix formula. At 5.7%: 199.4 × 0.057 = <strong>11.4 tons bitumen</strong> (PG 64-22 for most of NC) and 199.4 × 0.943 = <strong>188.0 tons aggregate</strong>. Charlotte and Coastal
+                        Plain projects using PG 70-22 may have slightly higher binder costs but the tonnage formula is unchanged.</p>
+                </div>
+            </div>
+            <div class="info-box" style="margin-top:2rem;">
+                <span class="info-icon">🌿</span>
+                <div>
+                    <strong style="color:var(--text);display:block;margin-bottom:.25rem;">NCDOT Specification Note</strong>
+                    <p style="margin:0;">North Carolina's Superpave mix designations (S9.5B, S12.5B, I19.0B, B25.0B) are governed by NCDOT Standard Specifications Section 610. The letter suffix (B, C, D) indicates design traffic level — B for standard, C for high-traffic
+                        interstates and urban arterials, D for very high traffic. Always confirm the required mix type and PG binder grade from the project plans before calculating material quantities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section class="calc-section" id="calculator">
+        <div class="container">
+            <div class="calc-wrap" id="calcResults">
+                <div class="calc-tabs">
+                    <button class="calc-tab active">North Carolina Pavement</button>
+                </div>
+                <div class="calc-body">
+                    <form class="calc-inputs" id="calcForm" onsubmit="return false;">
+
+                        <div class="input-set">
+                            <div class="input-set-title">Project Dimensions</div>
+                            <div class="field">
+                                <label for="length">Length</label>
+                                <div class="input-row">
+                                    <input type="number" id="length" placeholder="e.g. 100" min="0" step="any" />
+                                    <select id="lengthUnit" style="width:90px;" aria-label="Length unit">
+                  <option value="m" selected>m</option>
+                  <option value="km">km</option>
+                  <option value="ft">ft</option>
+                </select>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="width">Width</label>
+                                <div class="input-row">
+                                    <input type="number" id="width" placeholder="e.g. 7.5" min="0" step="any" />
+                                    <select id="widthUnit" style="width:90px;" aria-label="Width unit">
+                  <option value="m" selected>m</option>
+                  <option value="ft">ft</option>
+                </select>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="thickness">Thickness</label>
+                                <div class="input-row">
+                                    <input type="number" id="thickness" placeholder="e.g. 50" min="0" step="any" />
+                                    <select id="thicknessUnit" style="width:90px;" aria-label="Thickness unit">
+                  <option value="mm" selected>mm</option>
+                  <option value="cm">cm</option>
+                  <option value="in">in</option>
+                </select>
+                                </div>
+                                <div class="field-hint">S9.5B wearing course: typically 38–50 mm</div>
+                            </div>
+                        </div>
+
+                        <div class="input-set">
+                            <div class="input-set-title">North Carolina Mix Properties</div>
+                            <div class="field">
+                                <label for="mixType">Mix Type</label>
+                                <select id="mixType">
+                <option value="dense" selected>S9.5B Superpave</option>
+                <option value="sma">S12.5B</option>
+                <option value="hma">B25.0B Base</option>
+                <option value="ogfc">FG (Fine-Graded)</option>
+                <option value="custom">Custom</option>
+              </select>
+                            </div>
+                            <div class="field">
+                                <label for="bitumenContent">Bitumen Content (%)</label>
+                                <input type="number" id="bitumenContent" value="5.7" min="1" max="15" step="0.1" />
+                                <div class="field-hint">S9.5B typical: 5.5–7.0%</div>
+                            </div>
+                            <div class="field">
+                                <label for="density">Mix Density</label>
+                                <div class="input-row">
+                                    <input type="number" id="density" value="2310" min="1000" max="3000" step="10" />
+                                    <select id="densityUnit" style="width:110px;" aria-label="Density unit">
+                  <option value="kg/m3" selected>kg/m³</option>
+                  <option value="t/m3">t/m³</option>
+                </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-set">
+                            <div class="input-set-title">Cost (USD)</div>
+                            <div class="field">
+                                <label for="price">Price per Tonne</label>
+                                <div class="input-row">
+                                    <input type="number" id="price" placeholder="e.g. 185" min="0" step="any" />
+                                    <select id="currency" style="width:90px;" aria-label="Currency">
+                  <option value="USD" selected>USD</option>
+                  <option value="EUR">EUR</option>
+                </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="calc-btn" id="calcBtn">⚡ Calculate</button>
+                        <button type="button" class="reset-btn" id="resetBtn">↺ Reset</button>
+                    </form>
+
+                    <div class="calc-results">
+                        <div class="results-header">
+                            <h3>Results</h3>
+                        </div>
+                        <div id="results-empty" class="result-placeholder">
+                            <div class="placeholder-icon">🏗️</div>
+                            <p>Enter dimensions to calculate</p>
+                        </div>
+                        <div id="results-data">
+                            <div class="result-card">
+                                <div class="result-card-icon blue">📐</div>
+                                <div class="result-card-body">
+                                    <div class="result-card-label">Total Area</div>
+                                    <div class="result-card-value" id="resArea">—</div>
+                                </div>
+                            </div>
+                            <div class="result-card">
+                                <div class="result-card-icon purple">📦</div>
+                                <div class="result-card-body">
+                                    <div class="result-card-label">Total Volume</div>
+                                    <div class="result-card-value" id="resVolume">—</div>
+                                </div>
+                            </div>
+                            <div class="result-card highlighted">
+                                <div class="result-card-icon orange">⚖️</div>
+                                <div class="result-card-body">
+                                    <div class="result-card-label">Total Mix Weight</div>
+                                    <div class="result-card-value" id="resWeight">—</div>
+                                    <div class="result-card-sub" id="resWeightSub"></div>
+                                </div>
+                            </div>
+                            <div class="result-card">
+                                <div class="result-card-icon orange">🛢️</div>
+                                <div class="result-card-body">
+                                    <div class="result-card-label">Bitumen Required</div>
+                                    <div class="result-card-value" id="resBitumen">—</div>
+                                    <div class="result-card-sub" id="resBitumenSub"></div>
+                                </div>
+                            </div>
+                            <div class="result-card">
+                                <div class="result-card-icon blue">🪨</div>
+                                <div class="result-card-body">
+                                    <div class="result-card-label">Aggregate Required</div>
+                                    <div class="result-card-value" id="resAggregate">—</div>
+                                    <div class="result-card-sub" id="resAggregateSub"></div>
+                                </div>
+                            </div>
+                            <div class="result-card" id="resCostCard" style="display:none;">
+                                <div class="result-card-icon yellow">💵</div>
+                                <div class="result-card-body">
+                                    <div class="result-card-label">Estimated Cost (USD)</div>
+                                    <div class="result-card-value" id="resCost">—</div>
+                                </div>
+                            </div>
+                            <div class="breakdown-bar">
+                                <div class="breakdown-bar-label">Mix Composition</div>
+                                <div class="breakdown-track">
+                                    <div class="breakdown-fill-bitumen" id="bitPctBar" style="width:5.7%;"></div>
+                                    <div class="breakdown-fill-aggregate"></div>
+                                </div>
+                                <div class="breakdown-legend">
+                                    <div class="legend-item">
+                                        <div class="legend-dot orange"></div><span id="bitLegendPct">5.7% Bitumen</span></div>
+                                    <div class="legend-item">
+                                        <div class="legend-dot blue"></div><span id="aggLegendPct">94.3% Aggregate</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="ncdot-asphalt-index" aria-labelledby="ncdot-index-heading">
+        <div class="container" style="max-width:820px;">
+            <h2 id="ncdot-index-heading">NCDOT Asphalt Index: Official Price Sources</h2>
+            <p>For NCDOT asphalt index information, start with the official <a href="https://connect.ncdot.gov/projects/construction/Pages/Pavement-Construction-Prices.aspx">Asphalt and Fuel Prices, CPI, and SPA page</a>. It lists average terminal fuel and asphalt-cement prices, monthly terminal asphalt binder FOB prices, and PG64-22 binder pricing. Select the series and month required by your contract.</p>
+            <p>For NCDOT liquid asphalt price changes, the Purchasing unit also maintains a <a href="https://connect.ncdot.gov/business/Purchasing/Pages/LiqAsphPriceUpd.aspx">Liquid Asphalt Price Changes archive</a>. Check the publication date and applicable purchasing or construction contract before using a listed value.</p>
+            <h3>Which price belongs in this calculator?</h3>
+            <p>The calculator's <strong>Price per Tonne</strong> field estimates the cost of the whole asphalt mixture. Enter your supplier's mixture quote per metric tonne. A liquid binder index is not a finished-mixture quote and should not be entered as one.</p>
+            <h3>Contract price adjustments</h3>
+            <p>Use the price-adjustment provision in your contract to determine the applicable base period, comparison period, units, eligible quantity, and calculation. This quantity calculator does not calculate a certified NCDOT payment adjustment.</p>
+            <p>BitumenCalc is an independent estimator, not NCDOT. No current index value is reproduced here; verify values in the official publications linked above.</p>
+        </div>
+    </section>
+
+    <!-- APPLICATIONS SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="label">Applications</div>
+                <h2>Where North Carolina Asphalt Calculations Are Used</h2>
+                <p>From I-40 corridor resurfacing to Charlotte metro development and mountain highway rehabilitation, NCDOT-compliant tonnage estimates are essential across all three of North Carolina's distinct geographic regions.</p>
+            </div>
+            <div class="grid-3" style="gap:1.5rem;">
+                <div class="pillar-card">
+                    <div class="pillar-icon" style="background:var(--gold-50);">🛣️</div>
+                    <h3>NCDOT Primary System Resurfacing</h3>
+                    <p>NCDOT division engineers use S9.5C and S12.5C calculations for resurfacing programmes on I-40, I-85, I-95, and US-74. High-traffic routes through Charlotte, Raleigh, and Greensboro require polymer-modified binder at S9.5C specification
+                        for rutting resistance in hot summers. Tonnage estimates feed NCDOT's STIP (State Transportation Improvement Program) funding justifications and contractor payment certification.</p>
+                    <p>Related: <a href="/calculators/asphalt-tonnage-calculator/">Asphalt Tonnage Calculator</a></p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon" style="background:var(--sky-light);">🏙️</div>
+                    <h3>Charlotte &amp; Triangle Region Development</h3>
+                    <p>Developers and municipal engineers in the Charlotte metro and Research Triangle (Raleigh-Durham-Chapel Hill) regions estimate S9.5B and B25.0B quantities for subdivision roads, retail parking lots, and commercial access driveways.
+                        NC's strong population growth drives continuous new road construction, with cost estimates using current Triangle and Metrolina area supplier pricing ($95–$150/ton).</p>
+                    <p>Related: <a href="/calculators/asphalt-cost-calculator/">Asphalt Cost Calculator</a></p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon" style="background:#d1fae5;">⛰️</div>
+                    <h3>Western NC Mountain Highway Rehabilitation</h3>
+                    <p>NCDOT Division 14 (Asheville) engineers calculate asphalt quantities for mountain highway rehabilitation on US-441 (Blue Ridge Pkwy), US-74, and I-26. Mountain projects in Buncombe, Haywood, and Jackson counties use S12.5B or thicker
+                        I19 intermediate layers to handle mountain terrain. Shorter haul routes from Asheville area plants compared to western Colorado keep NC mountain project costs competitive.</p>
+                    <p>Related: <a href="/calculators/asphalt-repair-calculator/">Asphalt Repair Calculator</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAYER TAKE-OFF -->
+    <section class="section section-alt">
+        <div class="container container-sm">
+            <div class="section-header">
+                <div class="label">Worked take-off</div>
+                <h2>A layer-by-layer take-off sheet you can copy</h2>
+                <p>The same 1,000&nbsp;ft section as the example above, but built up properly as three lifts rather than one surface course.</p>
+            </div>
+            <div style="overflow-x:auto;">
+            <table class="ref-table">
+                <thead><tr><th>Lift</th><th>NCDOT mix</th><th>Depth</th><th>Volume (ft&sup3;)</th><th>Short tons at 145&nbsp;lb/ft&sup3;</th><th>Binder</th></tr></thead>
+                <tbody>
+                <tr><td>Wearing</td><td>S9.5B</td><td>1.5 in</td><td>2,750</td><td><strong>199.4</strong></td><td>5.7% &rarr; 11.4&nbsp;t</td></tr>
+                <tr><td>Intermediate</td><td>I19.0B</td><td>2.5 in</td><td>4,583</td><td><strong>332.3</strong></td><td>5.0% &rarr; 16.6&nbsp;t</td></tr>
+                <tr><td>Base</td><td>B25.0B</td><td>4.0 in</td><td>7,333</td><td><strong>531.7</strong></td><td>4.6% &rarr; 24.5&nbsp;t</td></tr>
+                <tr style="font-weight:700;"><td colspan="4">Total</td><td>1,063.3</td><td>52.4&nbsp;t</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <p style="margin-top:1.5rem;">Section is 1,000&nbsp;ft by 22&nbsp;ft, so 22,000&nbsp;ft&sup2; per lift. Volume is area &times; depth in feet: the wearing course at 1.5&nbsp;in is 22,000 &times; 0.125 = 2,750&nbsp;ft&sup3;, and so on down.</p>
+            <p>Two things fall out of doing it this way. The base course is half the total tonnage, so it deserves the most attention when you check the depth. And the binder percentage drops as you go down &mdash; coarser mixes need less &mdash; so the binder total is not simply 5.7% of everything. Averaging would have put binder at 60.6&nbsp;t instead of 52.4&nbsp;t, an 8-tonne error on the most expensive constituent.</p>
+            <p>Add 5% for waste and the order across all three lifts is about <strong>1,116 short tons</strong>. Tack coat between lifts is priced separately by area.</p>
+
+        </div>
+    </section>
+
+    <!-- NORTH CAROLINA MIX STANDARDS -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="label">Reference</div>
+                <h2>North Carolina Mix Standards</h2>
+                <p>Typical values for common NCDOT pavement mix designs.</p>
+            </div>
+            <table class="ref-table">
+                <thead>
+                    <tr>
+                        <th>Mix Type</th>
+                        <th>Bitumen Content (%)</th>
+                        <th>Density (kg/m³)</th>
+                        <th>Standard</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>S9.5B (Fine Surface)</td>
+                        <td class="highlight">5.5–7.0</td>
+                        <td>2290–2370</td>
+                        <td>NCDOT Section 610</td>
+                    </tr>
+                    <tr>
+                        <td>S12.5B (Coarse Surface)</td>
+                        <td class="highlight">5.0–6.5</td>
+                        <td>2300–2380</td>
+                        <td>NCDOT</td>
+                    </tr>
+                    <tr>
+                        <td>B25.0B (Base)</td>
+                        <td class="highlight">4.0–5.5</td>
+                        <td>2310–2400</td>
+                        <td>NCDOT base course</td>
+                    </tr>
+                    <tr>
+                        <td>FG (Fine-Graded)</td>
+                        <td class="highlight">5.5–6.5</td>
+                        <td>2280–2360</td>
+                        <td>Low-volume roads</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- CONTEXT CARDS -->
+    <section class="section-sm" style="background:var(--bg-2);border-bottom:1px solid var(--border);">
+        <div class="container">
+            <div class="grid-3" style="gap:1.5rem;">
+                <div class="info-box">
+                    <span class="info-icon">📋</span>
+                    <div>
+                        <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Standard Reference</strong>
+                        <p style="margin:0;font-size:.85rem;">NCDOT Standard Specifications, Section 610 (Asphalt Concrete Pavement) with S9.5B and S12.5B Superpave mixes.</p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <span class="info-icon">🌡️</span>
+                    <div>
+                        <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Climate Considerations</strong>
+                        <p style="margin:0;font-size:.85rem;">Humid subtropical climate — hot summers and mild winters; PG 64-22 most common, coastal areas PG 70-22.</p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <span class="info-icon">💰</span>
+                    <div>
+                        <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Typical NC Costs</strong>
+                        <p style="margin:0;font-size:.85rem;">Asphalt in North Carolina typically runs $120–$260/tonne depending on region.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container container-sm">
+            <div class="section-header">
+                <div class="label">FAQ</div>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">What are NCDOT's standard asphalt mix designations? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">
+                        <p>NCDOT uses Superpave mix design with their own designation system. Common surface mixes are S9.5B (9.5 mm nominal max aggregate, standard traffic) and S9.5C (high-traffic). I19 and I25 are intermediate layer mixes, and B25.0 and
+                            B37.5 are base course mixes. The letter suffix (B, C, D) indicates the design traffic level based on ESALs over the design life.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How much does asphalt cost in North Carolina? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">
+                        <p>North Carolina asphalt material prices typically range from $85–$165 per ton. Charlotte metro and Research Triangle (Raleigh-Durham) areas are at the mid-to-high end, while rural western NC mountain areas may run higher due to
+                            longer haul distances. Residential driveway paving in NC costs approximately $3–$6 per square foot installed. NCDOT publishes bid results that reflect current market pricing.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What warm-mix asphalt technologies does NCDOT allow? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">
+                        <p>NCDOT has approved Warm Mix Asphalt (WMA) technologies including foamed asphalt, chemical additives (Sasobit, Evotherm), and water-injection systems. WMA is produced at 250–275°F compared to 300–320°F for traditional hot mix, reducing
+                            energy consumption, emissions, and binder aging. NCDOT permits WMA use on projects where extended haul distances or nighttime paving conditions make lower mix temperatures advantageous.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the difference between NCDOT S9.5B and S9.5C mix types? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">
+                        <p>Both are NCDOT Superpave surface mixes with a 9.5 mm nominal maximum aggregate size, but the letter suffix indicates the design traffic level. <strong>S9.5B</strong> is designed for standard traffic (1–10 million ESALs over the
+                            design life) and uses a standard PG 64-22 binder — appropriate for residential streets, secondary routes, parking lots, and collector roads. <strong>S9.5C</strong> is designed for high-traffic roads (10–30 million ESALs) such
+                            as primary US routes, urban arterials, and interstates — it requires a stiffer binder (PG 70-22 or polymer-modified PG 64-22) for improved rutting resistance under heavy truck loads and NC's hot summer temperatures. Using S9.5B
+                            on a high-traffic route will result in premature rutting. Always confirm the required mix type from the NCDOT plans or a licensed pavement engineer for your specific project.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How many tons of asphalt do I need for a North Carolina driveway? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">
+                        <p>A typical North Carolina residential driveway (40 ft × 12 ft = 480 sq ft) with a standard 2-inch S9.5B surface: 480 × (2/12) × 110 ÷ 2,000 = <strong>4.4 short tons</strong>. With 5% waste = order approximately <strong>4.6 tons</strong>.
+                            NC's milder climate means thinner pavement sections are acceptable compared to northern states — a 2-inch surface over a 4-inch NCDOT ABC (Aggregate Base Course) stone base is standard for most residential driveways. For a
+                            wider driveway (14 ft × 60 ft = 840 sq ft at 2 inches) = approximately <strong>7.7 tons</strong>. Use the <a href="/calculators/bitumen-square-feet-calculator/">Square Feet Calculator</a> to quickly estimate from area dimensions.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What PG binder grades does NCDOT use across different regions? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">
+                        <p>North Carolina's climate ranges from the warm coastal Outer Banks to the cool Blue Ridge Mountains, so NCDOT selects binder grades by region. <strong>Coastal Plain</strong> (Wilmington, New Bern, Outer Banks) — hot summers and
+                            mild winters require <strong>PG 70-22</strong> on high-traffic routes and <strong>PG 64-22</strong> on secondary roads. <strong>Piedmont</strong> (Charlotte, Raleigh, Greensboro) — the most populous region uses <strong>PG 64-22</strong>                            as standard, with <strong>PG 70-22</strong> on interstates and heavily trafficked urban corridors. <strong>Mountain</strong> (Asheville, Boone, Murphy) — cooler temperatures allow <strong>PG 64-22</strong> statewide, with <strong>PG 58-28</strong>                            at higher elevations (>4,000 ft) in the western-most counties. NCDOT's binder grade map and specification guidance should always be consulted for project-specific selection.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Does North Carolina have rutting problems with asphalt in hot summers? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">
+                        <p>Yes — North Carolina's hot, humid summers (peak pavement temperatures can exceed 140°F in the Piedmont and coastal regions) create real rutting risk on high-traffic roads using standard PG 64-22 mixes. NCDOT addresses this by:
+                            (1) mandating <strong>PG 70-22</strong> (polymer-modified) on interstates and primary routes in the Piedmont and coastal plain; (2) requiring <strong>S9.5C or S12.5C</strong> mix design (stiffer, higher gyration count) on heavily
+                            trafficked routes; (3) using <strong>SMA</strong> at some high-stress locations (steep grades, bus stops, intersection approaches) where channelized truck traffic causes severe rutting. Homeowners and commercial property managers
+                            should specify S9.5C or a PG 70-22 binder mix for driveways with heavy truck deliveries or bus routes, even though it costs 10–20% more than standard S9.5B.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW TO USE -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="label">Guide</div>
+                <h2>How to Use This Calculator</h2>
+            </div>
+            <div class="grid-3" style="gap:1.5rem;">
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <h3>Enter Project Dimensions</h3>
+                    <p>Input the length, width, and compacted asphalt thickness. NCDOT S9.5B (surface mix) is typically 1.5–2 inches. North Carolina's varied topography spans coastal plain, Piedmont, and mountain regions, each requiring slightly different
+                        pavement design depths to account for local traffic and subgrade conditions.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <h3>Select NCDOT Mix Type</h3>
+                    <p>Choose the appropriate North Carolina DOT mix — S9.5B (standard surface), S9.5C (high-traffic surface), or I19 (intermediate). The "B" suffix indicates a standard traffic design level; "C" is used for high-traffic routes like I-40
+                        and I-85. Adjust bitumen content to 5.0–6.5% per your job mix formula and design traffic ESALs.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <h3>Add Cost &amp; Calculate</h3>
+                    <p>Enter the current North Carolina asphalt price per ton (typically $85–$165/ton). Click Calculate for total tonnage, materials breakdown, and project cost estimate. NC's warm humid climate allows a longer paving season than northern
+                        states — typically March through November statewide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REFERENCES -->
+    <section class="section section-alt">
+        <div class="container container-sm">
+            <div class="section-header">
+                <div class="label">References</div>
+                <h2>Specifications behind these numbers</h2>
+                <p>Mix designations, binder grades and densities on this page trace back to the state specification and to the Asphalt Institute. Your district may amend any of it, and your approved Job Mix Formula overrides all of it.</p>
+            </div>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.9rem;">
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://connect.ncdot.gov/projects/construction/ConstManRefDocs/610,%202018%20Standard%20Specifications.pdf" target="_blank" rel="noopener nofollow">NCDOT <em>Standard Specifications for Roads and Structures</em> — Section 610, Asphalt Concrete Plant Mix Pavements</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://connect.ncdot.gov/resources/Specifications/Pages/default.aspx" target="_blank" rel="noopener nofollow">NCDOT — Specifications library</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://bookstore.asphaltinstitute.org/catalog/book/ms-2-asphalt-mix-design-methods" target="_blank" rel="noopener nofollow">Asphalt Institute, <em>MS-2 Asphalt Mix Design Methods</em>, 7th edition</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://store.astm.org/d2041_d2041m-19.html" target="_blank" rel="noopener nofollow">ASTM D2041/D2041M-19 — Theoretical Maximum Specific Gravity and Density of Asphalt Mixtures (the Rice test)</a></li>
+            </ul>
+            <p style="margin-top:1.75rem;font-size:.85rem;color:var(--text-muted);">
+                Mix tables checked against the specifications above in <strong>July 2026</strong>.
+                Any cost figures quoted are indicative only and date quickly &mdash; treat them as a
+                sanity check on a quote, never as a quote.
+                See our <a href="/editorial-policy/">editorial policy</a> for how these values are
+                sourced and reviewed, and the <a href="/disclaimer/">disclaimer</a> for the limits of
+                these estimates.
+            </p>
+        </div>
+    </section>
+
+    <!-- OTHER REGIONS -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="label">Other Regions</div>
+                <h2>More Regional Calculators</h2>
+            </div>
+            <div class="dir-grid">
+                <a href="/calculators/virginia-asphalt-calculator/" class="dir-card">
+                    <div class="dir-card-icon" style="background:#fef9c3;">🇺🇸</div>
+                    <div class="dir-card-text">
+                        <div class="dir-card-title">Virginia</div>
+                        <div class="dir-card-desc">VDOT · USD · SM-9.5</div>
+                    </div>
+                    <div class="dir-card-arrow">→</div>
+                </a>
+                <a href="/calculators/new-jersey-asphalt-calculator/" class="dir-card">
+                    <div class="dir-card-icon" style="background:#fef9c3;">🇺🇸</div>
+                    <div class="dir-card-text">
+                        <div class="dir-card-title">New Jersey</div>
+                        <div class="dir-card-desc">NJDOT · USD · I-19</div>
+                    </div>
+                    <div class="dir-card-arrow">→</div>
+                </a>
+                <a href="/calculators/california-asphalt-calculator/" class="dir-card">
+                    <div class="dir-card-icon" style="background:#fef9c3;">🇺🇸</div>
+                    <div class="dir-card-text">
+                        <div class="dir-card-title">California</div>
+                        <div class="dir-card-desc">Caltrans · USD · Superpave</div>
+                    </div>
+                    <div class="dir-card-arrow">→</div>
+                </a>
+            </div>
+            <div style="text-align:center;margin-top:2rem;">
+                <a href="/calculators/" class="btn btn-outline">View All Calculators →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo" style="margin-bottom:.5rem;">
+                        <div class="nav-logo-icon">B</div>
+                        <div class="nav-logo-text">Bitumen<span>Calc</span></div>
+                    </a>
+                    <p>Free pavement quantity calculators. Every formula and default value is shown on the page.</p>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-label">Regional</p>
+                    <ul>
+                        <li><a href="/calculators/australia-bitumen-calculator/">Australia</a></li>
+                        <li><a href="/calculators/canada-bitumen-calculator/">Canada</a></li>
+                        <li><a href="/calculators/new-zealand-bitumen-calculator/">New Zealand</a></li>
+                        <li><a href="/calculators/california-asphalt-calculator/">California</a></li>
+                        <li><a href="/calculators/virginia-asphalt-calculator/">Virginia</a></li>
+                        <li><a href="/calculators/colorado-asphalt-calculator/">Colorado</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-label">Calculators</p>
+                    <ul>
+                        <li><a href="/calculators/bitumen-square-feet-calculator/">Square Feet</a></li>
+                        <li><a href="/calculators/asphalt-tonnage-calculator/">Tonnage</a></li>
+                        <li><a href="/calculators/asphalt-cost-calculator/">Cost Calculator</a></li>
+                        <li><a href="/calculators/asphalt-material-calculator/">Material</a></li>
+                        <li><a href="/calculators/road-asphalt-calculator/">Road</a></li>
+                        <li><a href="/calculators/asphalt-repair-calculator/">Repair</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-label">Company</p>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/calculators/">All Calculators</a></li>
+                        <li><a href="/about-us/">About Us</a></li>
+                        <li><a href="/contact-us/">Contact</a></li>
+                    </ul>
+                    <p style="margin-top:1.5rem;" class="footer-label">Legal</p>
+                    <ul>
+                        <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="/disclaimer/">Disclaimer</a></li>
+                        <li><a href="/editorial-policy/">Editorial Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Bitumen Calculator. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="/terms-and-conditions/">Terms</a>
+                    <a href="/privacy-policy/">Privacy</a>
+                    <a href="/disclaimer/">Disclaimer</a>
+                    <a href="/contact-us/">Contact</a>
+
+                    <a href="#" data-consent-open>Cookie Preferences</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+    <script src="/js/app.min.js?v=9"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.BitCalc) window.BitCalc.setDefaults({
+                bitumenContent: 5.7,
+                density: 2310,
+                currency: 'USD'
+            });
+        });
+    </script>
+</main>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: *
+Allow: /
+Disallow: /tools/
+Disallow: /add-content.js
+Disallow: /.local-static-server.cjs
+
+Sitemap: https://www.bitumencalc.com/sitemap.xml

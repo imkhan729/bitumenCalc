@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<!-- Consent Mode v2 defaults - must execute before any Google tag -->
+<script src="/js/consent.min.js?v=3"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GCYLRZ2PQK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GCYLRZ2PQK');
+</script>
+  <meta name="google-adsense-account" content="ca-pub-6438644207209483" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="msapplication-TileColor" content="#f59e0b" />
+<meta name="theme-color" content="#f59e0b" />
+<title>Asphalt Application Rate Calculator — kg/m² & t/100m²</title>
+  <meta name="description" content="Calculate asphalt or bitumen application rate in kg/m², t/100m², or L/m². Three modes: quantity to rate, rate to quantity, and emulsion spray rate. Free tool." />
+    <meta name="author" content="BitumenCalc" />
+<meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.bitumencalc.com/calculators/asphalt-application-rate-calculator/" />
+    <link rel="alternate" hreflang="en" href="https://www.bitumencalc.com/calculators/asphalt-application-rate-calculator/" />
+<meta name="keywords" content="asphalt application rate calculator, bitumen spray rate, kg per m2 asphalt, tack coat rate" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://www.bitumencalc.com/calculators/asphalt-application-rate-calculator/" />
+  <meta property="og:title" content="Asphalt Application Rate Calculator — kg/m² & t/100m²" />
+  <meta property="og:description" content="Calculate asphalt or bitumen application rate in kg/m², t/100m², or L/m². Three modes: quantity to rate, rate to quantity, and emulsion spray rate. Free tool." />
+  <meta property="og:image" content="https://www.bitumencalc.com/assets/hero-road.webp" />
+      <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="675" />
+<meta property="og:image:alt" content="BitumenCalc tool and guide preview image" />
+<meta property="og:site_name" content="BitumenCalc" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@BitumenCalc" />
+<meta name="twitter:title" content="Asphalt Application Rate Calculator — kg/m² & t/100m²" />
+  <meta name="twitter:description" content="Calculate asphalt or bitumen application rate in kg/m², t/100m², or L/m². Three modes: quantity to rate, rate to quantity, and emulsion spray rate. Free tool." />
+  <meta name="twitter:image" content="https://www.bitumencalc.com/assets/hero-road.webp" />
+
+    <meta name="twitter:image:alt" content="BitumenCalc tool and guide preview image" />
+<!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.bitumencalc.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://www.bitumencalc.com/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Application Rate",
+      "item": "https://www.bitumencalc.com/calculators/asphalt-application-rate-calculator/"
+    }
+  ]
+}
+</script>
+
+  <!-- Schema: WebApplication -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Asphalt Application Rate Calculator",
+  "url": "https://www.bitumencalc.com/calculators/asphalt-application-rate-calculator/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Calculate asphalt or bitumen application rate in kg/m², t/100m², or L/m². Three modes: quantity to rate, rate to quantity, and emulsion spray rate. Free tool.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "BitumenCalc",
+    "url": "https://www.bitumencalc.com",
+    "logo": "https://www.bitumencalc.com/assets/logo.svg",
+    "@id": "https://www.bitumencalc.com/#organization"
+  }
+}
+</script>
+<style id="critical-css">:root{--navy:#0b1628;--navy-700:#162240;--gold:#f59e0b;--gold-dark:#d97706;--gold-light:#fde68a;--bg:#f8fafc;--surface:#fff;--border:#e2e8f0;--text:#0b1628;--text-muted:#475569;--grad-gold:linear-gradient(135deg,#f59e0b 0%,#fbbf24 100%);--grad-hero:linear-gradient(150deg,#0b1628 0%,#1a3060 55%,#0b2215 100%);--r-lg:12px;--r-xl:16px;--r-full:9999px}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{font-size:16px}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}img{max-width:100%;height:auto;display:block}a{color:var(--gold);text-decoration:none}.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}.site-header{position:sticky;top:0;z-index:1000;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.07);box-shadow:0 2px 24px rgba(0,0,0,.35)}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem}.nav-logo{display:flex;align-items:center;gap:.65rem;text-decoration:none;flex-shrink:0}.nav-logo-icon{width:40px;height:40px;background:var(--grad-gold);border-radius:var(--r-lg);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:900;color:var(--navy)}.nav-logo-text{font-size:1.15rem;font-weight:800;color:#fff;line-height:1.2}.nav-logo-text span{color:var(--gold)}.nav-links{display:flex;align-items:center;gap:.15rem}.nav-links a{color:rgba(255,255,255,.7);font-size:.875rem;font-weight:500;padding:.5rem .9rem;border-radius:var(--r-full)}.nav-links a.active{color:var(--gold);background:rgba(245,158,11,.1)}.nav-dropdown{position:relative;display:flex;align-items:center}.nav-dropdown-btn{color:rgba(255,255,255,.7);font-size:.875rem;font-weight:500;padding:.5rem .9rem;border-radius:var(--r-full);display:flex;align-items:center;gap:.3rem;background:none;border:0;font-family:inherit}.nav-dropdown-menu{position:absolute;top:calc(100% + .35rem);left:50%;transform:translate(-50%,10px);background:var(--navy-700);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-xl);padding:1.5rem;min-width:700px;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem 2rem;opacity:0;visibility:hidden;pointer-events:none}.nav-toggle{display:none}.mobile-menu{display:none}.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.75rem;border-radius:var(--r-full);font-size:.9rem;font-weight:600;white-space:nowrap;text-decoration:none}.btn-primary{background:var(--grad-gold);color:var(--navy);font-weight:700}.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)}.btn-lg{padding:1.1rem 2.5rem;font-size:1rem}.btn-sm{padding:.5rem 1.2rem;font-size:.82rem}.hero{background-image:url('/assets/hero-road.webp');background-size:cover;background-position:center 40%;background-color:#0b1628;position:relative;overflow:hidden;padding:3rem 0 4rem;height:calc(100vh - 72px);min-height:620px;max-height:900px;display:flex;align-items:center}.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(4,8,18,.65) 0%,rgba(4,8,18,.72) 50%,rgba(4,8,18,.9) 100%);z-index:0}.hero-inner{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1;padding-top:3rem;width:100%}.hero-content{color:#fff;max-width:860px}.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,158,11,.18);border:1px solid rgba(245,158,11,.5);color:var(--gold-light);padding:.35rem 1rem;border-radius:var(--r-full);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem}.hero-title{font-family:'Arial Narrow','Segoe UI Condensed',Impact,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:700;font-size:clamp(2.8rem,4.2vw,4.2rem);line-height:1.1;margin-bottom:1.2rem;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.55);text-align:center}.hero-desc{font-size:1.05rem;color:rgba(255,255,255,.88);margin-bottom:1.8rem;line-height:1.7;text-align:center;text-shadow:0 1px 8px rgba(0,0,0,.4)}.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;justify-content:center}.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.15)}.hero-stat-val{font-size:1.85rem;font-weight:900;color:#fff;line-height:1}.hero-stat-val span{color:var(--gold)}.hero-stat-label{font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;text-transform:uppercase;letter-spacing:.08em}.hero-road{position:absolute;bottom:0;left:0;right:0;height:5px;background:repeating-linear-gradient(90deg,var(--gold) 0,var(--gold) 50px,transparent 50px,transparent 72px);opacity:.65}.page-hero{background:var(--grad-hero);padding:4rem 0 3rem;position:relative;overflow:hidden}.page-hero-inner{position:relative;z-index:1}.page-hero h1{color:#fff;margin-bottom:.75rem;font-size:clamp(2.2rem,5vw,3.75rem);font-weight:800;line-height:1.12}.page-hero p{font-size:1.1rem;color:rgba(255,255,255,.7);max-width:560px}.section{padding:5.5rem 0}.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:2rem}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}@media(max-width:900px){.nav-links,.nav-cta,.nav-dropdown-btn{display:none}.nav-toggle{display:flex;flex-direction:column;gap:5px;padding:.5rem}.nav-toggle span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}.mobile-menu.open{display:block;background:var(--navy-700);border-top:1px solid rgba(255,255,255,.06)}.mobile-menu a{display:block;padding:.9rem 1.5rem;color:rgba(255,255,255,.8);font-weight:500;font-size:.95rem;border-bottom:1px solid rgba(255,255,255,.04)}}@media(max-width:768px){.container{padding:0 1rem}.hero{height:auto;min-height:100svh;padding:2rem 0 3rem}.hero-tag{display:none}.hero-title{font-size:2.1rem;margin-bottom:.85rem}.hero-desc{font-size:.9rem;margin-bottom:1.25rem;line-height:1.6}.hero-actions{gap:.75rem;margin-bottom:1.25rem}.hero-stats{gap:1.25rem;padding-top:1rem}.hero-stat-val{font-size:1.4rem}.hero-stat-label{font-size:.65rem}.grid-3{grid-template-columns:1fr}}</style>
+<link rel="preload" href="/css/style.min.css?v=7" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="/css/style.min.css?v=7" /></noscript>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f59e0b'/><text y='.9em' font-size='80' x='10'>🛣️</text></svg>" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the typical bitumen application rate for a sprayed seal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Single coat sprayed seal (chip seal) bitumen application rates typically range from 0.9–1.8 L/m² depending on the aggregate size and existing surface condition. Coarser aggregate (20 mm) requires more bitumen to fill voids and embed the stone. Fine aggregate chip seals (7 mm or 10 mm) use 0.9–1.2 L/m². Double coat seals for rehabilitation use two applications. These rates are for neat bitumen — multiply by the dilution factor for emulsions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert bitumen application rate from L/m² to kg/m²?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply L/m² by bitumen density to get kg/m². Bitumen density at 15°C is approximately 1.02–1.05 kg/litre, depending on grade and polymer content. For practical purposes, 1 L/m² ≈ 1.03 kg/m² of bitumen. For emulsions, you must also account for residual bitumen content: actual bitumen = emulsion volume × (residual % ÷ 100) × emulsion density. Our calculator handles this conversion automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between application rate and spread rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Application rate refers specifically to the volume or mass of bitumen (or bitumen emulsion) applied per unit area, expressed as L/m² or kg/m². Spread rate (for aggregates) refers to the quantity of stone or grit applied per unit area, expressed as m²/m³ or number of chips per m². Both are required for designing and QA-checking a sprayed seal: the bitumen application rate must be calibrated to ensure proper aggregate embedment depth (typically 50–70% of aggregate height)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What application rate should I use for a 50 mm asphalt overlay?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard 50 mm dense-graded asphalt overlay at a compacted density of 2,300 kg/m³ has a theoretical application rate of approximately 115 kg/m² (50 mm ÷ 1,000 × 2,300 kg/m³ = 115 kg/m²). In practice, rates of 110–125 kg/m² are typical, depending on aggregate type and mix design. For a 25 mm thin overlay, expect 55–65 kg/m². For a 75 mm full-depth wearing course, expect 165–185 kg/m². Always use the design density from your approved mix design — it varies between AC 10, AC 14, and SMA mixes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is t/100m² and why is it used in Australia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "t/100m² (tonnes per 100 square metres) is the standard application rate unit used by Australian and New Zealand road authorities, including Transport for NSW, VicRoads, and NZTA. It is equivalent to kg/m² ÷ 10. For example, 115 kg/m² = 11.5 t/100m². This unit is used in pavement design documents, specification tables, and payment schedules because it gives a convenient whole-number figure that is easy to compare against contract rates. When reviewing road authority specifications, always check whether the stated rate is in kg/m², t/100m², or the older imperial-derived t/1,000 ft² (used in some older US state DOT specs)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I check if my spray tanker is calibrated correctly?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Perform a calibration run before commencing spray seal works: spray a known volume of bitumen over a measured test strip area and calculate the achieved L/m² using the Spray Rate mode of this calculator. The measured rate should be within ±5% of the design rate. Also check the transverse distribution by placing absorbent paper sheets across the full spray bar width and weighing them after a test run — distribution should be uniform within ±10% across the spray bar. Check nozzle condition, temperature, pump pressure, and travel speed against the manufacturer's spray chart. Most road authority specifications require calibration records to be submitted before work commences."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between emulsion application rate and residual bitumen rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bitumen emulsions contain water in addition to bitumen — typically 30–40% water content by volume. The emulsion application rate is the total volume of emulsion sprayed (litres of emulsion per m²). The residual bitumen rate is the actual bitumen content after the water breaks and evaporates. To convert: Residual Bitumen (L/m²) = Emulsion Rate (L/m²) × Residual Content (%). For example, a 60% residual content emulsion applied at 1.2 L/m² delivers 0.72 L/m² of residual bitumen. Road authority specifications for tack coats and prime coats are typically stated in residual bitumen terms — always confirm whether the spec refers to emulsion or residual bitumen before calibrating your tanker."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/css/seo-accessibility.css?v=3" />
+<link rel="preload" as="script" href="/js/app.min.js?v=9" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-icon">B</div>
+        <div class="nav-logo-text">Bitumen<span>Calc</span></div>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn">Calculators <span class="nav-dropdown-arrow">▾</span></button>
+          <div class="nav-dropdown-menu">
+            <div class="nav-dropdown-col">
+              <p class="nav-group-label">Regional</p>
+              <a href="/calculators/australia-bitumen-calculator/">Australia</a>
+              <a href="/calculators/canada-bitumen-calculator/">Canada</a>
+              <a href="/calculators/new-zealand-bitumen-calculator/">New Zealand</a>
+              <a href="/calculators/california-asphalt-calculator/">California</a>
+              <a href="/calculators/virginia-asphalt-calculator/">Virginia</a>
+              <a href="/calculators/colorado-asphalt-calculator/">Colorado</a>
+              <a href="/calculators/minnesota-asphalt-calculator/">Minnesota</a>
+              <a href="/calculators/new-jersey-asphalt-calculator/">New Jersey</a>
+              <a href="/calculators/north-carolina-asphalt-calculator/">North Carolina</a>
+            </div>
+            <div class="nav-dropdown-col">
+              <p class="nav-group-label">Area &amp; Unit Conversion</p>
+              <a href="/calculators/bitumen-square-feet-calculator/">Square Feet</a>
+              <a href="/calculators/square-feet-to-tons-calculator/">Sq Ft to Tons</a>
+              <a href="/calculators/bitumen-square-meters-calculator/">Square Meters</a>
+              <a href="/calculators/bitumen-square-yards-calculator/">Square Yards</a>
+              <a href="/calculators/metric-bitumen-calculator/">Metric</a>
+              <a href="/calculators/asphalt-measurement-calculator/">Measurement</a>
+              <p style="margin-top:.9rem;" class="nav-group-label">Thickness / Temp / Radius</p>
+              <a href="/calculators/asphalt-thickness-calculator/">Thickness</a>
+              <a href="/calculators/bitumen-temperature-converter/">Temperature</a>
+              <a href="/calculators/circular-asphalt-calculator/">Radius (Circular)</a>
+            </div>
+            <div class="nav-dropdown-col">
+              <p class="nav-group-label">Material &amp; Quantity</p>
+              <a href="/calculators/asphalt-material-calculator/">Material</a>
+              <a href="/calculators/asphalt-millings-calculator/">Millings (RAP)</a>
+              <a href="/calculators/asphalt-tonnage-calculator/">Tonnage</a>
+              <a href="/calculators/tack-coat-calculator/">Tack Coat</a>
+              <a href="/calculators/road-asphalt-calculator/">Road</a>
+              <a href="/calculators/roofing-bitumen-calculator/">Roofing</a>
+              <a href="/calculators/asphalt-repair-calculator/">Repair</a>
+              <a href="/calculators/asphalt-removal-calculator/">Removal</a>
+              <p style="margin-top:.9rem;" class="nav-group-label">Cost &amp; Rate</p>
+              <a href="/calculators/asphalt-cost-calculator/">Cost Calculator</a>
+              <a href="/calculators/asphalt-application-rate-calculator/" class="active">Rate Calculator</a>
+            </div>
+          </div>
+        </div>
+        <a href="/blog/">Blog</a>
+        <a href="/about-us/">About Us</a>
+      </div>
+      <a href="/calculators/" class="btn btn-primary btn-sm nav-cta">All Calculators</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/">🏠 Home</a>
+    <a href="/calculators/">🧮 All Calculators</a>
+    <a href="/calculators/australia-bitumen-calculator/">🇦🇺 Australia</a>
+    <a href="/calculators/canada-bitumen-calculator/">🇨🇦 Canada</a>
+    <a href="/calculators/bitumen-square-feet-calculator/">📐 Square Feet</a>
+    <a href="/calculators/asphalt-tonnage-calculator/">⚖️ Tonnage</a>
+    <a href="/calculators/asphalt-cost-calculator/">💰 Cost Calculator</a>
+    <a href="/blog/">📝 Blog</a>
+    <a href="/about-us/">ℹ️ About Us</a>
+  </div>
+</header>
+<main id="main-content">
+
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="eyebrow">Application Rate</div>
+    <h1>Asphalt Application Rate Calculator</h1>
+    <p>Calculate bitumen or asphalt application rate in kg/m², t/100m², or L/m². Three modes: quantity to rate, rate to quantity, and emulsion spray rate.</p>
+    <div class="region-meta">
+      <span class="badge badge-orange">kg/m²</span>
+      <span class="badge badge-blue">t/100m²</span>
+      <span class="badge badge-green">Spray Rate</span>
+    </div>
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <a href="/calculators/">Calculators</a>
+      <span class="sep">/</span>
+      <span>Rate Calculator</span>
+    </div>
+  </div>
+</section>
+
+<!-- INFO CARDS -->
+<section class="section-sm" style="background:var(--bg-2);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="info-box">
+        <span class="info-icon">📊</span>
+        <div>
+          <strong style="color:var(--text);display:block;margin-bottom:.25rem;">What is Application Rate?</strong>
+          <p style="margin:0;font-size:.85rem;">Application rate (kg/m²) tells you how much material is applied per unit area. Essential for quality control and specification compliance on all paving contracts.</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <span class="info-icon">📏</span>
+        <div>
+          <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Typical Rates</strong>
+          <p style="margin:0;font-size:.85rem;">Surface treatment: 10–25 kg/m². Thin overlay (25 mm): 55–65 kg/m². Standard overlay (50 mm): 110–120 kg/m². Full pavement (75 mm): 165–185 kg/m².</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <span class="info-icon">✅</span>
+        <div>
+          <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Quality Control</strong>
+          <p style="margin:0;font-size:.85rem;">Application rate checks are essential for compliance. Weigh tickets from the plant combined with measured area give actual delivered rate for verification.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATORS -->
+<section class="calc-section" id="calculator">
+  <div class="container">
+
+    <!-- MODE SELECTOR -->
+    <div style="display:flex;gap:.5rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+      <button class="calc-btn" id="modeQtoR" onclick="setRateMode('qtor')" style="flex:1;min-width:180px;">⚖️ Quantity → Rate</button>
+      <button class="calc-btn" id="modeRtoQ" onclick="setRateMode('rtoq')" style="flex:1;min-width:180px;background:var(--bg-2);color:var(--text);border:1px solid var(--border);">📐 Rate → Quantity</button>
+      <button class="calc-btn" id="modeSpray" onclick="setRateMode('spray')" style="flex:1;min-width:180px;background:var(--bg-2);color:var(--text);border:1px solid var(--border);">💧 Spray Rate (L/m²)</button>
+    </div>
+
+    <!-- MODE 1: QUANTITY → RATE -->
+    <div id="qtorCalc" class="calc-wrap" style="margin-bottom:1.5rem;">
+      <div class="calc-tabs"><button class="calc-tab active">⚖️ Quantity to Rate</button></div>
+      <div class="calc-body">
+        <form class="calc-inputs" onsubmit="return false;">
+          <div class="input-set">
+            <div class="input-set-title">Known Quantity &amp; Area</div>
+            <div class="field">
+              <label for="qtorWeight">Total Weight Delivered</label>
+              <div class="input-row">
+                <input type="number" id="qtorWeight" placeholder="e.g. 50" min="0" step="any" />
+                <select id="qtorWeightUnit" style="width:130px;">
+                  <option value="t" selected>metric tonnes</option>
+                  <option value="st">short tons</option>
+                  <option value="kg">kg</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="qtorArea">Total Area Covered (m²)</label>
+              <input type="number" id="qtorArea" placeholder="e.g. 500" min="0" step="any" />
+            </div>
+          </div>
+          <button type="button" class="calc-btn" onclick="calcQtoR()">⚡ Calculate Rate</button>
+          <button type="button" class="reset-btn" onclick="resetQtoR()">↺ Reset</button>
+        </form>
+        <div class="calc-results">
+          <div class="results-header"><h3>Results</h3></div>
+          <div id="qtor-empty" class="result-placeholder"><div class="placeholder-icon">📊</div><p>Enter weight and area to calculate rate</p></div>
+          <div id="qtor-data" style="display:none;">
+            <div class="result-card highlighted"><div class="result-card-icon orange">📊</div><div class="result-card-body"><div class="result-card-label">Application Rate</div><div class="result-card-value" id="qtorRateKg">—</div><div class="result-card-sub" id="qtorRateSub"></div></div></div>
+            <div class="result-card"><div class="result-card-icon blue">📐</div><div class="result-card-body"><div class="result-card-label">Rate per 100 m²</div><div class="result-card-value" id="qtorRate100">—</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODE 2: RATE → QUANTITY -->
+    <div id="rtoqCalc" class="calc-wrap" style="margin-bottom:1.5rem;display:none;">
+      <div class="calc-tabs"><button class="calc-tab active">📐 Rate to Quantity</button></div>
+      <div class="calc-body">
+        <form class="calc-inputs" onsubmit="return false;">
+          <div class="input-set">
+            <div class="input-set-title">Known Rate &amp; Area</div>
+            <div class="field">
+              <label for="rtoqRate">Application Rate (kg/m²)</label>
+              <input type="number" id="rtoqRate" placeholder="e.g. 115" min="0" step="any" />
+              <div class="field-hint">Thin overlay 25mm: ~60 kg/m² | Standard 50mm: ~115 kg/m²</div>
+            </div>
+            <div class="field">
+              <label for="rtoqArea">Total Area (m²)</label>
+              <input type="number" id="rtoqArea" placeholder="e.g. 1000" min="0" step="any" />
+            </div>
+          </div>
+          <button type="button" class="calc-btn" onclick="calcRtoQ()">⚡ Calculate Quantity</button>
+          <button type="button" class="reset-btn" onclick="resetRtoQ()">↺ Reset</button>
+        </form>
+        <div class="calc-results">
+          <div class="results-header"><h3>Results</h3></div>
+          <div id="rtoq-empty" class="result-placeholder"><div class="placeholder-icon">📐</div><p>Enter rate and area to calculate quantity</p></div>
+          <div id="rtoq-data" style="display:none;">
+            <div class="result-card highlighted"><div class="result-card-icon orange">⚖️</div><div class="result-card-body"><div class="result-card-label">Total Quantity Required</div><div class="result-card-value" id="rtoqTonnes">—</div><div class="result-card-sub" id="rtoqKg"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODE 3: SPRAY RATE -->
+    <div id="sprayCalc" class="calc-wrap" style="display:none;">
+      <div class="calc-tabs"><button class="calc-tab active">💧 Spray Rate Calculator</button></div>
+      <div class="calc-body">
+        <form class="calc-inputs" onsubmit="return false;">
+          <div class="input-set">
+            <div class="input-set-title">Volume &amp; Area</div>
+            <div class="field">
+              <label for="sprayVol">Total Volume Applied (litres)</label>
+              <input type="number" id="sprayVol" placeholder="e.g. 300" min="0" step="any" />
+            </div>
+            <div class="field">
+              <label for="sprayArea">Total Area (m²)</label>
+              <input type="number" id="sprayArea" placeholder="e.g. 1000" min="0" step="any" />
+            </div>
+          </div>
+          <button type="button" class="calc-btn" onclick="calcSpray()">⚡ Calculate Spray Rate</button>
+          <button type="button" class="reset-btn" onclick="resetSpray()">↺ Reset</button>
+        </form>
+        <div class="calc-results">
+          <div class="results-header"><h3>Results</h3></div>
+          <div id="spray-empty" class="result-placeholder"><div class="placeholder-icon">💧</div><p>Enter volume and area to calculate spray rate</p></div>
+          <div id="spray-data" style="display:none;">
+            <div class="result-card highlighted"><div class="result-card-icon orange">💧</div><div class="result-card-body"><div class="result-card-label">Spray Rate</div><div class="result-card-value" id="sprayRate">—</div></div></div>
+            <div class="result-card"><div class="result-card-icon blue">📊</div><div class="result-card-body"><div class="result-card-label">Litres per 100 m²</div><div class="result-card-value" id="sprayL100">—</div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- REFERENCE TABLE -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Reference</div>
+      <h2>Standard Application Rates by Pavement Type</h2>
+      <p>Typical application rates for common bituminous pavement treatments.</p>
+    </div>
+    <table class="ref-table">
+      <thead>
+        <tr>
+          <th>Pavement Type</th>
+          <th>Typical Rate</th>
+          <th>Unit</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Chip seal (bitumen spray)</td><td class="highlight">0.9–1.4</td><td>L/m²</td><td>Residual bitumen only</td></tr>
+        <tr><td>Surface dressing</td><td class="highlight">1.0–1.8</td><td>L/m²</td><td>Includes aggregate cover</td></tr>
+        <tr><td>Tack coat (inter-layer)</td><td class="highlight">0.2–0.5</td><td>L/m²</td><td>Emulsion, not residual bitumen</td></tr>
+        <tr><td>Thin overlay (25 mm)</td><td class="highlight">55–65</td><td>kg/m²</td><td>At ~2300 kg/m³</td></tr>
+        <tr><td>Standard overlay (50 mm)</td><td class="highlight">110–120</td><td>kg/m²</td><td>At ~2300 kg/m³</td></tr>
+        <tr><td>Full pavement (75 mm)</td><td class="highlight">165–185</td><td>kg/m²</td><td>At ~2300 kg/m³</td></tr>
+        <tr><td>Roofing torch-on membrane</td><td class="highlight">4–5</td><td>kg/m²</td><td>Per layer</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- FORMULA -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Formula</div>
+      <h2>Application Rate Formulas Explained</h2>
+      <p>Three core formulas power this calculator — deriving rate from quantity, quantity from rate, and converting between volume and mass for spray applications.</p>
+    </div>
+    <div class="formula-inline">
+      Rate (kg/m²) = Weight (kg) ÷ Area (m²) &nbsp;|&nbsp; Quantity (kg) = Rate (kg/m²) × Area (m²) &nbsp;|&nbsp; Spray Rate (L/m²) = Volume (L) ÷ Area (m²)
+    </div>
+    <div class="grid-3" style="gap:1.5rem;margin-top:2rem;">
+      <div class="step-card">
+        <div class="step-num">eg</div>
+        <h3>Worked Example — Rate Check (QA)</h3>
+        <p>Plant docket: 50 t delivered. Area paved: 450 m².</p>
+        <p><strong>Rate:</strong> 50,000 kg ÷ 450 = <strong>111.1 kg/m²</strong></p>
+        <p><strong>Equivalent:</strong> 11.11 t/100 m²</p>
+        <p>Compare to spec: if target is 110–125 kg/m², this result is within tolerance.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">eg</div>
+        <h3>Example — Order Quantity from Rate</h3>
+        <p>Target rate: 115 kg/m² (50 mm overlay). Area: 1,200 m².</p>
+        <p><strong>Required:</strong> 115 × 1,200 = 138,000 kg = <strong>138 t</strong></p>
+        <p>Add 3–5% bulking allowance → order <strong>142–145 t</strong>.</p>
+        <p>Use this mode for material purchasing and plant booking.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">eg</div>
+        <h3>Example — Spray Rate (Chip Seal)</h3>
+        <p>Spray tanker applied 850 L over 700 m² chip seal area.</p>
+        <p><strong>Spray Rate:</strong> 850 ÷ 700 = <strong>1.21 L/m²</strong></p>
+        <p><strong>Per 100 m²:</strong> 121 L/100 m²</p>
+        <p>Typical single coat range: 0.9–1.4 L/m². This result is within specification.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATIONS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Applications</div>
+      <h2>Who Uses This Calculator</h2>
+      <p>Critical for quality assurance, spray tanker calibration, and contract compliance across all bituminous paving applications.</p>
+    </div>
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="pillar-card">
+        <div class="pillar-icon" style="background:#fef3c7;">🔍</div>
+        <h3>Site QA Inspectors &amp; Supervisors</h3>
+        <p>Verify that the correct quantity of asphalt mix or bitumen was applied to a given area by cross-checking plant dockets against measured coverage. Instantly calculate achieved rate from delivery dockets and paved area, then compare against the approved mix design rate and road authority specification tolerances.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon" style="background:#e0f2fe;">🛢️</div>
+        <h3>Spray Seal &amp; Surface Treatment Contractors</h3>
+        <p>Use the spray rate mode to verify spray tanker calibration before each run. Enter the volume discharged from the tanker and the width and length sprayed to check whether the achieved L/m² matches the design rate from your bitumen spray design. Accurate spray rates are critical for aggregate embedment and chip seal longevity.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon" style="background:#f0fdf4;">📜</div>
+        <h3>Road Authority Compliance &amp; Auditing</h3>
+        <p>Road authorities and principal contractors use application rate calculations to verify payment claims and audit subcontractor performance. Compare the rate from delivery dockets against specification-required rates. The t/100 m² output format matches the standard used in Australian and New Zealand road authority specifications.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED CALCULATORS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Related</div>
+      <h2>Related Calculators</h2>
+    </div>
+    <div class="dir-grid">
+      <a href="/calculators/tack-coat-calculator/" class="dir-card">
+        <div class="dir-card-icon" style="background:#fef3c7;">🛢️</div>
+        <div class="dir-card-text">
+          <div class="dir-card-title">Tack Coat Calculator</div>
+          <div class="dir-card-desc">Emulsion spray rate and quantity</div>
+        </div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+      <a href="/calculators/asphalt-tonnage-calculator/" class="dir-card">
+        <div class="dir-card-icon" style="background:#e0f2fe;">⚖️</div>
+        <div class="dir-card-text">
+          <div class="dir-card-title">Tonnage Calculator</div>
+          <div class="dir-card-desc">Volume to weight conversion</div>
+        </div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+      <a href="/calculators/asphalt-material-calculator/" class="dir-card">
+        <div class="dir-card-icon" style="background:#f0fdf4;">🪨</div>
+        <div class="dir-card-text">
+          <div class="dir-card-title">Material Calculator</div>
+          <div class="dir-card-desc">Full asphalt material estimator</div>
+        </div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+      <a href="/blog/bitumen-spray-rate-chip-seal/" class="dir-card">
+        <div class="dir-card-icon" style="background:#fffbeb;">📘</div>
+        <div class="dir-card-text">
+          <div class="dir-card-title">Chip Seal Guide</div>
+          <div class="dir-card-desc">How to calculate bitumen spray rates for chip seal and surface dressing</div>
+        </div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="/calculators/" class="btn btn-outline">View All Calculators →</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO USE -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Guide</div>
+      <h2>How to Use This Calculator</h2>
+    </div>
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Select Calculation Mode</h3>
+        <p>Choose your calculation direction: "Quantity to Rate" (you know total bitumen used and the area — calculate the achieved rate), "Rate to Quantity" (you know the target rate and area — calculate how much bitumen to order), or "Emulsion Spray Rate" (convert between emulsion volume and residual bitumen content).</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Enter Area &amp; Known Values</h3>
+        <p>Input your project area in square metres or square feet and the known quantity or target rate. For sprayed seals, typical bitumen application rates are 0.9–1.5 L/m² for a single seal. For tack coats, 0.15–0.40 L/m². For prime coat on granular base, 0.5–1.0 L/m². Enter residual bitumen content percentage if working with emulsions.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Review Application Rate Results</h3>
+        <p>Click Calculate to see the application rate in kg/m², L/m², or the total quantity needed. Results help with spray tanker calibration, quality assurance checks on spray rates, material quantity ordering, and verifying compliance with road authority specifications. Use the rate per 100 m² value for traditional sprayed seal documentation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FURTHER READING -->
+    <section class="section">
+        <div class="container container-sm">
+            <div style="padding-left:1.1rem;border-left:2px solid var(--gold);">
+                <p>Rates differ sharply depending on whether you are priming an unbound base or tacking between asphalt lifts. <a href="/blog/prime-coat-vs-tack-coat/">Prime coat versus tack coat</a> explains which one your job needs before you calculate how much.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container container-sm">
+    <div class="section-header">
+      <div class="label">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">What is the typical bitumen application rate for a sprayed seal? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Single coat sprayed seal (chip seal) bitumen application rates typically range from 0.9–1.8 L/m² depending on the aggregate size and existing surface condition. Coarser aggregate (20 mm) requires more bitumen to fill voids and embed the stone. Fine aggregate chip seals (7 mm or 10 mm) use 0.9–1.2 L/m². Double coat seals for rehabilitation use two applications. These rates are for neat bitumen — multiply by the dilution factor for emulsions.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do I convert bitumen application rate from L/m² to kg/m²? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Multiply L/m² by bitumen density to get kg/m². Bitumen density at 15°C is approximately 1.02–1.05 kg/litre, depending on grade and polymer content. For practical purposes, 1 L/m² ≈ 1.03 kg/m² of bitumen. For emulsions, you must also account for residual bitumen content: actual bitumen = emulsion volume × (residual % ÷ 100) × emulsion density. Our calculator handles this conversion automatically.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What is the difference between application rate and spread rate? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Application rate refers specifically to the volume or mass of bitumen (or bitumen emulsion) applied per unit area, expressed as L/m² or kg/m². Spread rate (for aggregates) refers to the quantity of stone or grit applied per unit area, expressed as m²/m³ or number of chips per m². Both are required for designing and QA-checking a sprayed seal: the bitumen application rate must be calibrated to ensure proper aggregate embedment depth (typically 50–70% of aggregate height).</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What application rate should I use for a 50 mm asphalt overlay? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>A standard 50 mm dense-graded asphalt overlay at a compacted density of 2,300 kg/m³ has a theoretical application rate of approximately 115 kg/m² (50 mm ÷ 1,000 × 2,300 kg/m³ = 115 kg/m²). In practice, rates of 110–125 kg/m² are typical, depending on aggregate type and mix design. For a 25 mm thin overlay, expect 55–65 kg/m². For a 75 mm full-depth wearing course, expect 165–185 kg/m². Always use the design density from your approved mix design — it varies between AC 10, AC 14, and SMA mixes.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What is t/100m² and why is it used in Australia? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>t/100m² (tonnes per 100 square metres) is the standard application rate unit used by Australian and New Zealand road authorities, including Transport for NSW, VicRoads, and NZTA. It is equivalent to kg/m² ÷ 10. For example, 115 kg/m² = 11.5 t/100m². This unit is used in pavement design documents, specification tables, and payment schedules because it gives a convenient whole-number figure that is easy to compare against contract rates. When reviewing road authority specifications, always check whether the stated rate is in kg/m², t/100m², or the older imperial-derived t/1,000 ft² (used in some older US state DOT specs).</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do I check if my spray tanker is calibrated correctly? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Perform a calibration run before commencing spray seal works: spray a known volume of bitumen over a measured test strip area and calculate the achieved L/m² using the Spray Rate mode of this calculator. The measured rate should be within ±5% of the design rate. Also check the transverse distribution by placing absorbent paper sheets across the full spray bar width and weighing them after a test run — distribution should be uniform within ±10% across the spray bar. Check nozzle condition, temperature, pump pressure, and travel speed against the manufacturer's spray chart. Most road authority specifications require calibration records to be submitted before work commences.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What is the difference between emulsion application rate and residual bitumen rate? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Bitumen emulsions contain water in addition to bitumen — typically 30–40% water content by volume. The emulsion application rate is the total volume of emulsion sprayed (litres of emulsion per m²). The residual bitumen rate is the actual bitumen content after the water breaks and evaporates. To convert: Residual Bitumen (L/m²) = Emulsion Rate (L/m²) × Residual Content (%). For example, a 60% residual content emulsion applied at 1.2 L/m² delivers 0.72 L/m² of residual bitumen. Road authority specifications for tack coats and prime coats are typically stated in residual bitumen terms — always confirm whether the spec refers to emulsion or residual bitumen before calibrating your tanker.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- REFERENCES -->
+    <section class="section section-alt">
+        <div class="container container-sm">
+            <div class="section-header">
+                <div class="label">References</div>
+                <h2>Sources for the application rates</h2>
+                <p>Spray rates vary with surface texture, existing pavement condition and the emulsion grade. The ranges quoted here come from the sources below &mdash; treat them as a starting point, not a specification.</p>
+            </div>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.9rem;">
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://www.asphaltinstitute.org/" target="_blank" rel="noopener nofollow">Asphalt Institute — technical resources and engineering bulletins</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://bookstore.asphaltinstitute.org/catalog/book/ms-2-asphalt-mix-design-methods" target="_blank" rel="noopener nofollow">Asphalt Institute, <em>MS-2 Asphalt Mix Design Methods</em>, 7th edition</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://dot.ca.gov/programs/construction/construction-manual/section-4-39-asphalt-concrete" target="_blank" rel="noopener nofollow">Caltrans, <em>Construction Manual</em> — Section 4-39, Asphalt Concrete</a></li>
+            </ul>
+            <p style="margin-top:1.75rem;font-size:.85rem;color:var(--text-muted);">
+                Rate ranges reviewed in <strong>July 2026</strong>.
+                Any cost figures quoted are indicative only and date quickly &mdash; treat them as a
+                sanity check on a quote, never as a quote.
+                See our <a href="/editorial-policy/">editorial policy</a> for how these values are
+                sourced and reviewed, and the <a href="/disclaimer/">disclaimer</a> for the limits of
+                these estimates.
+            </p>
+        </div>
+    </section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" style="margin-bottom:.5rem;">
+          <div class="nav-logo-icon">B</div>
+          <div class="nav-logo-text">Bitumen<span>Calc</span></div>
+        </a>
+        <p>Free pavement quantity calculators. Every formula and default value is shown on the page.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Regional</p>
+        <ul>
+          <li><a href="/calculators/australia-bitumen-calculator/">Australia</a></li>
+          <li><a href="/calculators/canada-bitumen-calculator/">Canada</a></li>
+          <li><a href="/calculators/new-zealand-bitumen-calculator/">New Zealand</a></li>
+          <li><a href="/calculators/california-asphalt-calculator/">California</a></li>
+          <li><a href="/calculators/virginia-asphalt-calculator/">Virginia</a></li>
+          <li><a href="/calculators/colorado-asphalt-calculator/">Colorado</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Calculators</p>
+        <ul>
+          <li><a href="/calculators/bitumen-square-feet-calculator/">Square Feet</a></li>
+          <li><a href="/calculators/asphalt-tonnage-calculator/">Tonnage</a></li>
+          <li><a href="/calculators/asphalt-cost-calculator/">Cost Calculator</a></li>
+          <li><a href="/calculators/asphalt-material-calculator/">Material</a></li>
+          <li><a href="/calculators/road-asphalt-calculator/">Road</a></li>
+          <li><a href="/calculators/asphalt-repair-calculator/">Repair</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Company</p>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/calculators/">All Calculators</a></li>
+          <li><a href="/about-us/">About Us</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+        </ul>
+        <p style="margin-top:1.5rem;" class="footer-label">Legal</p>
+        <ul>
+          <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+
+                        <li><a href="/disclaimer/">Disclaimer</a></li>
+                        <li><a href="/editorial-policy/">Editorial Policy</a></li>
+                    </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Bitumen Calculator. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/terms-and-conditions/">Terms</a>
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/contact-us/">Contact</a>
+
+                    <a href="/disclaimer/">Disclaimer</a>
+                    <a href="#" data-consent-open>Cookie Preferences</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+<script src="/js/app.min.js?v=9"></script>
+<script>
+  let rateMode = 'qtor';
+
+  function setRateMode(mode) {
+    rateMode = mode;
+    document.getElementById('qtorCalc').style.display = mode === 'qtor' ? '' : 'none';
+    document.getElementById('rtoqCalc').style.display = mode === 'rtoq' ? '' : 'none';
+    document.getElementById('sprayCalc').style.display = mode === 'spray' ? '' : 'none';
+
+    const inactive = 'background:var(--bg-2);color:var(--text);border:1px solid var(--border);';
+    document.getElementById('modeQtoR').style.cssText = mode === 'qtor' ? '' : inactive;
+    document.getElementById('modeRtoQ').style.cssText = mode === 'rtoq' ? '' : inactive;
+    document.getElementById('modeSpray').style.cssText = mode === 'spray' ? '' : inactive;
+  }
+
+  // MODE 1: QUANTITY → RATE
+  function calcQtoR() {
+    const weightVal = parseFloat(document.getElementById('qtorWeight').value);
+    const weightUnit = document.getElementById('qtorWeightUnit').value;
+    const area = parseFloat(document.getElementById('qtorArea').value);
+    if (!weightVal || !area) return;
+
+    const weightKg = weightUnit === 't' ? weightVal * 1000
+                   : weightUnit === 'st' ? weightVal * 907.185
+                   : weightVal;
+
+    const kgPerM2 = weightKg / area;
+    const tPer100m2 = (weightKg / area) * 100 / 1000;
+
+    document.getElementById('qtor-empty').style.display = 'none';
+    document.getElementById('qtor-data').style.display = '';
+    document.getElementById('qtorRateKg').textContent = kgPerM2.toFixed(2) + ' kg/m²';
+    document.getElementById('qtorRateSub').textContent = tPer100m2.toFixed(3) + ' t/100m²';
+    document.getElementById('qtorRate100').textContent = (kgPerM2 * 100).toFixed(1) + ' kg per 100 m²';
+  }
+  function resetQtoR() {
+    document.getElementById('qtorWeight').value = '';
+    document.getElementById('qtorArea').value = '';
+    document.getElementById('qtor-empty').style.display = '';
+    document.getElementById('qtor-data').style.display = 'none';
+  }
+
+  // MODE 2: RATE → QUANTITY
+  function calcRtoQ() {
+    const rate = parseFloat(document.getElementById('rtoqRate').value);
+    const area = parseFloat(document.getElementById('rtoqArea').value);
+    if (!rate || !area) return;
+
+    const totalKg = rate * area;
+    const totalT = totalKg / 1000;
+
+    document.getElementById('rtoq-empty').style.display = 'none';
+    document.getElementById('rtoq-data').style.display = '';
+    document.getElementById('rtoqTonnes').textContent = totalT.toFixed(2) + ' t';
+    document.getElementById('rtoqKg').textContent = totalKg.toFixed(0) + ' kg';
+  }
+  function resetRtoQ() {
+    document.getElementById('rtoqRate').value = '';
+    document.getElementById('rtoqArea').value = '';
+    document.getElementById('rtoq-empty').style.display = '';
+    document.getElementById('rtoq-data').style.display = 'none';
+  }
+
+  // MODE 3: SPRAY RATE
+  function calcSpray() {
+    const vol = parseFloat(document.getElementById('sprayVol').value);
+    const area = parseFloat(document.getElementById('sprayArea').value);
+    if (!vol || !area) return;
+
+    const lPerM2 = vol / area;
+    const lPer100m2 = lPerM2 * 100;
+
+    document.getElementById('spray-empty').style.display = 'none';
+    document.getElementById('spray-data').style.display = '';
+    document.getElementById('sprayRate').textContent = lPerM2.toFixed(3) + ' L/m²';
+    document.getElementById('sprayL100').textContent = lPer100m2.toFixed(1) + ' L/100 m²';
+  }
+  function resetSpray() {
+    document.getElementById('sprayVol').value = '';
+    document.getElementById('sprayArea').value = '';
+    document.getElementById('spray-empty').style.display = '';
+    document.getElementById('spray-data').style.display = 'none';
+  }
+</script>
+</main>
+</body>
+</html>
+
+
+
+

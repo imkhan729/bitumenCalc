@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<!-- Consent Mode v2 defaults - must execute before any Google tag -->
+<script src="/js/consent.min.js?v=3"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GCYLRZ2PQK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GCYLRZ2PQK');
+</script>
+  <meta name="google-adsense-account" content="ca-pub-6438644207209483" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="msapplication-TileColor" content="#f59e0b" />
+<meta name="theme-color" content="#f59e0b" />
+<title>Colorado Asphalt Calculator — CDOT Standards</title>
+  <meta name="description" content="Colorado asphalt calculator using CDOT (Colorado Department of Transportation) standards. Mountain climate mix adjustments and USD pricing." />
+    <meta name="author" content="BitumenCalc" />
+<link rel="canonical" href="https://www.bitumencalc.com/calculators/colorado-asphalt-calculator/" />
+    <link rel="alternate" hreflang="en" href="https://www.bitumencalc.com/calculators/colorado-asphalt-calculator/" />
+<meta name="keywords" content="Colorado asphalt calculator, CDOT asphalt calculator, Colorado paving calculator, mountain climate asphalt" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://www.bitumencalc.com/calculators/colorado-asphalt-calculator/" />
+  <meta property="og:title" content="Colorado Asphalt Calculator — CDOT Standards" />
+  <meta property="og:description" content="Colorado asphalt calculator using CDOT (Colorado Department of Transportation) standards. Mountain climate mix adjustments and USD pricing." />
+  <meta property="og:image" content="https://www.bitumencalc.com/assets/hero-road.webp" />
+      <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="675" />
+<meta property="og:image:alt" content="BitumenCalc tool and guide preview image" />
+<meta property="og:site_name" content="BitumenCalc" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@BitumenCalc" />
+<meta name="twitter:title" content="Colorado Asphalt Calculator — CDOT Standards" />
+  <meta name="twitter:description" content="Colorado asphalt calculator using CDOT (Colorado Department of Transportation) standards. Mountain climate mix adjustments and USD pricing." />
+  <meta name="twitter:image" content="https://www.bitumencalc.com/assets/hero-road.webp" />
+
+    <meta name="twitter:image:alt" content="BitumenCalc tool and guide preview image" />
+<!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.bitumencalc.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://www.bitumencalc.com/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Colorado Calculator",
+      "item": "https://www.bitumencalc.com/calculators/colorado-asphalt-calculator/"
+    }
+  ]
+}
+</script>
+
+  <!-- Schema: WebApplication -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Colorado Asphalt Calculator",
+  "url": "https://www.bitumencalc.com/calculators/colorado-asphalt-calculator/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Colorado asphalt calculator using CDOT (Colorado Department of Transportation) standards. Mountain climate mix adjustments and USD pricing.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "BitumenCalc",
+    "url": "https://www.bitumencalc.com",
+    "logo": "https://www.bitumencalc.com/assets/logo.svg",
+    "@id": "https://www.bitumencalc.com/#organization"
+  }
+}
+</script>
+<style id="critical-css">:root{--navy:#0b1628;--navy-700:#162240;--gold:#f59e0b;--gold-dark:#d97706;--gold-light:#fde68a;--bg:#f8fafc;--surface:#fff;--border:#e2e8f0;--text:#0b1628;--text-muted:#475569;--grad-gold:linear-gradient(135deg,#f59e0b 0%,#fbbf24 100%);--grad-hero:linear-gradient(150deg,#0b1628 0%,#1a3060 55%,#0b2215 100%);--r-lg:12px;--r-xl:16px;--r-full:9999px}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{font-size:16px}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}img{max-width:100%;height:auto;display:block}a{color:var(--gold);text-decoration:none}.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}.site-header{position:sticky;top:0;z-index:1000;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.07);box-shadow:0 2px 24px rgba(0,0,0,.35)}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem}.nav-logo{display:flex;align-items:center;gap:.65rem;text-decoration:none;flex-shrink:0}.nav-logo-icon{width:40px;height:40px;background:var(--grad-gold);border-radius:var(--r-lg);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:900;color:var(--navy)}.nav-logo-text{font-size:1.15rem;font-weight:800;color:#fff;line-height:1.2}.nav-logo-text span{color:var(--gold)}.nav-links{display:flex;align-items:center;gap:.15rem}.nav-links a{color:rgba(255,255,255,.7);font-size:.875rem;font-weight:500;padding:.5rem .9rem;border-radius:var(--r-full)}.nav-links a.active{color:var(--gold);background:rgba(245,158,11,.1)}.nav-dropdown{position:relative;display:flex;align-items:center}.nav-dropdown-btn{color:rgba(255,255,255,.7);font-size:.875rem;font-weight:500;padding:.5rem .9rem;border-radius:var(--r-full);display:flex;align-items:center;gap:.3rem;background:none;border:0;font-family:inherit}.nav-dropdown-menu{position:absolute;top:calc(100% + .35rem);left:50%;transform:translate(-50%,10px);background:var(--navy-700);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-xl);padding:1.5rem;min-width:700px;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem 2rem;opacity:0;visibility:hidden;pointer-events:none}.nav-toggle{display:none}.mobile-menu{display:none}.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.75rem;border-radius:var(--r-full);font-size:.9rem;font-weight:600;white-space:nowrap;text-decoration:none}.btn-primary{background:var(--grad-gold);color:var(--navy);font-weight:700}.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)}.btn-lg{padding:1.1rem 2.5rem;font-size:1rem}.btn-sm{padding:.5rem 1.2rem;font-size:.82rem}.hero{background-image:url('/assets/hero-road.webp');background-size:cover;background-position:center 40%;background-color:#0b1628;position:relative;overflow:hidden;padding:3rem 0 4rem;height:calc(100vh - 72px);min-height:620px;max-height:900px;display:flex;align-items:center}.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(4,8,18,.65) 0%,rgba(4,8,18,.72) 50%,rgba(4,8,18,.9) 100%);z-index:0}.hero-inner{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1;padding-top:3rem;width:100%}.hero-content{color:#fff;max-width:860px}.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,158,11,.18);border:1px solid rgba(245,158,11,.5);color:var(--gold-light);padding:.35rem 1rem;border-radius:var(--r-full);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem}.hero-title{font-family:'Arial Narrow','Segoe UI Condensed',Impact,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:700;font-size:clamp(2.8rem,4.2vw,4.2rem);line-height:1.1;margin-bottom:1.2rem;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.55);text-align:center}.hero-desc{font-size:1.05rem;color:rgba(255,255,255,.88);margin-bottom:1.8rem;line-height:1.7;text-align:center;text-shadow:0 1px 8px rgba(0,0,0,.4)}.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;justify-content:center}.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.15)}.hero-stat-val{font-size:1.85rem;font-weight:900;color:#fff;line-height:1}.hero-stat-val span{color:var(--gold)}.hero-stat-label{font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;text-transform:uppercase;letter-spacing:.08em}.hero-road{position:absolute;bottom:0;left:0;right:0;height:5px;background:repeating-linear-gradient(90deg,var(--gold) 0,var(--gold) 50px,transparent 50px,transparent 72px);opacity:.65}.page-hero{background:var(--grad-hero);padding:4rem 0 3rem;position:relative;overflow:hidden}.page-hero-inner{position:relative;z-index:1}.page-hero h1{color:#fff;margin-bottom:.75rem;font-size:clamp(2.2rem,5vw,3.75rem);font-weight:800;line-height:1.12}.page-hero p{font-size:1.1rem;color:rgba(255,255,255,.7);max-width:560px}.section{padding:5.5rem 0}.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:2rem}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}@media(max-width:900px){.nav-links,.nav-cta,.nav-dropdown-btn{display:none}.nav-toggle{display:flex;flex-direction:column;gap:5px;padding:.5rem}.nav-toggle span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}.mobile-menu.open{display:block;background:var(--navy-700);border-top:1px solid rgba(255,255,255,.06)}.mobile-menu a{display:block;padding:.9rem 1.5rem;color:rgba(255,255,255,.8);font-weight:500;font-size:.95rem;border-bottom:1px solid rgba(255,255,255,.04)}}@media(max-width:768px){.container{padding:0 1rem}.hero{height:auto;min-height:100svh;padding:2rem 0 3rem}.hero-tag{display:none}.hero-title{font-size:2.1rem;margin-bottom:.85rem}.hero-desc{font-size:.9rem;margin-bottom:1.25rem;line-height:1.6}.hero-actions{gap:.75rem;margin-bottom:1.25rem}.hero-stats{gap:1.25rem;padding-top:1rem}.hero-stat-val{font-size:1.4rem}.hero-stat-label{font-size:.65rem}.grid-3{grid-template-columns:1fr}}</style>
+<link rel="preload" href="/css/style.min.css?v=7" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="/css/style.min.css?v=7" /></noscript>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f59e0b'/><text y='.9em' font-size='80' x='10'>🛣️</text></svg>" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does Colorado's altitude affect asphalt mix design?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Colorado's high elevations (Denver sits at 5,280 ft; mountain passes exceed 11,000 ft) create extreme temperature swings — summer highs of 95°F followed by winter lows of -20°F. This wide temperature range requires softer binder grades to prevent low-temperature thermal cracking while still resisting summer rutting. CDOT mandates PG 58-28 at elevations above 7,500 ft and PG 64-22 or PG 64-28 on the Front Range."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the paving season in Colorado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Colorado's paving season typically runs from mid-April through October at lower elevations (Denver, Colorado Springs). Mountain communities may have a much shorter window — June through September in many cases. Cold-weather paving is possible down to about 40°F ambient with proper mix temperature management, but CDOT generally restricts new pavement placement below 50°F for surface courses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does asphalt cost in Colorado?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Colorado asphalt prices range from approximately $100–$190 per ton for standard Superpave mixes. Denver metro and Front Range projects are in the $100–$150/ton range, while mountain resort areas like Aspen, Vail, and Telluride can run $150–$250/ton due to limited plant access and haul distance. Residential driveways typically cost $3–$6 per square foot installed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between CDOT SX(100) and SX(75) Superpave mixes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both are CDOT Superpave surface mixes with a 12.5 mm nominal maximum aggregate size (the \"SX\" designation), but the number refers to the number of gyrations used in the Superpave Gyratory Compactor during mix design — a proxy for design traffic loading. SX(100) is compacted at 100 gyrations and is designed for high-traffic roads (typically > 3 million ESALs) such as primary state highways and urban arterials. SX(75) uses 75 gyrations and is designed for medium-traffic applications (0.3–3 million ESALs) such as secondary roads, collector streets, and low-volume highways. SX(100) mixes are typically denser and more resistant to rutting. Both use the same binder grade selection based on location and climate zone — PG 58-28 in the mountains and PG 64-28 on the Front Range."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many tons of asphalt do I need for a Colorado driveway?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A typical Colorado residential driveway (50 ft × 12 ft = 600 sq ft) with a 3-inch SX(75) surface course: 600 × (3/12) × 110 ÷ 2,000 = 8.25 short tons. Allow 7% waste = order approximately 8.8 tons. Denver metro driveways often also have a 4-inch GX(100) base layer, adding another 11 tons. Mountain driveways in areas with severe freeze-thaw may need 4-inch surface plus 6-inch base for adequate frost protection — use the Tonnage Calculator to estimate each layer separately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does Colorado frequently specify Warm Mix Asphalt (WMA)?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Warm Mix Asphalt (WMA) uses chemical additives, foaming techniques, or organic waxes to reduce the mixing and compaction temperature by 50–90°F compared to conventional HMA. CDOT promotes WMA for three key reasons in Colorado: (1) Extended season — WMA can be placed at lower ambient temperatures, crucial for mountain communities with a 3–4 month paving window; (2) High-altitude workability — cooler temperatures at elevation reduce the mixing temperature window, and WMA additives help maintain mix workability during long hauls to remote job sites; (3) Energy savings and emissions — reduced plant temperatures cut fuel use and fume emissions. WMA is now standard practice on most CDOT projects and carries no significant cost premium over HMA."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does elevation affect asphalt density in Colorado calculations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Elevation itself does not directly change asphalt mix density, but Colorado's mountain aggregate sources (granite, rhyolite, and volcanic rock from Rocky Mountain quarries) tend to produce mixes with slightly lower density (2,260–2,340 kg/m³) compared to limestone-based mixes common in flatter states. The “110” figure common in US estimating is 110 lb per square yard per inch, not a density — read it that way and it agrees with the 2,280–2,360 kg/m³ the JMF reports for SX mixes. For high-stakes budget estimates or final quantity calculations, always use the lab-verified density from your CDOT-approved mix design rather than the default value in this calculator."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/css/seo-accessibility.css?v=3" />
+<link rel="preload" as="script" href="/js/app.min.js?v=9" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-icon">B</div>
+        <div class="nav-logo-text">Bitumen<span>Calc</span></div>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn">Calculators <span class="nav-dropdown-arrow">▾</span></button>
+          <div class="nav-dropdown-menu">
+            <div class="nav-dropdown-col">
+              <p class="nav-group-label">Regional</p>
+              <a href="/calculators/australia-bitumen-calculator/">Australia</a>
+              <a href="/calculators/canada-bitumen-calculator/">Canada</a>
+              <a href="/calculators/new-zealand-bitumen-calculator/">New Zealand</a>
+              <a href="/calculators/california-asphalt-calculator/">California</a>
+              <a href="/calculators/virginia-asphalt-calculator/">Virginia</a>
+              <a href="/calculators/colorado-asphalt-calculator/" class="active">Colorado</a>
+              <a href="/calculators/minnesota-asphalt-calculator/">Minnesota</a>
+              <a href="/calculators/new-jersey-asphalt-calculator/">New Jersey</a>
+              <a href="/calculators/north-carolina-asphalt-calculator/">North Carolina</a>
+            </div>
+            <div class="nav-dropdown-col">
+              <p class="nav-group-label">Area &amp; Unit Conversion</p>
+              <a href="/calculators/bitumen-square-feet-calculator/">Square Feet</a>
+              <a href="/calculators/square-feet-to-tons-calculator/">Sq Ft to Tons</a>
+              <a href="/calculators/bitumen-square-meters-calculator/">Square Meters</a>
+              <a href="/calculators/bitumen-square-yards-calculator/">Square Yards</a>
+              <a href="/calculators/metric-bitumen-calculator/">Metric</a>
+              <a href="/calculators/asphalt-measurement-calculator/">Measurement</a>
+              <p class="nav-group-label mt" style="margin-top:.9rem;">Thickness / Temp / Radius</p>
+              <a href="/calculators/asphalt-thickness-calculator/">Thickness</a>
+              <a href="/calculators/bitumen-temperature-converter/">Temperature</a>
+              <a href="/calculators/circular-asphalt-calculator/">Radius (Circular)</a>
+            </div>
+            <div class="nav-dropdown-col">
+              <p class="nav-group-label">Material &amp; Quantity</p>
+              <a href="/calculators/asphalt-material-calculator/">Material</a>
+              <a href="/calculators/asphalt-millings-calculator/">Millings (RAP)</a>
+              <a href="/calculators/asphalt-tonnage-calculator/">Tonnage</a>
+              <a href="/calculators/tack-coat-calculator/">Tack Coat</a>
+              <a href="/calculators/road-asphalt-calculator/">Road</a>
+              <a href="/calculators/roofing-bitumen-calculator/">Roofing</a>
+              <a href="/calculators/asphalt-repair-calculator/">Repair</a>
+              <a href="/calculators/asphalt-removal-calculator/">Removal</a>
+              <p style="margin-top:.9rem;" class="nav-group-label">Cost &amp; Rate</p>
+              <a href="/calculators/asphalt-cost-calculator/">Cost Calculator</a>
+              <a href="/calculators/asphalt-application-rate-calculator/">Rate Calculator</a>
+            </div>
+          </div>
+        </div>
+        <a href="/blog/">Blog</a>
+        <a href="/about-us/">About Us</a>
+      </div>
+      <a href="/calculators/" class="btn btn-primary btn-sm nav-cta">All Calculators</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/">🏠 Home</a>
+    <a href="/calculators/">🧮 All Calculators</a>
+    <a href="/calculators/australia-bitumen-calculator/">🇦🇺 Australia</a>
+    <a href="/calculators/canada-bitumen-calculator/">🇨🇦 Canada</a>
+    <a href="/calculators/new-zealand-bitumen-calculator/">🇳🇿 New Zealand</a>
+    <a href="/calculators/california-asphalt-calculator/">🇺🇸 California</a>
+    <a href="/calculators/virginia-asphalt-calculator/">🇺🇸 Virginia</a>
+    <a href="/calculators/bitumen-square-feet-calculator/">📐 Square Feet</a>
+    <a href="/calculators/asphalt-tonnage-calculator/">⚖️ Tonnage</a>
+    <a href="/calculators/asphalt-cost-calculator/">💰 Cost Calculator</a>
+    <a href="/blog/">📝 Blog</a>
+    <a href="/about-us/">ℹ️ About Us</a>
+  </div>
+</header>
+<main id="main-content">
+
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="eyebrow">Regional Calculator</div>
+    <h1>Colorado Asphalt Calculator</h1>
+    <p>Bitumen and aggregate estimation using CDOT specifications with high-altitude and cold-climate mix design defaults.</p>
+    <div class="region-meta">
+      <span class="badge badge-orange">CDOT Standards</span>
+      <span class="badge badge-blue">USD Currency</span>
+      <span class="badge badge-green">High-Altitude Mix Defaults</span>
+    </div>
+    <div class="breadcrumb">
+      <a href="/">Home</a><span class="sep">/</span>
+      <a href="/calculators/">Calculators</a><span class="sep">/</span>
+      <span>Colorado</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTEXT CARDS -->
+<section class="section-sm" style="background:var(--bg-2);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="info-box">
+        <span class="info-icon">📋</span>
+        <div>
+          <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Standard Reference</strong>
+          <p style="margin:0;font-size:.85rem;">CDOT Standard Specifications for Road and Bridge Construction, Section 401 (Hot Mix Asphalt) and Superpave mix design.</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <span class="info-icon">🏔️</span>
+        <div>
+          <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Climate Considerations</strong>
+          <p style="margin:0;font-size:.85rem;">High altitude (3,000–4,300m) and continental climate — requires soft bitumen grades (PG 58-28 to PG 64-28) to resist freeze-thaw and thermal cracking.</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <span class="info-icon">💰</span>
+        <div>
+          <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Typical CO Costs</strong>
+          <p style="margin:0;font-size:.85rem;">Asphalt in Colorado typically runs $150–$300/tonne depending on elevation and haul distance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="calc-section" id="calculator">
+  <div class="container">
+    <div class="calc-wrap" id="calcResults">
+      <div class="calc-tabs">
+        <button class="calc-tab active">Colorado Pavement</button>
+      </div>
+      <div class="calc-body">
+        <form class="calc-inputs" id="calcForm" onsubmit="return false;">
+
+          <div class="input-set">
+            <div class="input-set-title">Project Dimensions</div>
+            <div class="field">
+              <label for="length">Length</label>
+              <div class="input-row">
+                <input type="number" id="length" placeholder="e.g. 100" min="0" step="any" />
+                <select id="lengthUnit" style="width:90px;" aria-label="Length unit">
+                  <option value="m" selected>m</option>
+                  <option value="km">km</option>
+                  <option value="ft">ft</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="width">Width</label>
+              <div class="input-row">
+                <input type="number" id="width" placeholder="e.g. 7.5" min="0" step="any" />
+                <select id="widthUnit" style="width:90px;" aria-label="Width unit">
+                  <option value="m" selected>m</option>
+                  <option value="ft">ft</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="thickness">Thickness</label>
+              <div class="input-row">
+                <input type="number" id="thickness" placeholder="e.g. 50" min="0" step="any" />
+                <select id="thicknessUnit" style="width:90px;" aria-label="Thickness unit">
+                  <option value="mm" selected>mm</option>
+                  <option value="cm">cm</option>
+                  <option value="in">in</option>
+                </select>
+              </div>
+              <div class="field-hint">SX (100) wearing course: typically 40–75 mm</div>
+            </div>
+          </div>
+
+          <div class="input-set">
+            <div class="input-set-title">Colorado Mix Properties</div>
+            <div class="field">
+              <label for="mixType">Mix Type</label>
+              <select id="mixType">
+                <option value="dense" selected>SX (100) Superpave</option>
+                <option value="sma">SX (75) Medium</option>
+                <option value="hma">GX (100) Base</option>
+                <option value="wma">WMA</option>
+                <option value="custom">Custom</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="bitumenContent">Bitumen Content (%)</label>
+              <input type="number" id="bitumenContent" value="5.5" min="1" max="15" step="0.1" />
+              <div class="field-hint">SX (100) typical: 5.0–6.5%</div>
+            </div>
+            <div class="field">
+              <label for="density">Mix Density</label>
+              <div class="input-row">
+                <input type="number" id="density" value="2300" min="1000" max="3000" step="10" />
+                <select id="densityUnit" style="width:110px;" aria-label="Density unit">
+                  <option value="kg/m3" selected>kg/m³</option>
+                  <option value="t/m3">t/m³</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-set">
+            <div class="input-set-title">Cost (USD)</div>
+            <div class="field">
+              <label for="price">Price per Tonne</label>
+              <div class="input-row">
+                <input type="number" id="price" placeholder="e.g. 220" min="0" step="any" />
+                <select id="currency" style="width:90px;" aria-label="Currency">
+                  <option value="USD" selected>USD</option>
+                  <option value="EUR">EUR</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="calc-btn" id="calcBtn">⚡ Calculate</button>
+          <button type="button" class="reset-btn" id="resetBtn">↺ Reset</button>
+        </form>
+
+        <div class="calc-results">
+          <div class="results-header"><h3>Results</h3></div>
+          <div id="results-empty" class="result-placeholder">
+            <div class="placeholder-icon">🏗️</div>
+            <p>Enter dimensions to calculate</p>
+          </div>
+          <div id="results-data">
+            <div class="result-card"><div class="result-card-icon blue">📐</div><div class="result-card-body"><div class="result-card-label">Total Area</div><div class="result-card-value" id="resArea">—</div></div></div>
+            <div class="result-card"><div class="result-card-icon purple">📦</div><div class="result-card-body"><div class="result-card-label">Total Volume</div><div class="result-card-value" id="resVolume">—</div></div></div>
+            <div class="result-card highlighted"><div class="result-card-icon orange">⚖️</div><div class="result-card-body"><div class="result-card-label">Total Mix Weight</div><div class="result-card-value" id="resWeight">—</div><div class="result-card-sub" id="resWeightSub"></div></div></div>
+            <div class="result-card"><div class="result-card-icon orange">🛢️</div><div class="result-card-body"><div class="result-card-label">Bitumen Required</div><div class="result-card-value" id="resBitumen">—</div><div class="result-card-sub" id="resBitumenSub"></div></div></div>
+            <div class="result-card"><div class="result-card-icon blue">🪨</div><div class="result-card-body"><div class="result-card-label">Aggregate Required</div><div class="result-card-value" id="resAggregate">—</div><div class="result-card-sub" id="resAggregateSub"></div></div></div>
+            <div class="result-card" id="resCostCard" style="display:none;"><div class="result-card-icon yellow">💵</div><div class="result-card-body"><div class="result-card-label">Estimated Cost (USD)</div><div class="result-card-value" id="resCost">—</div></div></div>
+            <div class="breakdown-bar">
+              <div class="breakdown-bar-label">Mix Composition</div>
+              <div class="breakdown-track">
+                <div class="breakdown-fill-bitumen" id="bitPctBar" style="width:5.5%;"></div>
+                <div class="breakdown-fill-aggregate"></div>
+              </div>
+              <div class="breakdown-legend">
+                <div class="legend-item"><div class="legend-dot orange"></div><span id="bitLegendPct">5.5% Bitumen</span></div>
+                <div class="legend-item"><div class="legend-dot blue"></div><span id="aggLegendPct">94.5% Aggregate</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGIONAL INTRO -->
+<section class="section">
+  <div class="container" style="max-width:820px;">
+    <h2>Asphalt Estimating for Colorado's High-Altitude Climate</h2>
+    <p>Few states test asphalt the way Colorado does. Elevations above 5,000&nbsp;feet, intense UV, and dozens of freeze-thaw cycles each winter mean CDOT mixes are engineered for durability and crack resistance as much as for load. Grading&nbsp;S and SX Superpave surface mixes with polymer-modified binders are common along the Front Range and mountain corridors, and a design that performs in Denver may behave very differently on a pass over the Continental Divide.</p>
+    <p>Thin lifts at altitude are the difficult case. A 1.5-inch mat on a cold mountain subgrade loses heat fast and the roller window is short, so what you get in place can sit below the density the mix design assumed. That shows up as a shortfall against your estimate, not a surplus.</p>
+<p>Enter dimensions and lift thickness and the tool handles the volume-to-weight conversion. Colorado work commonly specifies PG&nbsp;58-28 or PG&nbsp;64-22 by elevation and traffic. Verify density and binder content against the CDOT-approved mix design, and carry a waste allowance on mountain jobs.</p>
+  </div>
+</section>
+
+<!-- FORMULA SECTION -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Formula</div>
+      <h2>Colorado Asphalt Tonnage Formula</h2>
+      <p>CDOT projects use imperial units. This calculator accepts both imperial and metric inputs and converts internally for accurate short-ton results aligned with CDOT quantity measurement standards.</p>
+    </div>
+    <div class="formula-inline">
+      Weight (short tons) = Length (ft) × Width (ft) × Thickness (in) ÷ 12 × Density (lb/ft³) ÷ 2,000
+    </div>
+    <div class="grid-3" style="gap:1.5rem;margin-top:2rem;">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Calculate Volume (ft³)</h3>
+        <p>Convert thickness from inches to feet (÷ 12), then multiply all dimensions. <strong>Example:</strong> A 500 ft I-70 mountain corridor resurfacing section, 24 ft wide, with a 3-inch SX(100) Superpave surface: 500 × 24 × (3 ÷ 12) = <strong>3,000 ft³</strong>.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Convert to Short Tons</h3>
+        <p>Multiply volume by compacted density and divide by 2,000. At 145&nbsp;lb/ft³: 3,000 × 145 ÷ 2,000 = <strong>217.5 short tons</strong>. Mountain corridor work should carry 7–10% for handling losses, so order roughly <strong>235 tons</strong>.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Separate Bitumen &amp; Aggregate</h3>
+        <p>Apply the SX(100) binder content from the CDOT-approved JMF. At 5.5%: 217.5 × 0.055 = <strong>12.0 tons bitumen</strong> (typically PG 58-28 for mountain locations) and 217.5 × 0.945 = <strong>205.5 tons aggregate</strong>. Front Range urban projects use PG 64-28 binder at similar content ranges.</p>
+      </div>
+    </div>
+    <div class="info-box" style="margin-top:2rem;">
+      <span class="info-icon">🏔️</span>
+      <div>
+        <strong style="color:var(--text);display:block;margin-bottom:.25rem;">High-Altitude Adjustment Note</strong>
+        <p style="margin:0;">At elevations above 7,500 ft, CDOT requires softer bitumen grades (PG 58-28 minimum) and often specifies WMA (Warm Mix Asphalt) additives to extend the paving season and improve mix workability in cooler ambient temperatures. Mix density at high altitude is generally 2–3% lower than sea-level values due to aggregate porosity differences. Always confirm density with the project-specific CDOT mix design report.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THIN LIFT AT ALTITUDE -->
+    <section class="section">
+        <div class="container container-sm">
+            <div class="section-header">
+                <div class="label">Site conditions</div>
+                <h2>Thin lifts, cold subgrade, and the density you actually get</h2>
+                <p>Mix design density assumes the mat was compacted properly. At altitude, on a cold base, in a thin lift, that assumption is the first thing to fail.</p>
+            </div>
+            <div style="overflow-x:auto;">
+            <table class="ref-table">
+                <thead><tr><th>Condition</th><th>Effect on the roller window</th><th>Practical consequence</th></tr></thead>
+                <tbody>
+                <tr><td>Thin lift (25&ndash;40&nbsp;mm)</td><td>Little thermal mass; cools in minutes rather than tens of minutes</td><td>Compaction must follow the paver closely or target density is missed</td></tr>
+                <tr><td>Cold subgrade or milled surface</td><td>Heat is drawn out of the mat from below</td><td>Effective window shortens again; early-morning starts are worst</td></tr>
+                <tr><td>High elevation, clear night sky</td><td>Strong radiative loss, large day&ndash;night swing</td><td>Narrow daily placement window; seasonal limits bite earlier</td></tr>
+                <tr><td>Wind across an open corridor</td><td>Convective loss over the full mat width</td><td>Density falls off at the mat edges first</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <p style="margin-top:1.5rem;">Why this belongs on an estimating page: in-place density below the design figure means the tonnage you ordered covers <em>more</em> area than planned, so you finish with material left over &mdash; or, if the crew chases density with extra passes and the mat tightens up, less. Either way the estimate and the delivery diverge, and the difference is not arithmetic.</p>
+            <p>Practical response is to keep the calculation honest and handle the risk separately: estimate at the mix design density, then carry an explicit contingency for mountain work rather than quietly fudging the density input.</p>
+
+        </div>
+    </section>
+
+<!-- COLORADO MIX STANDARDS -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Reference</div>
+      <h2>Colorado Mix Standards</h2>
+      <p>Typical values for common CDOT pavement mix designs.</p>
+    </div>
+    <table class="ref-table">
+      <thead>
+        <tr>
+          <th>Mix Type</th>
+          <th>Bitumen Content (%)</th>
+          <th>Density (kg/m³)</th>
+          <th>Standard</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>SX (100) Superpave</td><td class="highlight">5.0–6.5</td><td>2280–2360</td><td>CDOT Section 401</td></tr>
+        <tr><td>SX (75) Superpave</td><td class="highlight">5.0–6.5</td><td>2280–2360</td><td>CDOT medium traffic</td></tr>
+        <tr><td>GX (100) Base</td><td class="highlight">4.0–5.5</td><td>2300–2390</td><td>CDOT base course</td></tr>
+        <tr><td>WMA (Warm Mix)</td><td class="highlight">5.0–6.5</td><td>2280–2360</td><td>All regions</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- APPLICATIONS SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Applications</div>
+      <h2>Where Colorado Asphalt Calculations Are Used</h2>
+      <p>From the I-70 mountain corridor to Front Range urban developments and ski resort access roads, accurate CDOT-compliant tonnage estimates are essential for Colorado project budgeting and compliance.</p>
+    </div>
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="pillar-card">
+        <div class="pillar-icon" style="background:var(--gold-50);">🏔️</div>
+        <h3>CDOT Mountain Highway Resurfacing</h3>
+        <p>CDOT Region 1 (Denver/mountains) engineers and their consultants use SX(100) Superpave calculations to bid and manage resurfacing contracts on I-70, US-40, and CO-9. Mountain projects require higher wastage allowances due to complex geometry (curves, superelevation) and are often specified as WMA to allow placement in the narrow mountain paving window of June–September.</p>
+        <p>Related: <a href="/calculators/asphalt-tonnage-calculator/">Asphalt Tonnage Calculator</a></p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon" style="background:var(--sky-light);">🌆</div>
+        <h3>Denver Metro Front Range Development</h3>
+        <p>Commercial developers and municipality engineers in Denver, Aurora, and Colorado Springs estimate SX(75) and SX(100) quantities for new road construction, subdivision paving, and parking lot projects. Front Range projects benefit from lower haul costs and a longer paving season (April–October) compared to mountain locations, making budget estimates more predictable.</p>
+        <p>Related: <a href="/calculators/asphalt-cost-calculator/">Asphalt Cost Calculator</a></p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon" style="background:#d1fae5;">⛷️</div>
+        <h3>Ski Resort Access Roads &amp; Mountain Communities</h3>
+        <p>Garfield, Eagle, Summit, and Pitkin county road departments calculate asphalt quantities for resort access road maintenance and mountain subdivision paving. High aggregate haul costs and limited plant access mean accurate tonnage estimation is critical to avoid costly over-ordering. WMA mixes are common at these elevations to allow paving at lower ambient temperatures.</p>
+        <p>Related: <a href="/calculators/asphalt-repair-calculator/">Asphalt Repair Calculator</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container container-sm">
+    <div class="section-header">
+      <div class="label">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">How does Colorado's altitude affect asphalt mix design? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Colorado's high elevations (Denver sits at 5,280 ft; mountain passes exceed 11,000 ft) create extreme temperature swings — summer highs of 95°F followed by winter lows of -20°F. This wide temperature range requires softer binder grades to prevent low-temperature thermal cracking while still resisting summer rutting. CDOT mandates PG 58-28 at elevations above 7,500 ft and PG 64-22 or PG 64-28 on the Front Range.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What is the paving season in Colorado? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Colorado's paving season typically runs from mid-April through October at lower elevations (Denver, Colorado Springs). Mountain communities may have a much shorter window — June through September in many cases. Cold-weather paving is possible down to about 40°F ambient with proper mix temperature management, but CDOT generally restricts new pavement placement below 50°F for surface courses.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How much does asphalt cost in Colorado? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Colorado asphalt prices range from approximately $100–$190 per ton for standard Superpave mixes. Denver metro and Front Range projects are in the $100–$150/ton range, while mountain resort areas like Aspen, Vail, and Telluride can run $150–$250/ton due to limited plant access and haul distance. Residential driveways typically cost $3–$6 per square foot installed.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What is the difference between CDOT SX(100) and SX(75) Superpave mixes? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Both are CDOT Superpave surface mixes with a 12.5 mm nominal maximum aggregate size (the "SX" designation), but the number refers to the number of gyrations used in the Superpave Gyratory Compactor during mix design — a proxy for design traffic loading. <strong>SX(100)</strong> is compacted at 100 gyrations and is designed for high-traffic roads (typically > 3 million ESALs) such as primary state highways and urban arterials. <strong>SX(75)</strong> uses 75 gyrations and is designed for medium-traffic applications (0.3–3 million ESALs) such as secondary roads, collector streets, and low-volume highways. SX(100) mixes are typically denser and more resistant to rutting. Both use the same binder grade selection based on location and climate zone — PG 58-28 in the mountains and PG 64-28 on the Front Range.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How many tons of asphalt do I need for a Colorado driveway? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>A typical Colorado residential driveway (50 ft × 12 ft = 600 sq ft) with a 3-inch SX(75) surface course: 600 × (3/12) × 110 ÷ 2,000 = <strong>8.25 short tons</strong>. Allow 7% waste = order approximately <strong>8.8 tons</strong>. Denver metro driveways often also have a 4-inch GX(100) base layer, adding another 11 tons. Mountain driveways in areas with severe freeze-thaw may need 4-inch surface plus 6-inch base for adequate frost protection — use the <a href="/calculators/asphalt-tonnage-calculator/">Tonnage Calculator</a> to estimate each layer separately.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Why does Colorado frequently specify Warm Mix Asphalt (WMA)? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Warm Mix Asphalt (WMA) uses chemical additives, foaming techniques, or organic waxes to reduce the mixing and compaction temperature by 50–90°F compared to conventional HMA. CDOT promotes WMA for three key reasons in Colorado: (1) <strong>Extended season</strong> — WMA can be placed at lower ambient temperatures, crucial for mountain communities with a 3–4 month paving window; (2) <strong>High-altitude workability</strong> — cooler temperatures at elevation reduce the mixing temperature window, and WMA additives help maintain mix workability during long hauls to remote job sites; (3) <strong>Energy savings and emissions</strong> — reduced plant temperatures cut fuel use and fume emissions. WMA is now standard practice on most CDOT projects and carries no significant cost premium over HMA.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How does elevation affect asphalt density in Colorado calculations? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Elevation itself does not directly change asphalt mix density, but Colorado's mountain aggregate sources (granite, rhyolite, and volcanic rock from Rocky Mountain quarries) tend to produce mixes with slightly lower density (2,260–2,340 kg/m³) compared to limestone-based mixes common in flatter states. The “110” figure common in US estimating is 110&nbsp;lb per square yard per inch, not a density — read it that way and it agrees with the 2,280–2,360&nbsp;kg/m³ the JMF reports for SX mixes. For high-stakes budget estimates or final quantity calculations, always use the lab-verified density from your CDOT-approved mix design rather than the default value in this calculator.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO USE -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Guide</div>
+      <h2>How to Use This Calculator</h2>
+    </div>
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Enter Project Dimensions</h3>
+        <p>Input length, width, and compacted asphalt thickness in inches or mm. Colorado's high-altitude and freeze-thaw climate often requires thicker pavement sections — CDOT typically specifies 3–4 inches of surface mix on mountain highways, and thinner 2-inch lifts on urban roads.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Select CDOT Mix Type</h3>
+        <p>Choose the appropriate Colorado DOT Superpave mix grade. High-altitude areas above 8,000 ft require softer PG binder grades (PG 58-28 or PG 58-34) for low-temperature flexibility. Lower elevation Front Range highways use PG 64-28. Adjust bitumen content to 5.0–6.5% per your project mix design.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Add Cost &amp; Calculate</h3>
+        <p>Enter the current Colorado asphalt price per ton (typically $100–$190/ton). Click Calculate for total tonnage, bitumen and aggregate quantities, and estimated project cost. Mountain projects may carry a 15–20% premium over Front Range pricing due to haul distance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- REFERENCES -->
+    <section class="section section-alt">
+        <div class="container container-sm">
+            <div class="section-header">
+                <div class="label">References</div>
+                <h2>Specifications behind these numbers</h2>
+                <p>Mix designations, binder grades and densities on this page trace back to the state specification and to the Asphalt Institute. Your district may amend any of it, and your approved Job Mix Formula overrides all of it.</p>
+            </div>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.9rem;">
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://www.codot.gov/business/designsupport/cdot-construction-specifications/2023-construction-specifications/2023-specs-book/2023-cdot-specs-book.pdf" target="_blank" rel="noopener nofollow">Colorado DOT, <em>Standard Specifications for Road and Bridge Construction</em> (2023) — Section 403, Hot Mix Asphalt</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://www.codot.gov/business/designsupport/cdot-construction-specifications" target="_blank" rel="noopener nofollow">Colorado DOT — Construction Specifications library</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://bookstore.asphaltinstitute.org/catalog/book/ms-2-asphalt-mix-design-methods" target="_blank" rel="noopener nofollow">Asphalt Institute, <em>MS-2 Asphalt Mix Design Methods</em>, 7th edition</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://store.astm.org/d2041_d2041m-19.html" target="_blank" rel="noopener nofollow">ASTM D2041/D2041M-19 — Theoretical Maximum Specific Gravity and Density of Asphalt Mixtures (the Rice test)</a></li>
+            </ul>
+            <p style="margin-top:1.75rem;font-size:.85rem;color:var(--text-muted);">
+                Mix tables checked against the specifications above in <strong>July 2026</strong>.
+                Any cost figures quoted are indicative only and date quickly &mdash; treat them as a
+                sanity check on a quote, never as a quote.
+                See our <a href="/editorial-policy/">editorial policy</a> for how these values are
+                sourced and reviewed, and the <a href="/disclaimer/">disclaimer</a> for the limits of
+                these estimates.
+            </p>
+        </div>
+    </section>
+
+<!-- OTHER REGIONS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Other Regions</div>
+      <h2>More Regional Calculators</h2>
+    </div>
+    <div class="dir-grid">
+      <a href="/calculators/canada-bitumen-calculator/" class="dir-card">
+        <div class="dir-card-icon" style="background:#fee2e2;">🇨🇦</div>
+        <div class="dir-card-text"><div class="dir-card-title">Canada</div><div class="dir-card-desc">CSA / MTO · CAD · cold-climate</div></div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+      <a href="/calculators/new-zealand-bitumen-calculator/" class="dir-card">
+        <div class="dir-card-icon" style="background:#e0f2fe;">🇳🇿</div>
+        <div class="dir-card-text"><div class="dir-card-title">New Zealand</div><div class="dir-card-desc">NZTA · NZD · AC 14</div></div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+      <a href="/calculators/california-asphalt-calculator/" class="dir-card">
+        <div class="dir-card-icon" style="background:#fef9c3;">🇺🇸</div>
+        <div class="dir-card-text"><div class="dir-card-title">California</div><div class="dir-card-desc">Caltrans · USD · Superpave</div></div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="/calculators/" class="btn btn-outline">View All Calculators →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" style="margin-bottom:.5rem;">
+          <div class="nav-logo-icon">B</div>
+          <div class="nav-logo-text">Bitumen<span>Calc</span></div>
+        </a>
+        <p>Free pavement quantity calculators. Every formula and default value is shown on the page.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Regional</p>
+        <ul>
+          <li><a href="/calculators/australia-bitumen-calculator/">Australia</a></li>
+          <li><a href="/calculators/canada-bitumen-calculator/">Canada</a></li>
+          <li><a href="/calculators/new-zealand-bitumen-calculator/">New Zealand</a></li>
+          <li><a href="/calculators/california-asphalt-calculator/">California</a></li>
+          <li><a href="/calculators/virginia-asphalt-calculator/">Virginia</a></li>
+          <li><a href="/calculators/colorado-asphalt-calculator/">Colorado</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Calculators</p>
+        <ul>
+          <li><a href="/calculators/bitumen-square-feet-calculator/">Square Feet</a></li>
+          <li><a href="/calculators/asphalt-tonnage-calculator/">Tonnage</a></li>
+          <li><a href="/calculators/asphalt-cost-calculator/">Cost Calculator</a></li>
+          <li><a href="/calculators/asphalt-material-calculator/">Material</a></li>
+          <li><a href="/calculators/road-asphalt-calculator/">Road</a></li>
+          <li><a href="/calculators/asphalt-repair-calculator/">Repair</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Company</p>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/calculators/">All Calculators</a></li>
+          <li><a href="/about-us/">About Us</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+        </ul>
+        <p style="margin-top:1.5rem;" class="footer-label">Legal</p>
+        <ul>
+          <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+
+                        <li><a href="/disclaimer/">Disclaimer</a></li>
+                        <li><a href="/editorial-policy/">Editorial Policy</a></li>
+                    </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Bitumen Calculator. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/terms-and-conditions/">Terms</a>
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/contact-us/">Contact</a>
+
+                    <a href="/disclaimer/">Disclaimer</a>
+                    <a href="#" data-consent-open>Cookie Preferences</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+<script src="/js/app.min.js?v=9"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.BitCalc) window.BitCalc.setDefaults({ bitumenContent: 5.5, density: 2300, currency: 'USD' });
+  });
+</script>
+</main>
+</body>
+</html>
+
+
+

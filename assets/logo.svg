@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title>BitumenCalc logo</title>
+  <rect width="512" height="512" rx="96" fill="#0b1628"/>
+  <rect x="64" y="64" width="384" height="384" rx="72" fill="#f59e0b"/>
+  <path fill="#0b1628" d="M156 112h126c39 0 70 9 92 27s33 43 33 74c0 20-5 38-16 53s-26 26-45 33c24 6 42 18 55 36s19 39 19 64c0 34-12 60-35 78s-56 27-98 27H156V112Zm88 158h39c22 0 37-4 46-12s14-19 14-34c0-16-5-28-16-36s-26-12-47-12h-36v94Zm0 170h43c22 0 39-4 50-13s16-22 16-39c0-37-21-55-64-55h-45v107Z"/>
+</svg>

@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8" />
+<!-- Consent Mode v2 defaults - must execute before any Google tag -->
+<script src="/js/consent.min.js?v=3"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GCYLRZ2PQK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GCYLRZ2PQK');
+</script>
+    <meta name="google-adsense-account" content="ca-pub-6438644207209483" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="msapplication-TileColor" content="#f59e0b" />
+<meta name="theme-color" content="#f59e0b" />
+<title>Australian Bitumen Calculator — Austroads DG14, SMA & OGFC</title>
+    <meta name="description" content="Free Australian bitumen calculator for Austroads paving standards. Estimate asphalt tonnage, bitumen quantity and AUD cost for DG14, SMA, and OGFC mixes." />
+      <meta name="author" content="BitumenCalc" />
+<link rel="canonical" href="https://www.bitumencalc.com/calculators/australia-bitumen-calculator/" />
+      <link rel="alternate" hreflang="en" href="https://www.bitumencalc.com/calculators/australia-bitumen-calculator/" />
+<meta name="keywords" content="Australian bitumen calculator, Austroads asphalt calculator, DG14 calculator, Australia road paving calculator, AUD asphalt cost" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+      <meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://www.bitumencalc.com/calculators/australia-bitumen-calculator/" />
+    <meta property="og:title" content="Australian Bitumen Calculator — Austroads DG14, SMA & OGFC" />
+    <meta property="og:description" content="Austroads-ready calculator for Australian asphalt projects. Estimate tonnage, bitumen, and AUD cost for DG14, SMA, and OGFC." />
+    <meta property="og:image" content="https://www.bitumencalc.com/assets/hero-road.webp" />
+        <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="675" />
+<meta property="og:image:alt" content="BitumenCalc tool and guide preview image" />
+<meta property="og:site_name" content="BitumenCalc" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content="@BitumenCalc" />
+<meta name="twitter:title" content="Australian Bitumen Calculator — Austroads DG14, SMA & OGFC" />
+    <meta name="twitter:description" content="Free Australian asphalt calculator for Austroads standards. Estimate tonnage, bitumen and AUD cost instantly." />
+    <meta name="twitter:image" content="https://www.bitumencalc.com/assets/hero-road.webp" />
+
+      <meta name="twitter:image:alt" content="BitumenCalc tool and guide preview image" />
+<!-- Schema: BreadcrumbList -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.bitumencalc.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://www.bitumencalc.com/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Australia Calculator",
+      "item": "https://www.bitumencalc.com/calculators/australia-bitumen-calculator/"
+    }
+  ]
+}
+</script>
+
+    <!-- Schema: WebApplication -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Australian Bitumen Calculator",
+  "url": "https://www.bitumencalc.com/calculators/australia-bitumen-calculator/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Australian bitumen and aggregate calculator using Austroads standards. DG14, SMA, OGFC mix presets with AUD currency. Free for engineers and contractors.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "BitumenCalc",
+    "legalName": "Big Techies",
+    "url": "https://www.bitumencalc.com",
+    "logo": "https://www.bitumencalc.com/assets/logo.svg",
+    "email": "info@bitumencalc.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "New York",
+      "addressRegion": "NY",
+      "addressCountry": "US"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Jimmy",
+      "jobTitle": "Civil and Software Engineer",
+      "url": "https://www.bitumencalc.com/authors/jimmy/"
+    },
+    "@id": "https://www.bitumencalc.com/#organization"
+  }
+}
+</script>
+<style id="critical-css">:root{--navy:#0b1628;--navy-700:#162240;--gold:#f59e0b;--gold-dark:#d97706;--gold-light:#fde68a;--bg:#f8fafc;--surface:#fff;--border:#e2e8f0;--text:#0b1628;--text-muted:#475569;--grad-gold:linear-gradient(135deg,#f59e0b 0%,#fbbf24 100%);--grad-hero:linear-gradient(150deg,#0b1628 0%,#1a3060 55%,#0b2215 100%);--r-lg:12px;--r-xl:16px;--r-full:9999px}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{font-size:16px}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}img{max-width:100%;height:auto;display:block}a{color:var(--gold);text-decoration:none}.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}.site-header{position:sticky;top:0;z-index:1000;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.07);box-shadow:0 2px 24px rgba(0,0,0,.35)}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem}.nav-logo{display:flex;align-items:center;gap:.65rem;text-decoration:none;flex-shrink:0}.nav-logo-icon{width:40px;height:40px;background:var(--grad-gold);border-radius:var(--r-lg);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:900;color:var(--navy)}.nav-logo-text{font-size:1.15rem;font-weight:800;color:#fff;line-height:1.2}.nav-logo-text span{color:var(--gold)}.nav-links{display:flex;align-items:center;gap:.15rem}.nav-links a{color:rgba(255,255,255,.7);font-size:.875rem;font-weight:500;padding:.5rem .9rem;border-radius:var(--r-full)}.nav-links a.active{color:var(--gold);background:rgba(245,158,11,.1)}.nav-dropdown{position:relative;display:flex;align-items:center}.nav-dropdown-btn{color:rgba(255,255,255,.7);font-size:.875rem;font-weight:500;padding:.5rem .9rem;border-radius:var(--r-full);display:flex;align-items:center;gap:.3rem;background:none;border:0;font-family:inherit}.nav-dropdown-menu{position:absolute;top:calc(100% + .35rem);left:50%;transform:translate(-50%,10px);background:var(--navy-700);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-xl);padding:1.5rem;min-width:700px;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem 2rem;opacity:0;visibility:hidden;pointer-events:none}.nav-toggle{display:none}.mobile-menu{display:none}.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.75rem;border-radius:var(--r-full);font-size:.9rem;font-weight:600;white-space:nowrap;text-decoration:none}.btn-primary{background:var(--grad-gold);color:var(--navy);font-weight:700}.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)}.btn-lg{padding:1.1rem 2.5rem;font-size:1rem}.btn-sm{padding:.5rem 1.2rem;font-size:.82rem}.hero{background-image:url('/assets/hero-road.webp');background-size:cover;background-position:center 40%;background-color:#0b1628;position:relative;overflow:hidden;padding:3rem 0 4rem;height:calc(100vh - 72px);min-height:620px;max-height:900px;display:flex;align-items:center}.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(4,8,18,.65) 0%,rgba(4,8,18,.72) 50%,rgba(4,8,18,.9) 100%);z-index:0}.hero-inner{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1;padding-top:3rem;width:100%}.hero-content{color:#fff;max-width:860px}.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,158,11,.18);border:1px solid rgba(245,158,11,.5);color:var(--gold-light);padding:.35rem 1rem;border-radius:var(--r-full);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem}.hero-title{font-family:'Arial Narrow','Segoe UI Condensed',Impact,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:700;font-size:clamp(2.8rem,4.2vw,4.2rem);line-height:1.1;margin-bottom:1.2rem;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.55);text-align:center}.hero-desc{font-size:1.05rem;color:rgba(255,255,255,.88);margin-bottom:1.8rem;line-height:1.7;text-align:center;text-shadow:0 1px 8px rgba(0,0,0,.4)}.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;justify-content:center}.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.15)}.hero-stat-val{font-size:1.85rem;font-weight:900;color:#fff;line-height:1}.hero-stat-val span{color:var(--gold)}.hero-stat-label{font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;text-transform:uppercase;letter-spacing:.08em}.hero-road{position:absolute;bottom:0;left:0;right:0;height:5px;background:repeating-linear-gradient(90deg,var(--gold) 0,var(--gold) 50px,transparent 50px,transparent 72px);opacity:.65}.page-hero{background:var(--grad-hero);padding:4rem 0 3rem;position:relative;overflow:hidden}.page-hero-inner{position:relative;z-index:1}.page-hero h1{color:#fff;margin-bottom:.75rem;font-size:clamp(2.2rem,5vw,3.75rem);font-weight:800;line-height:1.12}.page-hero p{font-size:1.1rem;color:rgba(255,255,255,.7);max-width:560px}.section{padding:5.5rem 0}.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:2rem}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}@media(max-width:900px){.nav-links,.nav-cta,.nav-dropdown-btn{display:none}.nav-toggle{display:flex;flex-direction:column;gap:5px;padding:.5rem}.nav-toggle span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}.mobile-menu.open{display:block;background:var(--navy-700);border-top:1px solid rgba(255,255,255,.06)}.mobile-menu a{display:block;padding:.9rem 1.5rem;color:rgba(255,255,255,.8);font-weight:500;font-size:.95rem;border-bottom:1px solid rgba(255,255,255,.04)}}@media(max-width:768px){.container{padding:0 1rem}.hero{height:auto;min-height:100svh;padding:2rem 0 3rem}.hero-tag{display:none}.hero-title{font-size:2.1rem;margin-bottom:.85rem}.hero-desc{font-size:.9rem;margin-bottom:1.25rem;line-height:1.6}.hero-actions{gap:.75rem;margin-bottom:1.25rem}.hero-stats{gap:1.25rem;padding-top:1rem}.hero-stat-val{font-size:1.4rem}.hero-stat-label{font-size:.65rem}.grid-3{grid-template-columns:1fr}}</style>
+<link rel="preload" href="/css/style.min.css?v=7" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="/css/style.min.css?v=7" /></noscript>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f59e0b'/><text y='.9em' font-size='80' x='10'>🛣️</text></svg>" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the standard bitumen content for DG14 in Australia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Per Austroads AP-T295/14, DG14 Dense-Graded Asphalt typically requires 5.0–6.0% bitumen by weight of total mix. The exact content is determined by mix design testing to achieve target air voids and Marshall stability. Most state road authorities such as VicRoads and TMR specify 5.5% as a starting point for design."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does asphalt cost per tonne in Australia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Australian asphalt prices range from approximately A$120–$280 per tonne depending on the state, mix type, and project size. Metropolitan areas such as Sydney and Melbourne tend to be on the higher end (A$180–$280/t), while regional areas may be lower. SMA and polymer-modified mixes command a premium over standard DG14."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What density should I use for Australian asphalt calculations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard DG14 dense-graded asphalt has a compacted density of approximately 2300–2400 kg/m³, with 2350 kg/m³ used as a common default. OGFC (open-graded friction course) mixes are lighter at 1950–2100 kg/m³ due to their higher air void content. Always confirm with your specific mix design data or contractor's laboratory results."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which Austroads standard applies to Australian pavement design?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The primary reference is Austroads AP-T295/14 for mix design of dense-graded and stone mastic asphalt, complemented by AS 2150 (Hot Mix Asphalt) and individual state specifications. For sprayed seals, Austroads AP-T189 applies. Each state road authority (VicRoads, TMR Queensland, NSW RMS, SA DPTI, WA Main Roads) publishes supplementary specifications that take precedence in their jurisdiction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between DG14 and DG10 asphalt in Australia?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "DG14 and DG10 are both Austroads Dense-Graded mixes, with the number indicating the nominal maximum aggregate size in mm. DG14 (14 mm) is the most widely used wearing course mix in Australia — suitable for most urban and rural roads at 40–60 mm compacted thickness. DG10 (10 mm) has a finer aggregate gradation and is used for thin overlays (25–35 mm), urban low-speed roads, and surfaces requiring a finer texture. DG10 typically has a slightly higher bitumen content (5.5–6.5%) and similar density to DG14. For bicycle paths and footways, DG10 or DG7 may be specified."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the typical asphalt overlay thickness on Australian roads?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For resurfacing (overlay without milling), a standard minimum overlay thickness of 40 mm DG14 is specified on most Austroads-aligned projects to ensure adequate compaction and performance life. Thinner overlays (25–35 mm DG10) are used on low-traffic urban roads or where headroom constraints limit layer thickness. For rehabilitation projects with structural deficiency, a 50–75 mm binder course (DG20) plus 40–50 mm wearing course is common. Always check the current Austroads AGPT (Pavement Technology Guide) pavement design procedure for traffic loading and layer thickness requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are asphalt prices in different Australian states?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Asphalt material prices in Australia vary significantly by state and remoteness. Approximate ranges for supply-only DG14 (2026): NSW/VIC (metro): A$180–$260/t; QLD (SE): A$170–$250/t; WA (metro Perth): A$200–$300/t; SA: A$180–$260/t; Remote/NT: A$300–$500+/t due to haulage costs. Prices fluctuate with bitumen crude oil pricing and are typically higher in summer peak season. Always get current quotes from local asphalt plants — Boral, Fulton Hogan, Downer, and Pronto Asphalt are major suppliers nationally. Use the Cost Calculator to estimate your project cost with current prices."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/css/seo-accessibility.css?v=3" />
+<link rel="preload" as="script" href="/js/app.min.js?v=9" />
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav-inner">
+                <a href="/" class="nav-logo">
+                    <div class="nav-logo-icon">B</div>
+                    <div class="nav-logo-text">Bitumen<span>Calc</span></div>
+                </a>
+                <div class="nav-links">
+                    <a href="/">Home</a>
+                    <div class="nav-dropdown">
+                        <button class="nav-dropdown-btn">Calculators <span class="nav-dropdown-arrow">▾</span></button>
+                        <div class="nav-dropdown-menu">
+                            <div class="nav-dropdown-col">
+                                <p class="nav-group-label">Regional</p>
+                                <a href="/calculators/australia-bitumen-calculator/" class="active">Australia</a>
+                                <a href="/calculators/canada-bitumen-calculator/">Canada</a>
+                                <a href="/calculators/new-zealand-bitumen-calculator/">New Zealand</a>
+                                <a href="/calculators/california-asphalt-calculator/">California</a>
+                                <a href="/calculators/virginia-asphalt-calculator/">Virginia</a>
+                                <a href="/calculators/colorado-asphalt-calculator/">Colorado</a>
+                                <a href="/calculators/minnesota-asphalt-calculator/">Minnesota</a>
+                                <a href="/calculators/new-jersey-asphalt-calculator/">New Jersey</a>
+                                <a href="/calculators/north-carolina-asphalt-calculator/">North Carolina</a>
+                            </div>
+                            <div class="nav-dropdown-col">
+                                <p class="nav-group-label">Area &amp; Unit Conversion</p>
+                                <a href="/calculators/bitumen-square-feet-calculator/">Square Feet</a>
+                                <a href="/calculators/square-feet-to-tons-calculator/">Sq Ft to Tons</a>
+                                <a href="/calculators/bitumen-square-meters-calculator/">Square Meters</a>
+                                <a href="/calculators/bitumen-square-yards-calculator/">Square Yards</a>
+                                <a href="/calculators/metric-bitumen-calculator/">Metric</a>
+                                <a href="/calculators/asphalt-measurement-calculator/">Measurement</a>
+                                <p class="nav-group-label mt" style="margin-top:.9rem;">Thickness / Temp / Radius</p>
+                                <a href="/calculators/asphalt-thickness-calculator/">Thickness</a>
+                                <a href="/calculators/bitumen-temperature-converter/">Temperature</a>
+                                <a href="/calculators/circular-asphalt-calculator/">Radius (Circular)</a>
+                            </div>
+                            <div class="nav-dropdown-col">
+                                <p class="nav-group-label">Material &amp; Quantity</p>
+                                <a href="/calculators/asphalt-material-calculator/">Material</a>
+                                <a href="/calculators/asphalt-millings-calculator/">Millings (RAP)</a>
+                                <a href="/calculators/asphalt-tonnage-calculator/">Tonnage</a>
+                                <a href="/calculators/tack-coat-calculator/">Tack Coat</a>
+                                <a href="/calculators/road-asphalt-calculator/">Road</a>
+                                <a href="/calculators/roofing-bitumen-calculator/">Roofing</a>
+                                <a href="/calculators/asphalt-repair-calculator/">Repair</a>
+                                <a href="/calculators/asphalt-removal-calculator/">Removal</a>
+                                <p style="margin-top:.9rem;" class="nav-group-label">Cost &amp; Rate</p>
+                                <a href="/calculators/asphalt-cost-calculator/">Cost Calculator</a>
+                                <a href="/calculators/asphalt-application-rate-calculator/">Rate Calculator</a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/blog/">Blog</a>
+                    <a href="/about-us/">About Us</a>
+                </div>
+                <a href="/calculators/" class="btn btn-primary btn-sm nav-cta">All Calculators</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+            </nav>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="/">🏠 Home</a>
+            <a href="/calculators/">🧮 All Calculators</a>
+            <a href="/calculators/australia-bitumen-calculator/">🇦🇺 Australia</a>
+            <a href="/calculators/canada-bitumen-calculator/">🇨🇦 Canada</a>
+            <a href="/calculators/new-zealand-bitumen-calculator/">🇳🇿 New Zealand</a>
+            <a href="/calculators/california-asphalt-calculator/">🇺🇸 California</a>
+            <a href="/calculators/virginia-asphalt-calculator/">🇺🇸 Virginia</a>
+            <a href="/calculators/bitumen-square-feet-calculator/">📐 Square Feet</a>
+            <a href="/calculators/asphalt-tonnage-calculator/">⚖️ Tonnage</a>
+            <a href="/calculators/asphalt-cost-calculator/">💰 Cost Calculator</a>
+            <a href="/blog/">📝 Blog</a>
+            <a href="/about-us/">ℹ️ About Us</a>
+        </div>
+    </header>
+<main id="main-content">
+
+
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+        <div class="container page-hero-inner">
+            <div class="eyebrow">Regional Calculator</div>
+            <h1>Australian Bitumen Calculator</h1>
+            <p>Estimate asphalt tonnage, bitumen quantity, and AUD cost for Austroads projects using DG14, SMA, and OGFC presets.</p>
+            <div class="region-meta">
+                <span class="badge badge-orange">Austroads Standards</span>
+                <span class="badge badge-blue">AUD Currency</span>
+                <span class="badge badge-green">Metric Units</span>
+            </div>
+            <div class="breadcrumb">
+                <a href="/">Home</a>
+                <span class="sep">/</span>
+                <a href="/calculators/">Calculators</a>
+                <span class="sep">/</span>
+                <span>Australia</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTEXT CARDS -->
+    <section class="section-sm" style="background:var(--bg-2);border-bottom:1px solid var(--border);">
+        <div class="container">
+            <div class="grid-3" style="gap:1.5rem;">
+                <div class="info-box">
+                    <span class="info-icon">📋</span>
+                    <div>
+                        <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Standard Reference</strong>
+                        <p style="margin:0;font-size:.85rem;">Austroads AP-T295/14 and state road authority specifications (VicRoads, TMR, DPTI, RMS).</p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <span class="info-icon">🌡️</span>
+                    <div>
+                        <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Climate Zones</strong>
+                        <p style="margin:0;font-size:.85rem;">Australia spans hot arid to temperate zones — bitumen grade selection varies significantly by state and elevation.</p>
+                    </div>
+                </div>
+                <div class="info-box">
+                    <span class="info-icon">💰</span>
+                    <div>
+                        <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Typical AUS Costs</strong>
+                        <p style="margin:0;font-size:.85rem;">Asphalt costs in Australia range from A$120–$280/tonne depending on region and specification.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REGIONAL INTRO -->
+    <section class="section">
+      <div class="container" style="max-width:820px;">
+        <h2>Estimating Asphalt and Bitumen for Australian Projects</h2>
+        <p>Australian paving practice follows Austroads and state road-authority specifications rather than US standards, and the terminology differs — mixes are described as dense-graded asphalt (for example DG14 and DG20) and binders by class, such as Class&nbsp;320, along with multigrade and polymer-modified grades for heavy-duty work. The continent's climate range, from tropical Queensland to alpine Victoria, drives binder selection, and quantities are worked in metric units and priced per tonne in Australian dollars.</p>
+        <p>One warning before you start. Sprayed seals are not estimated this way. A seal is priced by application rate over an area, in litres per square metre; run it through a volume calculator and the answer will be nonsense. This tool is for dense-graded asphalt placed in a lift.</p>
+<p>Work in metres and millimetres, pick the mix, and you get tonnage, the binder and aggregate split, and a cost in AUD. Dense-graded asphalt lands around 2,300–2,400&nbsp;kg/m³ depending on aggregate source and nominal size. State road authorities amend Austroads, so the project specification beats the guide, and the mix design beats both.</p>
+      </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section class="calc-section" id="calculator">
+        <div class="container">
+            <div class="calc-wrap" id="calcResults">
+                <div class="calc-tabs">
+                    <button class="calc-tab active">Australian Pavement</button>
+                </div>
+                <div class="calc-body">
+                    <form class="calc-inputs" id="calcForm" onsubmit="return false;">
+
+                        <div class="input-set">
+                            <div class="input-set-title">Project Dimensions</div>
+                            <div class="field">
+                                <label for="length">Length</label>
+                                <div class="input-row">
+                                    <input type="number" id="length" placeholder="e.g. 100" min="0" step="any" />
+                                    <select id="lengthUnit" style="width:90px;" aria-label="Length unit">
+                  <option value="m" selected>m</option>
+                  <option value="km">km</option>
+                  <option value="ft">ft</option>
+                </select>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="width">Width</label>
+                                <div class="input-row">
+                                    <input type="number" id="width" placeholder="e.g. 7.5" min="0" step="any" />
+                                    <select id="widthUnit" style="width:90px;" aria-label="Width unit">
+                  <option value="m" selected>m</option>
+                  <option value="ft">ft</option>
+                </select>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <label for="thickness">Thickness</label>
+                                <div class="input-row">
+                                    <input type="number" id="thickness" placeholder="e.g. 50" min="0" step="any" />
+                                    <select id="thicknessUnit" style="width:90px;" aria-label="Thickness unit">
+                  <option value="mm" selected>mm</option>
+                  <option value="cm">cm</option>
+                  <option value="in">in</option>
+                </select>
+                                </div>
+                                <div class="field-hint">DG14 wearing course: typically 40–50 mm</div>
+                            </div>
+                        </div>
+
+                        <div class="input-set">
+                            <div class="input-set-title">Australian Mix Properties</div>
+                            <div class="field">
+                                <label for="mixType">Mix Type</label>
+                                <select id="mixType">
+                <option value="dense" selected>DG14 Dense-Graded</option>
+                <option value="sma">SMA (Stone Mastic Asphalt)</option>
+                <option value="ogfc">OGFC (Open-Graded FC)</option>
+                <option value="hma">HMA General Purpose</option>
+                <option value="wma">WMA (Warm Mix)</option>
+                <option value="rap">RAP / Recycled</option>
+                <option value="custom">Custom</option>
+              </select>
+                            </div>
+                            <div class="field">
+                                <label for="bitumenContent">Bitumen Content (%)</label>
+                                <input type="number" id="bitumenContent" value="5.5" min="1" max="15" step="0.1" />
+                                <div class="field-hint">DG14 typical: 5.0–6.0% per Austroads</div>
+                            </div>
+                            <div class="field">
+                                <label for="density">Mix Density</label>
+                                <div class="input-row">
+                                    <input type="number" id="density" value="2350" min="1000" max="3000" step="10" />
+                                    <select id="densityUnit" style="width:110px;" aria-label="Density unit">
+                  <option value="kg/m3" selected>kg/m³</option>
+                  <option value="t/m3">t/m³</option>
+                </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-set">
+                            <div class="input-set-title">Cost Estimation (AUD)</div>
+                            <div class="field">
+                                <label for="price">Price per Tonne (AUD)</label>
+                                <div class="input-row">
+                                    <input type="number" id="price" placeholder="e.g. 180" min="0" step="any" />
+                                    <select id="currency" style="width:90px;" aria-label="Currency">
+                  <option value="AUD" selected>AUD</option>
+                  <option value="USD">USD</option>
+                </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="calc-btn" id="calcBtn">⚡ Calculate</button>
+                        <button type="button" class="reset-btn" id="resetBtn">↺ Reset</button>
+                    </form>
+
+                    <div class="calc-results">
+                        <div class="results-header">
+                            <h3>Results</h3>
+                        </div>
+                        <div id="results-empty" class="result-placeholder">
+                            <div class="placeholder-icon">🏗️</div>
+                            <p>Enter project dimensions<br>to see your estimates</p>
+                        </div>
+                        <div id="results-data">
+                            <div class="result-card">
+                                <div class="result-card-icon blue">📐</div>
+                                <div class="result-card-body">
+                                    <div class="result-card-label">Total Area</div>
+                                    <div class="result-card-value" id="resArea">—</div>
+                                </div>
+                            </div>
+                            <div class="result-card">
+                                <div class="result-card-icon purple">📦</div>
+                                <div class="result-card-body">
+                                    <div class="result-card-label">Total Volume</div>
+                                    <div class="result-card-value" id="resVolume">—</div>
+                                </div>
+                            </div>
+                            <div class="result-card highlighted">
+                                <div class="result-card-icon orange">⚖️</div>
+                                <div class="result-card-body">
+                                    <div class="result-card-label">Total Mix Weight</div>
+                                    <div class="result-card-value" id="resWeight">—</div>
+                                    <div class="result-card-sub" id="resWeightSub"></div>
+                                </div>
+                            </div>
+                            <div class="result-card">
+                                <div class="result-card-icon orange">🛢️</div>
+                                <div class="result-card-body">
+                                    <div class="result-card-label">Bitumen Required</div>
+                                    <div class="result-card-value" id="resBitumen">—</div>
+                                    <div class="result-card-sub" id="resBitumenSub"></div>
+                                </div>
+                            </div>
+                            <div class="result-card">
+                                <div class="result-card-icon blue">🪨</div>
+                                <div class="result-card-body">
+                                    <div class="result-card-label">Aggregate Required</div>
+                                    <div class="result-card-value" id="resAggregate">—</div>
+                                    <div class="result-card-sub" id="resAggregateSub"></div>
+                                </div>
+                            </div>
+                            <div class="result-card" id="resCostCard" style="display:none;">
+                                <div class="result-card-icon yellow">💵</div>
+                                <div class="result-card-body">
+                                    <div class="result-card-label">Estimated Cost (AUD)</div>
+                                    <div class="result-card-value" id="resCost">—</div>
+                                    <div class="result-card-sub">Based on total mix weight</div>
+                                </div>
+                            </div>
+                            <div class="breakdown-bar">
+                                <div class="breakdown-bar-label">Mix Composition</div>
+                                <div class="breakdown-track">
+                                    <div class="breakdown-fill-bitumen" id="bitPctBar" style="width:5.5%;"></div>
+                                    <div class="breakdown-fill-aggregate"></div>
+                                </div>
+                                <div class="breakdown-legend">
+                                    <div class="legend-item">
+                                        <div class="legend-dot orange"></div><span id="bitLegendPct">5.5% Bitumen</span></div>
+                                    <div class="legend-item">
+                                        <div class="legend-dot blue"></div><span id="aggLegendPct">94.5% Aggregate</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW TO USE -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="label">Guide</div>
+                <h2>How to Use This Calculator</h2>
+            </div>
+            <div class="grid-3" style="gap:1.5rem;">
+                <div class="step-card">
+                    <div class="step-num">1</div>
+                    <h3>Enter Project Dimensions</h3>
+                    <p>Input the length, width, and compacted thickness of your pavement area. For a standard Australian road lane, width is typically 3.5 m and DG14 wearing course thickness is 40–50 mm as per Austroads guidelines.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">2</div>
+                    <h3>Select Your Australian Mix</h3>
+                    <p>Choose the appropriate mix type — DG14 Dense-Graded for most wearing courses, SMA for high-traffic arterials, or OGFC for noise-reducing surfaces. Adjust the bitumen content percentage to match your state road authority specification
+                        (VicRoads, TMR, RMS, DPTI).</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">3</div>
+                    <h3>Add AUD Cost &amp; Calculate</h3>
+                    <p>Optionally enter the price per tonne in AUD (typically A$120–$280/tonne depending on region and mix grade). Click Calculate to get total mix weight in tonnes, bitumen and aggregate quantities, and total project cost estimate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AUSTRALIAN MIX STANDARDS -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="label">Reference</div>
+                <h2>Australian Mix Design Standards</h2>
+                <p>Typical bitumen content and density values for common Australian pavement mixes.</p>
+            </div>
+            <table class="ref-table standards-table">
+                <thead>
+                    <tr>
+                        <th>Mix Type</th>
+                        <th>Bitumen Content (%)</th>
+                        <th>Density (kg/m³)</th>
+                        <th>Typical Application</th>
+                        <th>Standard</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>DG14 Dense-Graded</td>
+                        <td class="highlight">5.0–6.0</td>
+                        <td>2300–2400</td>
+                        <td>Wearing/intermediate course</td>
+                        <td>Austroads / AS 2150</td>
+                    </tr>
+                    <tr>
+                        <td>DG10 Dense-Graded</td>
+                        <td class="highlight">5.5–6.5</td>
+                        <td>2300–2390</td>
+                        <td>Thin wearing course (&lt;35 mm)</td>
+                        <td>Austroads</td>
+                    </tr>
+                    <tr>
+                        <td>SMA (Stone Mastic)</td>
+                        <td class="highlight">6.0–7.0</td>
+                        <td>2250–2350</td>
+                        <td>High-traffic arterials</td>
+                        <td>Austroads AP-T295</td>
+                    </tr>
+                    <tr>
+                        <td>OGFC (Open-Graded)</td>
+                        <td class="highlight">5.5–6.5</td>
+                        <td>1950–2100</td>
+                        <td>Noise-reducing surfaces</td>
+                        <td>State RTA specs</td>
+                    </tr>
+                    <tr>
+                        <td>RAP Overlay</td>
+                        <td class="highlight">4.5–5.5</td>
+                        <td>2200–2300</td>
+                        <td>Recycled overlay</td>
+                        <td>Austroads</td>
+                    </tr>
+                    <tr>
+                        <td>Sprayed Seal / Chip</td>
+                        <td class="highlight">N/A</td>
+                        <td>—</td>
+                        <td>Low-volume roads</td>
+                        <td>Austroads AP-T189</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- FORMULA SECTION -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="label">Formula</div>
+                <h2>Australian Bitumen Tonnage Formula</h2>
+                <p>The calculation follows Austroads methodology: convert project dimensions to volume, apply the compacted mix density, then split into bitumen and aggregate components.</p>
+            </div>
+            <div class="formula-inline">
+                Mix Weight (t) = Length (m) × Width (m) × Thickness (m) × Density (kg/m³) ÷ 1,000
+            </div>
+            <div class="grid-3" style="gap:1.5rem;margin-top:2rem;">
+                <div class="step-card">
+                    <div class="step-num">①</div>
+                    <h3>Road Dimensions Example</h3>
+                    <p>A 1 km two-lane road (3.5 m lanes, 7 m total width) with a 50 mm DG14 wearing course: 1,000 m × 7 m × 0.05 m = 350 m³. At 2,350 kg/m³ density: <strong>822.5 tonnes</strong> of asphalt mix required.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">②</div>
+                    <h3>Material Split</h3>
+                    <p>At 5.5% bitumen (Austroads DG14 default): 822.5 t × 0.055 = <strong>45.2 t of bitumen binder</strong>. Remainder: 822.5 − 45.2 = <strong>777.3 t of crushed aggregate</strong>. Add 7% for waste → order <strong>880 t of total mix</strong>.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-num">③</div>
+                    <h3>AUD Cost Estimate</h3>
+                    <p>At A$200/t material cost: 880 t × $200 = <strong>A$176,000</strong> for mix material only. Full project cost (plant, traffic management, mobilisation, linemarking) typically adds 60–100% on top. Use the <a href="/calculators/asphalt-cost-calculator/">Cost Calculator</a>                        to enter your regional quote.</p>
+                </div>
+            </div>
+            <div class="info-box" style="margin-top:2rem;background:var(--bg-2);border:1px solid var(--border);border-radius:12px;padding:1.5rem;">
+                <span class="info-icon">🇦🇺</span>
+                <div>
+                    <strong style="color:var(--text);display:block;margin-bottom:.4rem;">Austroads Density Defaults</strong>
+                    <p style="margin:0;font-size:.9rem;">This calculator uses Austroads-aligned defaults: <strong>DG14 at 2,350 kg/m³</strong>, SMA at 2,300 kg/m³, and OGFC at 2,050 kg/m³. Regional aggregate sources (e.g. granite in Victoria, basalt in QLD/NSW) cause density to vary ±50
+                        kg/m³. For National Land Transport Network (NLTN) projects, always use the density from the project's approved Job Mix Formula (JMF). Use the <a href="/calculators/asphalt-tonnage-calculator/" style="color:var(--accent);">Tonnage Calculator</a>                        to model any custom density.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APPLICATIONS -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <div class="label">Applications</div>
+                <h2>Who Uses the Australian Calculator</h2>
+                <p>This tool is built around Australian pavement standards and AUD pricing, making it suitable across all project types and states.</p>
+            </div>
+            <div class="grid-3" style="gap:1.5rem;">
+                <div class="pillar-card">
+                    <div class="pillar-icon" style="background:var(--gold-50);">🏛️</div>
+                    <h3>State &amp; Federal Road Authorities</h3>
+                    <p>Engineers at VicRoads, TMR Queensland, NSW Transport, Main Roads WA, and DPTI SA use tonnage calculators at concept and detailed design stage to prepare cost estimates for capital works programmes. DG14 is the dominant wearing course
+                        mix on Australian state highway networks, with SMA specified on high-speed, high-traffic motorways. Cross-reference your calculations with the <a href="/calculators/asphalt-material-calculator/">Material Calculator</a> to separate
+                        bitumen and aggregate procurement.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon" style="background:var(--sky-light);">🏘️</div>
+                    <h3>Residential Subdivision Roads</h3>
+                    <p>Civil engineers and developers use bitumen calculators to prepare pavement schedules for greenfield subdivisions. A typical Australian residential street uses 40 mm of DG14 over a 100 mm DG20 base course, with lane widths of 5.5–7.5
+                        m (AS 1428 access guidelines). A 200 m residential cul-de-sac at 7 m wide and 50 mm DG14 requires approximately <strong>165 tonnes</strong> of wearing course mix. Use the <a href="/calculators/road-asphalt-calculator/">Road Calculator</a>                        for multi-layer estimates.</p>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon" style="background:#d1fae5;">🏙️</div>
+                    <h3>Local Government &amp; Council Works</h3>
+                    <p>Australian local councils are major pavement asset owners, responsible for resurfacing thousands of km of local roads each year. Quantity surveyors in council infrastructure teams use this calculator to budget annual resealing and
+                        resurfacing programmes. Typical urban council road reseal: 40 mm DG14 over 1,000 m × 8 m = <strong>752 tonnes</strong> at ~A$180/t = A$135,000 material budget. See <a href="/calculators/asphalt-repair-calculator/">Repair Calculator</a>                        for pothole patching budgets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FIELD CHECKLIST -->
+    <section class="section section-alt">
+        <div class="container container-sm">
+            <div class="section-header">
+                <div class="label">Checklist</div>
+                <h2>Take-off checklist before you ring the plant</h2>
+                <p>Worth running down this list before the order goes in. Print it or keep it on your phone.</p>
+            </div>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.9rem;">
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><strong>Compacted thickness, not loose.</strong> If the drawing gives a loose depth, convert it before it goes anywhere near a calculator.</li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><strong>Nominal mix size confirmed.</strong> AC10, AC14 and AC20 are not interchangeable for either density or achievable lift thickness.</li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><strong>Density from the mix design, not from a table.</strong> Including this one. Aggregate source moves it more than people expect.</li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><strong>Each lift calculated separately.</strong> Wearing course and intermediate course rarely share a mix.</li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><strong>Area measured off the as-built, not the design.</strong> Widened shoulders and tie-ins add area that the drawing does not show.</li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><strong>Waste allowance decided and written down.</strong> 5% on clean rectangular work, 10&ndash;15% where there is hand-work around pits and kerb returns.</li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><strong>Sprayed seal separated out.</strong> Seals are ordered by application rate in L/m&sup2;. They do not belong in a tonnage calculation.</li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><strong>Minimum load and cartage checked.</strong> A plant a long way from site may make a short top-up load uneconomic, which changes how much margin is worth carrying.</li>
+            </ul>
+
+        </div>
+    </section>
+
+    <!-- REFERENCES -->
+    <section class="section section-alt">
+        <div class="container container-sm">
+            <div class="section-header">
+                <div class="label">References</div>
+                <h2>Standards this page draws on</h2>
+                <p>The mix types and densities here come from the national standard rather than from us. Where a local authority has its own supplement, that supplement wins.</p>
+            </div>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.9rem;">
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://austroads.gov.au/publications/pavement/agpt04b" target="_blank" rel="noopener nofollow">Austroads, <em>Guide to Pavement Technology Part 4B: Asphalt</em> (AGPT04B)</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://bookstore.asphaltinstitute.org/catalog/book/ms-2-asphalt-mix-design-methods" target="_blank" rel="noopener nofollow">Asphalt Institute, <em>MS-2 Asphalt Mix Design Methods</em>, 7th edition</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://store.astm.org/d2041_d2041m-19.html" target="_blank" rel="noopener nofollow">ASTM D2041/D2041M-19 — Theoretical Maximum Specific Gravity and Density of Asphalt Mixtures (the Rice test)</a></li>
+            </ul>
+            <p style="margin-top:1.75rem;font-size:.85rem;color:var(--text-muted);">
+                Standards re-checked in <strong>July 2026</strong>.
+                Any cost figures quoted are indicative only and date quickly &mdash; treat them as a
+                sanity check on a quote, never as a quote.
+                See our <a href="/editorial-policy/">editorial policy</a> for how these values are
+                sourced and reviewed, and the <a href="/disclaimer/">disclaimer</a> for the limits of
+                these estimates.
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container container-sm">
+            <div class="section-header">
+                <div class="label">FAQ</div>
+                <h2>Frequently Asked Questions</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-q">What is the standard bitumen content for DG14 in Australia? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">
+                        <p>Per Austroads AP-T295/14, DG14 Dense-Graded Asphalt typically requires 5.0–6.0% bitumen by weight of total mix. The exact content is determined by mix design testing to achieve target air voids and Marshall stability. Most state
+                            road authorities such as VicRoads and TMR specify 5.5% as a starting point for design.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">How much does asphalt cost per tonne in Australia? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">
+                        <p>Australian asphalt prices range from approximately A$120–$280 per tonne depending on the state, mix type, and project size. Metropolitan areas such as Sydney and Melbourne tend to be on the higher end (A$180–$280/t), while regional
+                            areas may be lower. SMA and polymer-modified mixes command a premium over standard DG14.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What density should I use for Australian asphalt calculations? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">
+                        <p>Standard DG14 dense-graded asphalt has a compacted density of approximately 2300–2400 kg/m³, with 2350 kg/m³ used as a common default. OGFC (open-graded friction course) mixes are lighter at 1950–2100 kg/m³ due to their higher
+                            air void content. Always confirm with your specific mix design data or contractor's laboratory results.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">Which Austroads standard applies to Australian pavement design? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">
+                        <p>The primary reference is Austroads AP-T295/14 for mix design of dense-graded and stone mastic asphalt, complemented by AS 2150 (Hot Mix Asphalt) and individual state specifications. For sprayed seals, Austroads AP-T189 applies.
+                            Each state road authority (VicRoads, TMR Queensland, NSW RMS, SA DPTI, WA Main Roads) publishes supplementary specifications that take precedence in their jurisdiction.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the difference between DG14 and DG10 asphalt in Australia? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">
+                        <p>DG14 and DG10 are both Austroads Dense-Graded mixes, with the number indicating the nominal maximum aggregate size in mm. <strong>DG14</strong> (14 mm) is the most widely used wearing course mix in Australia — suitable for most
+                            urban and rural roads at 40–60 mm compacted thickness. <strong>DG10</strong> (10 mm) has a finer aggregate gradation and is used for thin overlays (25–35 mm), urban low-speed roads, and surfaces requiring a finer texture. DG10
+                            typically has a slightly higher bitumen content (5.5–6.5%) and similar density to DG14. For bicycle paths and footways, DG10 or DG7 may be specified.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What is the typical asphalt overlay thickness on Australian roads? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">
+                        <p>For resurfacing (overlay without milling), a standard minimum overlay thickness of <strong>40 mm DG14</strong> is specified on most Austroads-aligned projects to ensure adequate compaction and performance life. Thinner overlays
+                            (25–35 mm DG10) are used on low-traffic urban roads or where headroom constraints limit layer thickness. For rehabilitation projects with structural deficiency, a <strong>50–75 mm binder course (DG20) plus 40–50 mm wearing course</strong>                            is common. Always check the current Austroads AGPT (Pavement Technology Guide) pavement design procedure for traffic loading and layer thickness requirements.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-q">What are asphalt prices in different Australian states? <span class="faq-icon">+</span></button>
+                    <div class="faq-a">
+                        <p>Asphalt material prices in Australia vary significantly by state and remoteness. Approximate ranges for supply-only DG14 (2026): <strong>NSW/VIC (metro): A$180–$260/t</strong>; <strong>QLD (SE): A$170–$250/t</strong>; <strong>WA (metro Perth): A$200–$300/t</strong>;
+                            <strong>SA: A$180–$260/t</strong>; <strong>Remote/NT: A$300–$500+/t</strong> due to haulage costs. Prices fluctuate with bitumen crude oil pricing and are typically higher in summer peak season. Always get current quotes from
+                            local asphalt plants — Boral, Fulton Hogan, Downer, and Pronto Asphalt are major suppliers nationally. Use the <a href="/calculators/asphalt-cost-calculator/">Cost Calculator</a> to estimate your project cost with current prices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- OTHER REGIONS -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <div class="label">Other Regions</div>
+                <h2>More Regional Calculators</h2>
+                <p>Select a region below for location-specific mix defaults and currency.</p>
+            </div>
+            <div class="dir-grid">
+                <a href="/calculators/canada-bitumen-calculator/" class="dir-card">
+                    <div class="dir-card-icon" style="background:#fee2e2;">🇨🇦</div>
+                    <div class="dir-card-text">
+                        <div class="dir-card-title">Canada</div>
+                        <div class="dir-card-desc">CSA / MTO · CAD · cold-climate mix</div>
+                    </div>
+                    <div class="dir-card-arrow">→</div>
+                </a>
+                <a href="/calculators/new-zealand-bitumen-calculator/" class="dir-card">
+                    <div class="dir-card-icon" style="background:#e0f2fe;">🇳🇿</div>
+                    <div class="dir-card-text">
+                        <div class="dir-card-title">New Zealand</div>
+                        <div class="dir-card-desc">NZTA / NZS · NZD · AC 14 defaults</div>
+                    </div>
+                    <div class="dir-card-arrow">→</div>
+                </a>
+                <a href="/calculators/california-asphalt-calculator/" class="dir-card">
+                    <div class="dir-card-icon" style="background:#fef9c3;">🇺🇸</div>
+                    <div class="dir-card-text">
+                        <div class="dir-card-title">California</div>
+                        <div class="dir-card-desc">Caltrans · USD · Superpave</div>
+                    </div>
+                    <div class="dir-card-arrow">→</div>
+                </a>
+            </div>
+            <div style="text-align:center;margin-top:2rem;">
+                <a href="/calculators/" class="btn btn-outline">View All Calculators →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="/" class="nav-logo" style="margin-bottom:.5rem;">
+                        <div class="nav-logo-icon">B</div>
+                        <div class="nav-logo-text">Bitumen<span>Calc</span></div>
+                    </a>
+                    <p>Free pavement quantity calculators. Every formula and default value is shown on the page.</p>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-label">Regional</p>
+                    <ul>
+                        <li><a href="/calculators/australia-bitumen-calculator/">Australia</a></li>
+                        <li><a href="/calculators/canada-bitumen-calculator/">Canada</a></li>
+                        <li><a href="/calculators/new-zealand-bitumen-calculator/">New Zealand</a></li>
+                        <li><a href="/calculators/california-asphalt-calculator/">California</a></li>
+                        <li><a href="/calculators/virginia-asphalt-calculator/">Virginia</a></li>
+                        <li><a href="/calculators/colorado-asphalt-calculator/">Colorado</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-label">Calculators</p>
+                    <ul>
+                        <li><a href="/calculators/bitumen-square-feet-calculator/">Square Feet</a></li>
+                        <li><a href="/calculators/asphalt-tonnage-calculator/">Tonnage</a></li>
+                        <li><a href="/calculators/asphalt-cost-calculator/">Cost Calculator</a></li>
+                        <li><a href="/calculators/asphalt-material-calculator/">Material</a></li>
+                        <li><a href="/calculators/road-asphalt-calculator/">Road</a></li>
+                        <li><a href="/calculators/asphalt-repair-calculator/">Repair</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <p class="footer-label">Company</p>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/calculators/">All Calculators</a></li>
+                        <li><a href="/about-us/">About Us</a></li>
+                        <li><a href="/contact-us/">Contact</a></li>
+                    </ul>
+                    <p style="margin-top:1.5rem;" class="footer-label">Legal</p>
+                    <ul>
+                        <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+                        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="/disclaimer/">Disclaimer</a></li>
+                        <li><a href="/editorial-policy/">Editorial Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Bitumen Calculator. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="/terms-and-conditions/">Terms</a>
+                    <a href="/privacy-policy/">Privacy</a>
+                    <a href="/disclaimer/">Disclaimer</a>
+                    <a href="/contact-us/">Contact</a>
+
+                    <a href="#" data-consent-open>Cookie Preferences</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+    <script src="/js/app.min.js?v=9"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.BitCalc) {
+                window.BitCalc.setDefaults({
+                    bitumenContent: 5.5,
+                    density: 2350,
+                    currency: 'AUD'
+                });
+            }
+        });
+    </script>
+</main>
+</body>
+
+</html>
+
+

@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<!-- Consent Mode v2 defaults - must execute before any Google tag -->
+<script src="/js/consent.min.js?v=3"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GCYLRZ2PQK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GCYLRZ2PQK');
+</script>
+  <meta name="google-adsense-account" content="ca-pub-6438644207209483" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="msapplication-TileColor" content="#f59e0b" />
+<meta name="theme-color" content="#f59e0b" />
+<title>Asphalt Tonnage Calculator — Weight from Area & Thickness</title>
+  <meta name="description" content="Calculate asphalt tonnage from area, thickness, and density. Get weight in tonnes or kg for any pavement project. Supports metric and imperial units." />
+    <meta name="author" content="BitumenCalc" />
+<meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.bitumencalc.com/calculators/asphalt-tonnage-calculator/" />
+    <link rel="alternate" hreflang="en" href="https://www.bitumencalc.com/calculators/asphalt-tonnage-calculator/" />
+<meta name="keywords" content="asphalt tonnage calculator, asphalt weight calculator, tons of asphalt calculator, bitumen tonnage" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://www.bitumencalc.com/calculators/asphalt-tonnage-calculator/" />
+  <meta property="og:title" content="Asphalt Tonnage Calculator — Weight from Area & Thickness" />
+  <meta property="og:description" content="Calculate asphalt tonnage from area, thickness, and density. Get weight in tonnes or kg for any pavement project. Supports metric and imperial units." />
+  <meta property="og:image" content="https://www.bitumencalc.com/assets/hero-road.webp" />
+      <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="675" />
+<meta property="og:image:alt" content="BitumenCalc tool and guide preview image" />
+<meta property="og:site_name" content="BitumenCalc" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@BitumenCalc" />
+<meta name="twitter:title" content="Asphalt Tonnage Calculator — Weight from Area & Thickness" />
+  <meta name="twitter:description" content="Calculate asphalt tonnage from area, thickness, and density. Get weight in tonnes or kg for any pavement project. Supports metric and imperial units." />
+  <meta name="twitter:image" content="https://www.bitumencalc.com/assets/hero-road.webp" />
+
+    <meta name="twitter:image:alt" content="BitumenCalc tool and guide preview image" />
+<!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.bitumencalc.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://www.bitumencalc.com/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Tonnage Calculator",
+      "item": "https://www.bitumencalc.com/calculators/asphalt-tonnage-calculator/"
+    }
+  ]
+}
+</script>
+
+  <!-- Schema: WebApplication -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Asphalt Tonnage Calculator",
+  "url": "https://www.bitumencalc.com/calculators/asphalt-tonnage-calculator/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Calculate asphalt tonnage from area, thickness, and density. Get weight in tonnes or kg for any pavement project. Supports metric and imperial units.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "BitumenCalc",
+    "url": "https://www.bitumencalc.com",
+    "logo": "https://www.bitumencalc.com/assets/logo.svg",
+    "@id": "https://www.bitumencalc.com/#organization"
+  }
+}
+</script>
+<style id="critical-css">:root{--navy:#0b1628;--navy-700:#162240;--gold:#f59e0b;--gold-dark:#d97706;--gold-light:#fde68a;--bg:#f8fafc;--surface:#fff;--border:#e2e8f0;--text:#0b1628;--text-muted:#475569;--grad-gold:linear-gradient(135deg,#f59e0b 0%,#fbbf24 100%);--grad-hero:linear-gradient(150deg,#0b1628 0%,#1a3060 55%,#0b2215 100%);--r-lg:12px;--r-xl:16px;--r-full:9999px}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{font-size:16px}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}img{max-width:100%;height:auto;display:block}a{color:var(--gold);text-decoration:none}.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}.site-header{position:sticky;top:0;z-index:1000;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.07);box-shadow:0 2px 24px rgba(0,0,0,.35)}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem}.nav-logo{display:flex;align-items:center;gap:.65rem;text-decoration:none;flex-shrink:0}.nav-logo-icon{width:40px;height:40px;background:var(--grad-gold);border-radius:var(--r-lg);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:900;color:var(--navy)}.nav-logo-text{font-size:1.15rem;font-weight:800;color:#fff;line-height:1.2}.nav-logo-text span{color:var(--gold)}.nav-links{display:flex;align-items:center;gap:.15rem}.nav-links a{color:rgba(255,255,255,.7);font-size:.875rem;font-weight:500;padding:.5rem .9rem;border-radius:var(--r-full)}.nav-links a.active{color:var(--gold);background:rgba(245,158,11,.1)}.nav-dropdown{position:relative;display:flex;align-items:center}.nav-dropdown-btn{color:rgba(255,255,255,.7);font-size:.875rem;font-weight:500;padding:.5rem .9rem;border-radius:var(--r-full);display:flex;align-items:center;gap:.3rem;background:none;border:0;font-family:inherit}.nav-dropdown-menu{position:absolute;top:calc(100% + .35rem);left:50%;transform:translate(-50%,10px);background:var(--navy-700);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-xl);padding:1.5rem;min-width:700px;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem 2rem;opacity:0;visibility:hidden;pointer-events:none}.nav-toggle{display:none}.mobile-menu{display:none}.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.75rem;border-radius:var(--r-full);font-size:.9rem;font-weight:600;white-space:nowrap;text-decoration:none}.btn-primary{background:var(--grad-gold);color:var(--navy);font-weight:700}.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)}.btn-lg{padding:1.1rem 2.5rem;font-size:1rem}.btn-sm{padding:.5rem 1.2rem;font-size:.82rem}.hero{background-image:url('/assets/hero-road.webp');background-size:cover;background-position:center 40%;background-color:#0b1628;position:relative;overflow:hidden;padding:3rem 0 4rem;height:calc(100vh - 72px);min-height:620px;max-height:900px;display:flex;align-items:center}.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(4,8,18,.65) 0%,rgba(4,8,18,.72) 50%,rgba(4,8,18,.9) 100%);z-index:0}.hero-inner{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1;padding-top:3rem;width:100%}.hero-content{color:#fff;max-width:860px}.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,158,11,.18);border:1px solid rgba(245,158,11,.5);color:var(--gold-light);padding:.35rem 1rem;border-radius:var(--r-full);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem}.hero-title{font-family:'Arial Narrow','Segoe UI Condensed',Impact,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:700;font-size:clamp(2.8rem,4.2vw,4.2rem);line-height:1.1;margin-bottom:1.2rem;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.55);text-align:center}.hero-desc{font-size:1.05rem;color:rgba(255,255,255,.88);margin-bottom:1.8rem;line-height:1.7;text-align:center;text-shadow:0 1px 8px rgba(0,0,0,.4)}.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;justify-content:center}.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.15)}.hero-stat-val{font-size:1.85rem;font-weight:900;color:#fff;line-height:1}.hero-stat-val span{color:var(--gold)}.hero-stat-label{font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;text-transform:uppercase;letter-spacing:.08em}.hero-road{position:absolute;bottom:0;left:0;right:0;height:5px;background:repeating-linear-gradient(90deg,var(--gold) 0,var(--gold) 50px,transparent 50px,transparent 72px);opacity:.65}.page-hero{background:var(--grad-hero);padding:4rem 0 3rem;position:relative;overflow:hidden}.page-hero-inner{position:relative;z-index:1}.page-hero h1{color:#fff;margin-bottom:.75rem;font-size:clamp(2.2rem,5vw,3.75rem);font-weight:800;line-height:1.12}.page-hero p{font-size:1.1rem;color:rgba(255,255,255,.7);max-width:560px}.section{padding:5.5rem 0}.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:2rem}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}@media(max-width:900px){.nav-links,.nav-cta,.nav-dropdown-btn{display:none}.nav-toggle{display:flex;flex-direction:column;gap:5px;padding:.5rem}.nav-toggle span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}.mobile-menu.open{display:block;background:var(--navy-700);border-top:1px solid rgba(255,255,255,.06)}.mobile-menu a{display:block;padding:.9rem 1.5rem;color:rgba(255,255,255,.8);font-weight:500;font-size:.95rem;border-bottom:1px solid rgba(255,255,255,.04)}}@media(max-width:768px){.container{padding:0 1rem}.hero{height:auto;min-height:100svh;padding:2rem 0 3rem}.hero-tag{display:none}.hero-title{font-size:2.1rem;margin-bottom:.85rem}.hero-desc{font-size:.9rem;margin-bottom:1.25rem;line-height:1.6}.hero-actions{gap:.75rem;margin-bottom:1.25rem}.hero-stats{gap:1.25rem;padding-top:1rem}.hero-stat-val{font-size:1.4rem}.hero-stat-label{font-size:.65rem}.grid-3{grid-template-columns:1fr}}</style>
+<link rel="preload" href="/css/style.min.css?v=7" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="/css/style.min.css?v=7" /></noscript>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f59e0b'/><text y='.9em' font-size='80' x='10'>🛣️</text></svg>" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between tonnes and short tons in asphalt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A metric tonne equals 1,000 kg (2,204.6 lbs). A US short ton equals 2,000 lbs (907 kg). Asphalt suppliers in the US typically quote in short tons, while most of the rest of the world (including Australia, UK, and Canada) use metric tonnes. The difference is about 10%: 1 metric tonne = 1.102 short tons. Always confirm which unit your supplier is quoting in to avoid costly ordering errors."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What density should I use to calculate asphalt tonnage?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard Hot Mix Asphalt (HMA/dense-graded) has a compacted density of approximately 2300–2400 kg/m³, commonly estimated at 2350 kg/m³. Stone Matrix Asphalt (SMA) is slightly heavier at 2300–2380 kg/m³. Open-graded mixes are lighter at 1950–2100 kg/m³. For the most accurate results, use the actual density from your project's mix design or the plant's mix design report."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many tonnes of asphalt per square metre?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a 50 mm (2-inch) thick compacted HMA layer at 2350 kg/m³: 0.05 m × 2350 kg/m³ = 117.5 kg/m² = 0.1175 tonnes/m². A 100 m² area at 50 mm thickness requires approximately 11.75 tonnes. For a 25 mm (1-inch) layer, halve that to 5.875 tonnes. Our calculator handles this automatically — just enter your dimensions and density."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I add a waste factor to my asphalt tonnage calculation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Always add a waste/overage factor when ordering asphalt. For straightforward machine-laid rectangular areas, add 5–8%. For irregular shapes, hand-work areas, driveways with curves, or projects with multiple thin lifts, use 10–15%. Material left in trucks (truck tare), cold joints, and compaction density variation also contribute to waste. It's better to have a small surplus than to run short and wait for a second delivery."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many tonnes of asphalt do I need for a driveway?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a typical residential driveway, a 50 mm compacted HMA layer at 2,350 kg/m³ requires approximately 0.1175 tonnes per m². A single-car driveway of 3 m × 10 m (30 m²) needs around 3.5 tonnes. A double driveway of 6 m × 12 m (72 m²) needs approximately 8.5 tonnes. Add 10% for edges and waste, giving a final order of around 9.5 tonnes. Use our Square Feet Calculator if you measured in imperial units."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I convert square metres to tonnes of asphalt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply the area in m² by the thickness in metres, then by the density in kg/m³, then divide by 1,000 to get tonnes. For example: 500 m² × 0.05 m (50 mm) × 2,350 kg/m³ ÷ 1,000 = 58.75 tonnes. If you only know the area in square metres and need a quick estimate, a rule of thumb for 50 mm HMA is approximately 0.12 t/m². Our Square Metres Calculator automates this conversion."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What bitumen content percentage should I use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard Hot Mix Asphalt (HMA) contains approximately 4.5–6.5% bitumen binder by total mix weight. Surface course mixes tend towards the higher end (5.5–6.5%) for durability and waterproofing, while base course mixes may be lower (4–5%). Stone Mastic Asphalt (SMA) uses 6–7.5% due to its gap-graded aggregate skeleton requiring more binder to fill voids. Always use the bitumen content from your approved mix design rather than a default estimate for procurement calculations."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/css/seo-accessibility.css?v=3" />
+<link rel="preload" as="script" href="/js/app.min.js?v=9" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-icon">B</div>
+        <div class="nav-logo-text">Bitumen<span>Calc</span></div>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn">Calculators <span class="nav-dropdown-arrow">▾</span></button>
+          <div class="nav-dropdown-menu">
+            <div class="nav-dropdown-col">
+              <p class="nav-group-label">Regional</p>
+              <a href="/calculators/australia-bitumen-calculator/">Australia</a>
+              <a href="/calculators/canada-bitumen-calculator/">Canada</a>
+              <a href="/calculators/new-zealand-bitumen-calculator/">New Zealand</a>
+              <a href="/calculators/california-asphalt-calculator/">California</a>
+              <a href="/calculators/virginia-asphalt-calculator/">Virginia</a>
+              <a href="/calculators/colorado-asphalt-calculator/">Colorado</a>
+              <a href="/calculators/minnesota-asphalt-calculator/">Minnesota</a>
+              <a href="/calculators/new-jersey-asphalt-calculator/">New Jersey</a>
+              <a href="/calculators/north-carolina-asphalt-calculator/">North Carolina</a>
+            </div>
+            <div class="nav-dropdown-col">
+              <p class="nav-group-label">Area &amp; Unit Conversion</p>
+              <a href="/calculators/bitumen-square-feet-calculator/">Square Feet</a>
+              <a href="/calculators/square-feet-to-tons-calculator/">Sq Ft to Tons</a>
+              <a href="/calculators/bitumen-square-meters-calculator/">Square Meters</a>
+              <a href="/calculators/bitumen-square-yards-calculator/">Square Yards</a>
+              <a href="/calculators/metric-bitumen-calculator/">Metric</a>
+              <a href="/calculators/asphalt-measurement-calculator/">Measurement</a>
+              <p style="margin-top:.9rem;" class="nav-group-label">Thickness / Temp / Radius</p>
+              <a href="/calculators/asphalt-thickness-calculator/">Thickness</a>
+              <a href="/calculators/bitumen-temperature-converter/">Temperature</a>
+              <a href="/calculators/circular-asphalt-calculator/">Radius (Circular)</a>
+            </div>
+            <div class="nav-dropdown-col">
+              <p class="nav-group-label">Material &amp; Quantity</p>
+              <a href="/calculators/asphalt-material-calculator/">Material</a>
+              <a href="/calculators/asphalt-millings-calculator/">Millings (RAP)</a>
+              <a href="/calculators/asphalt-tonnage-calculator/" class="active">Tonnage</a>
+              <a href="/calculators/tack-coat-calculator/">Tack Coat</a>
+              <a href="/calculators/road-asphalt-calculator/">Road</a>
+              <a href="/calculators/roofing-bitumen-calculator/">Roofing</a>
+              <a href="/calculators/asphalt-repair-calculator/">Repair</a>
+              <a href="/calculators/asphalt-removal-calculator/">Removal</a>
+              <p style="margin-top:.9rem;" class="nav-group-label">Cost &amp; Rate</p>
+              <a href="/calculators/asphalt-cost-calculator/">Cost Calculator</a>
+              <a href="/calculators/asphalt-application-rate-calculator/">Rate Calculator</a>
+            </div>
+          </div>
+        </div>
+        <a href="/blog/">Blog</a>
+        <a href="/about-us/">About Us</a>
+      </div>
+      <a href="/calculators/" class="btn btn-primary btn-sm nav-cta">All Calculators</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/">🏠 Home</a>
+    <a href="/calculators/">🧮 All Calculators</a>
+    <a href="/calculators/australia-bitumen-calculator/">🇦🇺 Australia</a>
+    <a href="/calculators/canada-bitumen-calculator/">🇨🇦 Canada</a>
+    <a href="/calculators/bitumen-square-feet-calculator/">📐 Square Feet</a>
+    <a href="/calculators/asphalt-tonnage-calculator/">⚖️ Tonnage</a>
+    <a href="/calculators/asphalt-cost-calculator/">💰 Cost Calculator</a>
+    <a href="/blog/">📝 Blog</a>
+    <a href="/about-us/">ℹ️ About Us</a>
+  </div>
+</header>
+<main id="main-content">
+
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="eyebrow">Tonnage Calculator</div>
+    <h1>Asphalt Tonnage Calculator</h1>
+    <p>Calculate asphalt tonnage from area and thickness. Get total mix weight, bitumen and aggregate quantities, and optional cost estimate.</p>
+    <div class="region-meta">
+      <span class="badge badge-orange">Volume to Weight</span>
+      <span class="badge badge-blue">Tonnes &amp; Short Tons</span>
+      <span class="badge badge-green">All Mix Types</span>
+    </div>
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <a href="/calculators/">Calculators</a>
+      <span class="sep">/</span>
+      <span>Tonnage</span>
+    </div>
+  </div>
+</section>
+
+<!-- INFO CARDS -->
+<section class="section-sm" style="background:var(--bg-2);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="info-box">
+        <span class="info-icon">⚖️</span>
+        <div>
+          <strong style="color:var(--text);display:block;margin-bottom:.25rem;">What is Tonnage?</strong>
+          <p style="margin:0;font-size:.85rem;">Tonnage is the total weight of asphalt mix required for your project. It is calculated as volume (area × thickness) multiplied by the compacted mix density.</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <span class="info-icon">🪨</span>
+        <div>
+          <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Bulk Density</strong>
+          <p style="margin:0;font-size:.85rem;">Standard HMA: 2250–2400 kg/m³ (140–150 lb/ft³). Porous/OGFC: 1800–2100 kg/m³. SMA: 2250–2350 kg/m³.</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <span class="info-icon">➕</span>
+        <div>
+          <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Wastage Factor</strong>
+          <p style="margin:0;font-size:.85rem;">Always add 5–10% to calculated tonnage for compaction loss and material wastage. Larger projects (1000+ t) can use 5%; smaller jobs may need 10%.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="calc-section" id="calculator">
+  <div class="container">
+    <div class="calc-wrap" id="calcResults">
+      <div class="calc-tabs">
+        <button class="calc-tab active">Tonnage Calculator</button>
+      </div>
+      <div class="calc-body">
+        <form class="calc-inputs" id="calcForm" onsubmit="return false;">
+
+          <div class="input-set">
+            <div class="input-set-title">Project Dimensions</div>
+            <div class="field">
+              <label for="length">Length</label>
+              <div class="input-row">
+                <input type="number" id="length" placeholder="e.g. 100" min="0" step="any" />
+                <select id="lengthUnit" style="width:90px;" aria-label="Length unit">
+                  <option value="m" selected>m</option>
+                  <option value="km">km</option>
+                  <option value="ft">ft</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="width">Width</label>
+              <div class="input-row">
+                <input type="number" id="width" placeholder="e.g. 7.5" min="0" step="any" />
+                <select id="widthUnit" style="width:90px;" aria-label="Width unit">
+                  <option value="m" selected>m</option>
+                  <option value="ft">ft</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="thickness">Thickness</label>
+              <div class="input-row">
+                <input type="number" id="thickness" placeholder="e.g. 50" min="0" step="any" />
+                <select id="thicknessUnit" style="width:90px;" aria-label="Thickness unit">
+                  <option value="mm" selected>mm</option>
+                  <option value="cm">cm</option>
+                  <option value="in">in</option>
+                </select>
+              </div>
+              <div class="field-hint">Surface: 40–75 mm | Binder: 50–100 mm | Base: 100–200 mm</div>
+            </div>
+          </div>
+
+          <div class="input-set">
+            <div class="input-set-title">Mix Properties</div>
+            <div class="field">
+              <label for="mixType">Mix Type</label>
+              <select id="mixType">
+                <option value="dense" selected>Dense HMA</option>
+                <option value="sma">SMA (Stone Mastic Asphalt)</option>
+                <option value="ogfc">OGFC (Open-Graded)</option>
+                <option value="porous">Porous Asphalt</option>
+                <option value="rap">RAP / Recycled</option>
+                <option value="custom">Custom</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="bitumenContent">Bitumen Content (%)</label>
+              <input type="number" id="bitumenContent" value="5.5" min="1" max="15" step="0.1" />
+            </div>
+            <div class="field">
+              <label for="density">Mix Density</label>
+              <div class="input-row">
+                <input type="number" id="density" value="2300" min="1000" max="3000" step="10" />
+                <select id="densityUnit" style="width:110px;" aria-label="Density unit">
+                  <option value="kg/m3" selected>kg/m³</option>
+                  <option value="t/m3">t/m³</option>
+                </select>
+              </div>
+              <div class="field-hint">Dense HMA: 2250–2400 | OGFC: 1900–2100 | Porous: 1800–2000 kg/m³</div>
+            </div>
+          </div>
+
+          <div class="input-set">
+            <div class="input-set-title">Cost Estimation (Optional)</div>
+            <div class="field">
+              <label for="price">Price per Tonne</label>
+              <div class="input-row">
+                <input type="number" id="price" placeholder="Optional" min="0" step="any" />
+                <select id="currency" style="width:90px;" aria-label="Currency">
+                  <option value="USD" selected>USD</option>
+                  <option value="AUD">AUD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="GBP">GBP</option>
+                  <option value="NZD">NZD</option>
+                  <option value="CAD">CAD</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="calc-btn" id="calcBtn">⚡ Calculate</button>
+          <button type="button" class="reset-btn" id="resetBtn">↺ Reset</button>
+        </form>
+
+        <div class="calc-results">
+          <div class="results-header"><h3>Results</h3></div>
+          <div id="results-empty" class="result-placeholder">
+            <div class="placeholder-icon">🏗️</div>
+            <p>Enter dimensions to calculate</p>
+          </div>
+          <div id="results-data">
+            <div class="result-card"><div class="result-card-icon blue">📐</div><div class="result-card-body"><div class="result-card-label">Total Area</div><div class="result-card-value" id="resArea">—</div></div></div>
+            <div class="result-card"><div class="result-card-icon purple">📦</div><div class="result-card-body"><div class="result-card-label">Total Volume</div><div class="result-card-value" id="resVolume">—</div></div></div>
+            <div class="result-card highlighted"><div class="result-card-icon orange">⚖️</div><div class="result-card-body"><div class="result-card-label">Total Mix Weight</div><div class="result-card-value" id="resWeight">—</div><div class="result-card-sub" id="resWeightSub"></div></div></div>
+            <div class="result-card"><div class="result-card-icon orange">🛢️</div><div class="result-card-body"><div class="result-card-label">Bitumen Required</div><div class="result-card-value" id="resBitumen">—</div><div class="result-card-sub" id="resBitumenSub"></div></div></div>
+            <div class="result-card"><div class="result-card-icon blue">🪨</div><div class="result-card-body"><div class="result-card-label">Aggregate Required</div><div class="result-card-value" id="resAggregate">—</div><div class="result-card-sub" id="resAggregateSub"></div></div></div>
+            <div class="result-card" id="resCostCard" style="display:none;"><div class="result-card-icon yellow">💵</div><div class="result-card-body"><div class="result-card-label">Estimated Cost</div><div class="result-card-value" id="resCost">—</div></div></div>
+            <div class="breakdown-bar">
+              <div class="breakdown-bar-label">Mix Composition</div>
+              <div class="breakdown-track">
+                <div class="breakdown-fill-bitumen" id="bitPctBar" style="width:5.5%;"></div>
+                <div class="breakdown-fill-aggregate"></div>
+              </div>
+              <div class="breakdown-legend">
+                <div class="legend-item"><div class="legend-dot orange"></div><span id="bitLegendPct">5.5% Bitumen</span></div>
+                <div class="legend-item"><div class="legend-dot blue"></div><span id="aggLegendPct">94.5% Aggregate</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENCE TABLE -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Reference</div>
+      <h2>Tonnes per 100 m² at Various Thicknesses</h2>
+      <p>Estimated tonnage at different densities. Add 5–10% for wastage and compaction.</p>
+    </div>
+    <table class="ref-table">
+      <thead>
+        <tr>
+          <th>Thickness</th>
+          <th>2250 kg/m³</th>
+          <th>2300 kg/m³</th>
+          <th>2350 kg/m³</th>
+          <th>2400 kg/m³</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>30 mm</td><td>6.75 t</td><td class="highlight">6.90 t</td><td>7.05 t</td><td>7.20 t</td></tr>
+        <tr><td>50 mm</td><td>11.25 t</td><td class="highlight">11.50 t</td><td>11.75 t</td><td>12.00 t</td></tr>
+        <tr><td>75 mm</td><td>16.88 t</td><td class="highlight">17.25 t</td><td>17.63 t</td><td>18.00 t</td></tr>
+        <tr><td>100 mm</td><td>22.50 t</td><td class="highlight">23.00 t</td><td>23.50 t</td><td>24.00 t</td></tr>
+        <tr><td>150 mm</td><td>33.75 t</td><td class="highlight">34.50 t</td><td>35.25 t</td><td>36.00 t</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- FORMULA SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Formula</div>
+      <h2>The Asphalt Tonnage Formula Explained</h2>
+      <p>Understanding the calculation helps you verify results and spot errors before placing a material order.</p>
+    </div>
+    <div class="formula-inline">
+      Weight (t) = Length (m) × Width (m) × Thickness (m) × Density (kg/m³) ÷ 1,000
+    </div>
+    <div class="grid-3" style="gap:1.5rem;margin-top:2rem;">
+      <div class="step-card">
+        <div class="step-num">①</div>
+        <h3>Calculate Volume</h3>
+        <p>Multiply the paved area (length × width in metres) by the compacted layer thickness converted to metres. A 200 m road, 7 m wide, at 75 mm = 0.075 m gives a volume of 200 × 7 × 0.075 = <strong>105 m³</strong>.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">②</div>
+        <h3>Apply Density</h3>
+        <p>Multiply the volume by the compacted mix density. Dense HMA is typically <strong>2,350 kg/m³</strong>. Using our example: 105 m³ × 2,350 kg/m³ = 246,750 kg. Divide by 1,000 to convert to <strong>246.75 metric tonnes</strong>.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">③</div>
+        <h3>Add Wastage</h3>
+        <p>Theoretical tonnage never accounts for compaction variation, truck residue, or edge waste. Always order <strong>5–10% extra</strong>. For our 246.75 t example, add 7% → order <strong>264 tonnes</strong> to complete the job without a costly second delivery.</p>
+      </div>
+    </div>
+    <div class="info-box" style="margin-top:2rem;background:var(--bg-2);border:1px solid var(--border);border-radius:12px;padding:1.5rem;">
+      <span class="info-icon">🧮</span>
+      <div>
+        <strong style="color:var(--text);display:block;margin-bottom:.4rem;">Component Breakdown</strong>
+        <p style="margin:0;font-size:.9rem;">Total mix weight splits into bitumen binder and aggregate. At a typical <strong>5.5% bitumen content</strong>: 246.75 t × 0.055 = <strong>13.57 t of bitumen</strong> and 246.75 − 13.57 = <strong>233.18 t of aggregate</strong>. Use the <a href="/calculators/asphalt-material-calculator/" style="color:var(--accent);">Material Calculator</a> to get a full material breakdown by mix design.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATIONS -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Applications</div>
+      <h2>Where Asphalt Tonnage Calculations Are Used</h2>
+      <p>Accurate tonnage estimates drive procurement, logistics, and budgeting across every paving project type.</p>
+    </div>
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="pillar-card">
+        <div class="pillar-icon" style="background:var(--gold-50);">🛣️</div>
+        <h3>Road &amp; Highway Construction</h3>
+        <p>Municipal and state road projects require precise tonnage schedules to co-ordinate asphalt plant production, trucking rosters, and paving crew shifts. A typical two-lane rural road (7 m wide, 50 mm surface + 100 mm binder over 1 km) requires approximately <strong>350–400 tonnes</strong> of total mix. Use the <a href="/calculators/road-asphalt-calculator/">Road Calculator</a> for multi-layer road estimates including subbase and binder courses.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon" style="background:var(--sky-light);">🚗</div>
+        <h3>Driveways &amp; Car Parks</h3>
+        <p>Residential driveways typically use 40–50 mm of compacted HMA. A standard double driveway (6 m × 12 m = 72 m²) at 50 mm and 2,350 kg/m³ requires just under <strong>8.5 tonnes</strong>. Car parks with heavy vehicle access (buses, trucks) may need 75–100 mm of binder course plus 40 mm surface, pushing tonnage above 35 t per 100 m². See the <a href="/calculators/asphalt-cost-calculator/">Cost Calculator</a> to price these projects.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon" style="background:#d1fae5;">🔧</div>
+        <h3>Patching &amp; Repair Works</h3>
+        <p>Pothole and pavement repair crews use tonnage calculators to pre-load trucks with the correct amount of cold-mix or hot-mix patch material. A 2 m × 2 m pothole at 80 mm depth needs roughly <strong>0.75 tonnes</strong> of patch mix. Ordering too little means a return trip; too much means wasted heated mix. The <a href="/calculators/asphalt-repair-calculator/">Repair Calculator</a> handles irregular repair areas quickly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED CALCULATORS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Related</div>
+      <h2>Related Calculators</h2>
+    </div>
+    <div class="dir-grid">
+      <a href="/calculators/asphalt-material-calculator/" class="dir-card">
+        <div class="dir-card-icon" style="background:#fef3c7;">🪨</div>
+        <div class="dir-card-text">
+          <div class="dir-card-title">Material Calculator</div>
+          <div class="dir-card-desc">Calculate by mix type with bitumen presets</div>
+        </div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+      <a href="/calculators/bitumen-square-meters-calculator/" class="dir-card">
+        <div class="dir-card-icon" style="background:#e0f2fe;">📐</div>
+        <div class="dir-card-text">
+          <div class="dir-card-title">Square Metres</div>
+          <div class="dir-card-desc">m² to tonnes metric calculator</div>
+        </div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+      <a href="/calculators/asphalt-cost-calculator/" class="dir-card">
+        <div class="dir-card-icon" style="background:#f0fdf4;">💰</div>
+        <div class="dir-card-text">
+          <div class="dir-card-title">Cost Calculator</div>
+          <div class="dir-card-desc">Full project cost with multi-currency support</div>
+        </div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+      <a href="/blog/bitumen-density-volume-cargo-calculations/" class="dir-card">
+        <div class="dir-card-icon" style="background:#fffbeb;">📘</div>
+        <div class="dir-card-text">
+          <div class="dir-card-title">Density and Volume Guide</div>
+          <div class="dir-card-desc">Use density and cargo formulas before converting bitumen volume to tonnes</div>
+        </div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="/calculators/" class="btn btn-outline">View All Calculators →</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO USE -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Guide</div>
+      <h2>How to Use This Calculator</h2>
+    </div>
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Enter Area &amp; Thickness</h3>
+        <p>Input the length and width of your pavement area (or total area directly), and the compacted layer thickness. Use metres and mm for metric, or feet and inches for imperial input. A standard 2-inch driveway overlay over 1,000 sq ft typically requires around 2.5 short tons of asphalt mix.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Select Mix Type &amp; Density</h3>
+        <p>Choose your asphalt mix type to load the default density. Standard Hot Mix Asphalt (HMA) is approximately 2300–2400 kg/m³ (145–150 lb/ft³). Open-graded friction course (OGFC) is lighter at 1950–2100 kg/m³. For maximum accuracy, enter the density from your laboratory mix design or supplier specification sheet.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Review Tonnage Results</h3>
+        <p>Click Calculate to see total asphalt tonnage in metric tonnes, short tons (US), and kilograms. Results include bitumen and aggregate component weights. Add a 5–10% waste factor for irregular areas, hand-work around edges, and compaction variability before placing your supplier order.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FURTHER READING -->
+    <section class="section">
+        <div class="container container-sm">
+            <div style="padding-left:1.1rem;border-left:2px solid var(--gold);">
+                <p>Two longer pieces go deeper than this page does: <a href="/blog/asphalt-tonnage-calculator-guide/">the full tonnage guide</a>, which works through unit conversion and waste factors in detail, and <a href="/blog/how-much-asphalt-do-i-need/">how much asphalt do I need</a>, which starts from a driveway rather than from a formula.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container container-sm">
+    <div class="section-header">
+      <div class="label">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">What is the difference between tonnes and short tons in asphalt? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>A metric tonne equals 1,000 kg (2,204.6 lbs). A US short ton equals 2,000 lbs (907 kg). Asphalt suppliers in the US typically quote in short tons, while most of the rest of the world (including Australia, UK, and Canada) use metric tonnes. The difference is about 10%: 1 metric tonne = 1.102 short tons. Always confirm which unit your supplier is quoting in to avoid costly ordering errors.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What density should I use to calculate asphalt tonnage? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Standard Hot Mix Asphalt (HMA/dense-graded) has a compacted density of approximately 2300–2400 kg/m³, commonly estimated at 2350 kg/m³. Stone Matrix Asphalt (SMA) is slightly heavier at 2300–2380 kg/m³. Open-graded mixes are lighter at 1950–2100 kg/m³. For the most accurate results, use the actual density from your project's mix design or the plant's mix design report.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How many tonnes of asphalt per square metre? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>For a 50 mm (2-inch) thick compacted HMA layer at 2350 kg/m³: 0.05 m × 2350 kg/m³ = 117.5 kg/m² = 0.1175 tonnes/m². A 100 m² area at 50 mm thickness requires approximately 11.75 tonnes. For a 25 mm (1-inch) layer, halve that to 5.875 tonnes. Our calculator handles this automatically — just enter your dimensions and density.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Should I add a waste factor to my asphalt tonnage calculation? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Yes. Always add a waste/overage factor when ordering asphalt. For straightforward machine-laid rectangular areas, add 5–8%. For irregular shapes, hand-work areas, driveways with curves, or projects with multiple thin lifts, use 10–15%. Material left in trucks (truck tare), cold joints, and compaction density variation also contribute to waste. It's better to have a small surplus than to run short and wait for a second delivery.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How many tonnes of asphalt do I need for a driveway? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>For a typical residential driveway, a 50 mm compacted HMA layer at 2,350 kg/m³ requires approximately <strong>0.1175 tonnes per m²</strong>. A single-car driveway of 3 m × 10 m (30 m²) needs around 3.5 tonnes. A double driveway of 6 m × 12 m (72 m²) needs approximately 8.5 tonnes. Add 10% for edges and waste, giving a final order of around 9.5 tonnes. Use our <a href="/calculators/bitumen-square-feet-calculator/">Square Feet Calculator</a> if you measured in imperial units.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do I convert square metres to tonnes of asphalt? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Multiply the area in m² by the thickness in metres, then by the density in kg/m³, then divide by 1,000 to get tonnes. For example: 500 m² × 0.05 m (50 mm) × 2,350 kg/m³ ÷ 1,000 = <strong>58.75 tonnes</strong>. If you only know the area in square metres and need a quick estimate, a rule of thumb for 50 mm HMA is approximately <strong>0.12 t/m²</strong>. Our <a href="/calculators/bitumen-square-meters-calculator/">Square Metres Calculator</a> automates this conversion.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What bitumen content percentage should I use? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Standard Hot Mix Asphalt (HMA) contains approximately <strong>4.5–6.5% bitumen binder by total mix weight</strong>. Surface course mixes tend towards the higher end (5.5–6.5%) for durability and waterproofing, while base course mixes may be lower (4–5%). Stone Mastic Asphalt (SMA) uses 6–7.5% due to its gap-graded aggregate skeleton requiring more binder to fill voids. Always use the bitumen content from your approved mix design rather than a default estimate for procurement calculations.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- REFERENCES -->
+    <section class="section section-alt">
+        <div class="container container-sm">
+            <div class="section-header">
+                <div class="label">References</div>
+                <h2>Sources</h2>
+                <p>Default densities and binder contents on this page are taken from published references, not estimated. Check them against whatever governs your job.</p>
+            </div>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.9rem;">
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://bookstore.asphaltinstitute.org/catalog/book/ms-2-asphalt-mix-design-methods" target="_blank" rel="noopener nofollow">Asphalt Institute, <em>MS-2 Asphalt Mix Design Methods</em>, 7th edition</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://store.astm.org/d2041_d2041m-19.html" target="_blank" rel="noopener nofollow">ASTM D2041/D2041M-19 — Theoretical Maximum Specific Gravity and Density of Asphalt Mixtures (the Rice test)</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://store.astm.org/d2726_d2726m-21.html" target="_blank" rel="noopener nofollow">ASTM D2726/D2726M-21 — Bulk Specific Gravity and Density of Non-Absorptive Compacted Asphalt Mixtures</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://store.transportation.org/item/collectiondetail/117" target="_blank" rel="noopener nofollow">AASHTO Materials Standards (T 166, T 209 and related test methods)</a></li>
+            </ul>
+            <p style="margin-top:1.75rem;font-size:.85rem;color:var(--text-muted);">
+                Reference values last reviewed in <strong>July 2026</strong>.
+                Any cost figures quoted are indicative only and date quickly &mdash; treat them as a
+                sanity check on a quote, never as a quote.
+                See our <a href="/editorial-policy/">editorial policy</a> for how these values are
+                sourced and reviewed, and the <a href="/disclaimer/">disclaimer</a> for the limits of
+                these estimates.
+            </p>
+        </div>
+    </section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" style="margin-bottom:.5rem;">
+          <div class="nav-logo-icon">B</div>
+          <div class="nav-logo-text">Bitumen<span>Calc</span></div>
+        </a>
+        <p>Free pavement quantity calculators. Every formula and default value is shown on the page.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Regional</p>
+        <ul>
+          <li><a href="/calculators/australia-bitumen-calculator/">Australia</a></li>
+          <li><a href="/calculators/canada-bitumen-calculator/">Canada</a></li>
+          <li><a href="/calculators/new-zealand-bitumen-calculator/">New Zealand</a></li>
+          <li><a href="/calculators/california-asphalt-calculator/">California</a></li>
+          <li><a href="/calculators/virginia-asphalt-calculator/">Virginia</a></li>
+          <li><a href="/calculators/colorado-asphalt-calculator/">Colorado</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Calculators</p>
+        <ul>
+          <li><a href="/calculators/bitumen-square-feet-calculator/">Square Feet</a></li>
+          <li><a href="/calculators/asphalt-tonnage-calculator/">Tonnage</a></li>
+          <li><a href="/calculators/asphalt-cost-calculator/">Cost Calculator</a></li>
+          <li><a href="/calculators/asphalt-material-calculator/">Material</a></li>
+          <li><a href="/calculators/road-asphalt-calculator/">Road</a></li>
+          <li><a href="/calculators/asphalt-repair-calculator/">Repair</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Company</p>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/calculators/">All Calculators</a></li>
+          <li><a href="/about-us/">About Us</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+        </ul>
+        <p style="margin-top:1.5rem;" class="footer-label">Legal</p>
+        <ul>
+          <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+
+                        <li><a href="/disclaimer/">Disclaimer</a></li>
+                        <li><a href="/editorial-policy/">Editorial Policy</a></li>
+                    </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Bitumen Calculator. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/terms-and-conditions/">Terms</a>
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/contact-us/">Contact</a>
+
+                    <a href="/disclaimer/">Disclaimer</a>
+                    <a href="#" data-consent-open>Cookie Preferences</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+<script src="/js/app.min.js?v=9"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.BitCalc) {
+      window.BitCalc.setDefaults({ bitumenContent: 5.5, density: 2300 });
+    }
+  });
+</script>
+<!-- SEO-RECOVERY:tonnage-answer -->
+<section class="section section-alt seo-answer" id="tonnage-answer"><div class="container container-sm"><h2 style="color:var(--text)">Asphalt tonnage from area, thickness and density</h2><p>For a specified finished layer, multiply area by compacted thickness and mix density. At 2,400 kg/m³, 100 m² at 50 mm needs 12 metric tonnes before allowance. The main result is metric tonnes, with US short tons identified separately.</p><p>If your takeoff starts with volume, see <a href="/blog/tons-of-asphalt-per-cubic-yard/">tons of asphalt per cubic yard</a>. Read <a href="/blog/asphalt-density-guide/">the density guide</a> for unit conversions and <a href="/blog/asphalt-thickness-guide/">the thickness guide</a> for separate lift calculations.</p></div></section>
+<!-- /SEO-RECOVERY:tonnage-answer -->
+</main>
+</body>
+</html>
+
+
+
+

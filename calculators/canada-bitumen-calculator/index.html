@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<!-- Consent Mode v2 defaults - must execute before any Google tag -->
+<script src="/js/consent.min.js?v=3"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GCYLRZ2PQK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GCYLRZ2PQK');
+</script>
+  <meta name="google-adsense-account" content="ca-pub-6438644207209483" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="msapplication-TileColor" content="#f59e0b" />
+<meta name="theme-color" content="#f59e0b" />
+<title>Canada Bitumen Calculator — CSA/MTO Standards & CAD</title>
+  <meta name="description" content="Canadian bitumen calculator using CSA and MTO standards. SP 12.5, SP 19, and cold-climate mix presets. CAD currency for Canadian paving projects." />
+    <meta name="author" content="BitumenCalc" />
+<link rel="canonical" href="https://www.bitumencalc.com/calculators/canada-bitumen-calculator/" />
+    <link rel="alternate" hreflang="en" href="https://www.bitumencalc.com/calculators/canada-bitumen-calculator/" />
+<meta name="keywords" content="Canada bitumen calculator, CSA asphalt calculator, MTO asphalt calculator, Canadian paving calculator CAD" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://www.bitumencalc.com/calculators/canada-bitumen-calculator/" />
+  <meta property="og:title" content="Canada Bitumen Calculator — CSA/MTO Standards & CAD" />
+  <meta property="og:description" content="Canadian bitumen calculator using CSA and MTO standards. SP 12.5, SP 19, and cold-climate mix presets. CAD currency for Canadian paving projects." />
+  <meta property="og:image" content="https://www.bitumencalc.com/assets/hero-road.webp" />
+      <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="675" />
+<meta property="og:image:alt" content="BitumenCalc tool and guide preview image" />
+<meta property="og:site_name" content="BitumenCalc" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@BitumenCalc" />
+<meta name="twitter:title" content="Canada Bitumen Calculator — CSA/MTO Standards & CAD" />
+  <meta name="twitter:description" content="Canadian bitumen calculator using CSA and MTO standards. SP 12.5, SP 19, and cold-climate mix presets. CAD currency for Canadian paving projects." />
+  <meta name="twitter:image" content="https://www.bitumencalc.com/assets/hero-road.webp" />
+
+    <meta name="twitter:image:alt" content="BitumenCalc tool and guide preview image" />
+<!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.bitumencalc.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://www.bitumencalc.com/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Canada Calculator",
+      "item": "https://www.bitumencalc.com/calculators/canada-bitumen-calculator/"
+    }
+  ]
+}
+</script>
+
+  <!-- Schema: WebApplication -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Canada Bitumen Calculator",
+  "url": "https://www.bitumencalc.com/calculators/canada-bitumen-calculator/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Canadian bitumen calculator using CSA and MTO standards. SP 12.5, SP 19, and cold-climate mix presets. CAD currency for Canadian paving projects.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "BitumenCalc",
+    "url": "https://www.bitumencalc.com",
+    "logo": "https://www.bitumencalc.com/assets/logo.svg",
+    "@id": "https://www.bitumencalc.com/#organization"
+  }
+}
+</script>
+<style id="critical-css">:root{--navy:#0b1628;--navy-700:#162240;--gold:#f59e0b;--gold-dark:#d97706;--gold-light:#fde68a;--bg:#f8fafc;--surface:#fff;--border:#e2e8f0;--text:#0b1628;--text-muted:#475569;--grad-gold:linear-gradient(135deg,#f59e0b 0%,#fbbf24 100%);--grad-hero:linear-gradient(150deg,#0b1628 0%,#1a3060 55%,#0b2215 100%);--r-lg:12px;--r-xl:16px;--r-full:9999px}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{font-size:16px}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}img{max-width:100%;height:auto;display:block}a{color:var(--gold);text-decoration:none}.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}.site-header{position:sticky;top:0;z-index:1000;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.07);box-shadow:0 2px 24px rgba(0,0,0,.35)}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem}.nav-logo{display:flex;align-items:center;gap:.65rem;text-decoration:none;flex-shrink:0}.nav-logo-icon{width:40px;height:40px;background:var(--grad-gold);border-radius:var(--r-lg);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:900;color:var(--navy)}.nav-logo-text{font-size:1.15rem;font-weight:800;color:#fff;line-height:1.2}.nav-logo-text span{color:var(--gold)}.nav-links{display:flex;align-items:center;gap:.15rem}.nav-links a{color:rgba(255,255,255,.7);font-size:.875rem;font-weight:500;padding:.5rem .9rem;border-radius:var(--r-full)}.nav-links a.active{color:var(--gold);background:rgba(245,158,11,.1)}.nav-dropdown{position:relative;display:flex;align-items:center}.nav-dropdown-btn{color:rgba(255,255,255,.7);font-size:.875rem;font-weight:500;padding:.5rem .9rem;border-radius:var(--r-full);display:flex;align-items:center;gap:.3rem;background:none;border:0;font-family:inherit}.nav-dropdown-menu{position:absolute;top:calc(100% + .35rem);left:50%;transform:translate(-50%,10px);background:var(--navy-700);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-xl);padding:1.5rem;min-width:700px;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem 2rem;opacity:0;visibility:hidden;pointer-events:none}.nav-toggle{display:none}.mobile-menu{display:none}.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.75rem;border-radius:var(--r-full);font-size:.9rem;font-weight:600;white-space:nowrap;text-decoration:none}.btn-primary{background:var(--grad-gold);color:var(--navy);font-weight:700}.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)}.btn-lg{padding:1.1rem 2.5rem;font-size:1rem}.btn-sm{padding:.5rem 1.2rem;font-size:.82rem}.hero{background-image:url('/assets/hero-road.webp');background-size:cover;background-position:center 40%;background-color:#0b1628;position:relative;overflow:hidden;padding:3rem 0 4rem;height:calc(100vh - 72px);min-height:620px;max-height:900px;display:flex;align-items:center}.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(4,8,18,.65) 0%,rgba(4,8,18,.72) 50%,rgba(4,8,18,.9) 100%);z-index:0}.hero-inner{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1;padding-top:3rem;width:100%}.hero-content{color:#fff;max-width:860px}.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,158,11,.18);border:1px solid rgba(245,158,11,.5);color:var(--gold-light);padding:.35rem 1rem;border-radius:var(--r-full);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem}.hero-title{font-family:'Arial Narrow','Segoe UI Condensed',Impact,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:700;font-size:clamp(2.8rem,4.2vw,4.2rem);line-height:1.1;margin-bottom:1.2rem;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.55);text-align:center}.hero-desc{font-size:1.05rem;color:rgba(255,255,255,.88);margin-bottom:1.8rem;line-height:1.7;text-align:center;text-shadow:0 1px 8px rgba(0,0,0,.4)}.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;justify-content:center}.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.15)}.hero-stat-val{font-size:1.85rem;font-weight:900;color:#fff;line-height:1}.hero-stat-val span{color:var(--gold)}.hero-stat-label{font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;text-transform:uppercase;letter-spacing:.08em}.hero-road{position:absolute;bottom:0;left:0;right:0;height:5px;background:repeating-linear-gradient(90deg,var(--gold) 0,var(--gold) 50px,transparent 50px,transparent 72px);opacity:.65}.page-hero{background:var(--grad-hero);padding:4rem 0 3rem;position:relative;overflow:hidden}.page-hero-inner{position:relative;z-index:1}.page-hero h1{color:#fff;margin-bottom:.75rem;font-size:clamp(2.2rem,5vw,3.75rem);font-weight:800;line-height:1.12}.page-hero p{font-size:1.1rem;color:rgba(255,255,255,.7);max-width:560px}.section{padding:5.5rem 0}.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:2rem}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}@media(max-width:900px){.nav-links,.nav-cta,.nav-dropdown-btn{display:none}.nav-toggle{display:flex;flex-direction:column;gap:5px;padding:.5rem}.nav-toggle span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}.mobile-menu.open{display:block;background:var(--navy-700);border-top:1px solid rgba(255,255,255,.06)}.mobile-menu a{display:block;padding:.9rem 1.5rem;color:rgba(255,255,255,.8);font-weight:500;font-size:.95rem;border-bottom:1px solid rgba(255,255,255,.04)}}@media(max-width:768px){.container{padding:0 1rem}.hero{height:auto;min-height:100svh;padding:2rem 0 3rem}.hero-tag{display:none}.hero-title{font-size:2.1rem;margin-bottom:.85rem}.hero-desc{font-size:.9rem;margin-bottom:1.25rem;line-height:1.6}.hero-actions{gap:.75rem;margin-bottom:1.25rem}.hero-stats{gap:1.25rem;padding-top:1rem}.hero-stat-val{font-size:1.4rem}.hero-stat-label{font-size:.65rem}.grid-3{grid-template-columns:1fr}}</style>
+<link rel="preload" href="/css/style.min.css?v=7" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="/css/style.min.css?v=7" /></noscript>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f59e0b'/><text y='.9em' font-size='80' x='10'>🛣️</text></svg>" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What asphalt mix standards apply in Canada?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Canada uses Superpave mix design aligned with AASHTO standards, adapted by each province. Ontario MTO uses SP 9.5 and SP 12.5 designations; BC MOTI, Alberta Infrastructure, and Quebec MTMDET publish their own standard specifications. The CSA A23.1 standard covers general concrete work, but asphalt is governed primarily by provincial road authority specifications."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why do Canadian asphalt mixes use softer bitumen grades?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Canada's harsh winters require bitumen that remains flexible at very low temperatures to prevent thermal cracking. Performance grades such as PG 58-34 or PG 64-34 indicate the bitumen performs at down to -34°C. Southern regions may use PG 64-28, while extreme cold areas in the north can require PG 52-40 or softer."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does asphalt cost in Canada?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Canadian asphalt prices typically range from C$150–$320 per tonne. Ontario and BC tend to be at the higher end while prairie provinces are often more affordable. Prices fluctuate with crude oil costs, seasonal demand (paving season is April–October in most provinces), and project scale. Always get current quotes from local suppliers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What density should I use for Canadian asphalt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SP 12.5 Superpave mix typically has a compacted density of 2290–2380 kg/m³, with 2310 kg/m³ a common default for estimation. HL-3 hot-mix runs slightly higher at around 2290–2370 kg/m³. Always confirm with your laboratory mix design data or contractor's specifications for the specific aggregate source being used."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between SP 12.5 and HL-3 asphalt mix in Canada?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SP 12.5 refers to a Superpave-designed mix with a 12.5 mm nominal maximum aggregate size, commonly specified by Ontario MTO and other provincial authorities for wearing courses on arterial and collector roads. HL-3 (Hot-Mix Limestone 3) is an older Ontario MTO designation for a 12.5 mm dense-graded hot-mix asphalt — functionally similar to SP 12.5 but designed under Marshall methodology rather than Superpave volumetrics. Most provinces have transitioned to Superpave design, but HL-3 remains common on lower-volume municipal roads. Both mixes have typical bitumen contents of 5.0–6.0% and densities of 2290–2380 kg/m³."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many tonnes of asphalt do I need for a Canadian residential driveway?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard Canadian residential driveway (6 m × 10 m = 60 m²) with a 50 mm SP 12.5 wearing course requires approximately: 60 × 0.050 × 2,310 ÷ 1,000 = 6.9 tonnes of asphalt mix. Allow an additional 5–10% for waste and compaction variability, so order roughly 7.5 tonnes. Wider or longer driveways with a granular base beneath will need additional base course calculation — use the Asphalt Tonnage Calculator for both layers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is the paving season in Canada and can I pave in cold weather?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The main paving season in most Canadian provinces runs from late April to October, when ambient temperatures are consistently above 10°C. Most provincial specifications prohibit laying hot-mix asphalt when air temperatures fall below 5–10°C, as cold air and substrate cause the mix to cool and stiffen too quickly, preventing adequate compaction. Some contractors use WMA (Warm Mix Asphalt) additives to extend the season slightly into cooler temperatures. Emergency pothole patching can be done year-round using cold-mix or heated repair materials, though permanent repairs should wait for suitable weather. See the Asphalt Repair Calculator for patching quantity estimates."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/css/seo-accessibility.css?v=3" />
+<link rel="preload" as="script" href="/js/app.min.js?v=9" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-icon">B</div>
+        <div class="nav-logo-text">Bitumen<span>Calc</span></div>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn">Calculators <span class="nav-dropdown-arrow">▾</span></button>
+          <div class="nav-dropdown-menu">
+            <div class="nav-dropdown-col">
+              <p class="nav-group-label">Regional</p>
+              <a href="/calculators/australia-bitumen-calculator/">Australia</a>
+              <a href="/calculators/canada-bitumen-calculator/" class="active">Canada</a>
+              <a href="/calculators/new-zealand-bitumen-calculator/">New Zealand</a>
+              <a href="/calculators/california-asphalt-calculator/">California</a>
+              <a href="/calculators/virginia-asphalt-calculator/">Virginia</a>
+              <a href="/calculators/colorado-asphalt-calculator/">Colorado</a>
+              <a href="/calculators/minnesota-asphalt-calculator/">Minnesota</a>
+              <a href="/calculators/new-jersey-asphalt-calculator/">New Jersey</a>
+              <a href="/calculators/north-carolina-asphalt-calculator/">North Carolina</a>
+            </div>
+            <div class="nav-dropdown-col">
+              <p class="nav-group-label">Area &amp; Unit Conversion</p>
+              <a href="/calculators/bitumen-square-feet-calculator/">Square Feet</a>
+              <a href="/calculators/square-feet-to-tons-calculator/">Sq Ft to Tons</a>
+              <a href="/calculators/bitumen-square-meters-calculator/">Square Meters</a>
+              <a href="/calculators/bitumen-square-yards-calculator/">Square Yards</a>
+              <a href="/calculators/metric-bitumen-calculator/">Metric</a>
+              <a href="/calculators/asphalt-measurement-calculator/">Measurement</a>
+              <p class="nav-group-label mt" style="margin-top:.9rem;">Thickness / Temp / Radius</p>
+              <a href="/calculators/asphalt-thickness-calculator/">Thickness</a>
+              <a href="/calculators/bitumen-temperature-converter/">Temperature</a>
+              <a href="/calculators/circular-asphalt-calculator/">Radius (Circular)</a>
+            </div>
+            <div class="nav-dropdown-col">
+              <p class="nav-group-label">Material &amp; Quantity</p>
+              <a href="/calculators/asphalt-material-calculator/">Material</a>
+              <a href="/calculators/asphalt-millings-calculator/">Millings (RAP)</a>
+              <a href="/calculators/asphalt-tonnage-calculator/">Tonnage</a>
+              <a href="/calculators/tack-coat-calculator/">Tack Coat</a>
+              <a href="/calculators/road-asphalt-calculator/">Road</a>
+              <a href="/calculators/roofing-bitumen-calculator/">Roofing</a>
+              <a href="/calculators/asphalt-repair-calculator/">Repair</a>
+              <a href="/calculators/asphalt-removal-calculator/">Removal</a>
+              <p style="margin-top:.9rem;" class="nav-group-label">Cost &amp; Rate</p>
+              <a href="/calculators/asphalt-cost-calculator/">Cost Calculator</a>
+              <a href="/calculators/asphalt-application-rate-calculator/">Rate Calculator</a>
+            </div>
+          </div>
+        </div>
+        <a href="/blog/">Blog</a>
+        <a href="/about-us/">About Us</a>
+      </div>
+      <a href="/calculators/" class="btn btn-primary btn-sm nav-cta">All Calculators</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/">🏠 Home</a>
+    <a href="/calculators/">🧮 All Calculators</a>
+    <a href="/calculators/australia-bitumen-calculator/">🇦🇺 Australia</a>
+    <a href="/calculators/canada-bitumen-calculator/">🇨🇦 Canada</a>
+    <a href="/calculators/new-zealand-bitumen-calculator/">🇳🇿 New Zealand</a>
+    <a href="/calculators/california-asphalt-calculator/">🇺🇸 California</a>
+    <a href="/calculators/virginia-asphalt-calculator/">🇺🇸 Virginia</a>
+    <a href="/calculators/bitumen-square-feet-calculator/">📐 Square Feet</a>
+    <a href="/calculators/asphalt-tonnage-calculator/">⚖️ Tonnage</a>
+    <a href="/calculators/asphalt-cost-calculator/">💰 Cost Calculator</a>
+    <a href="/blog/">📝 Blog</a>
+    <a href="/about-us/">ℹ️ About Us</a>
+  </div>
+</header>
+<main id="main-content">
+
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="eyebrow">Regional Calculator</div>
+    <h1>Canadian Bitumen Calculator</h1>
+    <p>Bitumen and aggregate estimation aligned with CSA A23.1, provincial MOT specifications, and cold-climate mix design requirements.</p>
+    <div class="region-meta">
+      <span class="badge badge-orange">CSA Standards</span>
+      <span class="badge badge-blue">CAD Currency</span>
+      <span class="badge badge-green">Cold Climate Mix Defaults</span>
+    </div>
+    <div class="breadcrumb">
+      <a href="/">Home</a><span class="sep">/</span>
+      <a href="/calculators/">Calculators</a><span class="sep">/</span>
+      <span>Canada</span>
+    </div>
+  </div>
+</section>
+
+<!-- CONTEXT CARDS -->
+<section class="section-sm" style="background:var(--bg-2);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="info-box">
+        <span class="info-icon">📋</span>
+        <div>
+          <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Provincial Specs</strong>
+          <p style="margin:0;font-size:.85rem;">MTO (Ontario), MOTI (BC), Alberta Infrastructure, MTMDET (Quebec) and other provincial road authorities.</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <span class="info-icon">❄️</span>
+        <div>
+          <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Cold Climate Design</strong>
+          <p style="margin:0;font-size:.85rem;">Canadian mixes use soft bitumen grades (PG 58-34 to PG 64-34) to resist low-temperature cracking.</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <span class="info-icon">💰</span>
+        <div>
+          <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Typical CA Costs</strong>
+          <p style="margin:0;font-size:.85rem;">Asphalt in Canada typically runs C$150–$320/tonne depending on province and spec.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGIONAL INTRO -->
+<section class="section">
+  <div class="container" style="max-width:820px;">
+    <h2>Calculating Asphalt for Canadian Cold-Climate Paving</h2>
+    <p>Canadian pavement is built to survive brutal winters and repeated freeze-thaw, and design follows CSA and provincial standards such as Ontario's MTO Superpave specifications. Binders are selected by Performance Grade — low-temperature grades like PG&nbsp;58-34 or PG&nbsp;52-40 are common across the Prairies and the North — and quantities are handled in metric units and priced in Canadian dollars per tonne. Accurate estimating matters here because short construction seasons and long haul distances leave little room to correct a short order.</p>
+    <p>Calculate multi-lift builds one layer at a time. A surface course and the base under it are usually different mixes with different binder contents, and averaging them produces a number that is wrong for both.</p>
+<p>Enter length, width and compacted lift thickness; results come back in tonnes with the binder split and a cost in CAD. Superpave surface mixes here compact to roughly 2,300–2,400&nbsp;kg/m³. Confirm binder grade, binder content and density against the MTO or provincial mix design, then add your waste allowance.</p>
+  </div>
+</section>
+
+<!-- CANADIAN MIX STANDARDS -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Reference</div>
+      <h2>Canadian Mix Standards</h2>
+      <p>Typical values for common Canadian pavement mix designs.</p>
+    </div>
+    <table class="ref-table">
+      <thead>
+        <tr>
+          <th>Mix Type</th>
+          <th>Bitumen Content (%)</th>
+          <th>Density (kg/m³)</th>
+          <th>Province / Spec</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>SP 12.5 Superpave</td><td class="highlight">5.0–6.0</td><td>2290–2380</td><td>Ontario MTO</td></tr>
+        <tr><td>SP 9.5 Fine-Graded</td><td class="highlight">5.5–6.5</td><td>2280–2360</td><td>Various provinces</td></tr>
+        <tr><td>HL-3 Hot-Mix</td><td class="highlight">5.0–6.0</td><td>2290–2370</td><td>Ontario MTO</td></tr>
+        <tr><td>SMA (Stone Mastic)</td><td class="highlight">6.0–7.0</td><td>2250–2340</td><td>High-volume roads</td></tr>
+        <tr><td>RAP / Recycled Mix</td><td class="highlight">4.5–5.5</td><td>2200–2300</td><td>All provinces</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="calc-section" id="calculator">
+  <div class="container">
+    <div class="calc-wrap" id="calcResults">
+      <div class="calc-tabs">
+        <button class="calc-tab active">Canadian Pavement</button>
+      </div>
+      <div class="calc-body">
+        <form class="calc-inputs" id="calcForm" onsubmit="return false;">
+
+          <div class="input-set">
+            <div class="input-set-title">Project Dimensions</div>
+            <div class="field">
+              <label for="length">Length</label>
+              <div class="input-row">
+                <input type="number" id="length" placeholder="e.g. 100" min="0" step="any" />
+                <select id="lengthUnit" style="width:90px;" aria-label="Length unit">
+                  <option value="m" selected>m</option>
+                  <option value="km">km</option>
+                  <option value="ft">ft</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="width">Width</label>
+              <div class="input-row">
+                <input type="number" id="width" placeholder="e.g. 7.5" min="0" step="any" />
+                <select id="widthUnit" style="width:90px;" aria-label="Width unit">
+                  <option value="m" selected>m</option>
+                  <option value="ft">ft</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="thickness">Thickness</label>
+              <div class="input-row">
+                <input type="number" id="thickness" placeholder="e.g. 50" min="0" step="any" />
+                <select id="thicknessUnit" style="width:90px;" aria-label="Thickness unit">
+                  <option value="mm" selected>mm</option>
+                  <option value="cm">cm</option>
+                  <option value="in">in</option>
+                </select>
+              </div>
+              <div class="field-hint">SP 12.5 wearing course: typically 40–50 mm</div>
+            </div>
+          </div>
+
+          <div class="input-set">
+            <div class="input-set-title">Canadian Mix Properties</div>
+            <div class="field">
+              <label for="mixType">Mix Type</label>
+              <select id="mixType">
+                <option value="dense" selected>SP 12.5 Superpave</option>
+                <option value="sma">SMA (Stone Mastic)</option>
+                <option value="hma">HL-3 Hot-Mix</option>
+                <option value="wma">WMA</option>
+                <option value="rap">RAP Mix</option>
+                <option value="custom">Custom</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="bitumenContent">Bitumen Content (%)</label>
+              <input type="number" id="bitumenContent" value="5.5" min="1" max="15" step="0.1" />
+              <div class="field-hint">SP 12.5 typical: 5.0–6.0%</div>
+            </div>
+            <div class="field">
+              <label for="density">Mix Density</label>
+              <div class="input-row">
+                <input type="number" id="density" value="2310" min="1000" max="3000" step="10" />
+                <select id="densityUnit" style="width:110px;" aria-label="Density unit">
+                  <option value="kg/m3" selected>kg/m³</option>
+                  <option value="t/m3">t/m³</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-set">
+            <div class="input-set-title">Cost (CAD)</div>
+            <div class="field">
+              <label for="price">Price per Tonne</label>
+              <div class="input-row">
+                <input type="number" id="price" placeholder="e.g. 200" min="0" step="any" />
+                <select id="currency" style="width:90px;" aria-label="Currency">
+                  <option value="CAD" selected>CAD</option>
+                  <option value="USD">USD</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="calc-btn" id="calcBtn">⚡ Calculate</button>
+          <button type="button" class="reset-btn" id="resetBtn">↺ Reset</button>
+        </form>
+
+        <div class="calc-results">
+          <div class="results-header"><h3>Results</h3></div>
+          <div id="results-empty" class="result-placeholder">
+            <div class="placeholder-icon">🏗️</div>
+            <p>Enter dimensions to calculate</p>
+          </div>
+          <div id="results-data">
+            <div class="result-card"><div class="result-card-icon blue">📐</div><div class="result-card-body"><div class="result-card-label">Total Area</div><div class="result-card-value" id="resArea">—</div></div></div>
+            <div class="result-card"><div class="result-card-icon purple">📦</div><div class="result-card-body"><div class="result-card-label">Total Volume</div><div class="result-card-value" id="resVolume">—</div></div></div>
+            <div class="result-card highlighted"><div class="result-card-icon orange">⚖️</div><div class="result-card-body"><div class="result-card-label">Total Mix Weight</div><div class="result-card-value" id="resWeight">—</div><div class="result-card-sub" id="resWeightSub"></div></div></div>
+            <div class="result-card"><div class="result-card-icon orange">🛢️</div><div class="result-card-body"><div class="result-card-label">Bitumen Required</div><div class="result-card-value" id="resBitumen">—</div><div class="result-card-sub" id="resBitumenSub"></div></div></div>
+            <div class="result-card"><div class="result-card-icon blue">🪨</div><div class="result-card-body"><div class="result-card-label">Aggregate Required</div><div class="result-card-value" id="resAggregate">—</div><div class="result-card-sub" id="resAggregateSub"></div></div></div>
+            <div class="result-card" id="resCostCard" style="display:none;"><div class="result-card-icon yellow">💵</div><div class="result-card-body"><div class="result-card-label">Estimated Cost (CAD)</div><div class="result-card-value" id="resCost">—</div></div></div>
+            <div class="breakdown-bar">
+              <div class="breakdown-bar-label">Mix Composition</div>
+              <div class="breakdown-track">
+                <div class="breakdown-fill-bitumen" id="bitPctBar" style="width:5.5%;"></div>
+                <div class="breakdown-fill-aggregate"></div>
+              </div>
+              <div class="breakdown-legend">
+                <div class="legend-item"><div class="legend-dot orange"></div><span id="bitLegendPct">5.5% Bitumen</span></div>
+                <div class="legend-item"><div class="legend-dot blue"></div><span id="aggLegendPct">94.5% Aggregate</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WORKED PROJECT -->
+    <section class="section">
+        <div class="container container-sm">
+            <div class="section-header">
+                <div class="label">Worked example</div>
+                <h2>A three-lift municipal rebuild, start to finish</h2>
+                <p>A 400&nbsp;m length of collector road, 9.5&nbsp;m wide, rebuilt in three lifts. Every layer calculated on its own, because none of them share a mix.</p>
+            </div>
+            <div style="overflow-x:auto;">
+            <table class="ref-table">
+                <thead><tr><th>Lift</th><th>Mix</th><th>Depth</th><th>Volume</th><th>Density</th><th>Tonnes</th><th>Binder</th></tr></thead>
+                <tbody>
+                <tr><td>Surface</td><td>SP 12.5</td><td>40&nbsp;mm</td><td>152&nbsp;m&sup3;</td><td>2,360&nbsp;kg/m&sup3;</td><td><strong>358.7&nbsp;t</strong></td><td>5.3% &rarr; 19.0&nbsp;t</td></tr>
+                <tr><td>Intermediate</td><td>SP 19.0</td><td>50&nbsp;mm</td><td>190&nbsp;m&sup3;</td><td>2,380&nbsp;kg/m&sup3;</td><td><strong>452.2&nbsp;t</strong></td><td>4.8% &rarr; 21.7&nbsp;t</td></tr>
+                <tr><td>Base</td><td>SP 25.0</td><td>70&nbsp;mm</td><td>266&nbsp;m&sup3;</td><td>2,400&nbsp;kg/m&sup3;</td><td><strong>638.4&nbsp;t</strong></td><td>4.4% &rarr; 28.1&nbsp;t</td></tr>
+                <tr style="font-weight:700;"><td colspan="5">Total asphalt</td><td>1,449.3&nbsp;t</td><td>68.8&nbsp;t</td></tr>
+                </tbody>
+            </table>
+            </div>
+            <p style="margin-top:1.5rem;">Area is 3,800&nbsp;m&sup2; for every lift, so it is only depth, density and binder content that change. Now try the shortcut everyone is tempted by: apply the surface mix figures to the whole build. At 2,360&nbsp;kg/m&sup3; and 5.3% binder across all 608&nbsp;m&sup3; you get 1,434.9&nbsp;t, which is only about 1% off the real total and looks perfectly reasonable. The binder comes out at 76.1&nbsp;t against the true 68.8&nbsp;t &mdash; overstated by more than seven tonnes, because the coarser lifts underneath need considerably less binder than the surface. Tonnage hides the error; binder exposes it.</p>
+            <p>Add 5% for waste and the order is about <strong>1,522&nbsp;t</strong>. Tack coat between lifts is separate and priced by area, not tonnage.</p>
+
+        </div>
+    </section>
+
+<!-- FORMULA SECTION -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Formula</div>
+      <h2>How the Canadian Bitumen Calculation Works</h2>
+      <p>This calculator uses the standard metric formula aligned with provincial road authority specifications across Canada.</p>
+    </div>
+    <div class="formula-inline">
+      Weight (t) = Length (m) × Width (m) × Thickness (mm) ÷ 1,000 × Density (kg/m³) ÷ 1,000
+    </div>
+    <div class="grid-3" style="gap:1.5rem;margin-top:2rem;">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Calculate Volume (m³)</h3>
+        <p>Convert thickness from mm to metres, then multiply all three dimensions. <strong>Example:</strong> A 500 m provincial arterial road, 7.0 m wide, with 50 mm SP 12.5 wearing course: 500 × 7.0 × 0.050 = <strong>175 m³</strong>.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Convert Volume to Tonnes</h3>
+        <p>Multiply volume by mix density and divide by 1,000 to convert kg to tonnes. Using SP 12.5 density of 2,310 kg/m³: 175 × 2,310 ÷ 1,000 = <strong>404.3 tonnes</strong> total mix.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Separate Bitumen &amp; Aggregate</h3>
+        <p>Apply bitumen content percentage to the total mix weight. At 5.5%: 404.3 × 0.055 = <strong>22.2 t bitumen</strong> and 404.3 × 0.945 = <strong>382.1 t aggregate</strong>. Add 5–10% waste allowance when ordering.</p>
+      </div>
+    </div>
+    <div class="info-box" style="margin-top:2rem;">
+      <span class="info-icon">🇨🇦</span>
+      <div>
+        <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Provincial Specification Note</strong>
+        <p style="margin:0;">Canadian mixes are governed by provincial road authority specs — not a single national standard. Always confirm density and bitumen content with your specific provincial authority (MTO, MOTI, Alberta Infrastructure, or MTMDET) and the Superpave or Marshall mix design for your aggregate source.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- REFERENCES -->
+    <section class="section section-alt">
+        <div class="container container-sm">
+            <div class="section-header">
+                <div class="label">References</div>
+                <h2>Standards this page draws on</h2>
+                <p>The mix types and densities here come from the national standard rather than from us. Where a local authority has its own supplement, that supplement wins.</p>
+            </div>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.9rem;">
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://www.library.mto.gov.on.ca/SydneyPLUS/TechPubs/Portal/mto/TechPubs.aspx" target="_blank" rel="noopener nofollow">Ontario Ministry of Transportation — Technical Publications portal (OPSS 1150, Hot Mix Asphalt)</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://bookstore.asphaltinstitute.org/catalog/book/ms-2-asphalt-mix-design-methods" target="_blank" rel="noopener nofollow">Asphalt Institute, <em>MS-2 Asphalt Mix Design Methods</em>, 7th edition</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://store.astm.org/d2041_d2041m-19.html" target="_blank" rel="noopener nofollow">ASTM D2041/D2041M-19 — Theoretical Maximum Specific Gravity and Density of Asphalt Mixtures (the Rice test)</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://store.transportation.org/item/collectiondetail/117" target="_blank" rel="noopener nofollow">AASHTO Materials Standards (T 166, T 209 and related test methods)</a></li>
+            </ul>
+            <p style="margin-top:1.75rem;font-size:.85rem;color:var(--text-muted);">
+                Standards re-checked in <strong>July 2026</strong>.
+                Any cost figures quoted are indicative only and date quickly &mdash; treat them as a
+                sanity check on a quote, never as a quote.
+                See our <a href="/editorial-policy/">editorial policy</a> for how these values are
+                sourced and reviewed, and the <a href="/disclaimer/">disclaimer</a> for the limits of
+                these estimates.
+            </p>
+        </div>
+    </section>
+
+<!-- APPLICATIONS SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Applications</div>
+      <h2>Where Canadian Bitumen Calculations Are Used</h2>
+      <p>From provincial highways to residential subdivision streets, accurate material estimation is critical for budget control and tender compliance across Canada.</p>
+    </div>
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="pillar-card">
+        <div class="pillar-icon" style="background:var(--gold-50);">🛣️</div>
+        <h3>Provincial Highway Rehabilitation</h3>
+        <p>MTO, MOTI, and Alberta Infrastructure project managers use mix tonnage calculations to prepare Bills of Quantities and validate contractor submissions on overlay and rehabilitation contracts. Accurate density values for the specified mix type are essential for payment verification against core samples.</p>
+        <p>Related: <a href="/calculators/asphalt-tonnage-calculator/">Asphalt Tonnage Calculator</a></p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon" style="background:var(--sky-light);">🏘️</div>
+        <h3>Residential Subdivision Roads</h3>
+        <p>Developers and municipal engineers use SP 12.5 or HL-3 mix calculations to estimate asphalt quantities for new subdivision road construction. Budget estimates include both granular base and asphalt wearing course, with CAD pricing from local suppliers used to set construction contingencies.</p>
+        <p>Related: <a href="/calculators/asphalt-cost-calculator/">Asphalt Cost Calculator</a></p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon" style="background:#d1fae5;">🏙️</div>
+        <h3>Municipal Pavement Maintenance</h3>
+        <p>City public works departments calculate annual asphalt requirements for pothole patching, crack sealing, and mill-and-fill programs. RAP mix calculations help municipalities track recycled material usage and demonstrate sustainability commitments under provincial environmental guidelines.</p>
+        <p>Related: <a href="/calculators/asphalt-repair-calculator/">Asphalt Repair Calculator</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container container-sm">
+    <div class="section-header">
+      <div class="label">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">What asphalt mix standards apply in Canada? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Canada uses Superpave mix design aligned with AASHTO standards, adapted by each province. Ontario MTO uses SP 9.5 and SP 12.5 designations; BC MOTI, Alberta Infrastructure, and Quebec MTMDET publish their own standard specifications. The CSA A23.1 standard covers general concrete work, but asphalt is governed primarily by provincial road authority specifications.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Why do Canadian asphalt mixes use softer bitumen grades? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Canada's harsh winters require bitumen that remains flexible at very low temperatures to prevent thermal cracking. Performance grades such as PG 58-34 or PG 64-34 indicate the bitumen performs at down to -34°C. Southern regions may use PG 64-28, while extreme cold areas in the north can require PG 52-40 or softer.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How much does asphalt cost in Canada? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Canadian asphalt prices typically range from C$150–$320 per tonne. Ontario and BC tend to be at the higher end while prairie provinces are often more affordable. Prices fluctuate with crude oil costs, seasonal demand (paving season is April–October in most provinces), and project scale. Always get current quotes from local suppliers.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What density should I use for Canadian asphalt? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>SP 12.5 Superpave mix typically has a compacted density of 2290–2380 kg/m³, with 2310 kg/m³ a common default for estimation. HL-3 hot-mix runs slightly higher at around 2290–2370 kg/m³. Always confirm with your laboratory mix design data or contractor's specifications for the specific aggregate source being used.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What is the difference between SP 12.5 and HL-3 asphalt mix in Canada? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>SP 12.5 refers to a Superpave-designed mix with a 12.5 mm nominal maximum aggregate size, commonly specified by Ontario MTO and other provincial authorities for wearing courses on arterial and collector roads. HL-3 (Hot-Mix Limestone 3) is an older Ontario MTO designation for a 12.5 mm dense-graded hot-mix asphalt — functionally similar to SP 12.5 but designed under Marshall methodology rather than Superpave volumetrics. Most provinces have transitioned to Superpave design, but HL-3 remains common on lower-volume municipal roads. Both mixes have typical bitumen contents of 5.0–6.0% and densities of 2290–2380 kg/m³.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How many tonnes of asphalt do I need for a Canadian residential driveway? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>A standard Canadian residential driveway (6 m × 10 m = 60 m²) with a 50 mm SP 12.5 wearing course requires approximately: 60 × 0.050 × 2,310 ÷ 1,000 = <strong>6.9 tonnes</strong> of asphalt mix. Allow an additional 5–10% for waste and compaction variability, so order roughly <strong>7.5 tonnes</strong>. Wider or longer driveways with a granular base beneath will need additional base course calculation — use the <a href="/calculators/asphalt-tonnage-calculator/">Asphalt Tonnage Calculator</a> for both layers.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">When is the paving season in Canada and can I pave in cold weather? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>The main paving season in most Canadian provinces runs from <strong>late April to October</strong>, when ambient temperatures are consistently above 10°C. Most provincial specifications prohibit laying hot-mix asphalt when air temperatures fall below 5–10°C, as cold air and substrate cause the mix to cool and stiffen too quickly, preventing adequate compaction. Some contractors use WMA (Warm Mix Asphalt) additives to extend the season slightly into cooler temperatures. Emergency pothole patching can be done year-round using cold-mix or heated repair materials, though permanent repairs should wait for suitable weather. See the <a href="/calculators/asphalt-repair-calculator/">Asphalt Repair Calculator</a> for patching quantity estimates.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO USE -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Guide</div>
+      <h2>How to Use This Calculator</h2>
+    </div>
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Enter Project Dimensions</h3>
+        <p>Input the length, width, and compacted thickness of your pavement. Canadian SP 12.5 Superpave wearing courses are typically laid at 40–50 mm thickness. Use metres for metric input or switch to feet for imperial measurements.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Select Canadian Mix Type</h3>
+        <p>Choose the appropriate provincial mix — SP 12.5 Superpave (Ontario MTO), HL-3 Hot-Mix, or SMA for high-volume highways. Adjust bitumen content to match your provincial specification. Cold-climate Canadian mixes often use soft binder grades (PG 58-34 to PG 64-34) to resist freeze-thaw cracking.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Enter CAD Price &amp; Calculate</h3>
+        <p>Enter the current price per tonne in Canadian dollars (typically C$150–$320/tonne depending on province). Click Calculate to get total asphalt tonnage, bitumen and aggregate quantities, and your estimated project cost in CAD.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OTHER REGIONS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Other Regions</div>
+      <h2>More Regional Calculators</h2>
+    </div>
+    <div class="dir-grid">
+      <a href="/calculators/australia-bitumen-calculator/" class="dir-card">
+        <div class="dir-card-icon" style="background:#fff3e0;">🇦🇺</div>
+        <div class="dir-card-text"><div class="dir-card-title">Australia</div><div class="dir-card-desc">Austroads · AUD · DG14</div></div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+      <a href="/calculators/new-zealand-bitumen-calculator/" class="dir-card">
+        <div class="dir-card-icon" style="background:#e0f2fe;">🇳🇿</div>
+        <div class="dir-card-text"><div class="dir-card-title">New Zealand</div><div class="dir-card-desc">NZTA · NZD · AC 14</div></div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+      <a href="/calculators/california-asphalt-calculator/" class="dir-card">
+        <div class="dir-card-icon" style="background:#fef9c3;">🇺🇸</div>
+        <div class="dir-card-text"><div class="dir-card-title">California</div><div class="dir-card-desc">Caltrans · USD · Superpave</div></div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="/calculators/" class="btn btn-outline">View All Calculators →</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" style="margin-bottom:.5rem;">
+          <div class="nav-logo-icon">B</div>
+          <div class="nav-logo-text">Bitumen<span>Calc</span></div>
+        </a>
+        <p>Free pavement quantity calculators. Every formula and default value is shown on the page.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Regional</p>
+        <ul>
+          <li><a href="/calculators/australia-bitumen-calculator/">Australia</a></li>
+          <li><a href="/calculators/canada-bitumen-calculator/">Canada</a></li>
+          <li><a href="/calculators/new-zealand-bitumen-calculator/">New Zealand</a></li>
+          <li><a href="/calculators/california-asphalt-calculator/">California</a></li>
+          <li><a href="/calculators/virginia-asphalt-calculator/">Virginia</a></li>
+          <li><a href="/calculators/colorado-asphalt-calculator/">Colorado</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Calculators</p>
+        <ul>
+          <li><a href="/calculators/bitumen-square-feet-calculator/">Square Feet</a></li>
+          <li><a href="/calculators/asphalt-tonnage-calculator/">Tonnage</a></li>
+          <li><a href="/calculators/asphalt-cost-calculator/">Cost Calculator</a></li>
+          <li><a href="/calculators/asphalt-material-calculator/">Material</a></li>
+          <li><a href="/calculators/road-asphalt-calculator/">Road</a></li>
+          <li><a href="/calculators/asphalt-repair-calculator/">Repair</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Company</p>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/calculators/">All Calculators</a></li>
+          <li><a href="/about-us/">About Us</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+        </ul>
+        <p style="margin-top:1.5rem;" class="footer-label">Legal</p>
+        <ul>
+          <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+
+                        <li><a href="/disclaimer/">Disclaimer</a></li>
+                        <li><a href="/editorial-policy/">Editorial Policy</a></li>
+                    </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Bitumen Calculator. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/terms-and-conditions/">Terms</a>
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/contact-us/">Contact</a>
+
+                    <a href="/disclaimer/">Disclaimer</a>
+                    <a href="#" data-consent-open>Cookie Preferences</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+<script src="/js/app.min.js?v=9"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.BitCalc) window.BitCalc.setDefaults({ bitumenContent: 5.5, density: 2310, currency: 'CAD' });
+  });
+</script>
+</main>
+</body>
+</html>
+
+
+
+

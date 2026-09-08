@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<!-- Consent Mode v2 defaults - must execute before any Google tag -->
+<script src="/js/consent.min.js?v=3"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GCYLRZ2PQK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GCYLRZ2PQK');
+</script>
+  <meta name="google-adsense-account" content="ca-pub-6438644207209483" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="msapplication-TileColor" content="#f59e0b" />
+<meta name="theme-color" content="#f59e0b" />
+<title>Asphalt Material Calculator — Quantities by Mix Type</title>
+  <meta name="description" content="Calculate bitumen and aggregate quantities by selecting your asphalt mix type. Presets for HMA, SMA, OGFC, WMA, porous, and RAP mixes. Free tool." />
+    <meta name="author" content="BitumenCalc" />
+<meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.bitumencalc.com/calculators/asphalt-material-calculator/" />
+    <link rel="alternate" hreflang="en" href="https://www.bitumencalc.com/calculators/asphalt-material-calculator/" />
+<meta name="keywords" content="asphalt material calculator, bitumen quantity calculator, HMA calculator, asphalt mix design calculator" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://www.bitumencalc.com/calculators/asphalt-material-calculator/" />
+  <meta property="og:title" content="Asphalt Material Calculator — Quantities by Mix Type" />
+  <meta property="og:description" content="Calculate bitumen and aggregate quantities by selecting your asphalt mix type. Presets for HMA, SMA, OGFC, WMA, porous, and RAP mixes. Free tool." />
+  <meta property="og:image" content="https://www.bitumencalc.com/assets/hero-road.webp" />
+      <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="675" />
+<meta property="og:image:alt" content="BitumenCalc tool and guide preview image" />
+<meta property="og:site_name" content="BitumenCalc" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@BitumenCalc" />
+<meta name="twitter:title" content="Asphalt Material Calculator — Quantities by Mix Type" />
+  <meta name="twitter:description" content="Calculate bitumen and aggregate quantities by selecting your asphalt mix type. Presets for HMA, SMA, OGFC, WMA, porous, and RAP mixes. Free tool." />
+  <meta name="twitter:image" content="https://www.bitumencalc.com/assets/hero-road.webp" />
+
+    <meta name="twitter:image:alt" content="BitumenCalc tool and guide preview image" />
+<!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.bitumencalc.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://www.bitumencalc.com/calculators/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Material Calculator",
+      "item": "https://www.bitumencalc.com/calculators/asphalt-material-calculator/"
+    }
+  ]
+}
+</script>
+
+  <!-- Schema: WebApplication -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Asphalt Material Calculator",
+  "url": "https://www.bitumencalc.com/calculators/asphalt-material-calculator/",
+  "applicationCategory": "UtilitiesApplication",
+  "operatingSystem": "Web",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": "Calculate bitumen and aggregate quantities by selecting your asphalt mix type. Presets for HMA, SMA, OGFC, WMA, porous, and RAP mixes. Free tool.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "BitumenCalc",
+    "url": "https://www.bitumencalc.com",
+    "logo": "https://www.bitumencalc.com/assets/logo.svg",
+    "@id": "https://www.bitumencalc.com/#organization"
+  }
+}
+</script>
+<style id="critical-css">:root{--navy:#0b1628;--navy-700:#162240;--gold:#f59e0b;--gold-dark:#d97706;--gold-light:#fde68a;--bg:#f8fafc;--surface:#fff;--border:#e2e8f0;--text:#0b1628;--text-muted:#475569;--grad-gold:linear-gradient(135deg,#f59e0b 0%,#fbbf24 100%);--grad-hero:linear-gradient(150deg,#0b1628 0%,#1a3060 55%,#0b2215 100%);--r-lg:12px;--r-xl:16px;--r-full:9999px}*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{font-size:16px}body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}img{max-width:100%;height:auto;display:block}a{color:var(--gold);text-decoration:none}.container{max-width:1200px;margin:0 auto;padding:0 1.5rem}.site-header{position:sticky;top:0;z-index:1000;background:var(--navy);border-bottom:1px solid rgba(255,255,255,.07);box-shadow:0 2px 24px rgba(0,0,0,.35)}.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem}.nav-logo{display:flex;align-items:center;gap:.65rem;text-decoration:none;flex-shrink:0}.nav-logo-icon{width:40px;height:40px;background:var(--grad-gold);border-radius:var(--r-lg);display:flex;align-items:center;justify-content:center;font-size:1.1rem;font-weight:900;color:var(--navy)}.nav-logo-text{font-size:1.15rem;font-weight:800;color:#fff;line-height:1.2}.nav-logo-text span{color:var(--gold)}.nav-links{display:flex;align-items:center;gap:.15rem}.nav-links a{color:rgba(255,255,255,.7);font-size:.875rem;font-weight:500;padding:.5rem .9rem;border-radius:var(--r-full)}.nav-links a.active{color:var(--gold);background:rgba(245,158,11,.1)}.nav-dropdown{position:relative;display:flex;align-items:center}.nav-dropdown-btn{color:rgba(255,255,255,.7);font-size:.875rem;font-weight:500;padding:.5rem .9rem;border-radius:var(--r-full);display:flex;align-items:center;gap:.3rem;background:none;border:0;font-family:inherit}.nav-dropdown-menu{position:absolute;top:calc(100% + .35rem);left:50%;transform:translate(-50%,10px);background:var(--navy-700);border:1px solid rgba(255,255,255,.1);border-radius:var(--r-xl);padding:1.5rem;min-width:700px;display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem 2rem;opacity:0;visibility:hidden;pointer-events:none}.nav-toggle{display:none}.mobile-menu{display:none}.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1.75rem;border-radius:var(--r-full);font-size:.9rem;font-weight:600;white-space:nowrap;text-decoration:none}.btn-primary{background:var(--grad-gold);color:var(--navy);font-weight:700}.btn-ghost{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.2)}.btn-lg{padding:1.1rem 2.5rem;font-size:1rem}.btn-sm{padding:.5rem 1.2rem;font-size:.82rem}.hero{background-image:url('/assets/hero-road.webp');background-size:cover;background-position:center 40%;background-color:#0b1628;position:relative;overflow:hidden;padding:3rem 0 4rem;height:calc(100vh - 72px);min-height:620px;max-height:900px;display:flex;align-items:center}.hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(4,8,18,.65) 0%,rgba(4,8,18,.72) 50%,rgba(4,8,18,.9) 100%);z-index:0}.hero-inner{display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;z-index:1;padding-top:3rem;width:100%}.hero-content{color:#fff;max-width:860px}.hero-tag{display:inline-flex;align-items:center;gap:.5rem;background:rgba(245,158,11,.18);border:1px solid rgba(245,158,11,.5);color:var(--gold-light);padding:.35rem 1rem;border-radius:var(--r-full);font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem}.hero-title{font-family:'Arial Narrow','Segoe UI Condensed',Impact,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:700;font-size:clamp(2.8rem,4.2vw,4.2rem);line-height:1.1;margin-bottom:1.2rem;color:#fff;text-shadow:0 2px 24px rgba(0,0,0,.55);text-align:center}.hero-desc{font-size:1.05rem;color:rgba(255,255,255,.88);margin-bottom:1.8rem;line-height:1.7;text-align:center;text-shadow:0 1px 8px rgba(0,0,0,.4)}.hero-actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:2rem;justify-content:center}.hero-stats{display:flex;gap:2rem;flex-wrap:wrap;justify-content:center;padding-top:1.25rem;border-top:1px solid rgba(255,255,255,.15)}.hero-stat-val{font-size:1.85rem;font-weight:900;color:#fff;line-height:1}.hero-stat-val span{color:var(--gold)}.hero-stat-label{font-size:.72rem;color:rgba(255,255,255,.5);margin-top:.25rem;text-transform:uppercase;letter-spacing:.08em}.hero-road{position:absolute;bottom:0;left:0;right:0;height:5px;background:repeating-linear-gradient(90deg,var(--gold) 0,var(--gold) 50px,transparent 50px,transparent 72px);opacity:.65}.page-hero{background:var(--grad-hero);padding:4rem 0 3rem;position:relative;overflow:hidden}.page-hero-inner{position:relative;z-index:1}.page-hero h1{color:#fff;margin-bottom:.75rem;font-size:clamp(2.2rem,5vw,3.75rem);font-weight:800;line-height:1.12}.page-hero p{font-size:1.1rem;color:rgba(255,255,255,.7);max-width:560px}.section{padding:5.5rem 0}.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r-xl);padding:2rem}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}@media(max-width:900px){.nav-links,.nav-cta,.nav-dropdown-btn{display:none}.nav-toggle{display:flex;flex-direction:column;gap:5px;padding:.5rem}.nav-toggle span{display:block;width:22px;height:2px;background:#fff;border-radius:2px}.mobile-menu.open{display:block;background:var(--navy-700);border-top:1px solid rgba(255,255,255,.06)}.mobile-menu a{display:block;padding:.9rem 1.5rem;color:rgba(255,255,255,.8);font-weight:500;font-size:.95rem;border-bottom:1px solid rgba(255,255,255,.04)}}@media(max-width:768px){.container{padding:0 1rem}.hero{height:auto;min-height:100svh;padding:2rem 0 3rem}.hero-tag{display:none}.hero-title{font-size:2.1rem;margin-bottom:.85rem}.hero-desc{font-size:.9rem;margin-bottom:1.25rem;line-height:1.6}.hero-actions{gap:.75rem;margin-bottom:1.25rem}.hero-stats{gap:1.25rem;padding-top:1rem}.hero-stat-val{font-size:1.4rem}.hero-stat-label{font-size:.65rem}.grid-3{grid-template-columns:1fr}}</style>
+<link rel="preload" href="/css/style.min.css?v=7" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+<noscript><link rel="stylesheet" href="/css/style.min.css?v=7" /></noscript>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f59e0b'/><text y='.9em' font-size='80' x='10'>🛣️</text></svg>" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the difference between bitumen content and binder content?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bitumen content and binder content refer to the same thing — the percentage of bituminous binder (asphalt cement) by weight in the total mix. The terms are used interchangeably in practice, though \"bitumen\" is more common in Australian, UK, and European specifications, while \"asphalt binder\" is the preferred US terminology. Typical bitumen content ranges from 4.5% (base courses) to 7.0% (SMA) by total mix weight."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I calculate bitumen quantity from mix weight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiply total mix weight by bitumen content percentage: Bitumen weight = Total mix weight × (bitumen % ÷ 100). For example, 100 tonnes of mix at 5.5% bitumen content = 5.5 tonnes of bitumen. To convert to litres, divide by bitumen density (approximately 1.02–1.05 t/m³ at 15°C): 5.5 tonnes ÷ 1.03 t/m³ = 5,340 litres. Our calculator performs this conversion automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the typical aggregate-to-bitumen ratio in asphalt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Standard dense-graded HMA contains approximately 94–96% aggregate and 4–6% bitumen by weight. This means for every 100 kg of asphalt mix, roughly 94–96 kg is crushed stone/gravel aggregate and 4–6 kg is bitumen binder. Stone Matrix Asphalt (SMA) uses more bitumen (6–7%) and a gap-graded stone skeleton, while Open-Graded mixes use 5.5–6.5% bitumen with a permeable aggregate structure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Superpave and how does it affect mix type selection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Superpave (Superior Performing Asphalt Pavements) is an AASHTO performance-based mix design system used widely in the USA and increasingly worldwide. It specifies bitumen grade (e.g. PG 64-22) based on local climate temperatures and selects aggregate gradation to suit traffic loading. Superpave Dense-Graded HMA is what this calculator's \"Dense-Graded HMA (SP 12.5)\" preset refers to — SP denotes Superpave, 12.5 is the nominal maximum aggregate size in mm. If your project uses a Superpave specification, use the bitumen content from your approved job mix formula (JMF) rather than the calculator's default 5.5%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can RAP (Recycled Asphalt Pavement) reduce my material costs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — significantly. Incorporating 20–40% RAP reduces virgin aggregate demand by the same proportion and partially offsets virgin bitumen requirements (aged bitumen in RAP counts toward total binder content). On a 500-tonne job, 30% RAP replaces approximately 135 t of aggregate and contributes around 6–7 t of aged binder, reducing both procurement cost and carbon footprint. The trade-off is additional QA testing for RAP content consistency and potential performance risk if RAP bitumen is heavily aged. Use the Millings Calculator for detailed RAP quantity and cost savings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is WMA (Warm Mix Asphalt) and when is it preferred?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Warm Mix Asphalt uses chemical additives (zeolites, waxes, or foaming agents) to allow mixing and compaction at temperatures 20–40°C lower than conventional Hot Mix Asphalt. Benefits include reduced energy use at the plant, lower bitumen fume emissions for workers, longer haul distances before cooling, and better compaction in cold weather. Material quantities are essentially the same as HMA at similar bitumen content (5–6%) and density (2,280–2,380 kg/m³) — the difference is in the production process, not the mix composition. WMA is increasingly specified on environmentally-sensitive projects and remote sites."
+      }
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="/css/seo-accessibility.css?v=3" />
+<link rel="preload" as="script" href="/js/app.min.js?v=9" />
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container">
+    <nav class="nav-inner">
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-icon">B</div>
+        <div class="nav-logo-text">Bitumen<span>Calc</span></div>
+      </a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-btn">Calculators <span class="nav-dropdown-arrow">▾</span></button>
+          <div class="nav-dropdown-menu">
+            <div class="nav-dropdown-col">
+              <p class="nav-group-label">Regional</p>
+              <a href="/calculators/australia-bitumen-calculator/">Australia</a>
+              <a href="/calculators/canada-bitumen-calculator/">Canada</a>
+              <a href="/calculators/new-zealand-bitumen-calculator/">New Zealand</a>
+              <a href="/calculators/california-asphalt-calculator/">California</a>
+              <a href="/calculators/virginia-asphalt-calculator/">Virginia</a>
+              <a href="/calculators/colorado-asphalt-calculator/">Colorado</a>
+              <a href="/calculators/minnesota-asphalt-calculator/">Minnesota</a>
+              <a href="/calculators/new-jersey-asphalt-calculator/">New Jersey</a>
+              <a href="/calculators/north-carolina-asphalt-calculator/">North Carolina</a>
+            </div>
+            <div class="nav-dropdown-col">
+              <p class="nav-group-label">Area &amp; Unit Conversion</p>
+              <a href="/calculators/bitumen-square-feet-calculator/">Square Feet</a>
+              <a href="/calculators/square-feet-to-tons-calculator/">Sq Ft to Tons</a>
+              <a href="/calculators/bitumen-square-meters-calculator/">Square Meters</a>
+              <a href="/calculators/bitumen-square-yards-calculator/">Square Yards</a>
+              <a href="/calculators/metric-bitumen-calculator/">Metric</a>
+              <a href="/calculators/asphalt-measurement-calculator/">Measurement</a>
+              <p style="margin-top:.9rem;" class="nav-group-label">Thickness / Temp / Radius</p>
+              <a href="/calculators/asphalt-thickness-calculator/">Thickness</a>
+              <a href="/calculators/bitumen-temperature-converter/">Temperature</a>
+              <a href="/calculators/circular-asphalt-calculator/">Radius (Circular)</a>
+            </div>
+            <div class="nav-dropdown-col">
+              <p class="nav-group-label">Material &amp; Quantity</p>
+              <a href="/calculators/asphalt-material-calculator/" class="active">Material</a>
+              <a href="/calculators/asphalt-millings-calculator/">Millings (RAP)</a>
+              <a href="/calculators/asphalt-tonnage-calculator/">Tonnage</a>
+              <a href="/calculators/tack-coat-calculator/">Tack Coat</a>
+              <a href="/calculators/road-asphalt-calculator/">Road</a>
+              <a href="/calculators/roofing-bitumen-calculator/">Roofing</a>
+              <a href="/calculators/asphalt-repair-calculator/">Repair</a>
+              <a href="/calculators/asphalt-removal-calculator/">Removal</a>
+              <p style="margin-top:.9rem;" class="nav-group-label">Cost &amp; Rate</p>
+              <a href="/calculators/asphalt-cost-calculator/">Cost Calculator</a>
+              <a href="/calculators/asphalt-application-rate-calculator/">Rate Calculator</a>
+            </div>
+          </div>
+        </div>
+        <a href="/blog/">Blog</a>
+        <a href="/about-us/">About Us</a>
+      </div>
+      <a href="/calculators/" class="btn btn-primary btn-sm nav-cta">All Calculators</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/">🏠 Home</a>
+    <a href="/calculators/">🧮 All Calculators</a>
+    <a href="/calculators/australia-bitumen-calculator/">🇦🇺 Australia</a>
+    <a href="/calculators/canada-bitumen-calculator/">🇨🇦 Canada</a>
+    <a href="/calculators/bitumen-square-feet-calculator/">📐 Square Feet</a>
+    <a href="/calculators/asphalt-tonnage-calculator/">⚖️ Tonnage</a>
+    <a href="/calculators/asphalt-cost-calculator/">💰 Cost Calculator</a>
+    <a href="/blog/">📝 Blog</a>
+    <a href="/about-us/">ℹ️ About Us</a>
+  </div>
+</header>
+<main id="main-content">
+
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <div class="eyebrow">Material Calculator</div>
+    <h1>Asphalt Material Calculator</h1>
+    <p>Calculate bitumen and aggregate quantities by selecting your asphalt mix type. Presets for all common mix designs — HMA, SMA, OGFC, WMA, porous, and RAP mixes.</p>
+    <div class="region-meta">
+      <span class="badge badge-orange">Mix Type Presets</span>
+      <span class="badge badge-blue">Bitumen + Aggregate</span>
+      <span class="badge badge-green">All Standards</span>
+    </div>
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <a href="/calculators/">Calculators</a>
+      <span class="sep">/</span>
+      <span>Material</span>
+    </div>
+  </div>
+</section>
+
+<!-- INFO CARDS -->
+<section class="section-sm" style="background:var(--bg-2);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="info-box">
+        <span class="info-icon">🔬</span>
+        <div>
+          <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Mix Type Presets</strong>
+          <p style="margin:0;font-size:.85rem;">Select your mix type and bitumen content and density are automatically populated. Covers all common mixes from dense-graded HMA to porous asphalt and RAP.</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <span class="info-icon">🛢️</span>
+        <div>
+          <strong style="color:var(--text);display:block;margin-bottom:.25rem;">Bitumen + Aggregate</strong>
+          <p style="margin:0;font-size:.85rem;">Calculates both bitumen binder and aggregate quantities separately. Essential for material ordering and procurement planning.</p>
+        </div>
+      </div>
+      <div class="info-box">
+        <span class="info-icon">🌍</span>
+        <div>
+          <strong style="color:var(--text);display:block;margin-bottom:.25rem;">All Standards</strong>
+          <p style="margin:0;font-size:.85rem;">Mix type defaults match AASHTO Superpave, EN European standards, Austroads, and other major specifications. Fully editable for project-specific values.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="calc-section" id="calculator">
+  <div class="container">
+    <div class="calc-wrap" id="calcResults">
+      <div class="calc-tabs">
+        <button class="calc-tab active">Material Calculator</button>
+      </div>
+      <div class="calc-body">
+        <form class="calc-inputs" id="calcForm" onsubmit="return false;">
+
+          <div class="input-set">
+            <div class="input-set-title">Project Dimensions</div>
+            <div class="field">
+              <label for="length">Length</label>
+              <div class="input-row">
+                <input type="number" id="length" placeholder="e.g. 100" min="0" step="any" />
+                <select id="lengthUnit" style="width:90px;" aria-label="Length unit">
+                  <option value="m" selected>m</option>
+                  <option value="km">km</option>
+                  <option value="ft">ft</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="width">Width</label>
+              <div class="input-row">
+                <input type="number" id="width" placeholder="e.g. 7.5" min="0" step="any" />
+                <select id="widthUnit" style="width:90px;" aria-label="Width unit">
+                  <option value="m" selected>m</option>
+                  <option value="ft">ft</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="thickness">Thickness</label>
+              <div class="input-row">
+                <input type="number" id="thickness" placeholder="e.g. 50" min="0" step="any" />
+                <select id="thicknessUnit" style="width:90px;" aria-label="Thickness unit">
+                  <option value="mm" selected>mm</option>
+                  <option value="cm">cm</option>
+                  <option value="in">in</option>
+                </select>
+              </div>
+              <div class="field-hint">Surface course: 40–75 mm | Binder: 50–100 mm | Base: 100–200 mm</div>
+            </div>
+          </div>
+
+          <div class="input-set">
+            <div class="input-set-title">Mix Type &amp; Properties</div>
+            <div class="field">
+              <label for="mixType">Mix Type</label>
+              <select id="mixType">
+                <option value="dense" selected>Dense-Graded HMA (SP 12.5)</option>
+                <option value="sma">SMA (Stone Mastic Asphalt)</option>
+                <option value="ogfc">OGFC (Open-Graded)</option>
+                <option value="hma">Base Course HMA</option>
+                <option value="wma">WMA (Warm Mix)</option>
+                <option value="porous">Porous Asphalt</option>
+                <option value="rap">RAP / Recycled Mix</option>
+                <option value="custom">Custom</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="bitumenContent">Bitumen Content (%)</label>
+              <input type="number" id="bitumenContent" value="5.5" min="1" max="15" step="0.1" />
+              <div class="field-hint">Dense HMA: 5.0–6.0% | SMA: 6.0–7.5% | OGFC: 5.5–6.5%</div>
+            </div>
+            <div class="field">
+              <label for="density">Mix Density</label>
+              <div class="input-row">
+                <input type="number" id="density" value="2350" min="1000" max="3000" step="10" />
+                <select id="densityUnit" style="width:110px;" aria-label="Density unit">
+                  <option value="kg/m3" selected>kg/m³</option>
+                  <option value="t/m3">t/m³</option>
+                </select>
+              </div>
+              <div class="field-hint">Dense HMA: 2280–2400 | OGFC/Porous: 1900–2100 kg/m³</div>
+            </div>
+          </div>
+
+          <div class="input-set">
+            <div class="input-set-title">Cost Estimation (Optional)</div>
+            <div class="field">
+              <label for="price">Price per Tonne</label>
+              <div class="input-row">
+                <input type="number" id="price" placeholder="Optional" min="0" step="any" />
+                <select id="currency" style="width:90px;" aria-label="Currency">
+                  <option value="USD" selected>USD</option>
+                  <option value="AUD">AUD</option>
+                  <option value="EUR">EUR</option>
+                  <option value="GBP">GBP</option>
+                  <option value="NZD">NZD</option>
+                  <option value="CAD">CAD</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <button type="button" class="calc-btn" id="calcBtn">⚡ Calculate</button>
+          <button type="button" class="reset-btn" id="resetBtn">↺ Reset</button>
+        </form>
+
+        <div class="calc-results">
+          <div class="results-header"><h3>Results</h3></div>
+          <div id="results-empty" class="result-placeholder">
+            <div class="placeholder-icon">🏗️</div>
+            <p>Enter dimensions to calculate</p>
+          </div>
+          <div id="results-data">
+            <div class="result-card"><div class="result-card-icon blue">📐</div><div class="result-card-body"><div class="result-card-label">Total Area</div><div class="result-card-value" id="resArea">—</div></div></div>
+            <div class="result-card"><div class="result-card-icon purple">📦</div><div class="result-card-body"><div class="result-card-label">Total Volume</div><div class="result-card-value" id="resVolume">—</div></div></div>
+            <div class="result-card highlighted"><div class="result-card-icon orange">⚖️</div><div class="result-card-body"><div class="result-card-label">Total Mix Weight</div><div class="result-card-value" id="resWeight">—</div><div class="result-card-sub" id="resWeightSub"></div></div></div>
+            <div class="result-card"><div class="result-card-icon orange">🛢️</div><div class="result-card-body"><div class="result-card-label">Bitumen Required</div><div class="result-card-value" id="resBitumen">—</div><div class="result-card-sub" id="resBitumenSub"></div></div></div>
+            <div class="result-card"><div class="result-card-icon blue">🪨</div><div class="result-card-body"><div class="result-card-label">Aggregate Required</div><div class="result-card-value" id="resAggregate">—</div><div class="result-card-sub" id="resAggregateSub"></div></div></div>
+            <div class="result-card" id="resCostCard" style="display:none;"><div class="result-card-icon yellow">💵</div><div class="result-card-body"><div class="result-card-label">Estimated Cost</div><div class="result-card-value" id="resCost">—</div></div></div>
+            <div class="breakdown-bar">
+              <div class="breakdown-bar-label">Mix Composition</div>
+              <div class="breakdown-track">
+                <div class="breakdown-fill-bitumen" id="bitPctBar" style="width:5.5%;"></div>
+                <div class="breakdown-fill-aggregate"></div>
+              </div>
+              <div class="breakdown-legend">
+                <div class="legend-item"><div class="legend-dot orange"></div><span id="bitLegendPct">5.5% Bitumen</span></div>
+                <div class="legend-item"><div class="legend-dot blue"></div><span id="aggLegendPct">94.5% Aggregate</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENCE TABLE -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Reference</div>
+      <h2>Mix Type Properties &amp; Applications</h2>
+      <p>Typical bitumen content, density, and application for each asphalt mix type.</p>
+    </div>
+    <table class="ref-table">
+      <thead>
+        <tr>
+          <th>Mix Type</th>
+          <th>Bitumen Content (%)</th>
+          <th>Density (kg/m³)</th>
+          <th>Typical Application</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Dense-Graded HMA (SP 12.5)</td><td class="highlight">5.0–6.0</td><td>2300–2400</td><td>Surface &amp; binder course — most common</td></tr>
+        <tr><td>SMA (Stone Mastic Asphalt)</td><td class="highlight">6.0–7.5</td><td>2250–2350</td><td>High-traffic wearing course</td></tr>
+        <tr><td>OGFC (Open-Graded)</td><td class="highlight">5.5–6.5</td><td>1900–2100</td><td>Noise reducing, porous drainage</td></tr>
+        <tr><td>Base Course HMA</td><td class="highlight">4.5–5.5</td><td>2300–2400</td><td>Structural base layer</td></tr>
+        <tr><td>WMA (Warm Mix)</td><td class="highlight">5.0–6.0</td><td>2280–2380</td><td>Lower-temperature paving, any course</td></tr>
+        <tr><td>Porous Asphalt</td><td class="highlight">5.0–6.0</td><td>1800–2000</td><td>Stormwater management surfaces</td></tr>
+        <tr><td>RAP / Recycled Mix</td><td class="highlight">4.0–5.5</td><td>2200–2300</td><td>Sustainable overlay with recycled content</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- FORMULA SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Formula</div>
+      <h2>How Material Quantities Are Calculated</h2>
+      <p>The calculator derives bitumen and aggregate weights from the total mix tonnage using the mix type's bitumen content percentage.</p>
+    </div>
+    <div class="formula-inline">
+      Total Mix (t) = Area (m²) × Thickness (m) × Density (kg/m³) ÷ 1,000<br>
+      Bitumen (t) = Total Mix × (Bitumen % ÷ 100)<br>
+      Aggregate (t) = Total Mix − Bitumen
+    </div>
+    <div class="grid-3" style="gap:1.5rem;margin-top:2rem;">
+      <div class="step-card">
+        <div class="step-num">①</div>
+        <h3>Total Mix Weight</h3>
+        <p>For a 100 m × 7 m road at 50 mm Dense HMA (density 2,350 kg/m³): 700 m² × 0.05 m × 2,350 ÷ 1,000 = <strong>82.25 tonnes</strong> total mix. Use the <a href="/calculators/asphalt-tonnage-calculator/">Tonnage Calculator</a> for weight-only estimates across multiple thicknesses.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">②</div>
+        <h3>Bitumen Component</h3>
+        <p>At 5.5% bitumen content: 82.25 t × 0.055 = <strong>4.52 tonnes of bitumen binder</strong>. Bitumen density at 15°C is approximately 1.02–1.05 t/m³, so 4.52 t ÷ 1.03 = <strong>4,388 litres</strong> — useful for tanker delivery planning.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">③</div>
+        <h3>Aggregate Component</h3>
+        <p>82.25 t − 4.52 t = <strong>77.73 tonnes of aggregate</strong>. For a Dense HMA surface course this is typically crushed granite or basalt of SP 12.5 gradation. Higher bitumen mixes like SMA leave less room for aggregate — important for quarry scheduling.</p>
+      </div>
+    </div>
+    <div class="info-box" style="margin-top:2rem;background:var(--bg-2);border:1px solid var(--border);border-radius:12px;padding:1.5rem;">
+      <span class="info-icon">📊</span>
+      <div>
+        <strong style="color:var(--text);display:block;margin-bottom:.4rem;">Mix Type Changes Everything</strong>
+        <p style="margin:0;font-size:.9rem;">The same 700 m² × 50 mm job with SMA mix (7% bitumen, 2,300 kg/m³) gives 80.5 t total, 5.64 t bitumen, and 74.9 t aggregate — <strong>25% more bitumen</strong> than Dense HMA. Selecting the correct mix type before calculating ensures your material orders are accurate. See the reference table below for full mix type property ranges.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APPLICATIONS -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Applications</div>
+      <h2>When to Use a Material Calculator</h2>
+      <p>Accurate material quantity splits are essential for procurement, sustainability targets, and quality compliance.</p>
+    </div>
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="pillar-card">
+        <div class="pillar-icon" style="background:var(--gold-50);">📦</div>
+        <h3>Procurement &amp; Material Ordering</h3>
+        <p>Project managers use material calculators to raise separate purchase orders for bitumen binder and aggregate. Bitumen is typically ordered in tonnes and delivered by heated tanker, while aggregate is ordered by tonne from a quarry or stockpile. Knowing the split upfront prevents delays caused by bitumen shortages — which, unlike aggregate, cannot be sourced at short notice. Cross-check your order against the <a href="/calculators/asphalt-tonnage-calculator/">Tonnage Calculator</a> for the total mix weight.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon" style="background:var(--sky-light);">♻️</div>
+        <h3>RAP &amp; Sustainable Mix Design</h3>
+        <p>When specifying Reclaimed Asphalt Pavement (RAP) mixes, knowing the virgin bitumen and aggregate fractions helps calculate how much recycled material can substitute for fresh supply. A 30% RAP mix on a 100-tonne job saves approximately 28 t of virgin aggregate and reduces virgin bitumen demand by around 1.5 t. Use the <a href="/calculators/asphalt-millings-calculator/">Millings Calculator</a> for dedicated RAP quantity estimation and cost savings analysis.</p>
+      </div>
+      <div class="pillar-card">
+        <div class="pillar-icon" style="background:#d1fae5;">🔬</div>
+        <h3>Quality Control &amp; Compliance</h3>
+        <p>Site supervisors and lab technicians use material quantity breakdowns to verify that delivered loads match the mix design specification. If a 50-tonne batch of Dense HMA should contain 2.75 t of bitumen (5.5%) and the extraction test shows 2.5 t, that flags a potential underbitumen issue before it leads to premature pavement failure. The <a href="/calculators/asphalt-application-rate-calculator/">Application Rate Calculator</a> helps verify spreading rates on site.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RELATED CALCULATORS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Related</div>
+      <h2>Related Calculators</h2>
+    </div>
+    <div class="dir-grid">
+      <a href="/calculators/asphalt-tonnage-calculator/" class="dir-card">
+        <div class="dir-card-icon" style="background:#fef3c7;">⚖️</div>
+        <div class="dir-card-text">
+          <div class="dir-card-title">Tonnage Calculator</div>
+          <div class="dir-card-desc">Full tonnage estimator with mix presets</div>
+        </div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+      <a href="/calculators/asphalt-millings-calculator/" class="dir-card">
+        <div class="dir-card-icon" style="background:#e0f2fe;">♻️</div>
+        <div class="dir-card-text">
+          <div class="dir-card-title">Millings (RAP)</div>
+          <div class="dir-card-desc">Reclaimed asphalt pavement calculator</div>
+        </div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+      <a href="/calculators/road-asphalt-calculator/" class="dir-card">
+        <div class="dir-card-icon" style="background:#f0fdf4;">🛣️</div>
+        <div class="dir-card-text">
+          <div class="dir-card-title">Road Calculator</div>
+          <div class="dir-card-desc">Full road paving multi-layer estimator</div>
+        </div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+      <a href="/blog/bitumen-content-asphalt-guide/" class="dir-card">
+        <div class="dir-card-icon" style="background:#fffbeb;">📘</div>
+        <div class="dir-card-text">
+          <div class="dir-card-title">Bitumen Content Guide</div>
+          <div class="dir-card-desc">Optimum bitumen content, extraction test calculation, and mix design tips</div>
+        </div>
+        <div class="dir-card-arrow">→</div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:2rem;">
+      <a href="/calculators/" class="btn btn-outline">View All Calculators →</a>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO USE -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="section-header">
+      <div class="label">Guide</div>
+      <h2>How to Use This Calculator</h2>
+    </div>
+    <div class="grid-3" style="gap:1.5rem;">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <h3>Enter Project Dimensions</h3>
+        <p>Input the length, width, and compacted thickness for your paving project. You can enter dimensions in metres/mm (metric) or feet/inches (imperial). The calculator automatically converts units so you can work in whichever system your project specifications use.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Select Mix Type</h3>
+        <p>Choose the asphalt mix type that matches your project specification — HMA (standard dense-graded), SMA (stone matrix for high-traffic), OGFC (open-graded friction course), WMA (warm mix), Porous Asphalt, or RAP (recycled mix). Each mix preset loads the appropriate default bitumen content and density for that mix category.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Review Material Quantities</h3>
+        <p>Click Calculate to get the total mix weight, bitumen required (in tonnes and litres at standard temperature), and aggregate required. These quantities can be used directly for material ordering, Bill of Quantities preparation, and checking supplier deliveries. Use the bitumen percentage bar to visually confirm the mix composition.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FURTHER READING -->
+    <section class="section">
+        <div class="container container-sm">
+            <div style="padding-left:1.1rem;border-left:2px solid var(--gold);">
+                <p>Starting from scratch on a domestic job? <a href="/blog/how-much-asphalt-do-i-need/">How much asphalt do I need</a> walks the whole estimate through without assuming you already know the mix.</p>
+            </div>
+        </div>
+    </section>
+
+<!-- FAQ -->
+<section class="section">
+  <div class="container container-sm">
+    <div class="section-header">
+      <div class="label">FAQ</div>
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">What is the difference between bitumen content and binder content? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Bitumen content and binder content refer to the same thing — the percentage of bituminous binder (asphalt cement) by weight in the total mix. The terms are used interchangeably in practice, though "bitumen" is more common in Australian, UK, and European specifications, while "asphalt binder" is the preferred US terminology. Typical bitumen content ranges from 4.5% (base courses) to 7.0% (SMA) by total mix weight.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do I calculate bitumen quantity from mix weight? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Multiply total mix weight by bitumen content percentage: Bitumen weight = Total mix weight × (bitumen % ÷ 100). For example, 100 tonnes of mix at 5.5% bitumen content = 5.5 tonnes of bitumen. To convert to litres, divide by bitumen density (approximately 1.02–1.05 t/m³ at 15°C): 5.5 tonnes ÷ 1.03 t/m³ = 5,340 litres. Our calculator performs this conversion automatically.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What is the typical aggregate-to-bitumen ratio in asphalt? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Standard dense-graded HMA contains approximately 94–96% aggregate and 4–6% bitumen by weight. This means for every 100 kg of asphalt mix, roughly 94–96 kg is crushed stone/gravel aggregate and 4–6 kg is bitumen binder. Stone Matrix Asphalt (SMA) uses more bitumen (6–7%) and a gap-graded stone skeleton, while Open-Graded mixes use 5.5–6.5% bitumen with a permeable aggregate structure.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What is Superpave and how does it affect mix type selection? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Superpave (Superior Performing Asphalt Pavements) is an AASHTO performance-based mix design system used widely in the USA and increasingly worldwide. It specifies bitumen grade (e.g. PG 64-22) based on local climate temperatures and selects aggregate gradation to suit traffic loading. Superpave Dense-Graded HMA is what this calculator's "Dense-Graded HMA (SP 12.5)" preset refers to — SP denotes Superpave, 12.5 is the nominal maximum aggregate size in mm. If your project uses a Superpave specification, use the bitumen content from your approved job mix formula (JMF) rather than the calculator's default 5.5%.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can RAP (Recycled Asphalt Pavement) reduce my material costs? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Yes — significantly. Incorporating 20–40% RAP reduces virgin aggregate demand by the same proportion and partially offsets virgin bitumen requirements (aged bitumen in RAP counts toward total binder content). On a 500-tonne job, 30% RAP replaces approximately 135 t of aggregate and contributes around 6–7 t of aged binder, reducing both procurement cost and carbon footprint. The trade-off is additional QA testing for RAP content consistency and potential performance risk if RAP bitumen is heavily aged. Use the <a href="/calculators/asphalt-millings-calculator/">Millings Calculator</a> for detailed RAP quantity and cost savings.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What is WMA (Warm Mix Asphalt) and when is it preferred? <span class="faq-icon">+</span></button>
+        <div class="faq-a"><p>Warm Mix Asphalt uses chemical additives (zeolites, waxes, or foaming agents) to allow mixing and compaction at temperatures 20–40°C lower than conventional Hot Mix Asphalt. Benefits include reduced energy use at the plant, lower bitumen fume emissions for workers, longer haul distances before cooling, and better compaction in cold weather. Material quantities are essentially the same as HMA at similar bitumen content (5–6%) and density (2,280–2,380 kg/m³) — the difference is in the production process, not the mix composition. WMA is increasingly specified on environmentally-sensitive projects and remote sites.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- REFERENCES -->
+    <section class="section section-alt">
+        <div class="container container-sm">
+            <div class="section-header">
+                <div class="label">References</div>
+                <h2>Sources</h2>
+                <p>Default densities and binder contents on this page are taken from published references, not estimated. Check them against whatever governs your job.</p>
+            </div>
+            <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.9rem;">
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://bookstore.asphaltinstitute.org/catalog/book/ms-2-asphalt-mix-design-methods" target="_blank" rel="noopener nofollow">Asphalt Institute, <em>MS-2 Asphalt Mix Design Methods</em>, 7th edition</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://store.astm.org/d2041_d2041m-19.html" target="_blank" rel="noopener nofollow">ASTM D2041/D2041M-19 — Theoretical Maximum Specific Gravity and Density of Asphalt Mixtures (the Rice test)</a></li>
+                <li style="padding-left:1.1rem;border-left:2px solid var(--gold);"><a href="https://store.transportation.org/item/collectiondetail/117" target="_blank" rel="noopener nofollow">AASHTO Materials Standards (T 166, T 209 and related test methods)</a></li>
+            </ul>
+            <p style="margin-top:1.75rem;font-size:.85rem;color:var(--text-muted);">
+                Reference values last reviewed in <strong>July 2026</strong>.
+                Any cost figures quoted are indicative only and date quickly &mdash; treat them as a
+                sanity check on a quote, never as a quote.
+                See our <a href="/editorial-policy/">editorial policy</a> for how these values are
+                sourced and reviewed, and the <a href="/disclaimer/">disclaimer</a> for the limits of
+                these estimates.
+            </p>
+        </div>
+    </section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo" style="margin-bottom:.5rem;">
+          <div class="nav-logo-icon">B</div>
+          <div class="nav-logo-text">Bitumen<span>Calc</span></div>
+        </a>
+        <p>Free pavement quantity calculators. Every formula and default value is shown on the page.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Regional</p>
+        <ul>
+          <li><a href="/calculators/australia-bitumen-calculator/">Australia</a></li>
+          <li><a href="/calculators/canada-bitumen-calculator/">Canada</a></li>
+          <li><a href="/calculators/new-zealand-bitumen-calculator/">New Zealand</a></li>
+          <li><a href="/calculators/california-asphalt-calculator/">California</a></li>
+          <li><a href="/calculators/virginia-asphalt-calculator/">Virginia</a></li>
+          <li><a href="/calculators/colorado-asphalt-calculator/">Colorado</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Calculators</p>
+        <ul>
+          <li><a href="/calculators/bitumen-square-feet-calculator/">Square Feet</a></li>
+          <li><a href="/calculators/asphalt-tonnage-calculator/">Tonnage</a></li>
+          <li><a href="/calculators/asphalt-cost-calculator/">Cost Calculator</a></li>
+          <li><a href="/calculators/asphalt-material-calculator/">Material</a></li>
+          <li><a href="/calculators/road-asphalt-calculator/">Road</a></li>
+          <li><a href="/calculators/asphalt-repair-calculator/">Repair</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-label">Company</p>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/calculators/">All Calculators</a></li>
+          <li><a href="/about-us/">About Us</a></li>
+          <li><a href="/contact-us/">Contact</a></li>
+        </ul>
+        <p style="margin-top:1.5rem;" class="footer-label">Legal</p>
+        <ul>
+          <li><a href="/terms-and-conditions/">Terms &amp; Conditions</a></li>
+          <li><a href="/privacy-policy/">Privacy Policy</a></li>
+
+                        <li><a href="/disclaimer/">Disclaimer</a></li>
+                        <li><a href="/editorial-policy/">Editorial Policy</a></li>
+                    </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Bitumen Calculator. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="/terms-and-conditions/">Terms</a>
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/contact-us/">Contact</a>
+
+                    <a href="/disclaimer/">Disclaimer</a>
+                    <a href="#" data-consent-open>Cookie Preferences</a></div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+<script src="/js/app.min.js?v=9"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (window.BitCalc) {
+      window.BitCalc.setDefaults({ bitumenContent: 5.5, density: 2350 });
+    }
+  });
+</script>
+</main>
+</body>
+</html>
+
+
+
+
