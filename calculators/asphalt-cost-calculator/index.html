@@ -141,7 +141,7 @@
     <meta name="twitter:title" content="Asphalt Cost Calculator — Estimate Bitumen Project Cost" />
     <meta name="twitter:description" content="Calculate total asphalt project cost from area, thickness and price per tonne. Supports USD, AUD, CAD, NZD, GBP, EUR, ZAR and INR. Free bitumen cost estimator." />
     <meta name="twitter:image" content="https://www.bitumencalc.com/assets/hero-road.webp" />
-<link rel="stylesheet" href="/css/seo-accessibility.css?v=3" />
+<link rel="stylesheet" href="/css/seo-accessibility.css?v=4" />
 <link rel="preload" as="script" href="/js/app.min.js?v=9" />
 </head>
 <body>
@@ -291,7 +291,7 @@
             <div class="field">
               <label for="length">Length</label>
               <div class="input-row">
-                <input type="number" id="length" placeholder="e.g. 100" min="0" step="any" />
+                <input type="number" id="length" placeholder="e.g. 100" min="0" step="any" / inputmode="decimal">
                 <select id="lengthUnit" style="width:90px;" aria-label="Length unit">
                   <option value="m" selected>m</option>
                   <option value="km">km</option>
@@ -302,7 +302,7 @@
             <div class="field">
               <label for="width">Width</label>
               <div class="input-row">
-                <input type="number" id="width" placeholder="e.g. 7.5" min="0" step="any" />
+                <input type="number" id="width" placeholder="e.g. 7.5" min="0" step="any" / inputmode="decimal">
                 <select id="widthUnit" style="width:90px;" aria-label="Width unit">
                   <option value="m" selected>m</option>
                   <option value="ft">ft</option>
@@ -312,7 +312,7 @@
             <div class="field">
               <label for="thickness">Thickness</label>
               <div class="input-row">
-                <input type="number" id="thickness" placeholder="e.g. 50" min="0" step="any" />
+                <input type="number" id="thickness" placeholder="e.g. 50" min="0" step="any" / inputmode="decimal">
                 <select id="thicknessUnit" style="width:90px;" aria-label="Thickness unit">
                   <option value="mm" selected>mm</option>
                   <option value="cm">cm</option>
@@ -337,12 +337,12 @@
             </div>
             <div class="field">
               <label for="bitumenContent">Bitumen Content (%)</label>
-              <input type="number" id="bitumenContent" value="5.5" min="1" max="15" step="0.1" />
+              <input type="number" id="bitumenContent" value="5.5" min="1" max="15" step="0.1" / inputmode="decimal">
             </div>
             <div class="field">
               <label for="density">Mix Density</label>
               <div class="input-row">
-                <input type="number" id="density" value="2300" min="1000" max="3000" step="10" />
+                <input type="number" id="density" value="2300" min="1000" max="3000" step="10" / inputmode="decimal">
                 <select id="densityUnit" style="width:110px;" aria-label="Density unit">
                   <option value="kg/m3" selected>kg/m³</option>
                   <option value="t/m3">t/m³</option>
@@ -358,7 +358,7 @@
               <label for="priceUnit">Quote unit</label>
               <select id="priceUnit" aria-label="Price weight unit"><option value="tonne">Per metric tonne (1,000 kg)</option><option value="short-ton">Per US short ton (2,000 lb)</option></select>
               <div class="input-row">
-                <input type="number" id="price" placeholder="e.g. 200" min="0" step="any" />
+                <input type="number" id="price" placeholder="e.g. 200" min="0" step="any" / inputmode="decimal">
                 <select id="currency" style="width:90px;" aria-label="Currency">
                   <option value="USD" selected>USD</option>
                   <option value="AUD">AUD</option>
@@ -378,7 +378,7 @@
           <button type="button" class="reset-btn" id="resetBtn">↺ Reset</button>
         </form>
 
-        <div class="calc-results">
+        <div class="calc-results" aria-live="polite">
           <div class="results-header"><h3>Results</h3></div>
           <div id="results-empty" class="result-placeholder">
             <div class="placeholder-icon">💰</div>

@@ -165,7 +165,7 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="/css/seo-accessibility.css?v=3" />
+<link rel="stylesheet" href="/css/seo-accessibility.css?v=4" />
 <link rel="preload" as="script" href="/js/app.min.js?v=9" />
 </head>
 <body>
@@ -319,7 +319,7 @@
             <div class="field">
               <label for="qtorWeight">Total Weight Delivered</label>
               <div class="input-row">
-                <input type="number" id="qtorWeight" placeholder="e.g. 50" min="0" step="any" />
+                <input type="number" id="qtorWeight" placeholder="e.g. 50" min="0" step="any" / inputmode="decimal">
                 <select id="qtorWeightUnit" style="width:130px;">
                   <option value="t" selected>metric tonnes</option>
                   <option value="st">short tons</option>
@@ -329,13 +329,13 @@
             </div>
             <div class="field">
               <label for="qtorArea">Total Area Covered (m²)</label>
-              <input type="number" id="qtorArea" placeholder="e.g. 500" min="0" step="any" />
+              <input type="number" id="qtorArea" placeholder="e.g. 500" min="0" step="any" / inputmode="decimal">
             </div>
           </div>
           <button type="button" class="calc-btn" onclick="calcQtoR()">⚡ Calculate Rate</button>
           <button type="button" class="reset-btn" onclick="resetQtoR()">↺ Reset</button>
         </form>
-        <div class="calc-results">
+        <div class="calc-results" aria-live="polite">
           <div class="results-header"><h3>Results</h3></div>
           <div id="qtor-empty" class="result-placeholder"><div class="placeholder-icon">📊</div><p>Enter weight and area to calculate rate</p></div>
           <div id="qtor-data" style="display:none;">
@@ -355,18 +355,18 @@
             <div class="input-set-title">Known Rate &amp; Area</div>
             <div class="field">
               <label for="rtoqRate">Application Rate (kg/m²)</label>
-              <input type="number" id="rtoqRate" placeholder="e.g. 115" min="0" step="any" />
+              <input type="number" id="rtoqRate" placeholder="e.g. 115" min="0" step="any" / inputmode="decimal">
               <div class="field-hint">Thin overlay 25mm: ~60 kg/m² | Standard 50mm: ~115 kg/m²</div>
             </div>
             <div class="field">
               <label for="rtoqArea">Total Area (m²)</label>
-              <input type="number" id="rtoqArea" placeholder="e.g. 1000" min="0" step="any" />
+              <input type="number" id="rtoqArea" placeholder="e.g. 1000" min="0" step="any" / inputmode="decimal">
             </div>
           </div>
           <button type="button" class="calc-btn" onclick="calcRtoQ()">⚡ Calculate Quantity</button>
           <button type="button" class="reset-btn" onclick="resetRtoQ()">↺ Reset</button>
         </form>
-        <div class="calc-results">
+        <div class="calc-results" aria-live="polite">
           <div class="results-header"><h3>Results</h3></div>
           <div id="rtoq-empty" class="result-placeholder"><div class="placeholder-icon">📐</div><p>Enter rate and area to calculate quantity</p></div>
           <div id="rtoq-data" style="display:none;">
@@ -385,17 +385,17 @@
             <div class="input-set-title">Volume &amp; Area</div>
             <div class="field">
               <label for="sprayVol">Total Volume Applied (litres)</label>
-              <input type="number" id="sprayVol" placeholder="e.g. 300" min="0" step="any" />
+              <input type="number" id="sprayVol" placeholder="e.g. 300" min="0" step="any" / inputmode="decimal">
             </div>
             <div class="field">
               <label for="sprayArea">Total Area (m²)</label>
-              <input type="number" id="sprayArea" placeholder="e.g. 1000" min="0" step="any" />
+              <input type="number" id="sprayArea" placeholder="e.g. 1000" min="0" step="any" / inputmode="decimal">
             </div>
           </div>
           <button type="button" class="calc-btn" onclick="calcSpray()">⚡ Calculate Spray Rate</button>
           <button type="button" class="reset-btn" onclick="resetSpray()">↺ Reset</button>
         </form>
-        <div class="calc-results">
+        <div class="calc-results" aria-live="polite">
           <div class="results-header"><h3>Results</h3></div>
           <div id="spray-empty" class="result-placeholder"><div class="placeholder-icon">💧</div><p>Enter volume and area to calculate spray rate</p></div>
           <div id="spray-data" style="display:none;">

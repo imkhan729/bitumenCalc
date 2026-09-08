@@ -172,7 +172,7 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="/css/seo-accessibility.css?v=3" />
+<link rel="stylesheet" href="/css/seo-accessibility.css?v=4" />
 <link rel="preload" as="script" href="/js/app.min.js?v=9" />
 </head>
 
@@ -329,38 +329,38 @@
                             <div class="field">
                                 <label for="pLength">Length</label>
                                 <div class="input-row">
-                                    <input type="number" id="pLength" placeholder="e.g. 0.5" min="0" step="any" />
+                                    <input type="number" id="pLength" placeholder="e.g. 0.5" min="0" step="any" / inputmode="decimal">
                                     <select id="pLenUnit" style="width:90px;"><option value="m" selected>m</option><option value="ft">ft</option></select>
                                 </div>
                             </div>
                             <div class="field">
                                 <label for="pWidth">Width</label>
                                 <div class="input-row">
-                                    <input type="number" id="pWidth" placeholder="e.g. 0.5" min="0" step="any" />
+                                    <input type="number" id="pWidth" placeholder="e.g. 0.5" min="0" step="any" / inputmode="decimal">
                                     <select id="pWidUnit" style="width:90px;"><option value="m" selected>m</option><option value="ft">ft</option></select>
                                 </div>
                             </div>
                             <div class="field">
                                 <label for="pDepth">Depth</label>
                                 <div class="input-row">
-                                    <input type="number" id="pDepth" placeholder="e.g. 75" min="0" step="any" />
+                                    <input type="number" id="pDepth" placeholder="e.g. 75" min="0" step="any" / inputmode="decimal">
                                     <select id="pDepUnit" style="width:90px;"><option value="mm" selected>mm</option><option value="cm">cm</option><option value="in">in</option></select>
                                 </div>
                             </div>
                             <div class="field">
                                 <label for="pCount">Number of Patches</label>
-                                <input type="number" id="pCount" value="1" min="1" step="1" />
+                                <input type="number" id="pCount" value="1" min="1" step="1" / inputmode="decimal">
                             </div>
                             <div class="field">
                                 <label for="pDensity">Patch Material Density (kg/m³)</label>
-                                <input type="number" id="pDensity" value="2200" min="500" max="3000" step="10" />
+                                <input type="number" id="pDensity" value="2200" min="500" max="3000" step="10" / inputmode="decimal">
                                 <div class="field-hint">Hot-mix: ~2200–2300 | Cold-mix loose: ~1600–1800 kg/m³</div>
                             </div>
                         </div>
                         <button type="button" class="calc-btn" onclick="calcPothole()">⚡ Calculate</button>
                         <button type="button" class="reset-btn" onclick="resetPothole()">↺ Reset</button>
                     </form>
-                    <div class="calc-results">
+                    <div class="calc-results" aria-live="polite">
                         <div class="results-header">
                             <h3>Results</h3>
                         </div>
@@ -405,21 +405,21 @@
                             <div class="input-set-title">Crack Dimensions</div>
                             <div class="field">
                                 <label for="crackLen">Total Crack Length (m)</label>
-                                <input type="number" id="crackLen" placeholder="e.g. 50" min="0" step="any" />
+                                <input type="number" id="crackLen" placeholder="e.g. 50" min="0" step="any" / inputmode="decimal">
                             </div>
                             <div class="field">
                                 <label for="crackWidth">Crack Width (mm)</label>
-                                <input type="number" id="crackWidth" placeholder="e.g. 10" min="0" step="any" />
+                                <input type="number" id="crackWidth" placeholder="e.g. 10" min="0" step="any" / inputmode="decimal">
                             </div>
                             <div class="field">
                                 <label for="crackDepth">Crack Depth (mm)</label>
-                                <input type="number" id="crackDepth" placeholder="e.g. 20" min="0" step="any" />
+                                <input type="number" id="crackDepth" placeholder="e.g. 20" min="0" step="any" / inputmode="decimal">
                             </div>
                         </div>
                         <button type="button" class="calc-btn" onclick="calcCrack()">⚡ Calculate</button>
                         <button type="button" class="reset-btn" onclick="resetCrack()">↺ Reset</button>
                     </form>
-                    <div class="calc-results">
+                    <div class="calc-results" aria-live="polite">
                         <div class="results-header">
                             <h3>Results</h3>
                         </div>
@@ -457,21 +457,21 @@
                             <div class="input-set-title">Patch Area &amp; Depth</div>
                             <div class="field">
                                 <label for="areaTotal">Total Patch Area (m²)</label>
-                                <input type="number" id="areaTotal" placeholder="e.g. 5" min="0" step="any" />
+                                <input type="number" id="areaTotal" placeholder="e.g. 5" min="0" step="any" / inputmode="decimal">
                             </div>
                             <div class="field">
                                 <label for="areaDepth">Depth (mm)</label>
-                                <input type="number" id="areaDepth" placeholder="e.g. 50" min="0" step="any" />
+                                <input type="number" id="areaDepth" placeholder="e.g. 50" min="0" step="any" / inputmode="decimal">
                             </div>
                             <div class="field">
                                 <label for="areaDensity">Density (kg/m³)</label>
-                                <input type="number" id="areaDensity" value="2300" min="500" max="3000" step="10" />
+                                <input type="number" id="areaDensity" value="2300" min="500" max="3000" step="10" / inputmode="decimal">
                             </div>
                         </div>
                         <button type="button" class="calc-btn" onclick="calcArea()">⚡ Calculate</button>
                         <button type="button" class="reset-btn" onclick="resetArea()">↺ Reset</button>
                     </form>
-                    <div class="calc-results">
+                    <div class="calc-results" aria-live="polite">
                         <div class="results-header">
                             <h3>Results</h3>
                         </div>

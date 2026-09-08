@@ -165,7 +165,7 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="/css/seo-accessibility.css?v=3" />
+<link rel="stylesheet" href="/css/seo-accessibility.css?v=4" />
 <link rel="preload" as="script" href="/js/app.min.js?v=9" />
 </head>
 <body>
@@ -313,7 +313,7 @@
             <div class="field">
               <label for="roofLength">Length</label>
               <div class="input-row">
-                <input type="number" id="roofLength" placeholder="e.g. 20" min="0" step="any" />
+                <input type="number" id="roofLength" placeholder="e.g. 20" min="0" step="any" / inputmode="decimal">
                 <select id="roofLengthUnit" style="width:90px;">
                   <option value="m" selected>m</option>
                   <option value="ft">ft</option>
@@ -323,7 +323,7 @@
             <div class="field">
               <label for="roofWidth">Width</label>
               <div class="input-row">
-                <input type="number" id="roofWidth" placeholder="e.g. 15" min="0" step="any" />
+                <input type="number" id="roofWidth" placeholder="e.g. 15" min="0" step="any" / inputmode="decimal">
                 <select id="roofWidthUnit" style="width:90px;">
                   <option value="m" selected>m</option>
                   <option value="ft">ft</option>
@@ -332,7 +332,7 @@
             </div>
             <div class="field">
               <label for="roofTotalArea">OR enter total area (m²)</label>
-              <input type="number" id="roofTotalArea" placeholder="Optional — overrides length × width" min="0" step="any" />
+              <input type="number" id="roofTotalArea" placeholder="Optional — overrides length × width" min="0" step="any" / inputmode="decimal">
             </div>
           </div>
 
@@ -350,12 +350,12 @@
             </div>
             <div class="field">
               <label for="roofRate">Application Rate (kg/m²)</label>
-              <input type="number" id="roofRate" value="4.5" min="0.1" max="50" step="0.1" />
+              <input type="number" id="roofRate" value="4.5" min="0.1" max="50" step="0.1" / inputmode="decimal">
               <div class="field-hint">Torch-on: 4–5 | Cold-applied: 1.5–2.5 | Hot-pour: 3–4 | Felt: 1–2 kg/m²</div>
             </div>
             <div class="field">
               <label for="roofLayers">Number of Layers</label>
-              <input type="number" id="roofLayers" value="1" min="1" max="5" step="1" />
+              <input type="number" id="roofLayers" value="1" min="1" max="5" step="1" / inputmode="decimal">
             </div>
           </div>
 
@@ -364,7 +364,7 @@
             <div class="field">
               <label for="roofPrice">Price per kg</label>
               <div class="input-row">
-                <input type="number" id="roofPrice" placeholder="Optional" min="0" step="any" />
+                <input type="number" id="roofPrice" placeholder="Optional" min="0" step="any" / inputmode="decimal">
                 <select id="roofCurrency" style="width:90px;">
                   <option value="USD" selected>USD</option>
                   <option value="AUD">AUD</option>
@@ -380,7 +380,7 @@
           <button type="button" class="reset-btn" onclick="resetRoof()">↺ Reset</button>
         </form>
 
-        <div class="calc-results">
+        <div class="calc-results" aria-live="polite">
           <div class="results-header"><h3>Results</h3></div>
           <div id="roof-empty" class="result-placeholder">
             <div class="placeholder-icon">🏠</div>

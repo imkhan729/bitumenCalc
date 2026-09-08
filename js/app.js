@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initFAQ();
   initTableTabs();
   initCalculator();
+  initDirectoryFilter();
   initContactForm();
   setActiveNav();
   animateOnScroll();
@@ -282,6 +283,68 @@ function initCalculator() {
   if (mixSelect) {
     mixSelect.addEventListener('change', applyMixPreset);
   }
+
+  applySharedEstimate();
+  addCalculatorActions(form);
+}
+
+/* Lightweight calculator-directory filtering: rendered links remain ordinary
+   crawlable HTML and this enhancement does not need a dependency. */
+function initDirectoryFilter() {
+  const search = document.getElementById('calculatorDirectorySearch');
+  if (!search) return;
+  const cards = [...document.querySelectorAll('.dir-card')];
+  const chips = [...document.querySelectorAll('.directory-chip')];
+  let category = 'all';
+  const filter = () => {
+    const query = search.value.trim().toLowerCase();
+    cards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      const matchesCategory = category === 'all' || (card.dataset.category || '').split(' ').includes(category);
+      card.hidden = !(matchesCategory && text.includes(query));
+    });
+  };
+  search.addEventListener('input', filter);
+  chips.forEach(chip => chip.addEventListener('click', () => {
+    category = chip.dataset.category || 'all';
+    chips.forEach(item => item.setAttribute('aria-pressed', String(item === chip)));
+    filter();
+  }));
+}
+
+function applySharedEstimate() {
+  const params = new URLSearchParams(window.location.search);
+  if (![...params.keys()].some(key => key.startsWith('bc_'))) return;
+  const form = document.getElementById('calcForm' + SUFFIX);
+  if (!form) return;
+  [...form.elements].forEach(el => {
+    if (!el.id || !params.has('bc_' + el.id)) return;
+    el.value = params.get('bc_' + el.id);
+  });
+  window.setTimeout(runCalculation, 0);
+}
+
+function addCalculatorActions(form) {
+  const results = document.getElementById('calcResults' + SUFFIX);
+  if (!results || results.querySelector('.calc-actions')) return;
+  const actions = document.createElement('div');
+  actions.className = 'calc-actions';
+  actions.innerHTML = '<button type="button" class="calc-action" data-action="copy">Copy summary</button><button type="button" class="calc-action" data-action="share">Share estimate</button><button type="button" class="calc-action" data-action="print">Print</button>';
+  actions.addEventListener('click', async event => {
+    const action = event.target.dataset.action;
+    if (!action) return;
+    if (action === 'print') { window.print(); return; }
+    const fields = [...form.querySelectorAll('input, select')];
+    const summary = ['BitumenCalc estimate', document.title, ...fields.filter(el => el.value).map(el => `${form.querySelector(`label[for="${el.id}"]`)?.textContent?.trim() || el.name || el.id}: ${el.value}`), ...[...results.querySelectorAll('.result-card')].map(card => card.innerText.replace(/\s+/g, ' ').trim())].join('\n');
+    if (action === 'copy') {
+      try { await navigator.clipboard.writeText(summary); event.target.textContent = 'Copied'; window.setTimeout(() => event.target.textContent = 'Copy summary', 1600); } catch { event.target.textContent = 'Copy unavailable'; }
+      return;
+    }
+    const url = new URL(window.location.href);
+    fields.filter(el => el.id && el.value).forEach(el => url.searchParams.set('bc_' + el.id, el.value));
+    try { await navigator.clipboard.writeText(url.toString()); event.target.textContent = 'Link copied'; window.setTimeout(() => event.target.textContent = 'Share estimate', 1600); } catch { window.location.href = url.toString(); }
+  });
+  results.appendChild(actions);
 }
 
 /* -- Conversion helpers -------------------------------------- */

@@ -165,7 +165,7 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="/css/seo-accessibility.css?v=3" />
+<link rel="stylesheet" href="/css/seo-accessibility.css?v=4" />
 <link rel="preload" as="script" href="/js/app.min.js?v=9" />
 </head>
 <body>
@@ -322,7 +322,7 @@
             <div class="field">
               <label for="outerRadius">Outer Radius</label>
               <div class="input-row">
-                <input type="number" id="outerRadius" placeholder="e.g. 10" min="0" step="any" />
+                <input type="number" id="outerRadius" placeholder="e.g. 10" min="0" step="any" / inputmode="decimal">
                 <select id="radiusUnit" style="width:90px;">
                   <option value="m" selected>m</option>
                   <option value="ft">ft</option>
@@ -332,14 +332,14 @@
             <div class="field" id="innerRadiusField" style="display:none;">
               <label for="innerRadius">Inner Radius (for annular ring)</label>
               <div class="input-row">
-                <input type="number" id="innerRadius" placeholder="e.g. 5" min="0" step="any" />
+                <input type="number" id="innerRadius" placeholder="e.g. 5" min="0" step="any" / inputmode="decimal">
                 <span style="padding:.5rem;color:var(--text-2);">same unit</span>
               </div>
             </div>
             <div class="field">
               <label for="circThickness">Thickness</label>
               <div class="input-row">
-                <input type="number" id="circThickness" placeholder="e.g. 50" min="0" step="any" />
+                <input type="number" id="circThickness" placeholder="e.g. 50" min="0" step="any" / inputmode="decimal">
                 <select id="circThicknessUnit" style="width:90px;">
                   <option value="mm" selected>mm</option>
                   <option value="cm">cm</option>
@@ -353,12 +353,12 @@
             <div class="input-set-title">Mix Properties</div>
             <div class="field">
               <label for="circDensity">Mix Density (kg/m³)</label>
-              <input type="number" id="circDensity" value="2300" min="500" max="4000" step="10" />
+              <input type="number" id="circDensity" value="2300" min="500" max="4000" step="10" / inputmode="decimal">
               <div class="field-hint">Standard HMA: 2250–2400 kg/m³</div>
             </div>
             <div class="field">
               <label for="circBitumen">Bitumen Content (%)</label>
-              <input type="number" id="circBitumen" value="5.5" min="1" max="15" step="0.1" />
+              <input type="number" id="circBitumen" value="5.5" min="1" max="15" step="0.1" / inputmode="decimal">
             </div>
           </div>
 
@@ -367,7 +367,7 @@
             <div class="field">
               <label for="circPrice">Price per Tonne</label>
               <div class="input-row">
-                <input type="number" id="circPrice" placeholder="Optional" min="0" step="any" />
+                <input type="number" id="circPrice" placeholder="Optional" min="0" step="any" / inputmode="decimal">
                 <select id="circCurrency" style="width:90px;">
                   <option value="USD" selected>USD</option>
                   <option value="AUD">AUD</option>
@@ -383,7 +383,7 @@
           <button type="button" class="reset-btn" onclick="resetCircular()">↺ Reset</button>
         </form>
 
-        <div class="calc-results">
+        <div class="calc-results" aria-live="polite">
           <div class="results-header"><h3>Results</h3></div>
           <div id="circ-empty" class="result-placeholder">
             <div class="placeholder-icon">⭕</div>

@@ -172,7 +172,7 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="/css/seo-accessibility.css?v=3" />
+<link rel="stylesheet" href="/css/seo-accessibility.css?v=4" />
 <link rel="preload" as="script" href="/js/app.min.js?v=9" />
 </head>
 
@@ -323,7 +323,7 @@
                             <div class="field">
                                 <label for="tackLength">Length</label>
                                 <div class="input-row">
-                                    <input type="number" id="tackLength" placeholder="e.g. 100" min="0" step="any" />
+                                    <input type="number" id="tackLength" placeholder="e.g. 100" min="0" step="any" / inputmode="decimal">
                                     <select id="tackLengthUnit" style="width:90px;">
                   <option value="m" selected>m</option>
                   <option value="km">km</option>
@@ -334,7 +334,7 @@
                             <div class="field">
                                 <label for="tackWidth">Width</label>
                                 <div class="input-row">
-                                    <input type="number" id="tackWidth" placeholder="e.g. 7.5" min="0" step="any" />
+                                    <input type="number" id="tackWidth" placeholder="e.g. 7.5" min="0" step="any" / inputmode="decimal">
                                     <select id="tackWidthUnit" style="width:90px;">
                   <option value="m" selected>m</option>
                   <option value="ft">ft</option>
@@ -343,7 +343,7 @@
                             </div>
                             <div class="field">
                                 <label for="tackTotalArea">OR enter total area directly (m²)</label>
-                                <input type="number" id="tackTotalArea" placeholder="Optional — overrides length × width" min="0" step="any" />
+                                <input type="number" id="tackTotalArea" placeholder="Optional — overrides length × width" min="0" step="any" / inputmode="decimal">
                                 <div class="field-hint">If you enter total area here, it overrides the length × width above</div>
                             </div>
                         </div>
@@ -352,12 +352,12 @@
                             <div class="input-set-title">Application Settings</div>
                             <div class="field">
                                 <label for="tackRate">Application Rate (L/m²)</label>
-                                <input type="number" id="tackRate" value="0.3" min="0.05" max="2" step="0.05" />
+                                <input type="number" id="tackRate" value="0.3" min="0.05" max="2" step="0.05" / inputmode="decimal">
                                 <div class="field-hint">New HMA: 0.2–0.3 L/m² | Existing HMA: 0.3–0.5 L/m² | PCC: 0.4–0.6 L/m²</div>
                             </div>
                             <div class="field">
                                 <label for="tackConc">Emulsion Residual Bitumen Content (%)</label>
-                                <input type="number" id="tackConc" value="60" min="10" max="100" step="1" />
+                                <input type="number" id="tackConc" value="60" min="10" max="100" step="1" / inputmode="decimal">
                                 <div class="field-hint">Use the supplier's volume-based residual fraction for this volume estimate, including any permitted dilution. A mass percentage is not directly interchangeable.</div>
                             </div>
                         </div>
@@ -367,7 +367,7 @@
                             <div class="field">
                                 <label for="tackPrice">Price per Litre of Emulsion</label>
                                 <div class="input-row">
-                                    <input type="number" id="tackPrice" placeholder="Optional" min="0" step="any" />
+                                    <input type="number" id="tackPrice" placeholder="Optional" min="0" step="any" / inputmode="decimal">
                                     <select id="tackCurrency" style="width:90px;">
                   <option value="USD" selected>USD</option>
                   <option value="AUD">AUD</option>
@@ -383,7 +383,7 @@
                         <button type="button" class="reset-btn" onclick="resetTack()">↺ Reset</button>
                     </form>
 
-                    <div class="calc-results">
+                    <div class="calc-results" aria-live="polite">
                         <div class="results-header">
                             <h3>Results</h3>
                         </div>

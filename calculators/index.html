@@ -61,7 +61,7 @@
     <meta name="twitter:title" content="Asphalt Calculator Directory: Choose a Quantity Tool" />
     <meta name="twitter:description" content="Browse 30+ free bitumen and asphalt calculators for tonnage, cost, material quantities, spray rate, roofing, regional paving, and unit conversion." />
     <meta name="twitter:image" content="https://www.bitumencalc.com/assets/hero-road.webp" />
-<link rel="stylesheet" href="/css/seo-accessibility.css?v=3" />
+<link rel="stylesheet" href="/css/seo-accessibility.css?v=4" />
 <link rel="preload" as="script" href="/js/app.min.js?v=9" />
 </head>
 <body>
@@ -158,6 +158,29 @@
   </div>
 </section>
 
+<section class="section" aria-labelledby="calculator-directory-tools">
+  <div class="container">
+    <div class="section-header" style="margin-bottom:1.5rem;">
+      <div class="label">Find a tool</div>
+      <h2 id="calculator-directory-tools">Browse by calculation</h2>
+      <p>Search the directory or choose a category. All calculators remain available below.</p>
+    </div>
+    <div class="directory-controls">
+      <label class="sr-only" for="calculatorDirectorySearch">Search calculators</label>
+      <input id="calculatorDirectorySearch" class="directory-search" type="search" placeholder="Search calculators, regions, material or conversion" autocomplete="off">
+      <div class="directory-chips" aria-label="Calculator categories">
+        <button type="button" class="directory-chip" data-category="all" aria-pressed="true">All</button>
+        <button type="button" class="directory-chip" data-category="quantity" aria-pressed="false">Quantity</button>
+        <button type="button" class="directory-chip" data-category="conversion" aria-pressed="false">Conversion</button>
+        <button type="button" class="directory-chip" data-category="material" aria-pressed="false">Material</button>
+        <button type="button" class="directory-chip" data-category="road" aria-pressed="false">Road</button>
+        <button type="button" class="directory-chip" data-category="maintenance" aria-pressed="false">Maintenance</button>
+        <button type="button" class="directory-chip" data-category="regional" aria-pressed="false">Regional</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- REGIONAL CALCULATORS -->
 <section class="section section-alt">
   <div class="container">
@@ -167,7 +190,7 @@
       <p>Location-specific mix defaults, standards, and currency settings for your region.</p>
     </div>
     <div class="dir-grid">
-      <a href="/calculators/australia-bitumen-calculator/" class="dir-card">
+      <a href="/calculators/australia-bitumen-calculator/" class="dir-card" data-category="regional">
         <div class="dir-card-icon" style="background:#fff3e0;">🇦🇺</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Australia</div>
@@ -175,7 +198,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/canada-bitumen-calculator/" class="dir-card">
+      <a href="/calculators/canada-bitumen-calculator/" class="dir-card" data-category="regional">
         <div class="dir-card-icon" style="background:#fee2e2;">🇨🇦</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Canada</div>
@@ -183,7 +206,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/new-zealand-bitumen-calculator/" class="dir-card">
+      <a href="/calculators/new-zealand-bitumen-calculator/" class="dir-card" data-category="regional">
         <div class="dir-card-icon" style="background:#fff3e0;">🇳🇿</div>
         <div class="dir-card-text">
           <div class="dir-card-title">New Zealand</div>
@@ -191,7 +214,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/california-asphalt-calculator/" class="dir-card">
+      <a href="/calculators/california-asphalt-calculator/" class="dir-card" data-category="regional">
         <div class="dir-card-icon" style="background:#fef9c3;">🇺🇸</div>
         <div class="dir-card-text">
           <div class="dir-card-title">California</div>
@@ -199,7 +222,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/virginia-asphalt-calculator/" class="dir-card">
+      <a href="/calculators/virginia-asphalt-calculator/" class="dir-card" data-category="regional">
         <div class="dir-card-icon" style="background:#fef9c3;">🇺🇸</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Virginia</div>
@@ -207,7 +230,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/colorado-asphalt-calculator/" class="dir-card">
+      <a href="/calculators/colorado-asphalt-calculator/" class="dir-card" data-category="regional">
         <div class="dir-card-icon" style="background:#fef9c3;">🇺🇸</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Colorado</div>
@@ -215,7 +238,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/minnesota-asphalt-calculator/" class="dir-card">
+      <a href="/calculators/minnesota-asphalt-calculator/" class="dir-card" data-category="regional">
         <div class="dir-card-icon" style="background:#fef9c3;">🇺🇸</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Minnesota</div>
@@ -223,7 +246,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/new-jersey-asphalt-calculator/" class="dir-card">
+      <a href="/calculators/new-jersey-asphalt-calculator/" class="dir-card" data-category="regional">
         <div class="dir-card-icon" style="background:#fef9c3;">🇺🇸</div>
         <div class="dir-card-text">
           <div class="dir-card-title">New Jersey</div>
@@ -231,7 +254,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/north-carolina-asphalt-calculator/" class="dir-card">
+      <a href="/calculators/north-carolina-asphalt-calculator/" class="dir-card" data-category="regional">
         <div class="dir-card-icon" style="background:#fef9c3;">🇺🇸</div>
         <div class="dir-card-text">
           <div class="dir-card-title">North Carolina</div>
@@ -252,7 +275,7 @@
       <p>Convert between square feet, meters, yards, and more for accurate project estimation.</p>
     </div>
     <div class="dir-grid">
-      <a href="/calculators/bitumen-square-feet-calculator/" class="dir-card">
+      <a href="/calculators/bitumen-square-feet-calculator/" class="dir-card" data-category="conversion quantity">
         <div class="dir-card-icon" style="background:#e0f2fe;">📐</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Square Feet</div>
@@ -260,7 +283,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/square-feet-to-tons-calculator/" class="dir-card">
+      <a href="/calculators/square-feet-to-tons-calculator/" class="dir-card" data-category="conversion quantity">
         <div class="dir-card-icon" style="background:#e0f2fe;">🔄</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Sq Ft to Tons</div>
@@ -268,7 +291,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/bitumen-square-meters-calculator/" class="dir-card">
+      <a href="/calculators/bitumen-square-meters-calculator/" class="dir-card" data-category="conversion quantity">
         <div class="dir-card-icon" style="background:#e0f2fe;">📏</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Square Meters</div>
@@ -276,7 +299,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/bitumen-square-yards-calculator/" class="dir-card">
+      <a href="/calculators/bitumen-square-yards-calculator/" class="dir-card" data-category="conversion quantity">
         <div class="dir-card-icon" style="background:#e0f2fe;">📐</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Square Yards</div>
@@ -284,7 +307,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/metric-bitumen-calculator/" class="dir-card">
+      <a href="/calculators/metric-bitumen-calculator/" class="dir-card" data-category="conversion quantity">
         <div class="dir-card-icon" style="background:#e0f2fe;">🔢</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Metric</div>
@@ -292,7 +315,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/asphalt-measurement-calculator/" class="dir-card">
+      <a href="/calculators/asphalt-measurement-calculator/" class="dir-card" data-category="conversion quantity">
         <div class="dir-card-icon" style="background:#e0f2fe;">📊</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Measurement</div>
@@ -313,7 +336,7 @@
       <p>Specialist calculators for pavement depth, thermal properties, and circular areas.</p>
     </div>
     <div class="dir-grid">
-      <a href="/calculators/asphalt-thickness-calculator/" class="dir-card">
+      <a href="/calculators/asphalt-thickness-calculator/" class="dir-card" data-category="conversion">
         <div class="dir-card-icon" style="background:#f0fdf4;">📏</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Thickness Calculator</div>
@@ -321,7 +344,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/bitumen-temperature-converter/" class="dir-card">
+      <a href="/calculators/bitumen-temperature-converter/" class="dir-card" data-category="conversion">
         <div class="dir-card-icon" style="background:#f0fdf4;">🌡️</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Temperature Converter</div>
@@ -329,7 +352,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/circular-asphalt-calculator/" class="dir-card">
+      <a href="/calculators/circular-asphalt-calculator/" class="dir-card" data-category="conversion">
         <div class="dir-card-icon" style="background:#f0fdf4;">⭕</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Radius (Circular)</div>
@@ -350,7 +373,7 @@
       <p>Calculate precise quantities for every type of bituminous work — from road laying to roofing.</p>
     </div>
     <div class="dir-grid">
-      <a href="/calculators/asphalt-material-calculator/" class="dir-card">
+      <a href="/calculators/asphalt-material-calculator/" class="dir-card" data-category="material quantity">
         <div class="dir-card-icon" style="background:#fdf4ff;">🧱</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Material Calculator</div>
@@ -358,7 +381,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/asphalt-millings-calculator/" class="dir-card">
+      <a href="/calculators/asphalt-millings-calculator/" class="dir-card" data-category="material quantity">
         <div class="dir-card-icon" style="background:#fdf4ff;">♻️</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Millings (RAP)</div>
@@ -366,7 +389,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/asphalt-tonnage-calculator/" class="dir-card">
+      <a href="/calculators/asphalt-tonnage-calculator/" class="dir-card" data-category="material quantity">
         <div class="dir-card-icon" style="background:#fdf4ff;">⚖️</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Tonnage Calculator</div>
@@ -374,7 +397,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/tack-coat-calculator/" class="dir-card">
+      <a href="/calculators/tack-coat-calculator/" class="dir-card" data-category="material quantity">
         <div class="dir-card-icon" style="background:#fdf4ff;">🛢️</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Tack Coat</div>
@@ -382,7 +405,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/road-asphalt-calculator/" class="dir-card">
+      <a href="/calculators/road-asphalt-calculator/" class="dir-card" data-category="material quantity road">
         <div class="dir-card-icon" style="background:#fdf4ff;">🛣️</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Road Calculator</div>
@@ -390,7 +413,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/roofing-bitumen-calculator/" class="dir-card">
+      <a href="/calculators/roofing-bitumen-calculator/" class="dir-card" data-category="material quantity">
         <div class="dir-card-icon" style="background:#fdf4ff;">🏠</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Roofing Bitumen</div>
@@ -398,7 +421,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/asphalt-repair-calculator/" class="dir-card">
+      <a href="/calculators/asphalt-repair-calculator/" class="dir-card" data-category="material quantity maintenance">
         <div class="dir-card-icon" style="background:#fdf4ff;">🔧</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Repair / Patch</div>
@@ -406,7 +429,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/asphalt-removal-calculator/" class="dir-card">
+      <a href="/calculators/asphalt-removal-calculator/" class="dir-card" data-category="material quantity maintenance">
         <div class="dir-card-icon" style="background:#fdf4ff;">🚛</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Removal Calculator</div>
@@ -427,7 +450,7 @@
       <p>Estimate project costs and application rates with precision.</p>
     </div>
     <div class="dir-grid">
-      <a href="/calculators/asphalt-cost-calculator/" class="dir-card">
+      <a href="/calculators/asphalt-cost-calculator/" class="dir-card" data-category="quantity">
         <div class="dir-card-icon" style="background:#fffbeb;">💰</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Cost Calculator</div>
@@ -435,7 +458,7 @@
         </div>
         <div class="dir-card-arrow">→</div>
       </a>
-      <a href="/calculators/asphalt-application-rate-calculator/" class="dir-card">
+      <a href="/calculators/asphalt-application-rate-calculator/" class="dir-card" data-category="quantity">
         <div class="dir-card-icon" style="background:#fffbeb;">📊</div>
         <div class="dir-card-text">
           <div class="dir-card-title">Rate Calculator</div>
@@ -519,6 +542,5 @@
 </main>
 </body>
 </html>
-
 
 

@@ -165,7 +165,7 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="/css/seo-accessibility.css?v=3" />
+<link rel="stylesheet" href="/css/seo-accessibility.css?v=4" />
 <link rel="preload" as="script" href="/js/app.min.js?v=9" />
 </head>
 <body>
@@ -313,7 +313,7 @@
             <div class="field">
               <label for="remLength">Length</label>
               <div class="input-row">
-                <input type="number" id="remLength" placeholder="e.g. 100" min="0" step="any" />
+                <input type="number" id="remLength" placeholder="e.g. 100" min="0" step="any" / inputmode="decimal">
                 <select id="remLengthUnit" style="width:90px;">
                   <option value="m" selected>m</option>
                   <option value="km">km</option>
@@ -324,7 +324,7 @@
             <div class="field">
               <label for="remWidth">Width</label>
               <div class="input-row">
-                <input type="number" id="remWidth" placeholder="e.g. 7.5" min="0" step="any" />
+                <input type="number" id="remWidth" placeholder="e.g. 7.5" min="0" step="any" / inputmode="decimal">
                 <select id="remWidthUnit" style="width:90px;">
                   <option value="m" selected>m</option>
                   <option value="ft">ft</option>
@@ -333,7 +333,7 @@
             </div>
             <div class="field">
               <label for="remAreaDirect">OR enter total area (m²)</label>
-              <input type="number" id="remAreaDirect" placeholder="Optional — overrides length × width" min="0" step="any" />
+              <input type="number" id="remAreaDirect" placeholder="Optional — overrides length × width" min="0" step="any" / inputmode="decimal">
             </div>
           </div>
 
@@ -342,7 +342,7 @@
             <div class="field">
               <label for="remDepth">Removal Depth</label>
               <div class="input-row">
-                <input type="number" id="remDepth" placeholder="e.g. 50" min="0" step="any" />
+                <input type="number" id="remDepth" placeholder="e.g. 50" min="0" step="any" / inputmode="decimal">
                 <select id="remDepthUnit" style="width:90px;">
                   <option value="mm" selected>mm</option>
                   <option value="cm">cm</option>
@@ -353,12 +353,12 @@
             </div>
             <div class="field">
               <label for="remDensity">Material Density (kg/m³)</label>
-              <input type="number" id="remDensity" value="2200" min="500" max="3000" step="10" />
+              <input type="number" id="remDensity" value="2200" min="500" max="3000" step="10" / inputmode="decimal">
               <div class="field-hint">Existing compacted asphalt: 2100–2300 kg/m³</div>
             </div>
             <div class="field">
               <label for="remTruckCap">Truck/Skip Capacity (tonnes)</label>
-              <input type="number" id="remTruckCap" value="20" min="1" max="100" step="1" />
+              <input type="number" id="remTruckCap" value="20" min="1" max="100" step="1" / inputmode="decimal">
               <div class="field-hint">Typical rigid truck: 10–15 t | Articulated: 20–30 t</div>
             </div>
           </div>
@@ -368,7 +368,7 @@
             <div class="field">
               <label for="remPrice">Disposal Cost per Tonne</label>
               <div class="input-row">
-                <input type="number" id="remPrice" placeholder="Optional" min="0" step="any" />
+                <input type="number" id="remPrice" placeholder="Optional" min="0" step="any" / inputmode="decimal">
                 <select id="remCurrency" style="width:90px;">
                   <option value="USD" selected>USD</option>
                   <option value="AUD">AUD</option>
@@ -384,7 +384,7 @@
           <button type="button" class="reset-btn" onclick="resetRemoval()">↺ Reset</button>
         </form>
 
-        <div class="calc-results">
+        <div class="calc-results" aria-live="polite">
           <div class="results-header"><h3>Results</h3></div>
           <div id="rem-empty" class="result-placeholder">
             <div class="placeholder-icon">🏗️</div>

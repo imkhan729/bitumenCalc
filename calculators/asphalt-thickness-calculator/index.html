@@ -165,7 +165,7 @@
   ]
 }
 </script>
-<link rel="stylesheet" href="/css/seo-accessibility.css?v=3" />
+<link rel="stylesheet" href="/css/seo-accessibility.css?v=4" />
 <link rel="preload" as="script" href="/js/app.min.js?v=9" />
 </head>
 <body>
@@ -314,7 +314,7 @@
             <div class="field">
               <label for="revWeight">Total Weight Delivered</label>
               <div class="input-row">
-                <input type="number" id="revWeight" placeholder="e.g. 50" min="0" step="any" />
+                <input type="number" id="revWeight" placeholder="e.g. 50" min="0" step="any" / inputmode="decimal">
                 <select id="revWeightUnit" style="width:130px;">
                   <option value="t" selected>metric tonnes</option>
                   <option value="st">short tons</option>
@@ -328,7 +328,7 @@
             <div class="field">
               <label for="revArea">Total Area Covered</label>
               <div class="input-row">
-                <input type="number" id="revArea" placeholder="e.g. 500" min="0" step="any" />
+                <input type="number" id="revArea" placeholder="e.g. 500" min="0" step="any" / inputmode="decimal">
                 <select id="revAreaUnit" style="width:100px;">
                   <option value="m2" selected>m²</option>
                   <option value="sqft">sq ft</option>
@@ -338,7 +338,7 @@
             </div>
             <div class="field">
               <label for="revDensity">Mix Density (kg/m³)</label>
-              <input type="number" id="revDensity" value="2300" min="500" max="4000" step="10" />
+              <input type="number" id="revDensity" value="2300" min="500" max="4000" step="10" / inputmode="decimal">
               <div class="field-hint">Standard HMA: 2250–2400 kg/m³</div>
             </div>
           </div>
@@ -346,7 +346,7 @@
           <button type="button" class="reset-btn" onclick="resetReverse()">↺ Reset</button>
         </form>
 
-        <div class="calc-results">
+        <div class="calc-results" aria-live="polite">
           <div class="results-header"><h3>Thickness Results</h3></div>
           <div id="rev-empty" class="result-placeholder">
             <div class="placeholder-icon">📏</div>
@@ -392,7 +392,7 @@
             <div class="field">
               <label for="length">Length</label>
               <div class="input-row">
-                <input type="number" id="length" placeholder="e.g. 50" min="0" step="any" />
+                <input type="number" id="length" placeholder="e.g. 50" min="0" step="any" / inputmode="decimal">
                 <select id="lengthUnit" style="width:90px;" aria-label="Length unit">
                   <option value="m" selected>m</option>
                   <option value="km">km</option>
@@ -403,7 +403,7 @@
             <div class="field">
               <label for="width">Width</label>
               <div class="input-row">
-                <input type="number" id="width" placeholder="e.g. 7.5" min="0" step="any" />
+                <input type="number" id="width" placeholder="e.g. 7.5" min="0" step="any" / inputmode="decimal">
                 <select id="widthUnit" style="width:90px;" aria-label="Width unit">
                   <option value="m" selected>m</option>
                   <option value="ft">ft</option>
@@ -413,7 +413,7 @@
             <div class="field">
               <label for="thickness">Thickness</label>
               <div class="input-row">
-                <input type="number" id="thickness" placeholder="e.g. 50" min="0" step="any" />
+                <input type="number" id="thickness" placeholder="e.g. 50" min="0" step="any" / inputmode="decimal">
                 <select id="thicknessUnit" style="width:90px;" aria-label="Thickness unit">
                   <option value="mm" selected>mm</option>
                   <option value="cm">cm</option>
@@ -435,12 +435,12 @@
             </div>
             <div class="field">
               <label for="bitumenContent">Bitumen Content (%)</label>
-              <input type="number" id="bitumenContent" value="5.5" min="1" max="15" step="0.1" />
+              <input type="number" id="bitumenContent" value="5.5" min="1" max="15" step="0.1" / inputmode="decimal">
             </div>
             <div class="field">
               <label for="density">Mix Density</label>
               <div class="input-row">
-                <input type="number" id="density" value="2300" min="1000" max="3000" step="10" />
+                <input type="number" id="density" value="2300" min="1000" max="3000" step="10" / inputmode="decimal">
                 <select id="densityUnit" style="width:110px;" aria-label="Density unit">
                   <option value="kg/m3" selected>kg/m³</option>
                   <option value="t/m3">t/m³</option>
@@ -453,7 +453,7 @@
             <div class="field">
               <label for="price">Price per Tonne</label>
               <div class="input-row">
-                <input type="number" id="price" placeholder="Optional" min="0" step="any" />
+                <input type="number" id="price" placeholder="Optional" min="0" step="any" / inputmode="decimal">
                 <select id="currency" style="width:90px;" aria-label="Currency">
                   <option value="USD" selected>USD</option>
                   <option value="AUD">AUD</option>
@@ -467,7 +467,7 @@
           <button type="button" class="reset-btn" id="resetBtn">↺ Reset</button>
         </form>
 
-        <div class="calc-results">
+        <div class="calc-results" aria-live="polite">
           <div class="results-header"><h3>Results</h3></div>
           <div id="results-empty" class="result-placeholder">
             <div class="placeholder-icon">🏗️</div>
