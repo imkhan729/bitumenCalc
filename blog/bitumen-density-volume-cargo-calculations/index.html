@@ -223,67 +223,33 @@
       <p>This is the basis of every bitumen density calculator, bitumen volume calculation, and bulk cargo quantity invoice. On-site paving projects use a different density reference — see the <a href="/calculators/asphalt-tonnage-calculator/">tonnage calculator</a> for compacted asphalt mix density (2,300–2,400 kg/m³).</p>
 
       <h2>How to Calculate Density of Bitumen</h2>
-      <p>Bitumen density depends primarily on grade (penetration or viscosity rating) and temperature. Suppliers measure density at a reference temperature (typically 15°C or 25°C) and provide the value on product data sheets. Key reference values:</p>
-      <div style="overflow-x:auto;">
-        <table class="ref-table" style="margin:1.5rem 0;">
-          <thead>
-            <tr><th>Grade</th><th>Density at 15°C (kg/m³)</th><th>Common Applications</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>35/50 pen (hard)</td><td class="highlight">1,030–1,040</td><td>Airport runways, heavy traffic roads</td></tr>
-            <tr><td>50/70 pen</td><td class="highlight">1,020–1,035</td><td>European standard highway surfacing</td></tr>
-            <tr><td>70/100 pen</td><td class="highlight">1,010–1,025</td><td>General road construction</td></tr>
-            <tr><td>80/100 pen</td><td class="highlight">1,010–1,025</td><td>Standard grade, widely traded</td></tr>
-            <tr><td>160/220 pen (soft)</td><td class="highlight">1,000–1,015</td><td>Cold climate applications</td></tr>
-            <tr><td>SBS Modified Bitumen</td><td class="highlight">1,010–1,030</td><td>PMB for premium surfacing</td></tr>
-            <tr><td>Oxidised / Blown Bitumen</td><td class="highlight">1,010–1,040</td><td>Roofing, industrial waterproofing</td></tr>
-          </tbody>
-        </table>
-      </div>
+<p><strong>Density = mass ÷ volume.</strong> Divide kilograms by cubic metres to obtain kg/m³. For example, a measured 1,010 kg occupying 1 m³ has a density of 1,010 kg/m³, or 1.010 kg/L. This is an illustrative value, not a specification for every grade.</p>
+<p>Use the measured density on the supplier's certificate and its reference temperature. A penetration grade alone does not determine density. Match the volume and density temperatures before multiplying them. Bitumen binder is a different material from asphalt mixture, which also contains aggregate; do not substitute compacted asphalt density in a binder cargo calculation.</p>
 
-      <h2>How to Calculate Volume of Bitumen</h2>
+<h2>How to Calculate Volume of Bitumen</h2>
       <p>The reverse calculation — converting mass to volume — is used for tank sizing, container loading, and delivery planning:</p>
 
       <div class="formula-inline">
         Volume (m³) = Mass (kg) ÷ Density (kg/m³)
       </div>
 
-      <p><strong>Example:</strong> You purchase 25,000 kg of 80/100 pen bitumen at a density of 1,020 kg/m³:</p>
+      <p><strong>Example:</strong> You purchase 25,000 kg of 80/100 pen bitumen at an assumed density of 1,020 kg/m³ at the same reference temperature:</p>
       <p style="padding-left:1.5rem;"><em>Volume = 25,000 ÷ 1,020 = <strong>24.51 m³</strong></em></p>
-      <p>This volume calculation is important for pump-out rates, ISO tank container capacity (typically 24–26 m³), and storage tank inventory management.</p>
+      <p>Check the permitted working capacity of the actual container before using this volume in delivery planning.</p>
 
       <h2>Temperature Correction</h2>
-      <p>Bitumen expands with temperature — its density decreases as it heats up. For custody transfer and cargo measurement, always correct volume readings to the reference temperature. The standard temperature correction factor for bitumen is approximately <strong>−0.00060 m³/m³/°C</strong> (or about 0.6 litres per m³ per degree Celsius).</p>
+<p>Heating changes bitumen volume and density. Use the product's approved volume correction table or method and the reference temperature required by the contract. A single expansion coefficient is not a universal custody-transfer standard.</p>
+<div class="formula-inline">Reference volume = observed volume × approved volume correction factor</div>
+<p><strong>Illustrative example:</strong> If the approved factor for a shipment were 0.95, an observed volume of 40 m³ would become 38 m³ at the reference temperature. At a density of 1,010 kg/m³ at that same temperature, the calculated mass would be 38.38 metric tonnes. The factor 0.95 is an example, not a factor to use for an actual shipment.</p>
+<p>Obtain the applicable factor from the supplier or inspection procedure. The <a href="/calculators/bitumen-temperature-converter/">temperature converter</a> converts °C and °F only; it does not calculate a volume correction factor.</p>
 
-      <div class="formula-inline">
-        Volume at 15°C = Observed Volume × [1 − 0.00060 × (Observed Temp °C − 15)]
-      </div>
+<h2>Cargo and Bulk Shipment Calculations</h2>
+<ol><li>Use the tank's calibrated measurement procedure to determine observed volume.</li><li>Record the product temperature and the supplier's density with its reference temperature.</li><li>Apply the contractually approved correction method to bring volume and density to the same reference temperature.</li><li>Multiply cubic metres by kg/m³ and divide by 1,000 for metric tonnes.</li><li>Reconcile the result with the delivery documentation and agreed measurement tolerances.</li></ol>
+<h2>Storage Tank Planning</h2>
+<p>Nominal tank volume is not the same as its permitted working capacity. Use the tank design, operating procedure and supplier guidance for filling limits, heating and storage temperature. Polymer-modified binders may need different handling conditions.</p>
+<p>See <a href="https://eurobitume.eu/wp-content/uploads/2024/06/EB-Guidance-for-the-Storage-of-Bitumen.pdf" rel="noopener" target="_blank">Eurobitume's storage guidance</a> and the product safety data sheet. These quantity examples do not specify safe tank operating limits. Once the delivered mass is confirmed, the <a href="/calculators/asphalt-cost-calculator/">cost calculator</a> can multiply tonnes by an entered price.</p>
 
-      <p><strong>Example:</strong> 40 m³ measured at 160°C (pumping temperature):</p>
-      <p style="padding-left:1.5rem;"><em>Volume at 15°C = 40 × [1 − 0.00060 × (160 − 15)] = 40 × [1 − 0.087] = 40 × 0.913 = <strong>36.52 m³</strong></em></p>
-      <p>This means the hot bitumen occupies more volume than the equivalent mass at 15°C. Use temperature-corrected volumes for all cargo invoices and payment calculations. For temperature unit conversions between °C and °F, use the <a href="/calculators/bitumen-temperature-converter/">temperature converter</a>.</p>
-
-      <h2>Cargo and Bulk Shipment Calculations</h2>
-      <p>For bulk sea cargo (bitumen in vessels or flexitanks), the procedure is:</p>
-      <ol>
-        <li>Measure the vessel tank volume by ullage (dipping from top) or outage measurement</li>
-        <li>Record the temperature of the cargo at time of measurement</li>
-        <li>Apply temperature correction factor to convert to volume at 15°C reference</li>
-        <li>Multiply corrected volume by density at 15°C from product data sheet</li>
-        <li>Divide by 1,000 to obtain mass in metric tonnes (MT)</li>
-      </ol>
-      <p>Typical bulk bitumen cargo sizes: ISO flexitank 16–21 MT | Small coaster 500–2,000 MT | Handy bulk tanker 5,000–15,000 MT | Large product tanker 30,000–50,000 MT.</p>
-
-      <h2>Storage Tank Planning</h2>
-      <p>When sizing bitumen storage tanks or calculating inventory, use the following guidelines:</p>
-      <ul>
-        <li>Allow for <strong>10–15% tank ullage</strong> (minimum air space above bitumen surface for thermal expansion and vapour management)</li>
-        <li>A typical <strong>50,000-litre (50 m³) insulated tank</strong> holds approximately 48–50 tonnes of bitumen at operating temperature</li>
-        <li>Maintain bitumen at <strong>140–180°C</strong> in storage to preserve pumpability without overheating (polymer-modified bitumen: 170–190°C)</li>
-        <li>Use the <a href="/calculators/asphalt-cost-calculator/">cost calculator</a> to estimate material cost once tonnes are confirmed</li>
-      </ul>
-
-      <h2>Related Reading</h2>
+<h2>Related Reading</h2>
       <div class="link-grid">
         <a class="link-card" href="/blog/how-to-calculate-bitumen-quantity-for-road/"><strong>Road Quantity Guide</strong><span>Use confirmed density assumptions with layer volume to calculate project bitumen tonnage.</span></a>
         <a class="link-card" href="/blog/bitumen-content-asphalt-guide/"><strong>Bitumen Content Guide</strong><span>Connect binder percentage to total mix mass derived from density calculations.</span></a>

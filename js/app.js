@@ -127,6 +127,16 @@ function initScrollTop() {
 /* -- FAQ Accordion ------------------------------------------- */
 function initFAQ() {
   document.querySelectorAll('.faq-q').forEach((q, index) => {
+    if (q.tagName !== 'BUTTON') {
+      q.setAttribute('role', 'button');
+      q.tabIndex = 0;
+      q.addEventListener('keydown', event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          q.click();
+        }
+      });
+    }
     const answer = q.closest('.faq-item').querySelector('.faq-a');
     if (answer) {
       answer.id = answer.id || 'faq-answer-' + index;
