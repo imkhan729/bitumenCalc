@@ -28,6 +28,13 @@ p, li, h1, h2, h3, .formula-inline { overflow-wrap: anywhere; }
 .nav-dropdown-col .nav-group-label { font-size: .68rem; font-weight: 700; text-transform: uppercase; letter-spacing: .12em; color: var(--gold); margin: 0 0 .5rem; padding-bottom: .35rem; border-bottom: 1px solid rgba(255,255,255,.07); }
 .nav-dropdown-col .nav-group-label.mt { margin-top: .9rem; }
 .formula-card h3 { color: #fff; margin-bottom: 1rem; font-size: 1rem; }
+.generated-illustration { padding: 2.5rem 0; background: #fff; }
+.generated-illustration figure { max-width: 920px; margin: 0 auto; overflow: hidden; border: 1px solid #e2e8f0; border-radius: 16px; box-shadow: 0 8px 30px rgba(15, 23, 42, .1); }
+.generated-illustration img { width: 100%; height: auto; }
+.generated-illustration figcaption { padding: .8rem 1rem; color: #475569; font-size: .9rem; background: #f8fafc; }
+.generated-inline-illustration { margin: 1.5rem 0; overflow: hidden; border: 1px solid #e2e8f0; border-radius: 16px; background: #fff; }
+.generated-inline-illustration img { width: 100%; height: auto; }
+.generated-inline-illustration figcaption { padding: .8rem 1rem; color: #475569; font-size: .9rem; }
 @media (max-width: 480px) {
   .footer-bottom-links { justify-content: center; gap: .7rem; }
   .btn { white-space: normal; }
