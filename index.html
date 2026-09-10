@@ -245,6 +245,7 @@
 
 
 
+
 <link rel="stylesheet" href="/css/site.css?v=20260909c">
 </head>
 
@@ -1635,7 +1636,7 @@
     if (!wrap) return;
     var tabs = wrap.querySelectorAll('.table-tab');
     var panels = wrap.querySelectorAll('.table-panel');
-    
+
     tabs.forEach(function(tab, i) {
       tab.addEventListener('click', function(e) {
         e.preventDefault();
@@ -1647,7 +1648,7 @@
           p.classList.remove('active');
           p.style.display = 'none';
         });
-        
+
         tab.classList.add('active');
         tab.setAttribute('aria-selected', 'true');
         var target = tab.getAttribute('data-tab');
@@ -1657,7 +1658,7 @@
           panel.style.display = 'block';
         }
       });
-      
+
       tab.addEventListener('keydown', function(e) {
         var nextIndex = null;
         if (e.key === 'ArrowRight') nextIndex = (i + 1) % tabs.length;
@@ -1673,61 +1674,20 @@
 
   // 2. UNIFIED CALCULATOR ENGINE CONTROLLER
   function initUnifiedCalculator() {
-    var isImperial = false;
-    var isCostMode = false;
-    var currentStep = 'volume';
-
-    var toM = { m: 1, ft: 0.3048 };
-    var toThickM = { mm: 0.001, cm: 0.01, in: 0.0254 };
-    var toDensityKg = { 'kg/m3': 1, 't/m3': 1000, 'lb/ft3': 16.018463 };
-    var currSyms = { USD: '
-, AUD: 'A
-, CAD: 'C
-, NZD: 'NZ
-, GBP: '£', EUR: '€', ZAR: 'R', INR: '₹' };
-
-    var mixSpecs = {
-      dense:  { name: 'Dense-Graded HMA',  bitumen: 5.5, density: 2300 },
-      sma:    { name: 'Stone Mastic Asphalt', bitumen: 6.5, density: 2350 },
-      ogfc:   { name: 'OGFC Porous Friction', bitumen: 6.0, density: 2050 },
-      porous: { name: 'Porous Asphalt Drainage', bitumen: 5.0, density: 2000 },
-      rap:    { name: 'RAP Recycled Asphalt', bitumen: 4.5, density: 2250 },
-      custom: { name: 'Custom Mix Design', bitumen: null, density: null }
-    };
-
-    // DOM Elements
-    var modeStandardBtn = document.getElementById('modeStandard');
-    var modeCostBtn = document.getElementById('modeCost');
-    var includeCostCheck = document.getElementById('includeCostEstimate');
-    var costCard = document.getElementById('costEstimationCard');
-    var resCostCard = document.getElementById('resCostCard');
-    var mixBreakdownWrap = document.getElementById('mixBreakdownWrap');
-
-    var toggleMetric = document.getElementById('toggleMetric');
-    var toggleImperial = document.getElementById('toggleImperial');
-    var presetDriveway = document.getElementById('presetDriveway');
-    var presetParking = document.getElementById('presetParking');
-
     var lengthInput = document.getElementById('length');
     var lengthUnit = document.getElementById('lengthUnit');
     var widthInput = document.getElementById('width');
     var widthUnit = document.getElementById('widthUnit');
     var thicknessInput = document.getElementById('thickness');
     var thicknessUnit = document.getElementById('thicknessUnit');
-
     var mixTypeSelect = document.getElementById('mixType');
     var bitumenInput = document.getElementById('bitumenContent');
     var densityInput = document.getElementById('density');
     var densityUnit = document.getElementById('densityUnit');
-
     var priceInput = document.getElementById('price');
-    var currencySelect = document.getElementById('currency');
     var priceUnit = document.getElementById('priceUnit');
+    var currencySelect = document.getElementById('currency');
 
-    var calcBtn = document.getElementById('calcBtn');
-    var resetBtn = document.getElementById('resetBtn');
-
-    // Telemetry display elements
     var resWeight = document.getElementById('resWeight');
     var resWeightSub = document.getElementById('resWeightSub');
     var resArea = document.getElementById('resArea');
@@ -1738,41 +1698,67 @@
     var resAggregateSub = document.getElementById('resAggregateSub');
     var resCost = document.getElementById('resCost');
     var resCostDetail = document.getElementById('resCostDetail');
-
+    var resCostCard = document.getElementById('resCostCard');
+    var costCardInput = document.getElementById('costEstimationCard');
+    var mixBreakdownWrap = document.getElementById('mixBreakdownWrap');
     var bitPctBar = document.getElementById('bitPctBar');
     var bitLegendPct = document.getElementById('bitLegendPct');
     var aggLegendPct = document.getElementById('aggLegendPct');
+
+    var modeStandard = document.getElementById('modeStandard');
+    var modeCost = document.getElementById('modeCost');
+    var includeCostCheck = document.getElementById('includeCostEstimate');
+
+    var toggleMetric = document.getElementById('toggleMetric');
+    var toggleImperial = document.getElementById('toggleImperial');
+    var presetDriveway = document.getElementById('presetDriveway');
+    var presetParking = document.getElementById('presetParking');
 
     var formulaMainEq = document.getElementById('formulaMainEq');
     var formulaExCalc = document.getElementById('formulaExCalc');
     var formulaExResult = document.getElementById('formulaExResult');
     var stepChips = document.querySelectorAll('.process-step-chip');
 
-    // Cost Mode Toggles
+    var calcBtn = document.getElementById('calcBtn');
+    var resetBtn = document.getElementById('resetBtn');
+
+    var isCostMode = false;
+    var currentStep = 'volume';
+    var isImperial = false;
+
+    var toM = { m: 1, ft: 0.3048, km: 1000, yd: 0.9144 };
+    var toThickM = { mm: 0.001, cm: 0.01, m: 1, in: 0.0254 };
+    var toDensityKg = { 'kg/m3': 1, 'lb/ft3': 16.0185, 't/m3': 1000 };
+    var currSyms = { USD: '$', AUD: 'A$', CAD: 'C$', NZD: 'NZ$', GBP: '£', EUR: '€', ZAR: 'R', INR: '₹' };
+
+    var MIX_SPECS = {
+      dense:  { content: 5.5, density: 2350 },
+      sma:    { content: 6.5, density: 2300 },
+      ogfc:   { content: 5.0, density: 2100 },
+      porous: { content: 4.5, density: 2000 },
+      rap:    { content: 4.5, density: 2250 },
+      custom: { content: null, density: null }
+    };
+
     function setCostMode(active) {
       isCostMode = active;
       if (includeCostCheck) includeCostCheck.checked = active;
-      if (modeCostBtn && modeStandardBtn) {
-        modeCostBtn.classList.toggle('active', active);
-        modeCostBtn.setAttribute('aria-selected', active);
-        modeStandardBtn.classList.toggle('active', !active);
-        modeStandardBtn.setAttribute('aria-selected', !active);
+      if (modeStandard && modeCost) {
+        modeStandard.classList.toggle('active', !active);
+        modeStandard.setAttribute('aria-selected', !active);
+        modeCost.classList.toggle('active', active);
+        modeCost.setAttribute('aria-selected', active);
       }
-      if (costCard) costCard.style.display = active ? 'block' : 'none';
-      if (resCostCard) resCostCard.style.display = active ? 'block' : 'none';
+      if (costCardInput) costCardInput.style.display = active ? 'block' : 'none';
+      if (resCostCard) resCostCard.style.display = active ? 'flex' : 'none';
       if (mixBreakdownWrap) mixBreakdownWrap.style.display = active ? 'block' : 'none';
       recalculate();
     }
 
-    if (modeStandardBtn) modeStandardBtn.addEventListener('click', function() { setCostMode(false); });
-    if (modeCostBtn) modeCostBtn.addEventListener('click', function() { setCostMode(true); });
-    if (includeCostCheck) {
-      includeCostCheck.addEventListener('change', function() {
-        setCostMode(includeCostCheck.checked);
-      });
-    }
+    if (modeStandard) modeStandard.addEventListener('click', function() { setCostMode(false); });
+    if (modeCost) modeCost.addEventListener('click', function() { setCostMode(true); });
+    if (includeCostCheck) includeCostCheck.addEventListener('change', function(e) { setCostMode(e.target.checked); });
 
-    // Step Chips (Formula Bar)
     stepChips.forEach(function(chip) {
       chip.addEventListener('click', function() {
         stepChips.forEach(function(c) {
@@ -1786,69 +1772,58 @@
       });
     });
 
-    // Measurement Unit Toggles
-    function setUnitSystem(imperial) {
-      if (isImperial === imperial) return;
-      isImperial = imperial;
-
-      if (toggleMetric && toggleImperial) {
-        toggleMetric.classList.toggle('active', !imperial);
-        toggleImperial.classList.toggle('active', imperial);
-      }
-
-      if (imperial) {
-        if (lengthUnit) lengthUnit.value = 'ft';
-        if (widthUnit) widthUnit.value = 'ft';
-        if (thicknessUnit) thicknessUnit.value = 'in';
-        if (densityUnit) densityUnit.value = 'lb/ft3';
-        if (densityInput && densityInput.value === '2300') densityInput.value = '145';
-        if (priceUnit) priceUnit.value = 'short-ton';
-
-        if (lengthInput && lengthInput.value) {
-          lengthInput.value = (parseFloat(lengthInput.value) * 3.28084).toFixed(1);
-        }
-        if (widthInput && widthInput.value) {
-          widthInput.value = (parseFloat(widthInput.value) * 3.28084).toFixed(1);
-        }
-        if (thicknessInput && thicknessInput.value) {
-          thicknessInput.value = (parseFloat(thicknessInput.value) / 25.4).toFixed(1);
-        }
-      } else {
+    if (toggleMetric) {
+      toggleMetric.addEventListener('click', function() {
+        if (!isImperial) return;
+        isImperial = false;
+        toggleMetric.classList.add('active');
+        toggleImperial.classList.remove('active');
         if (lengthUnit) lengthUnit.value = 'm';
         if (widthUnit) widthUnit.value = 'm';
         if (thicknessUnit) thicknessUnit.value = 'mm';
         if (densityUnit) densityUnit.value = 'kg/m3';
-        if (densityInput && densityInput.value === '145') densityInput.value = '2300';
+        if (lengthInput && lengthInput.value) lengthInput.value = (parseFloat(lengthInput.value) * 0.3048).toFixed(1);
+        if (widthInput && widthInput.value) widthInput.value = (parseFloat(widthInput.value) * 0.3048).toFixed(1);
+        if (thicknessInput && thicknessInput.value) thicknessInput.value = (parseFloat(thicknessInput.value) * 25.4).toFixed(0);
+        if (densityInput && densityInput.value) {
+          densityInput.value = densityInput.value === '145' ? '2300' : Math.round(parseFloat(densityInput.value) * 16.0185);
+        }
         if (priceUnit) priceUnit.value = 'tonne';
-
-        if (lengthInput && lengthInput.value) {
-          lengthInput.value = (parseFloat(lengthInput.value) / 3.28084).toFixed(1);
-        }
-        if (widthInput && widthInput.value) {
-          widthInput.value = (parseFloat(widthInput.value) / 3.28084).toFixed(1);
-        }
-        if (thicknessInput && thicknessInput.value) {
-          thicknessInput.value = Math.round(parseFloat(thicknessInput.value) * 25.4);
-        }
-      }
-
-      recalculate();
+        recalculate();
+      });
     }
 
-    if (toggleMetric) toggleMetric.addEventListener('click', function() { setUnitSystem(false); });
-    if (toggleImperial) toggleImperial.addEventListener('click', function() { setUnitSystem(true); });
+    if (toggleImperial) {
+      toggleImperial.addEventListener('click', function() {
+        if (isImperial) return;
+        isImperial = true;
+        toggleImperial.classList.add('active');
+        toggleMetric.classList.remove('active');
+        if (lengthUnit) lengthUnit.value = 'ft';
+        if (widthUnit) widthUnit.value = 'ft';
+        if (thicknessUnit) thicknessUnit.value = 'in';
+        if (densityUnit) densityUnit.value = 'lb/ft3';
+        if (lengthInput && lengthInput.value) lengthInput.value = (parseFloat(lengthInput.value) / 0.3048).toFixed(0);
+        if (widthInput && widthInput.value) widthInput.value = (parseFloat(widthInput.value) / 0.3048).toFixed(0);
+        if (thicknessInput && thicknessInput.value) thicknessInput.value = (parseFloat(thicknessInput.value) / 25.4).toFixed(1);
+        if (densityInput && densityInput.value) {
+          densityInput.value = densityInput.value === '2300' ? '145' : Math.round(parseFloat(densityInput.value) / 16.0185);
+        }
+        if (priceUnit) priceUnit.value = 'short-ton';
+        recalculate();
+      });
+    }
 
-    // Presets
     if (presetDriveway) {
       presetDriveway.addEventListener('click', function() {
         if (isImperial) {
-          if (lengthInput) lengthInput.value = 40;
-          if (widthInput) widthInput.value = 12;
-          if (thicknessInput) thicknessInput.value = 2;
+          if (lengthInput) lengthInput.value = '60';
+          if (widthInput) widthInput.value = '12';
+          if (thicknessInput) thicknessInput.value = '2.5';
         } else {
-          if (lengthInput) lengthInput.value = 12;
-          if (widthInput) widthInput.value = 3.5;
-          if (thicknessInput) thicknessInput.value = 50;
+          if (lengthInput) lengthInput.value = '18.0';
+          if (widthInput) widthInput.value = '3.5';
+          if (thicknessInput) thicknessInput.value = '50';
         }
         recalculate();
       });
@@ -1857,24 +1832,23 @@
     if (presetParking) {
       presetParking.addEventListener('click', function() {
         if (isImperial) {
-          if (lengthInput) lengthInput.value = 100;
-          if (widthInput) widthInput.value = 65;
-          if (thicknessInput) thicknessInput.value = 3;
+          if (lengthInput) lengthInput.value = '150';
+          if (widthInput) widthInput.value = '80';
+          if (thicknessInput) thicknessInput.value = '3.0';
         } else {
-          if (lengthInput) lengthInput.value = 30;
-          if (widthInput) widthInput.value = 20;
-          if (thicknessInput) thicknessInput.value = 75;
+          if (lengthInput) lengthInput.value = '45.0';
+          if (widthInput) widthInput.value = '25.0';
+          if (thicknessInput) thicknessInput.value = '75';
         }
         recalculate();
       });
     }
 
-    // Mix Type Presets
     if (mixTypeSelect) {
       mixTypeSelect.addEventListener('change', function() {
-        var spec = mixSpecs[mixTypeSelect.value];
-        if (spec && spec.bitumen !== null) {
-          if (bitumenInput) bitumenInput.value = spec.bitumen;
+        var spec = MIX_SPECS[mixTypeSelect.value];
+        if (spec && spec.content !== null) {
+          if (bitumenInput) bitumenInput.value = spec.content;
           if (densityInput) {
             var val = isImperial ? Math.round(spec.density / 16.0185) : spec.density;
             densityInput.value = val;
@@ -1922,8 +1896,7 @@
       if (resAggregate) resAggregate.textContent = aggT.toFixed(2) + ' t';
       if (resAggregateSub) resAggregateSub.textContent = 'Total aggregate (mix mass − binder) (Assuming ' + bitPct.toFixed(1) + '% binder)';
 
-      var sym = currSyms[curr] || '
-;
+      var sym = currSyms[curr] || '$';
       var billableT = prU === 'short-ton' ? (massT / 0.90718474) : massT;
       var totalCost = billableT * pr;
 
@@ -2016,16 +1989,11 @@
     var btnCopy = document.getElementById('btnCopySummary');
     if (btnCopy) {
       btnCopy.addEventListener('click', function() {
-        var summary = 'Asphalt Estimate Summary:
-' +
-          '• Total Mix Weight: ' + (resWeight ? resWeight.textContent : '0') + ' tonnes
-' +
-          '• Surface Area: ' + (resArea ? resArea.textContent : '0') + '
-' +
-          '• Compacted Volume: ' + (resVolume ? resVolume.textContent : '0') + '
-' +
-          '• Binder Takeoff: ' + (resBitumen ? resBitumen.textContent : '0') + '
-' +
+        var summary = 'Asphalt Estimate Summary:\n' +
+          '• Total Mix Weight: ' + (resWeight ? resWeight.textContent : '0') + ' tonnes\n' +
+          '• Surface Area: ' + (resArea ? resArea.textContent : '0') + '\n' +
+          '• Compacted Volume: ' + (resVolume ? resVolume.textContent : '0') + '\n' +
+          '• Binder Takeoff: ' + (resBitumen ? resBitumen.textContent : '0') + '\n' +
           '• Aggregate: ' + (resAggregate ? resAggregate.textContent : '0');
         if (isCostMode && resCost) {
           summary += '\n• Estimated Material Cost: ' + resCost.textContent;
@@ -2066,11 +2034,6 @@
           window.print();
         }
       });
-    }
-
-    // Connect with window.BitCalc
-    if (window.BitCalc) {
-      window.BitCalc.setDefaults({ bitumenContent: 5.5, density: 2300, currency: 'USD' });
     }
 
     // Initial zero state calculation
