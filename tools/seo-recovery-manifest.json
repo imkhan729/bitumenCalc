@@ -1,0 +1,278 @@
+{
+  "date": "2026-09-08",
+  "backup": "C:\\Users\\Roy\\AppData\\Local\\Temp\\bitumencalc-before-seo-20260908",
+  "changed": [
+    "blog/asphalt-density-guide/index.html",
+    "blog/asphalt-millings-calculator-guide/index.html",
+    "blog/asphalt-thickness-guide/index.html",
+    "blog/tons-of-asphalt-per-cubic-yard/index.html",
+    "calculators/square-feet-to-tons-calculator/index.html",
+    "index.html",
+    "calculators/bitumen-square-meters-calculator/index.html",
+    "calculators/asphalt-millings-calculator/index.html",
+    "calculators/asphalt-thickness-calculator/index.html",
+    "calculators/asphalt-tonnage-calculator/index.html",
+    "calculators/bitumen-square-yards-calculator/index.html",
+    "calculators/bitumen-temperature-converter/index.html",
+    "blog/tack-coat-calculator-guide/index.html",
+    "calculators/tack-coat-calculator/index.html",
+    "calculators/index.html",
+    "blog/index.html",
+    "calculators/asphalt-repair-calculator/index.html",
+    "blog/bitumen-spray-rate-chip-seal/index.html",
+    "blog/bitumen-density-volume-cargo-calculations/index.html",
+    "about-us/index.html",
+    "editorial-policy/index.html",
+    "authors/jimmy/index.html",
+    "blog/asphalt-driveway-cost-calculator/index.html",
+    "blog/asphalt-tonnage-calculator-guide/index.html",
+    "blog/bitumen-content-asphalt-guide/index.html",
+    "blog/how-much-asphalt-do-i-need/index.html",
+    "blog/how-to-calculate-bitumen-quantity-for-road/index.html",
+    "blog/modified-bitumen-roofing-calculator/index.html",
+    "blog/prime-coat-vs-tack-coat/index.html",
+    "calculators/asphalt-application-rate-calculator/index.html",
+    "calculators/asphalt-cost-calculator/index.html",
+    "calculators/asphalt-material-calculator/index.html",
+    "calculators/asphalt-measurement-calculator/index.html",
+    "calculators/asphalt-removal-calculator/index.html",
+    "calculators/australia-bitumen-calculator/index.html",
+    "calculators/bitumen-square-feet-calculator/index.html",
+    "calculators/california-asphalt-calculator/index.html",
+    "calculators/canada-bitumen-calculator/index.html",
+    "calculators/circular-asphalt-calculator/index.html",
+    "calculators/colorado-asphalt-calculator/index.html",
+    "calculators/metric-bitumen-calculator/index.html",
+    "calculators/minnesota-asphalt-calculator/index.html",
+    "calculators/new-jersey-asphalt-calculator/index.html",
+    "calculators/new-zealand-bitumen-calculator/index.html",
+    "calculators/north-carolina-asphalt-calculator/index.html",
+    "calculators/road-asphalt-calculator/index.html",
+    "calculators/roofing-bitumen-calculator/index.html",
+    "calculators/virginia-asphalt-calculator/index.html",
+    "contact-us/index.html",
+    "disclaimer/index.html",
+    "privacy-policy/index.html",
+    "terms-and-conditions/index.html",
+    ".htaccess",
+    "sitemap.xml"
+  ],
+  "files": [
+    {
+      "path": "blog/asphalt-density-guide/index.html",
+      "sha256": "1cfc029233ccff60e1e29893ebf7b170e7943e78260041b5fb9de35fed6aaf46"
+    },
+    {
+      "path": "blog/asphalt-millings-calculator-guide/index.html",
+      "sha256": "bc59c8d071826b06b372f3084541a18077e44aca08e3ba0755ae99135326c4cb"
+    },
+    {
+      "path": "blog/asphalt-thickness-guide/index.html",
+      "sha256": "c2558f64c1786381cf544b25730e878019c739d127aa2bb1229e47da5ebf81de"
+    },
+    {
+      "path": "blog/tons-of-asphalt-per-cubic-yard/index.html",
+      "sha256": "f3f59aea7ea520aff3c07a4f97d5af974fdcdb384a38f6a44be23b50395cadf6"
+    },
+    {
+      "path": "calculators/square-feet-to-tons-calculator/index.html",
+      "sha256": "b81db883b5daa583eb76ea84325c8bf755726da620ecab2b2fbc6565bedf75bf"
+    },
+    {
+      "path": "index.html",
+      "sha256": "3eb5d426316d343b8809261dc0df8d9043045a2d03635af9e527ceff9f82c200"
+    },
+    {
+      "path": "calculators/bitumen-square-meters-calculator/index.html",
+      "sha256": "49227a6a056c2897dadb64cbafa0bb3b86fb381d859238e11e581bee62c1a4d2"
+    },
+    {
+      "path": "calculators/asphalt-millings-calculator/index.html",
+      "sha256": "9628da260b35e6bd076c0b9acec7deaaa55494511aa6397514a22956edb0bf7b"
+    },
+    {
+      "path": "calculators/asphalt-thickness-calculator/index.html",
+      "sha256": "37814be67797147196c650ecf20b430502f2c8cdeee01cfdac989ef41ed2dd13"
+    },
+    {
+      "path": "calculators/asphalt-tonnage-calculator/index.html",
+      "sha256": "646f5f0ed80c139129bcd48b260fa52e76a18d72df315eeebc5bdfc7c9ca8dfb"
+    },
+    {
+      "path": "calculators/bitumen-square-yards-calculator/index.html",
+      "sha256": "20457ef96a26b3d58ba9ab0f3ba969c8eec98d873fc408172744d10793df551f"
+    },
+    {
+      "path": "calculators/bitumen-temperature-converter/index.html",
+      "sha256": "df02157ae7ebbc979db9c9263dfb89b9999713129e29b136d15ce55f04acf553"
+    },
+    {
+      "path": "blog/tack-coat-calculator-guide/index.html",
+      "sha256": "e59589d871102154e00f6eb38136e9ec1fdbc7f55ae89a129ffc03d3eb60573d"
+    },
+    {
+      "path": "calculators/tack-coat-calculator/index.html",
+      "sha256": "0c0606ce93f70affa02bc194fac6d1f24af43be5b2f398ae0bfe9f9e87cbe2df"
+    },
+    {
+      "path": "calculators/index.html",
+      "sha256": "322919c60f44cc116ff801842943adcbbf4ccb44e7aa91583bd15397529083a9"
+    },
+    {
+      "path": "blog/index.html",
+      "sha256": "89e01441bc9f63c825d8309a4cb581a5a10686f9a2a32beae14e6c334a116d97"
+    },
+    {
+      "path": "calculators/asphalt-repair-calculator/index.html",
+      "sha256": "3a27611bbab83c9417d219315a47e9583cc358a954600b37808d9d59a2c12152"
+    },
+    {
+      "path": "blog/bitumen-spray-rate-chip-seal/index.html",
+      "sha256": "e6c7b8f86d95b022ffa4736b332c8731d36dffc529d19a43a03c53ac19b98fd2"
+    },
+    {
+      "path": "blog/bitumen-density-volume-cargo-calculations/index.html",
+      "sha256": "d1ee513a5ba2922978e4f4b5689d403ac02caed198b74f20f7a1de6c402ab870"
+    },
+    {
+      "path": "about-us/index.html",
+      "sha256": "3c4c7316fc9aa98c9e0793d63631da9a15d65e114488665987786fa90e4a5cae"
+    },
+    {
+      "path": "editorial-policy/index.html",
+      "sha256": "70a265704fb0acba773e5a2ec6806ae1393976b6616e40f7a1eef20a65265ba4"
+    },
+    {
+      "path": "authors/jimmy/index.html",
+      "sha256": "5b6542dfdef0cb99a5b6c68d87b861a9dff5713f6df8ce994ecd01b991249e35"
+    },
+    {
+      "path": "blog/asphalt-driveway-cost-calculator/index.html",
+      "sha256": "a128c5cdea759e71b46d6ec0a884a44ffeac2adbd2fa772220ad586da6d2a978"
+    },
+    {
+      "path": "blog/asphalt-tonnage-calculator-guide/index.html",
+      "sha256": "8957a8f88cc06fb1fd41d5ed1e1321dcf2490acfd5409f0df28607b5da937313"
+    },
+    {
+      "path": "blog/bitumen-content-asphalt-guide/index.html",
+      "sha256": "cb4ca66560075f081fdb7505771aa59080d2e22c035c3a6f039243fdc850d4a5"
+    },
+    {
+      "path": "blog/how-much-asphalt-do-i-need/index.html",
+      "sha256": "89d2a7049f4fa7ce6bfa28a4d5c211812e382f378bd9bd8efdb4075d4825172c"
+    },
+    {
+      "path": "blog/how-to-calculate-bitumen-quantity-for-road/index.html",
+      "sha256": "9cf6840f5919783b081cce8e932e2f6dbea6679f2fdbce13dcf78f8adb69b7b8"
+    },
+    {
+      "path": "blog/modified-bitumen-roofing-calculator/index.html",
+      "sha256": "669409fab7036831ae92a1f218291db1a47929edc58b1460abd26bf6cdb9dadf"
+    },
+    {
+      "path": "blog/prime-coat-vs-tack-coat/index.html",
+      "sha256": "a51ebb38fe8109b93dce8264494a7eb5197e63fcc84cd1360828f0234aa4e0e0"
+    },
+    {
+      "path": "calculators/asphalt-application-rate-calculator/index.html",
+      "sha256": "fcf34d25ddf72b5aeedefe98d163c627f8d9d3f1e0b492ca41712c9c64bc730b"
+    },
+    {
+      "path": "calculators/asphalt-cost-calculator/index.html",
+      "sha256": "29c6fef9f6c84e253a7d499d1834b5e73120cbe0c1e1926fa36de2a9a54c44d4"
+    },
+    {
+      "path": "calculators/asphalt-material-calculator/index.html",
+      "sha256": "17dd91a80d4c88d24de7fd3cf38b673718ab1fb41f5aac0c869f180c1aabff4a"
+    },
+    {
+      "path": "calculators/asphalt-measurement-calculator/index.html",
+      "sha256": "1a3f3912984863cf180a676819849f285a31b5b0d83dd673bfa34c5328b419a7"
+    },
+    {
+      "path": "calculators/asphalt-removal-calculator/index.html",
+      "sha256": "12e58bce45136cd0821dc5cac440278ac3a67a8474546c17833fe92cd9c83d1a"
+    },
+    {
+      "path": "calculators/australia-bitumen-calculator/index.html",
+      "sha256": "bc89388503bb4fc937c16ad7da6490dfe79914c7d9a3ededd30ef6be8e35a75c"
+    },
+    {
+      "path": "calculators/bitumen-square-feet-calculator/index.html",
+      "sha256": "c4053ad33fe78567ebdcffa23035fcb262bfa039cbaf9eb254bbfbf4a5843964"
+    },
+    {
+      "path": "calculators/california-asphalt-calculator/index.html",
+      "sha256": "788ee53a6d127b5988b8b72756d7a070c3f4ec29f9558bcab08b790312e32433"
+    },
+    {
+      "path": "calculators/canada-bitumen-calculator/index.html",
+      "sha256": "d8037c3d052d78b85da4b58c5a013f3cb8b8be89005ca9c29127231d95511cb4"
+    },
+    {
+      "path": "calculators/circular-asphalt-calculator/index.html",
+      "sha256": "23493889a08ed7383134c195ab374a9fdf101590e4ec36236fa38f76592597d9"
+    },
+    {
+      "path": "calculators/colorado-asphalt-calculator/index.html",
+      "sha256": "7fec7f06f55d626b52a6dcabff9fd8bafb258b913ff34dfa84e54b9b5fdc6d11"
+    },
+    {
+      "path": "calculators/metric-bitumen-calculator/index.html",
+      "sha256": "b6e8ba8bcf2769acbd548bf0312bf30830eac686cbd083fd6cb8732c2892c886"
+    },
+    {
+      "path": "calculators/minnesota-asphalt-calculator/index.html",
+      "sha256": "d80d28a41b0ef3d00cf5884c1bcc41cac1c8227a692ff0bfd3a1fd8262f679ea"
+    },
+    {
+      "path": "calculators/new-jersey-asphalt-calculator/index.html",
+      "sha256": "e2ccabc6f3891dcfc87c5ac5c428b260dea2586a328f5fb85bbed5a588d66f93"
+    },
+    {
+      "path": "calculators/new-zealand-bitumen-calculator/index.html",
+      "sha256": "7ea40d6ad61d914a54b5770da656ad473540b0f5755d4ba0c9c27779734f947b"
+    },
+    {
+      "path": "calculators/north-carolina-asphalt-calculator/index.html",
+      "sha256": "b665b0ff7123e11822c57acc0bb659f7b949e4fb81ff9548488d6f03ff292986"
+    },
+    {
+      "path": "calculators/road-asphalt-calculator/index.html",
+      "sha256": "998d882a2c7f7aecba557166d5d814438291bc5426e702df387e74108faf5980"
+    },
+    {
+      "path": "calculators/roofing-bitumen-calculator/index.html",
+      "sha256": "4f0b7bef6feb3f592a2e0e7ff8922914cdd464399926c8645d357a2f2c7a0fda"
+    },
+    {
+      "path": "calculators/virginia-asphalt-calculator/index.html",
+      "sha256": "1b05daad67794fe9bfebcd4eaa1bd535962621005535f40d868aa9bb829bcb21"
+    },
+    {
+      "path": "contact-us/index.html",
+      "sha256": "3b74da0ee3db73a8ac4a4bc6f37ce899fb85f75f8e2bc0fba87915c5b16348c2"
+    },
+    {
+      "path": "disclaimer/index.html",
+      "sha256": "43cdb26d543c158d8e9d666ab52ddaa23963a5d71c12fe7d9cd0b4b921014a64"
+    },
+    {
+      "path": "privacy-policy/index.html",
+      "sha256": "a8bfced1a562fd12a5a028e53b3633f1e978a3596e22e395935941806962d5b2"
+    },
+    {
+      "path": "terms-and-conditions/index.html",
+      "sha256": "0f335b2cdb35332f1ecf6d8ec5332e39964c2f4deb9bcb54b85d5de4d5dc6f57"
+    },
+    {
+      "path": ".htaccess",
+      "sha256": "87e916554a7eb4182aaafe6bde3dd5c3d26800264e97c6aaf7c8d0a9730b4d6d"
+    },
+    {
+      "path": "sitemap.xml",
+      "sha256": "b1cc0cd8657c79987d1dcdf98504e83cbf07c1c8ad8931eb8a85c1cd8a203f3e"
+    }
+  ]
+}

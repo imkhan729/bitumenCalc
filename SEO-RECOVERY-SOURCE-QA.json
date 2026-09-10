@@ -1,0 +1,12 @@
+{
+  "scope": "Source index.html files; generated release mirrors excluded. Schema parsing checks JSON syntax only; links check file/route existence, not fragments or Apache redirects.",
+  "pageCount": 52,
+  "sitemapCount": 52,
+  "missingFromSitemap": [],
+  "sitemapMissingLocally": [],
+  "metadataIssues": [],
+  "schemaErrors": [],
+  "duplicateTitles": [],
+  "duplicateDescriptions": [],
+  "brokenLinks": []
+}

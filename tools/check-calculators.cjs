@@ -1,0 +1,25 @@
+const {chromium}=require('playwright');
+const assert=require('node:assert/strict');
+(async()=>{
+ const browser=await chromium.launch({channel:'msedge',headless:true});
+ const page=await browser.newPage({viewport:{width:320,height:900}});
+ await page.route('**/*',r=>r.request().url().startsWith('http://127.0.0.1:4173')?r.continue():r.abort());
+ await page.goto('http://127.0.0.1:4173/blog/asphalt-density-guide/');
+ console.log('Overflow elements',await page.evaluate(()=>[...document.querySelectorAll('body *')].filter(e=>e.getBoundingClientRect().right>innerWidth+1&&getComputedStyle(e).position!=='absolute').slice(0,25).map(e=>({tag:e.tagName,cls:e.className,right:e.getBoundingClientRect().right}))));
+ await page.goto('http://127.0.0.1:4173/calculators/bitumen-square-meters-calculator/');
+ await page.locator('#coverageForm button[type=submit]').click();
+ assert.match(await page.locator('#coverageResult').innerText(),/8.333/);
+ await page.selectOption('#coverageDirection','mass');await page.fill('#coverageValue','100');
+ assert.match(await page.locator('#coverageResult').innerText(),/12.000/);
+ await page.fill('#coverageThickness','0');assert.match(await page.locator('#coverageResult').innerText(),/positive/);
+ await page.locator('#coverageForm button[type=reset]').click();await page.waitForTimeout(50);
+ assert.equal(await page.inputValue('#coverageValue'),'1');
+ await page.fill('#length','10');await page.fill('#width','10');await page.fill('#thickness','50');await page.fill('#density','2400');
+ await page.evaluate(()=>window.BitCalc.run());assert.match(await page.locator('#resWeight').innerText(),/12.000/);
+ await page.fill('#length','-1');await page.evaluate(()=>window.BitCalc.run());assert.match(await page.locator('#calcError').innerText(),/positive/);
+ assert.equal(await page.locator('#calcResults').evaluate(e=>e.classList.contains('has-results')),false);
+ await page.goto('http://127.0.0.1:4173/calculators/square-feet-to-tons-calculator/');
+ const initial=await page.inputValue('#density');await page.fill('#density','2500');await page.evaluate(()=>window.BitCalc.reset());assert.equal(await page.inputValue('#density'),initial);
+ console.log('PASS: reverse conversion, 100 m² = 12 t, invalid inputs, reset defaults');
+ await browser.close();
+})().catch(e=>{console.error(e);process.exitCode=1;});

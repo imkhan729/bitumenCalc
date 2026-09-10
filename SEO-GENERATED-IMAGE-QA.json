@@ -1,0 +1,92 @@
+[
+  {
+    "route": "/",
+    "status": 200,
+    "loaded": true,
+    "alt": "Bitumen binder compared with asphalt mix made from bitumen and crushed stone aggregate",
+    "width": "1200",
+    "height": "675",
+    "overflow": false
+  },
+  {
+    "route": "/calculators/asphalt-tonnage-calculator/",
+    "status": 200,
+    "loaded": true,
+    "alt": "Asphalt slab diagram showing length, width and thickness with the calculation from area and volume to asphalt tonnage",
+    "width": "1200",
+    "height": "675",
+    "overflow": false
+  },
+  {
+    "route": "/calculators/asphalt-cost-calculator/",
+    "status": 200,
+    "loaded": true,
+    "alt": "Residential asphalt driveway with length, width and thickness measurements plus a pavement cutaway for cost estimation",
+    "width": "1200",
+    "height": "675",
+    "overflow": false
+  },
+  {
+    "route": "/calculators/road-asphalt-calculator/",
+    "status": 200,
+    "loaded": true,
+    "alt": "Road pavement section showing length, width, thickness and the sequence from volume to asphalt quantity",
+    "width": "1200",
+    "height": "675",
+    "overflow": false
+  },
+  {
+    "route": "/calculators/asphalt-repair-calculator/",
+    "status": 200,
+    "loaded": true,
+    "alt": "Pothole repair area showing length, width and depth measurements used to estimate asphalt repair quantity",
+    "width": "1200",
+    "height": "675",
+    "overflow": false
+  },
+  {
+    "route": "/calculators/asphalt-millings-calculator/",
+    "status": 200,
+    "loaded": true,
+    "alt": "Recycled asphalt pavement process showing reclaimed material from removal and milling through reuse as RAP",
+    "width": "1200",
+    "height": "675",
+    "overflow": false
+  },
+  {
+    "route": "/calculators/tack-coat-calculator/",
+    "status": 200,
+    "loaded": true,
+    "alt": "Tack coat being sprayed between pavement layers to create a bond before the next asphalt lift",
+    "width": "1200",
+    "height": "675",
+    "overflow": false
+  },
+  {
+    "route": "/blog/asphalt-density-guide/",
+    "status": 200,
+    "loaded": true,
+    "alt": "Three equal-volume asphalt samples illustrating that density changes the resulting material weight",
+    "width": "1200",
+    "height": "675",
+    "overflow": false
+  },
+  {
+    "route": "/blog/asphalt-thickness-guide/",
+    "status": 200,
+    "loaded": true,
+    "alt": "Asphalt pavement cross-section showing surface course, binder course, aggregate base and compacted sub-base",
+    "width": "1200",
+    "height": "675",
+    "overflow": false
+  },
+  {
+    "route": "/blog/bitumen-content-asphalt-guide/",
+    "status": 200,
+    "loaded": true,
+    "alt": "Asphalt mix composition showing bitumen binder coating crushed stone aggregate",
+    "width": "1200",
+    "height": "675",
+    "overflow": false
+  }
+]

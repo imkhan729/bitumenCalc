@@ -1,0 +1,533 @@
+{
+  "checkedAt": "2026-09-08T10:07:29.697Z",
+  "files": 83,
+  "failures": [],
+  "redirects": [
+    {
+      "route": "/index.html",
+      "status": 301,
+      "location": "https://www.bitumencalc.com/"
+    },
+    {
+      "route": "/index",
+      "status": 301,
+      "location": "https://www.bitumencalc.com/"
+    },
+    {
+      "route": "/blog/how-to-calculate-quantity-of-bitumen-for-road/",
+      "status": 301,
+      "location": "https://www.bitumencalc.com/blog/how-to-calculate-bitumen-quantity-for-road/"
+    },
+    {
+      "route": "/blog/modified-bitumen-roof-calculator/",
+      "status": 301,
+      "location": "https://www.bitumencalc.com/blog/modified-bitumen-roofing-calculator/"
+    },
+    {
+      "route": "/seo-test-nonexistent-20260908/",
+      "status": 404,
+      "location": null
+    }
+  ],
+  "results": [
+    {
+      "route": "/404.html",
+      "status": 200,
+      "match": true,
+      "noindex": true
+    },
+    {
+      "route": "/about-us/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/ads.txt",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/assets/blog/asphalt-millings-driveway.webp",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/assets/blog/asphalt-density-lab-guide.webp",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/assets/blog/asphalt-driveway-estimate.webp",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/assets/blog/bitumen-spray-tack-coat.webp",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/assets/blog/asphalt-tonnage-truckloads.webp",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/assets/blog/asphalt-thickness-guide.webp",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/assets/blog/asphalt-thickness-density-test.webp",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/assets/blog/asphalt-mix-design-lab.webp",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/assets/blog/bitumen-storage-tanks.webp",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/assets/blog/tons-asphalt-cubic-yard.webp",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/assets/blog/how-much-asphalt-quantity.webp",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/assets/blog/tack-coat-calculator-guide.webp",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/assets/blog/modified-bitumen-roofing.webp",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/assets/blog/prime-coat-vs-tack-coat.webp",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/assets/blog/road-bitumen-quantity.webp",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/assets/logo.svg",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/authors/jimmy/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/assets/road-paving-hero.svg",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/assets/hero-road.webp",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/blog/asphalt-density-guide/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/blog/asphalt-driveway-cost-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/blog/asphalt-millings-calculator-guide/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/blog/bitumen-spray-rate-chip-seal/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/blog/bitumen-content-asphalt-guide/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/blog/bitumen-density-volume-cargo-calculations/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/blog/asphalt-tonnage-calculator-guide/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/blog/asphalt-thickness-guide/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/blog/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/blog/how-to-calculate-bitumen-quantity-for-road/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/blog/prime-coat-vs-tack-coat/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/blog/tack-coat-calculator-guide/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/blog/modified-bitumen-roofing-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/blog/how-much-asphalt-do-i-need/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/blog/tons-of-asphalt-per-cubic-yard/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/asphalt-material-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/asphalt-cost-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/asphalt-measurement-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/asphalt-millings-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/asphalt-application-rate-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/asphalt-repair-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/asphalt-thickness-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/australia-bitumen-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/asphalt-tonnage-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/bitumen-square-feet-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/asphalt-removal-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/bitumen-square-meters-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/california-asphalt-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/circular-asphalt-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/canada-bitumen-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/bitumen-square-yards-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/bitumen-temperature-converter/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/metric-bitumen-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/new-zealand-bitumen-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/minnesota-asphalt-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/new-jersey-asphalt-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/colorado-asphalt-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/north-carolina-asphalt-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/roofing-bitumen-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/tack-coat-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/virginia-asphalt-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/square-feet-to-tons-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/calculators/road-asphalt-calculator/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/css/seo-accessibility.css",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/css/style.min.css",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/contact-us/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/editorial-policy/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/disclaimer/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/css/style.css",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/js/consent.js",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/js/consent.min.js",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/js/app.js",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/google5993f549b22db87c.html",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/js/app.min.js",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/sitemap.xml",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/privacy-policy/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/js/coverage.js",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/robots.txt",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    },
+    {
+      "route": "/terms-and-conditions/",
+      "status": 200,
+      "match": true,
+      "noindex": false
+    }
+  ],
+  "note": "The dedicated error template intentionally carries noindex. A nonexistent route returned HTTP 404."
+}

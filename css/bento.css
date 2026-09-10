@@ -1,0 +1,1012 @@
+/* ============================================================
+   NEO-INDUSTRIAL BENTO BOX DESIGN SYSTEM (bento.css)
+   Engineering HUD, Asymmetrical Grid, High-Contrast Spatial UI
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Core Industrial Palette */
+  --bento-bg: #0b0f17;
+  --bento-bg-subtle: #111724;
+  --bento-panel: #161f30;
+  --bento-panel-hover: #1c273c;
+  --bento-panel-alt: #0e1420;
+  
+  --bento-border: rgba(255, 255, 255, 0.08);
+  --bento-border-strong: rgba(255, 255, 255, 0.16);
+  --bento-border-active: #f59e0b;
+  
+  --bento-text: #f8fafc;
+  --bento-text-muted: #94a3b8;
+  --bento-text-dim: #64748b;
+  
+  /* Signal & Accent Accents */
+  --hazard-amber: #f59e0b;
+  --hazard-amber-glow: rgba(245, 158, 11, 0.25);
+  --hazard-dark: #b45309;
+  --neon-cyan: #06b6d4;
+  --neon-cyan-glow: rgba(6, 182, 212, 0.2);
+  --cyber-emerald: #10b981;
+  --cyber-emerald-glow: rgba(16, 185, 129, 0.2);
+  --hazard-red: #ef4444;
+  
+  /* Spatial Variables */
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-display: 'Space Grotesk', -apple-system, sans-serif;
+  --font-sans: 'Inter', -apple-system, sans-serif;
+}
+
+/* Light Theme Variables */
+[data-theme="light"] {
+  --bento-bg: #f4f6fa;
+  --bento-bg-subtle: #eaeff6;
+  --bento-panel: #ffffff;
+  --bento-panel-hover: #f8fafc;
+  --bento-panel-alt: #f1f5f9;
+  
+  --bento-border: rgba(15, 23, 42, 0.12);
+  --bento-border-strong: rgba(15, 23, 42, 0.24);
+  --bento-border-active: #d97706;
+  
+  --bento-text: #0f172a;
+  --bento-text-muted: #475569;
+  --bento-text-dim: #64748b;
+  
+  --hazard-amber-glow: rgba(217, 119, 6, 0.15);
+}
+
+/* Base resets & typography */
+body {
+  background-color: var(--bento-bg) !important;
+  color: var(--bento-text) !important;
+  font-family: var(--font-sans) !important;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.font-mono {
+  font-family: var(--font-mono) !important;
+  font-variant-numeric: tabular-nums;
+}
+
+.font-display {
+  font-family: var(--font-display) !important;
+}
+
+/* Crosshair watermark background */
+.hud-grid-pattern {
+  background-image: 
+    radial-gradient(circle at 1px 1px, var(--bento-border) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* ============================================================
+   A. FLOATING ISLAND NAVIGATION
+   ============================================================ */
+.island-nav-wrapper {
+  position: fixed;
+  top: 1.25rem;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 900;
+  pointer-events: none;
+  padding: 0 1rem;
+}
+
+.island-nav {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--bento-border-strong);
+  border-radius: 9999px;
+  padding: 0.5rem 1.25rem 0.5rem 0.75rem;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+  transition: all 0.25s ease;
+}
+
+[data-theme="light"] .island-nav {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 16px 32px -10px rgba(0, 0, 0, 0.1);
+}
+
+.island-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: -0.02em;
+  color: var(--bento-text);
+}
+
+.island-badge {
+  background: var(--hazard-amber);
+  color: #0b0f17;
+  font-weight: 900;
+  font-size: 0.75rem;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+.island-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--bento-text-muted);
+  border-left: 1px solid var(--bento-border);
+  padding-left: 1rem;
+}
+
+.island-status-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--cyber-emerald);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--cyber-emerald);
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+.island-links {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.island-link {
+  color: var(--bento-text-muted);
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: color 0.15s;
+}
+
+.island-link:hover {
+  color: var(--hazard-amber);
+}
+
+.island-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.island-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--bento-border);
+  color: var(--bento-text);
+  height: 34px;
+  padding: 0 0.75rem;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.island-btn:hover {
+  background: var(--hazard-amber);
+  color: #0b0f17;
+  border-color: var(--hazard-amber);
+}
+
+.island-menu-btn {
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.island-menu-btn span {
+  display: block;
+  width: 16px;
+  height: 2px;
+  background: var(--bento-text);
+  border-radius: 2px;
+  transition: all 0.25s ease;
+}
+
+.island-menu-btn:hover span {
+  background: #0b0f17;
+}
+
+/* Fullscreen Tactical Menu Overlay */
+.tactical-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 15, 23, 0.96);
+  backdrop-filter: blur(24px);
+  z-index: 1000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  padding: 6rem 2rem 2rem;
+}
+
+[data-theme="light"] .tactical-overlay {
+  background: rgba(248, 250, 252, 0.97);
+}
+
+.tactical-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.tactical-menu-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+}
+
+.tactical-menu-col h4 {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--hazard-amber);
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--bento-border);
+  padding-bottom: 0.5rem;
+}
+
+.tactical-menu-col a {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--bento-text);
+  text-decoration: none;
+  margin-bottom: 0.85rem;
+  transition: all 0.2s;
+}
+
+.tactical-menu-col a:hover {
+  color: var(--hazard-amber);
+  transform: translateX(6px);
+}
+
+.tactical-overlay-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: 1px solid var(--bento-border);
+  color: var(--bento-text);
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.tactical-overlay-close:hover {
+  background: var(--hazard-amber);
+  color: #0b0f17;
+}
+
+/* ============================================================
+   B. THE BENTO HUD GRID SYSTEM
+   ============================================================ */
+.hud-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 6.5rem 1.5rem 3rem;
+}
+
+@media (max-width: 640px) {
+  .hud-container {
+    padding: 5.5rem 0.75rem 2rem;
+  }
+}
+
+.hud-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+/* Bento Card Base */
+.bento-card {
+  background: var(--bento-panel);
+  border: 1px solid var(--bento-border);
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.bento-card:hover {
+  border-color: var(--bento-border-strong);
+}
+
+.bento-header {
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--bento-border);
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.bento-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  color: var(--hazard-amber);
+  margin: 0;
+}
+
+.bento-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  color: var(--bento-text-muted);
+  border: 1px solid var(--bento-border);
+}
+
+/* Corner industrial markers */
+.hud-corner {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  pointer-events: none;
+}
+.hud-corner-tl { top: 0; left: 0; border-top: 2px solid var(--hazard-amber); border-left: 2px solid var(--hazard-amber); }
+.hud-corner-tr { top: 0; right: 0; border-top: 2px solid var(--hazard-amber); border-right: 2px solid var(--hazard-amber); }
+.hud-corner-bl { bottom: 0; left: 0; border-bottom: 2px solid var(--hazard-amber); border-left: 2px solid var(--hazard-amber); }
+.hud-corner-br { bottom: 0; right: 0; border-bottom: 2px solid var(--hazard-amber); border-right: 2px solid var(--hazard-amber); }
+
+/* Bento Grid Column Spans */
+.bento-col-8 { grid-column: span 8; }
+.bento-col-4 { grid-column: span 4; }
+.bento-col-6 { grid-column: span 6; }
+.bento-col-12 { grid-column: span 12; }
+
+@media (max-width: 1024px) {
+  .bento-col-8, .bento-col-4, .bento-col-6 {
+    grid-column: span 12;
+  }
+}
+
+/* ============================================================
+   C. RADICAL INPUT ZONES (Oversized Monospace UI)
+   ============================================================ */
+.param-zone-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1px;
+  background: var(--bento-border);
+}
+
+.param-zone {
+  background: var(--bento-panel);
+  padding: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 140px;
+  transition: background-color 0.2s;
+}
+
+.param-zone:focus-within {
+  background: var(--bento-panel-hover);
+}
+
+.param-zone:focus-within::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--hazard-amber);
+}
+
+.param-label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.param-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: var(--bento-text-muted);
+}
+
+.param-indicator {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--neon-cyan);
+}
+
+.param-input-cluster {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  position: relative;
+}
+
+/* The Massive Raw Number Input */
+.param-huge-input {
+  font-family: var(--font-mono) !important;
+  font-size: clamp(2.4rem, 5vw, 4rem) !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+  color: var(--bento-text) !important;
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 100% !important;
+  letter-spacing: -0.04em !important;
+}
+
+.param-huge-input::placeholder {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="light"] .param-huge-input::placeholder {
+  color: rgba(0, 0, 0, 0.18);
+}
+
+/* Baseline Unit Selector Badge */
+.param-unit-badge {
+  position: relative;
+  flex-shrink: 0;
+  align-self: flex-end;
+  margin-bottom: 0.25rem;
+}
+
+.param-unit-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--bento-border-strong);
+  color: var(--hazard-amber);
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 0.35rem 1.6rem 0.35rem 0.75rem;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s;
+}
+
+[data-theme="light"] .param-unit-select {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.param-unit-select:hover, .param-unit-select:focus {
+  background: var(--hazard-amber);
+  color: #0b0f17;
+  border-color: var(--hazard-amber);
+}
+
+.param-unit-arrow {
+  position: absolute;
+  right: 0.55rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 0.65rem;
+  color: currentColor;
+}
+
+/* Spatial Segmented Controls (Thickness & Presets) */
+.spatial-chips-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.spatial-chip {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--bento-border);
+  color: var(--bento-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.75rem 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.15s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.spatial-chip span.chip-sub {
+  font-size: 0.62rem;
+  font-weight: 500;
+  opacity: 0.6;
+}
+
+.spatial-chip:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--bento-text);
+  border-color: var(--bento-border-strong);
+}
+
+.spatial-chip.active {
+  background: var(--hazard-amber);
+  color: #0b0f17;
+  border-color: var(--hazard-amber);
+  box-shadow: 0 4px 16px var(--hazard-amber-glow);
+}
+
+.spatial-chip.active span.chip-sub {
+  color: #0b0f17;
+  opacity: 0.85;
+}
+
+/* Mix Type Visual Selector Matrix */
+.mix-matrix-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  padding: 1.25rem;
+}
+
+@media (max-width: 480px) {
+  .mix-matrix-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mix-card-option {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--bento-border);
+  border-radius: 10px;
+  padding: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  text-align: left;
+}
+
+.mix-card-option:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--bento-border-strong);
+}
+
+.mix-card-option.active {
+  background: rgba(245, 158, 11, 0.1);
+  border-color: var(--hazard-amber);
+  box-shadow: inset 0 0 12px rgba(245, 158, 11, 0.08);
+}
+
+.mix-card-title {
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--bento-text);
+  margin-bottom: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mix-card-specs {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--bento-text-muted);
+}
+
+/* ============================================================
+   D. THE ENGINEERING HUD (Results & Visualizer)
+   ============================================================ */
+.hud-results-card {
+  background: linear-gradient(180deg, #111827 0%, #0c121e 100%);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="light"] .hud-results-card {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+  border-color: rgba(217, 119, 6, 0.35);
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+}
+
+.hud-hero-metric {
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid var(--bento-border);
+  position: relative;
+  background: radial-gradient(ellipse at top right, rgba(245, 158, 11, 0.08), transparent 70%);
+}
+
+.hud-metric-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--hazard-amber);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hud-hero-value {
+  font-family: var(--font-mono);
+  font-size: clamp(3.2rem, 7vw, 5.5rem);
+  font-weight: 900;
+  line-height: 0.95;
+  color: var(--bento-text);
+  letter-spacing: -0.05em;
+}
+
+.hud-hero-sub {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--bento-text-muted);
+  margin-top: 0.75rem;
+}
+
+/* 2D Proportional Cross-Section Visualizer */
+.pavement-cross-section-panel {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--bento-border);
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.cross-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.cross-section-title {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--neon-cyan);
+}
+
+.cross-section-diagram {
+  border: 1px solid var(--bento-border-strong);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 80px;
+  display: flex;
+  position: relative;
+  background: #0f172a;
+}
+
+.cs-layer-asphalt {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #1e293b;
+  display: flex;
+}
+
+.cs-binder-matrix {
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    #f59e0b,
+    #f59e0b 8px,
+    #d97706 8px,
+    #d97706 16px
+  );
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+}
+
+.cs-aggregate-skeleton {
+  flex: 1;
+  height: 100%;
+  background: #334155;
+  background-image: radial-gradient(circle, #64748b 2px, transparent 2px);
+  background-size: 8px 8px;
+}
+
+.cross-section-metrics {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+}
+
+.cs-metric-binder {
+  color: var(--hazard-amber);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.cs-metric-agg {
+  color: var(--neon-cyan);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Secondary Telemetry Grid */
+.hud-telemetry-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--bento-border);
+}
+
+.hud-tile {
+  background: var(--bento-panel);
+  padding: 1.25rem 1.5rem;
+}
+
+.hud-tile-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--bento-text-dim);
+  margin-bottom: 0.25rem;
+}
+
+.hud-tile-value {
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--bento-text);
+  letter-spacing: -0.03em;
+}
+
+.hud-tile-sub {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--bento-text-muted);
+  margin-top: 0.2rem;
+}
+
+/* Tactical Primary Action Bar */
+.hud-action-bar {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.hud-primary-btn {
+  flex: 1;
+  background: var(--hazard-amber);
+  color: #0b0f17;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 20px var(--hazard-amber-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.hud-primary-btn:hover {
+  background: #fbbf24;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px var(--hazard-amber-glow);
+}
+
+.hud-reset-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--bento-border-strong);
+  color: var(--bento-text-muted);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.hud-reset-btn:hover {
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--hazard-red);
+  border-color: var(--hazard-red);
+}
+
+/* ============================================================
+   E. PERSISTENT HUD TELEMETRY FOOTER BAR
+   ============================================================ */
+.hud-telemetry-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 850;
+  background: rgba(11, 15, 23, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--bento-border-strong);
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.4);
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-theme="light"] .hud-telemetry-bar {
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.hud-telemetry-bar.visible {
+  transform: translateY(0);
+}
+
+.bar-metric-group {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.bar-metric-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.bar-metric-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--bento-text-dim);
+}
+
+.bar-metric-value {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--hazard-amber);
+}
+
+.bar-expand-btn {
+  background: var(--hazard-amber);
+  color: #0b0f17;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ============================================================
+   F. MOBILE BOTTOM SHEET & ADAPTIVE HUD
+   ============================================================ */
+@media (max-width: 1024px) {
+  .hud-bento-grid {
+    gap: 1rem;
+  }
+  
+  .param-zone {
+    padding: 1.25rem;
+  }
+  
+  .spatial-chips-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .hud-telemetry-bar {
+    padding: 0.6rem 1rem;
+  }
+  
+  .bar-metric-group {
+    gap: 1rem;
+  }
+  
+  .bar-metric-value {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .island-links {
+    display: none;
+  }
+  .island-nav {
+    padding: 0.4rem 0.75rem;
+    gap: 0.75rem;
+  }
+  .island-status {
+    display: none;
+  }
+  .hud-container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  .bento-card {
+    border-radius: 12px;
+  }
+  .spatial-chips-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .param-zone {
+    padding: 1rem 0.75rem;
+  }
+  .hud-telemetry-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Ensure original engine classes don't cause unexpected scroll clipping */
+.calc-inputs, .calc-results {
+  min-width: 0;
+  width: 100%;
+}

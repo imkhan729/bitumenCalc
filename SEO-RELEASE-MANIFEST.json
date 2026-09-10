@@ -1,0 +1,475 @@
+{
+  "release": "C:\\Users\\Roy\\AppData\\Local\\Temp\\bitumencalc-static-release-20260908",
+  "files": [
+    {
+      "path": ".htaccess",
+      "bytes": 8124,
+      "sha256": "87e916554a7eb4182aaafe6bde3dd5c3d26800264e97c6aaf7c8d0a9730b4d6d"
+    },
+    {
+      "path": "404.html",
+      "bytes": 2710,
+      "sha256": "b6d42b94935ef3fe803804417b48d9626a43e100acb191c3d3cd09e68c566526"
+    },
+    {
+      "path": "about-us/index.html",
+      "bytes": 23720,
+      "sha256": "22a8535a831d8dfc9f5ec897701f130ba07cb1a43bc544902750d04aff4d7071"
+    },
+    {
+      "path": "ads.txt",
+      "bytes": 59,
+      "sha256": "f11ead755747e000e7a28e8a9b209c148537e1ff97a4298104cad4a2a0a03c89"
+    },
+    {
+      "path": "assets/blog/asphalt-density-lab-guide.webp",
+      "bytes": 70488,
+      "sha256": "a88bdb31b7b48b6ee09c84cc6cb0f18099ffe2182e1761c099a9f932ce7c976b"
+    },
+    {
+      "path": "assets/blog/asphalt-driveway-estimate.webp",
+      "bytes": 242976,
+      "sha256": "0bb33583a6e8eb3de5bf47f80877c27c04292375418b79c05f4994bfa9377f21"
+    },
+    {
+      "path": "assets/blog/asphalt-millings-driveway.webp",
+      "bytes": 362390,
+      "sha256": "1705e5d237c5383799e90a851a8e440990f647df186ba2aebb0d7688b3aa028b"
+    },
+    {
+      "path": "assets/blog/asphalt-mix-design-lab.webp",
+      "bytes": 103320,
+      "sha256": "adbf38a1f68499c9cf859d2746fbbd9e74b54b1b8840da824f34c71a866ddec3"
+    },
+    {
+      "path": "assets/blog/asphalt-thickness-density-test.webp",
+      "bytes": 159986,
+      "sha256": "3c89efba8566aa3c2b3e91e772139827d8f044e94e2967ea14b8354b377c7d9b"
+    },
+    {
+      "path": "assets/blog/asphalt-thickness-guide.webp",
+      "bytes": 62920,
+      "sha256": "7b9ae9cd65316f275f9578f9927f83a8dd322b432b22a90633b2d6cf42acd9d1"
+    },
+    {
+      "path": "assets/blog/asphalt-tonnage-truckloads.webp",
+      "bytes": 118522,
+      "sha256": "bd742fd8e16ea7f13cdcdacf7c654caa43a98b67c02b25a7651ba5fd04e78dcb"
+    },
+    {
+      "path": "assets/blog/bitumen-spray-tack-coat.webp",
+      "bytes": 225750,
+      "sha256": "6f36853b19f79b8600eecbee477d64cfcf9bc81737a855e016794faef133f86f"
+    },
+    {
+      "path": "assets/blog/bitumen-storage-tanks.webp",
+      "bytes": 167824,
+      "sha256": "d0309e652f681d013c12079e42efd3830de847f1bce92d9ed1893606fd95ed6b"
+    },
+    {
+      "path": "assets/blog/how-much-asphalt-quantity.webp",
+      "bytes": 105762,
+      "sha256": "f863c732685dea880a6f8a280dddd80f9ce9594fae39b5f7de2ded91e1b3a3ce"
+    },
+    {
+      "path": "assets/blog/modified-bitumen-roofing.webp",
+      "bytes": 127060,
+      "sha256": "02e0d0d915a32fd5a2385528579d701027120dbfa65904b1f6b41a8c449c82d4"
+    },
+    {
+      "path": "assets/blog/prime-coat-vs-tack-coat.webp",
+      "bytes": 121436,
+      "sha256": "8e68c445af297d7e6d3a203d9a7c8d374aea8e65475d3feca3e9ea66f195d282"
+    },
+    {
+      "path": "assets/blog/road-bitumen-quantity.webp",
+      "bytes": 189574,
+      "sha256": "f64a0d1ea6d433b180466b881c70446c1bf35dedfaaa06ad91ecafdcaf987985"
+    },
+    {
+      "path": "assets/blog/tack-coat-calculator-guide.webp",
+      "bytes": 115274,
+      "sha256": "e085089faeeeb5d255e0b63fc5d8a70a3b79adaf6e23420dbdea7dc9a4e5145b"
+    },
+    {
+      "path": "assets/blog/tons-asphalt-cubic-yard.webp",
+      "bytes": 217264,
+      "sha256": "452912ec68abae4950a4bc1ff8b77a98ef6b840e75698be5cfdf83da6a293128"
+    },
+    {
+      "path": "assets/hero-road.webp",
+      "bytes": 250614,
+      "sha256": "d1b2e76dfc6e14b9a709e876cbde6e95c9c75405ec4e8813f4d97f7f7981850b"
+    },
+    {
+      "path": "assets/illustrations/asphalt-density-comparison.webp",
+      "bytes": 127000,
+      "sha256": "c27b51775b5cd460254a513831d3584f29c5cc46b55b6a7849732b89bf10e779"
+    },
+    {
+      "path": "assets/illustrations/asphalt-driveway-cost-calculation.webp",
+      "bytes": 169624,
+      "sha256": "5cad10ac783b641480fd8cb88a5a361ca6acf185967cadea806a4b36eee42833"
+    },
+    {
+      "path": "assets/illustrations/asphalt-mix-composition-bitumen-aggregate.webp",
+      "bytes": 146628,
+      "sha256": "fdc469af37923ef114a1a8f33e36a264046728cecac53f7f92b3fb6f11361a8d"
+    },
+    {
+      "path": "assets/illustrations/asphalt-pavement-layer-cross-section.webp",
+      "bytes": 136774,
+      "sha256": "9df2574da14dd03e01bde44993be5f8f0ae7755dfce1dfd543617ace72b127ac"
+    },
+    {
+      "path": "assets/illustrations/asphalt-tack-coat-rate-calculator.webp",
+      "bytes": 183944,
+      "sha256": "b0210f91cb5260948fc59b99134be43a1617b00b2076d3db0b8cae329c2a6421"
+    },
+    {
+      "path": "assets/illustrations/asphalt-tonnage-calculation-formula.webp",
+      "bytes": 79282,
+      "sha256": "10e87d76252307bd3ac376908db90a138d3d2e087fcbe5feb8250463263d5398"
+    },
+    {
+      "path": "assets/illustrations/bitumen-vs-asphalt-difference.webp",
+      "bytes": 138752,
+      "sha256": "5d2d3aa6994d925e805f23011fcfb83c94f25fe384e2d58b1ba30a33fbf6b5d3"
+    },
+    {
+      "path": "assets/illustrations/pothole-repair-asphalt-calculation.webp",
+      "bytes": 212194,
+      "sha256": "ab087afd1c84a6d21b40e1957329bfdf40e3c3fbccf4d5aef38cefc9f49746d8"
+    },
+    {
+      "path": "assets/illustrations/recycled-asphalt-pavement-rap-process.webp",
+      "bytes": 175172,
+      "sha256": "9fd414061165d58ddfc35ff61a96bec946ab32d4500f5bc23208a6969d097f5b"
+    },
+    {
+      "path": "assets/illustrations/road-paving-quantity-calculation.webp",
+      "bytes": 139828,
+      "sha256": "40d496cbf28694edb7399dee4a091ac7feb9539d0567fde286f98741ee27f7d9"
+    },
+    {
+      "path": "assets/logo.svg",
+      "bytes": 574,
+      "sha256": "4e4c5089bf8c37904c7b3af30391e7571c43817c81f745cff080940146de234b"
+    },
+    {
+      "path": "assets/road-paving-hero.svg",
+      "bytes": 2196,
+      "sha256": "fb52889689fef2d9ed186bc427fd49f6acf97f5bd347226ab9f554be7377379e"
+    },
+    {
+      "path": "authors/jimmy/index.html",
+      "bytes": 29932,
+      "sha256": "01f92f1e5b81621d89d1dc2e51f68e8dfa66664913196120ebe5eb9e242b06f0"
+    },
+    {
+      "path": "blog/asphalt-density-guide/index.html",
+      "bytes": 32741,
+      "sha256": "7ce645730435e73a3c9eb4002c5c4b4898062663e6c0b17d12133e2c5a2a5901"
+    },
+    {
+      "path": "blog/asphalt-driveway-cost-calculator/index.html",
+      "bytes": 63826,
+      "sha256": "2e22c1cdd665041a80b061217f9ac17a0cfb836a265a20d93ec304b83b937f7a"
+    },
+    {
+      "path": "blog/asphalt-millings-calculator-guide/index.html",
+      "bytes": 32884,
+      "sha256": "e2ca188964b1d020930254b60af627091983194e752bf8b69ee385e6ce33a385"
+    },
+    {
+      "path": "blog/asphalt-thickness-guide/index.html",
+      "bytes": 33090,
+      "sha256": "55bc3e23b403d9f447d42104370df4b66f8ba2cc82cd4ee4d23faf71e3a10c57"
+    },
+    {
+      "path": "blog/asphalt-tonnage-calculator-guide/index.html",
+      "bytes": 65835,
+      "sha256": "bcbc0baec95c406d243772b1f67952b8e69190910a9418de7946a64c3c2ad788"
+    },
+    {
+      "path": "blog/bitumen-content-asphalt-guide/index.html",
+      "bytes": 30769,
+      "sha256": "785132a518238e3a6e40804537648a4b08dfb739e1b54e1c2e1eaaf1bd60cfaf"
+    },
+    {
+      "path": "blog/bitumen-density-volume-cargo-calculations/index.html",
+      "bytes": 28817,
+      "sha256": "e91270ea26f1c763323b087b6a6d436cec144222fc1193a0985e59db9417d3b9"
+    },
+    {
+      "path": "blog/bitumen-spray-rate-chip-seal/index.html",
+      "bytes": 29740,
+      "sha256": "262d0199b0bbc4f403d17a80ed2de4fca939485e2c90c14608333b03dead8a34"
+    },
+    {
+      "path": "blog/how-much-asphalt-do-i-need/index.html",
+      "bytes": 56838,
+      "sha256": "67b7af311f1aa45d89b6159d2797d30b166da4f353cd9b39f42ac3077cb2b642"
+    },
+    {
+      "path": "blog/how-to-calculate-bitumen-quantity-for-road/index.html",
+      "bytes": 32042,
+      "sha256": "4668869c4539b321bc2478fa00466b6da7d1935fbf4e048599139196505b2ae3"
+    },
+    {
+      "path": "blog/index.html",
+      "bytes": 56034,
+      "sha256": "1a8188af606c68da66f71026116de0705b9045ee62731218ee195a7e3ada98f8"
+    },
+    {
+      "path": "blog/modified-bitumen-roofing-calculator/index.html",
+      "bytes": 30090,
+      "sha256": "77ae03a77a3b6b45cf0b9472c9e8f3c808067dd49d9aaa0f55bfaf16b17908bb"
+    },
+    {
+      "path": "blog/prime-coat-vs-tack-coat/index.html",
+      "bytes": 59139,
+      "sha256": "e0976ce100e7cc0dcf7095bc1fc1ccdee89d0f454da700f0e0ecfe3cbaf24f23"
+    },
+    {
+      "path": "blog/tack-coat-calculator-guide/index.html",
+      "bytes": 61359,
+      "sha256": "8e412606029b3ca4391bee9cf909129c773f356fb780bf26a2cf2d9056bcec21"
+    },
+    {
+      "path": "blog/tons-of-asphalt-per-cubic-yard/index.html",
+      "bytes": 32250,
+      "sha256": "33198f4bfbc0bca1be2b8361a5e5a0ed8100216034d75464fe941e5d4734dc30"
+    },
+    {
+      "path": "calculators/asphalt-application-rate-calculator/index.html",
+      "bytes": 54500,
+      "sha256": "850d0ccf447c7ca9ad154d8361885145f6cf635daad8472c12bc979ee003749c"
+    },
+    {
+      "path": "calculators/asphalt-cost-calculator/index.html",
+      "bytes": 49981,
+      "sha256": "8bfb3087b2d20a72b89f47e61bfea7bd8c20ea7ad3199fb7419a4cbfc5693412"
+    },
+    {
+      "path": "calculators/asphalt-material-calculator/index.html",
+      "bytes": 50403,
+      "sha256": "aebd907abde672337513c9bc3d04b63261c8faee18a04d97c82c5e7a46535501"
+    },
+    {
+      "path": "calculators/asphalt-measurement-calculator/index.html",
+      "bytes": 53486,
+      "sha256": "b3e7d66a8942edb75bd75162e2338ff3b9c42ffe73593594aa9a044a351b8a0a"
+    },
+    {
+      "path": "calculators/asphalt-millings-calculator/index.html",
+      "bytes": 50737,
+      "sha256": "7c89b0261b7f7d410b517fe2461b99fc80489b24d509c46b0c876dc629483d42"
+    },
+    {
+      "path": "calculators/asphalt-removal-calculator/index.html",
+      "bytes": 51675,
+      "sha256": "60af623bac4b23c2f7e6a4a882b0150e158b1568131f230adbfcdfd8bc1c44fd"
+    },
+    {
+      "path": "calculators/asphalt-repair-calculator/index.html",
+      "bytes": 66773,
+      "sha256": "6b6ccc0caa1742d48e359179627e00c7f8b4f79adc630283781b7daeade80c85"
+    },
+    {
+      "path": "calculators/asphalt-thickness-calculator/index.html",
+      "bytes": 59063,
+      "sha256": "23c6192152e19c1401d5658ffe73722c160f8cb8bc20b111b20a191035771c7d"
+    },
+    {
+      "path": "calculators/asphalt-tonnage-calculator/index.html",
+      "bytes": 51268,
+      "sha256": "d06a61a20ec91943c6628881da322826ed9d60749e61e472a5f67a9ecaa84a52"
+    },
+    {
+      "path": "calculators/australia-bitumen-calculator/index.html",
+      "bytes": 63215,
+      "sha256": "743ae6142bb7d2ffd7bed9aff3f2e21e809494598bf62b292f19773792ea6926"
+    },
+    {
+      "path": "calculators/bitumen-square-feet-calculator/index.html",
+      "bytes": 49700,
+      "sha256": "5df402fd269e96fd43aea04e3a7c5b46db64be2118e16f2681f4907cad508cd4"
+    },
+    {
+      "path": "calculators/bitumen-square-meters-calculator/index.html",
+      "bytes": 62519,
+      "sha256": "3cea758bcb25195eff7b145f22bcc4d859c407823f86550493d45c692f08f7c8"
+    },
+    {
+      "path": "calculators/bitumen-square-yards-calculator/index.html",
+      "bytes": 59317,
+      "sha256": "63d8449bad6751ffdc102c8ddc06eb968202303627d467a26eb0fe911ece4956"
+    },
+    {
+      "path": "calculators/bitumen-temperature-converter/index.html",
+      "bytes": 51336,
+      "sha256": "72dc55b89d2c13a92dae2f0c034790daa84e11750280c5aa65459ddb2ab4dff8"
+    },
+    {
+      "path": "calculators/california-asphalt-calculator/index.html",
+      "bytes": 52505,
+      "sha256": "b602c01322c39e3d08644fe1d989754a69f255bd941d668f42f5e9de9f135f6d"
+    },
+    {
+      "path": "calculators/canada-bitumen-calculator/index.html",
+      "bytes": 52322,
+      "sha256": "2c8689b2f8daad236542c82156bc98f7d33b72af1f5ae166f76a687193367bc6"
+    },
+    {
+      "path": "calculators/circular-asphalt-calculator/index.html",
+      "bytes": 53837,
+      "sha256": "4a937c6caf3a70393255fb4cf2ccb9e5dfaa8fa7528e0227a78e101f0a54630d"
+    },
+    {
+      "path": "calculators/colorado-asphalt-calculator/index.html",
+      "bytes": 54617,
+      "sha256": "6ae5fd95f9a07313b44ece657b1536d04e6dba4a141ce94c020c3743e044ab81"
+    },
+    {
+      "path": "calculators/index.html",
+      "bytes": 34117,
+      "sha256": "6bf70184e3b112b0244011efb08cffeaba18fd6416cd31ad2be928c713f45f60"
+    },
+    {
+      "path": "calculators/metric-bitumen-calculator/index.html",
+      "bytes": 53450,
+      "sha256": "3e8c2d7160b4134515faa87b873bc2b0ebc2e7bef9930db34e81ca9f18decd5c"
+    },
+    {
+      "path": "calculators/minnesota-asphalt-calculator/index.html",
+      "bytes": 54561,
+      "sha256": "01668b3fbf69fc8409165029de387c0d37c25913fdf5409119a15eefd5cfb066"
+    },
+    {
+      "path": "calculators/new-jersey-asphalt-calculator/index.html",
+      "bytes": 55529,
+      "sha256": "6f52ff08f5ca99605881c0538f81dccbcce774f9ee03e42a08b0d909267c05d5"
+    },
+    {
+      "path": "calculators/new-zealand-bitumen-calculator/index.html",
+      "bytes": 52789,
+      "sha256": "c937f243beeadf22efbd6eb9b9188965d059455364b442b4881bc54c3c962f76"
+    },
+    {
+      "path": "calculators/north-carolina-asphalt-calculator/index.html",
+      "bytes": 66385,
+      "sha256": "be87248990b30f4a938a07979ba973b1789c05efe461603a6966375a82fa92b7"
+    },
+    {
+      "path": "calculators/road-asphalt-calculator/index.html",
+      "bytes": 67783,
+      "sha256": "5db514807ea81e024863234757f6cf80731f84ca2606341e29c00f02fb065b6e"
+    },
+    {
+      "path": "calculators/roofing-bitumen-calculator/index.html",
+      "bytes": 49610,
+      "sha256": "bbab42a604e11d1da7b438dd05780de2c26aad94aef353d9d25db07f8269b39a"
+    },
+    {
+      "path": "calculators/square-feet-to-tons-calculator/index.html",
+      "bytes": 50541,
+      "sha256": "b8efe39fdc058eab9fd1b0706b83511b8c2a44f34b3ed1ae312a54078f96a1e5"
+    },
+    {
+      "path": "calculators/tack-coat-calculator/index.html",
+      "bytes": 62517,
+      "sha256": "16c59e14e789c7a1b454e09ea709a9b09d03f7febcc26c706ef97cac2e39d089"
+    },
+    {
+      "path": "calculators/virginia-asphalt-calculator/index.html",
+      "bytes": 62625,
+      "sha256": "9c1f035fbeb4405d3ff22ab6a2f9391be7908e08cc1f8876d35b13fb08e34822"
+    },
+    {
+      "path": "contact-us/index.html",
+      "bytes": 28189,
+      "sha256": "931fcb7c5446db905aadde02d26f78983dc6fc41aafc5512100d72ab2a6e8735"
+    },
+    {
+      "path": "css/seo-accessibility.css",
+      "bytes": 14565,
+      "sha256": "fe2e26d7be0d54f14ca340173a7612546595f8dc26faf7f8fefeb4b8d7cc7055"
+    },
+    {
+      "path": "css/style.css",
+      "bytes": 51501,
+      "sha256": "79f74de0127fb375cefd3318e0be05c43fad9a672b9c996086f3b29f4196554f"
+    },
+    {
+      "path": "css/style.min.css",
+      "bytes": 39873,
+      "sha256": "a7342f5736b7e7d0978b9305eb982967b02e35d4fef168cfbf53b180ba623e4c"
+    },
+    {
+      "path": "disclaimer/index.html",
+      "bytes": 24222,
+      "sha256": "381f9688424b610afe2ea877718bdcdca48cc094dee46f06ef9e5a56335efda3"
+    },
+    {
+      "path": "editorial-policy/index.html",
+      "bytes": 25188,
+      "sha256": "9fde6458b8ee2498864fb45a509f335ed5b13788f7083558e29609d9cd43beeb"
+    },
+    {
+      "path": "google5993f549b22db87c.html",
+      "bytes": 58,
+      "sha256": "15cd47e6d7b842a99a44aa95bc7c56575d2ee9d46de72e0b54c30166177d60d7"
+    },
+    {
+      "path": "index.html",
+      "bytes": 60795,
+      "sha256": "7c42a1a9e48672e8244c817606f405765dbd3db390a5ce9c53ac6b23ee3215ad"
+    },
+    {
+      "path": "js/app.js",
+      "bytes": 21007,
+      "sha256": "9969ff40c560ad0133f4e1e4f0256df023f8cb8461444a12fb21a26f45083022"
+    },
+    {
+      "path": "js/app.min.js",
+      "bytes": 13308,
+      "sha256": "d504f943c3950cde1e546017c0358ec406e6b67beca4df2418fa73182f768b96"
+    },
+    {
+      "path": "js/consent.js",
+      "bytes": 6173,
+      "sha256": "ec13ed217e8f4d97001b5e1dbad3999d179059fd7853866fc09db9ba5e81f665"
+    },
+    {
+      "path": "js/consent.min.js",
+      "bytes": 2976,
+      "sha256": "4f94e177306f3cb34494c09f93a259457416ce98d775c6f331ae82bef7a13106"
+    },
+    {
+      "path": "js/coverage.js",
+      "bytes": 1265,
+      "sha256": "ee631829d575ae7c986c4b23cb927874f0ca81b57128c710ddb90be6ff2eb9e6"
+    },
+    {
+      "path": "privacy-policy/index.html",
+      "bytes": 38230,
+      "sha256": "dd095fe94f293661117fdf7de4949ade04d6f8e72e9a0ca4d401e7a5140088b8"
+    },
+    {
+      "path": "robots.txt",
+      "bytes": 227,
+      "sha256": "f6f699a846650814ccf5041203bbfd09d56531f7664cbc42b69285bc5feaf6df"
+    },
+    {
+      "path": "sitemap.xml",
+      "bytes": 10232,
+      "sha256": "b1cc0cd8657c79987d1dcdf98504e83cbf07c1c8ad8931eb8a85c1cd8a203f3e"
+    },
+    {
+      "path": "terms-and-conditions/index.html",
+      "bytes": 27069,
+      "sha256": "7a38894097843ab6edce78d3c1b40a7c69da5eac9377ff28ef0b17168a46b4b1"
+    }
+  ]
+}

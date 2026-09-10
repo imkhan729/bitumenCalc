@@ -1,0 +1,47 @@
+{
+  "standardCalculators": [
+    "/calculators/asphalt-cost-calculator/",
+    "/calculators/asphalt-material-calculator/",
+    "/calculators/asphalt-millings-calculator/",
+    "/calculators/asphalt-thickness-calculator/",
+    "/calculators/asphalt-tonnage-calculator/",
+    "/calculators/australia-bitumen-calculator/",
+    "/calculators/bitumen-square-feet-calculator/",
+    "/calculators/bitumen-square-meters-calculator/",
+    "/calculators/bitumen-square-yards-calculator/",
+    "/calculators/california-asphalt-calculator/",
+    "/calculators/canada-bitumen-calculator/",
+    "/calculators/colorado-asphalt-calculator/",
+    "/calculators/metric-bitumen-calculator/",
+    "/calculators/minnesota-asphalt-calculator/",
+    "/calculators/new-jersey-asphalt-calculator/",
+    "/calculators/new-zealand-bitumen-calculator/",
+    "/calculators/north-carolina-asphalt-calculator/",
+    "/calculators/square-feet-to-tons-calculator/",
+    "/calculators/virginia-asphalt-calculator/",
+    "/"
+  ],
+  "standardExample": "10 m × 10 m × 50 mm × 2400 kg/m³ = 12 t; metric-imperial round trip",
+  "specialCases": [
+    "circle 10 m radius = 37.699 t",
+    "tack 1000 m² × 0.3 L/m² = 300 L",
+    "150°C = 302°F"
+  ],
+  "interactions": [
+    "example",
+    "cost",
+    "share round trip",
+    "copy",
+    "print",
+    "directory filter"
+  ],
+  "widths": [
+    320,
+    360,
+    375,
+    390,
+    414,
+    768,
+    1365
+  ]
+}

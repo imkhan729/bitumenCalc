@@ -1,0 +1,1183 @@
+/* ============================================================
+   3D / NEUMORPHIC / GLASSMORPHIC DESIGN SYSTEM (3d-neumorphic.css)
+   BitumenCalc tactile software UI layer
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Roboto+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Surface & Base */
+  --neo-bg: #F0F2F5;
+  --neo-bg-alt: #E8ECF2;
+  --neo-surface: #F0F2F5;
+  --neo-surface-glass: rgba(240, 242, 245, 0.75);
+  --neo-text: #1E293B;
+  --neo-text-muted: #64748B;
+  --neo-text-light: #94A3B8;
+
+  /* Neumorphic 3D Shadow Pairs */
+  --neo-shadow-raised: 8px 8px 18px rgba(163, 177, 198, 0.55), -8px -8px 18px rgba(255, 255, 255, 0.85);
+  --neo-shadow-raised-sm: 4px 4px 10px rgba(163, 177, 198, 0.45), -4px -4px 10px rgba(255, 255, 255, 0.8);
+  --neo-shadow-raised-lg: 12px 12px 28px rgba(163, 177, 198, 0.5), -12px -12px 28px rgba(255, 255, 255, 0.9);
+  
+  --neo-shadow-inset: inset 3px 3px 6px rgba(163, 177, 198, 0.45), inset -3px -3px 6px rgba(255, 255, 255, 0.8);
+  --neo-shadow-inset-deep: inset 0 2px 6px rgba(0, 0, 0, 0.16), inset 0 -1px 2px rgba(255, 255, 255, 0.4);
+
+  /* Accents: Construction Safety Orange & Trust Blue */
+  --neo-orange-start: #FF6A00;
+  --neo-orange-end: #D45500;
+  --neo-orange-grad: linear-gradient(180deg, #FF6A00 0%, #D45500 100%);
+  --neo-orange-shadow: 0 6px 14px rgba(212, 85, 0, 0.38), inset 0 1px 1px rgba(255, 255, 255, 0.35);
+
+  --neo-blue-start: #2E6BE6;
+  --neo-blue-end: #1E4FBF;
+  --neo-blue-grad: linear-gradient(180deg, #2E6BE6 0%, #1E4FBF 100%);
+  --neo-blue-shadow: 0 6px 14px rgba(30, 79, 191, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.35);
+
+  --neo-neutral-grad: linear-gradient(180deg, #FFFFFF 0%, #E2E8F0 100%);
+
+  /* Radii & Typography */
+  --neo-radius: 18px;
+  --neo-radius-sm: 12px;
+  --neo-radius-pill: 9999px;
+  --font-mono: 'JetBrains Mono', 'Roboto Mono', ui-monospace, monospace;
+}
+
+/* ============================================================
+   GLOBAL BODY & BASE OVERRIDES
+   ============================================================ */
+body {
+  background-color: var(--neo-bg) !important;
+  color: var(--neo-text) !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Digital Monospace Readout Class */
+.font-mono, 
+.result-card-value, 
+.hud-hero-value, 
+.hud-tile-value, 
+.param-huge-input, 
+.formula-code, 
+.formula-inline {
+  font-family: var(--font-mono) !important;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================================
+   1. 3D NEUMORPHIC CARDS & SECTIONS
+   ============================================================ */
+.bento-card,
+.calc-wrap,
+.card,
+.dir-card,
+.step-card,
+.feature-card,
+.resource-panel,
+.article-card,
+.table-tabs-wrap {
+  background: var(--neo-surface) !important;
+  border: 1px solid rgba(255, 255, 255, 0.7) !important;
+  border-radius: var(--neo-radius) !important;
+  box-shadow: var(--neo-shadow-raised) !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.bento-card:hover,
+.card:hover,
+.dir-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--neo-shadow-raised-lg) !important;
+}
+
+/* ============================================================
+   HERO & PAGE HERO (Pure White High-Contrast Typography)
+   ============================================================ */
+.hero {
+  background-image: url('/assets/hero-road.webp') !important;
+  background-size: cover !important;
+  background-position: center 40% !important;
+  background-color: #0b1628 !important;
+  border-bottom: none !important;
+  padding: 4.5rem 0 3.5rem !important;
+  min-height: 480px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.hero::after {
+  content: '' !important;
+  display: block !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: linear-gradient(180deg, rgba(11, 22, 40, 0.72) 0%, rgba(11, 22, 40, 0.82) 50%, rgba(11, 22, 40, 0.94) 100%) !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+
+.hero-content, .hero-inner, .page-hero-inner {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1, .page-hero h1, .hero-subtitle {
+  color: #FFFFFF !important;
+  font-size: clamp(2.3rem, 5vw, 3.8rem) !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.15 !important;
+  margin-bottom: 1rem !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7), 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+}
+
+.hero p, .hero-desc, .page-hero p {
+  color: #FFFFFF !important;
+  font-size: 1.15rem !important;
+  line-height: 1.65 !important;
+  max-width: 720px !important;
+  margin: 0 auto 2.25rem !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8) !important;
+  opacity: 0.95 !important;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.hero-badge,
+.hero-tag,
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(8px) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25), var(--neo-shadow-raised-sm) !important;
+  color: var(--neo-orange-start) !important;
+  font-weight: 700 !important;
+  font-size: 0.82rem !important;
+  padding: 0.4rem 1.1rem !important;
+  border-radius: var(--neo-radius-pill) !important;
+  margin-bottom: 1.25rem !important;
+}
+
+/* ============================================================
+   2. GLASSMORPHIC FLOATING NAVBAR (Pill shaped with frosted glass)
+   ============================================================ */
+.site-header,
+.island-nav-wrapper {
+  position: sticky;
+  top: 0.75rem;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 1rem;
+}
+
+.island-nav,
+.site-header .nav-inner {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1060px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.45rem 1.1rem;
+  background: rgba(240, 242, 245, 0.88) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.85) !important;
+  border-radius: var(--neo-radius-pill) !important;
+  box-shadow: 0 10px 30px rgba(163, 177, 198, 0.35), 0 1px 2px rgba(255, 255, 255, 0.8) !important;
+}
+
+.nav-logo, .island-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--neo-text) !important;
+  text-decoration: none;
+}
+
+.nav-logo-icon, .island-badge {
+  background: var(--neo-orange-grad) !important;
+  color: #fff !important;
+  font-weight: 800;
+  width: 28px;
+  height: 28px;
+  font-size: 0.85rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--neo-orange-shadow);
+}
+
+.nav-logo-text span {
+  color: var(--neo-orange-start);
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.desktop-nav > a, 
+.desktop-nav details > summary, 
+.island-link {
+  color: var(--neo-text-muted) !important;
+  font-weight: 600;
+  font-size: 0.82rem !important;
+  text-decoration: none;
+  padding: 0.35rem 0.65rem !important;
+  border-radius: var(--neo-radius-pill);
+  transition: all 0.2s;
+  letter-spacing: -0.01em;
+}
+
+.desktop-nav > a:hover, 
+.desktop-nav details > summary:hover, 
+.island-link:hover {
+  color: var(--neo-blue-start) !important;
+  box-shadow: var(--neo-shadow-inset);
+}
+
+/* 3D Dropdown Panel */
+.tool-menu-panel {
+  background: var(--neo-surface) !important;
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  border-radius: var(--neo-radius) !important;
+  box-shadow: var(--neo-shadow-raised-lg) !important;
+  top: 52px;
+}
+
+/* Mobile Toggle Hamburger */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  background: var(--neo-surface);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  box-shadow: var(--neo-shadow-raised-sm);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s ease;
+  z-index: 1002;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 20px;
+  height: 2.5px;
+  background: var(--neo-text);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-toggle:active {
+  box-shadow: var(--neo-shadow-inset);
+  transform: translateY(1px);
+}
+
+/* Mobile Frosted Glass Drawer */
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 1rem;
+  right: 1rem;
+  background: rgba(240, 242, 245, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: var(--neo-shadow-raised-lg), 0 20px 45px rgba(15, 23, 42, 0.18);
+  padding: 1.25rem;
+  flex-direction: column;
+  gap: 0.6rem;
+  z-index: 1001;
+}
+
+.mobile-menu.open {
+  display: flex !important;
+  animation: mobileMenuIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes mobileMenuIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.mobile-menu a {
+  display: flex;
+  align-items: center;
+  padding: 0.85rem 1.25rem;
+  min-height: 48px;
+  color: var(--neo-text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  background: var(--neo-surface);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow: var(--neo-shadow-raised-sm);
+  transition: all 0.15s ease;
+}
+
+.mobile-menu a:active {
+  box-shadow: var(--neo-shadow-inset);
+  color: var(--neo-orange-start);
+  transform: translateY(1px);
+}
+
+/* ============================================================
+   3. TACTILE HARDWARE BUTTONS (Orange primary / Blue secondary)
+   ============================================================ */
+/* Primary Safety Amber Tactile Button */
+.btn-primary,
+.calc-btn,
+.hud-primary-btn {
+  background: linear-gradient(135deg, #FF6A00 0%, #FF7D1A 45%, #E65100 100%) !important;
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+  font-size: 1rem !important;
+  letter-spacing: 0.01em !important;
+  border: none !important;
+  border-radius: var(--neo-radius-sm) !important;
+  padding: 0.85rem 1.85rem !important;
+  min-height: 50px !important;
+  box-shadow: 0 6px 18px rgba(230, 81, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.45), 0 4px 0 #9E3500 !important;
+  cursor: pointer;
+  transform: translateY(0);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-primary:hover,
+.calc-btn:hover,
+.hud-primary-btn:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 8px 24px rgba(230, 81, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.5), 0 4px 0 #9E3500 !important;
+}
+
+.btn-primary:active,
+.calc-btn:active,
+.hud-primary-btn:active {
+  transform: translateY(4px) !important;
+  box-shadow: 0 2px 6px rgba(230, 81, 0, 0.4), 0 0 0 #9E3500 !important;
+}
+
+/* Secondary Trust Blue Tactile Button */
+.btn-secondary,
+.btn-ghost,
+.btn-outline {
+  background: linear-gradient(135deg, #2E6BE6 0%, #3B82F6 45%, #1D4ED8 100%) !important;
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  font-size: 0.92rem !important;
+  border: none !important;
+  border-radius: var(--neo-radius-sm) !important;
+  padding: 0.85rem 1.6rem !important;
+  min-height: 48px !important;
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.35), 0 4px 0 #1E40AF !important;
+  cursor: pointer;
+  transform: translateY(0);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.btn-secondary:hover,
+.btn-ghost:hover,
+.btn-outline:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 7px 22px rgba(37, 99, 235, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 4px 0 #1E40AF !important;
+}
+
+.btn-secondary:active,
+.btn-ghost:active,
+.btn-outline:active {
+  transform: translateY(4px) !important;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.4), 0 0 0 #1E40AF !important;
+}
+
+/* Reset / Neutral Tactile Key */
+.reset-btn,
+.hud-reset-btn {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%) !important;
+  color: var(--neo-text-muted) !important;
+  font-weight: 700 !important;
+  font-size: 0.92rem !important;
+  border: 1px solid #CBD5E1 !important;
+  border-radius: var(--neo-radius-sm) !important;
+  padding: 0.85rem 1.5rem !important;
+  min-height: 50px !important;
+  box-shadow: 0 4px 10px rgba(163, 177, 198, 0.4), 0 3px 0 #CBD5E1 !important;
+  cursor: pointer;
+  transition: all 0.15s ease !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+.reset-btn:hover,
+.hud-reset-btn:hover {
+  color: #DC2626 !important;
+  border-color: #FCA5A5 !important;
+  background: #FEF2F2 !important;
+}
+
+.reset-btn:active,
+.hud-reset-btn:active {
+  transform: translateY(3px) !important;
+  box-shadow: var(--neo-shadow-inset) !important;
+}
+
+/* ============================================================
+   4. INSET INPUT TRAYS & SEGMENTED 3D CONTROLS
+   ============================================================ */
+/* Inset Hollowed-Out Input Fields */
+.param-zone,
+.field input,
+.calc-inputs input[type=number],
+.calc-inputs input[type=text],
+.directory-search {
+  background: var(--neo-surface) !important;
+  border: 1px solid rgba(203, 213, 225, 0.4) !important;
+  border-radius: var(--neo-radius-sm) !important;
+  box-shadow: var(--neo-shadow-inset) !important;
+  color: var(--neo-text) !important;
+  font-family: var(--font-mono) !important;
+  min-height: 48px;
+  padding: 0.6rem 1rem !important;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.param-zone:focus-within,
+.field input:focus,
+.calc-inputs input:focus {
+  outline: none !important;
+  border-color: var(--neo-blue-start) !important;
+  box-shadow: var(--neo-shadow-inset), 0 0 0 3px rgba(46, 107, 230, 0.2) !important;
+}
+
+/* 3D Segmented Control Switches (Tabs & Chips) */
+.calc-tabs,
+.table-tabs,
+.directory-chips,
+.spatial-chips-grid,
+.thickness-chips {
+  background: var(--neo-bg-alt) !important;
+  border-radius: var(--neo-radius-pill) !important;
+  box-shadow: var(--neo-shadow-inset) !important;
+  padding: 6px !important;
+  display: inline-flex !important;
+  gap: 6px !important;
+}
+
+.calc-tab,
+.table-tab,
+.directory-chip,
+.spatial-chip,
+.thickness-chip {
+  background: transparent !important;
+  border: none !important;
+  color: var(--neo-text-muted) !important;
+  font-weight: 600 !important;
+  font-size: 0.88rem !important;
+  padding: 0.55rem 1.25rem !important;
+  min-height: 44px !important;
+  border-radius: var(--neo-radius-pill) !important;
+  cursor: pointer;
+  transition: all 0.2s ease !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calc-tab.active,
+.table-tab.active,
+.directory-chip[aria-pressed=true],
+.spatial-chip.active,
+.thickness-chip.active {
+  background: var(--neo-surface) !important;
+  color: var(--neo-orange-start) !important;
+  box-shadow: var(--neo-shadow-raised-sm) !important;
+  font-weight: 700 !important;
+}
+
+/* Unit Selector Selects */
+.param-unit-select,
+.unit-select,
+.calc-inputs select {
+  background: var(--neo-surface) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  border-radius: var(--neo-radius-sm) !important;
+  box-shadow: var(--neo-shadow-raised-sm) !important;
+  color: var(--neo-blue-start) !important;
+  font-weight: 700 !important;
+  font-family: var(--font-mono) !important;
+  min-height: 44px;
+  padding: 0.4rem 1.75rem 0.4rem 0.85rem !important;
+  cursor: pointer;
+}
+
+/* ============================================================
+   5. RESULTS DASHBOARD & ENGRAVED GAUGES
+   ============================================================ */
+.calc-results,
+.hud-results-card {
+  background: var(--neo-surface) !important;
+  border-radius: var(--neo-radius) !important;
+  box-shadow: var(--neo-shadow-raised) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Primary Result Highlight Card (Raised + Orange Glow Bevel) */
+.result-card.highlighted,
+.hud-hero-metric {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFF7ED 100%) !important;
+  border-radius: var(--neo-radius) !important;
+  border: 2px solid var(--neo-orange-start) !important;
+  box-shadow: 0 10px 25px rgba(255, 106, 0, 0.15), var(--neo-shadow-raised) !important;
+  padding: 1.75rem !important;
+}
+
+.result-card.highlighted .result-card-value,
+.hud-hero-metric .hud-hero-value {
+  color: var(--neo-orange-start) !important;
+  font-size: clamp(2.5rem, 5vw, 4rem) !important;
+  font-weight: 800 !important;
+}
+
+/* Secondary 3D Result Tiles */
+.result-card:not(.highlighted),
+.hud-tile {
+  background: var(--neo-surface) !important;
+  border-radius: var(--neo-radius-sm) !important;
+  box-shadow: var(--neo-shadow-raised-sm) !important;
+  border: 1px solid rgba(255, 255, 255, 0.7) !important;
+  padding: 1.25rem !important;
+}
+
+.result-card-label, .hud-tile-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--neo-text-muted) !important;
+}
+
+.result-card-value, .hud-tile-value {
+  color: var(--neo-text) !important;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Inset Mix Composition Gauge */
+.breakdown-bar,
+.pavement-cross-section-panel {
+  background: var(--neo-bg-alt) !important;
+  border-radius: var(--neo-radius-sm) !important;
+  box-shadow: var(--neo-shadow-inset) !important;
+  padding: 1rem !important;
+}
+
+.breakdown-track,
+.cross-section-diagram {
+  height: 20px !important;
+  border-radius: var(--neo-radius-pill) !important;
+  background: #CBD5E1 !important;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.2) !important;
+  overflow: hidden;
+}
+
+.breakdown-fill-bitumen,
+.cs-binder-matrix {
+  background: var(--neo-orange-grad) !important;
+}
+
+.breakdown-fill-aggregate,
+.cs-aggregate-skeleton {
+  background: var(--neo-blue-grad) !important;
+}
+
+/* ============================================================
+   6. ENGRAVED FORMULA & METHODOLOGY SCREENS
+   ============================================================ */
+.formula-card,
+.formula-inline,
+.pavement-cross-section-panel {
+  background: #E2E8F0 !important;
+  border-radius: var(--neo-radius-sm) !important;
+  box-shadow: var(--neo-shadow-inset-deep) !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  color: var(--neo-text) !important;
+}
+
+.formula-code {
+  background: #CBD5E1 !important;
+  border-radius: 8px !important;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.15) !important;
+  color: #0F172A !important;
+  padding: 1rem !important;
+}
+
+/* ============================================================
+   7. 3D FAQ ACCORDION (Presses in when open)
+   ============================================================ */
+.question,
+.faq-item {
+  background: var(--neo-surface) !important;
+  border-radius: var(--neo-radius-sm) !important;
+  box-shadow: var(--neo-shadow-raised-sm) !important;
+  border: 1px solid rgba(255, 255, 255, 0.8) !important;
+  margin-bottom: 1rem !important;
+  transition: all 0.2s ease !important;
+  overflow: hidden;
+}
+
+.question summary,
+.faq-q {
+  padding: 1.25rem 1.5rem !important;
+  font-weight: 700 !important;
+  color: var(--neo-text) !important;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.question summary::-webkit-details-marker {
+  display: none;
+}
+
+.question summary::after {
+  content: '+';
+  color: var(--neo-blue-start);
+  font-size: 1.4rem;
+  font-weight: 800;
+  transition: transform 0.2s ease;
+}
+
+.question[open] {
+  box-shadow: var(--neo-shadow-inset) !important;
+  background: var(--neo-bg-alt) !important;
+}
+
+.question[open] summary::after {
+  transform: rotate(45deg);
+  color: var(--neo-orange-start);
+}
+
+.question-answer {
+  padding: 0 1.5rem 1.25rem !important;
+  color: var(--neo-text-muted) !important;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   8. HEAVY GROUNDED 3D SLAB FOOTER
+   ============================================================ */
+.site-footer {
+  background: linear-gradient(180deg, #1E293B 0%, #0F172A 100%) !important;
+  color: #F8FAFC !important;
+  border-top: 2px solid rgba(255, 255, 255, 0.15) !important;
+  box-shadow: inset 0 3px 8px rgba(255, 255, 255, 0.1) !important;
+  padding: 4.5rem 0 2rem !important;
+  margin-top: 5rem;
+}
+
+.site-footer a {
+  color: #94A3B8 !important;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.site-footer a:hover {
+  color: var(--neo-orange-start) !important;
+}
+
+.site-footer .footer-label {
+  color: #F8FAFC !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+}
+
+/* 3D Circular Back to Top Button */
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px !important;
+  height: 50px !important;
+  background: var(--neo-orange-grad) !important;
+  color: #FFFFFF !important;
+  border-radius: 50% !important;
+  box-shadow: var(--neo-orange-shadow), 0 4px 0 #A84400 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  z-index: 800;
+}
+
+.scroll-top:active {
+  transform: translateY(4px);
+  box-shadow: var(--neo-orange-shadow), 0 1px 0 #A84400 !important;
+}
+
+/* Breadcrumb in Calculator & Blog Templates */
+.breadcrumb {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--neo-bg-alt);
+  border-radius: var(--neo-radius-pill);
+  box-shadow: var(--neo-shadow-inset);
+  padding: 0.35rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--neo-text-muted);
+}
+
+/* ============================================================
+   9. LIVE INTERACTIVE FORMULA BAR (Engineering HUD)
+   ============================================================ */
+.formula-bar-wrap {
+  margin-bottom: 1.5rem;
+  background: var(--neo-bg-alt);
+  border: 1.5px solid rgba(255, 255, 255, 0.9);
+  border-radius: var(--neo-radius);
+  box-shadow: var(--neo-shadow-raised-sm);
+  padding: 1.25rem;
+  transition: all 0.2s ease;
+}
+
+.formula-bar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.formula-bar-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--neo-text-muted);
+}
+
+.formula-step-chips {
+  display: flex;
+  gap: 0.4rem;
+  overflow-x: auto;
+  padding-bottom: 3px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.formula-step-chips::-webkit-scrollbar {
+  display: none;
+}
+
+.formula-step-chip {
+  background: var(--neo-surface);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: var(--neo-radius-pill);
+  box-shadow: var(--neo-shadow-raised-sm);
+  color: var(--neo-text-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.4rem 0.85rem;
+  min-height: 36px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.formula-step-chip:hover {
+  color: var(--neo-blue-start);
+  transform: translateY(-1px);
+}
+
+.formula-step-chip.active {
+  background: linear-gradient(135deg, #2E6BE6 0%, #1D4ED8 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.35) !important;
+}
+
+.formula-screen-box {
+  background: #0B1628;
+  border-radius: 14px;
+  padding: 1.15rem 1.35rem;
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.5), 0 1px 2px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #F8FAFC;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.formula-eq-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #94A3B8;
+}
+
+.formula-eq-line .formula-var {
+  color: #38BDF8;
+  font-weight: 700;
+}
+
+.formula-eq-line .formula-op {
+  color: #F59E0B;
+  font-weight: 800;
+}
+
+.formula-eq-line .formula-res {
+  color: #34D399;
+  font-weight: 800;
+}
+
+.formula-live-sub {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: #E2E8F0;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.6rem 0.95rem;
+  border-radius: 9px;
+  border-left: 3.5px solid var(--neo-orange-start);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  word-break: break-word;
+  line-height: 1.5;
+}
+
+.formula-live-sub .sub-accent {
+  color: #FBBF24;
+  font-weight: 700;
+}
+
+.formula-live-sub .sub-res {
+  color: #4ADE80;
+  font-weight: 800;
+}
+
+/* ============================================================
+   10. ESTIMATE TOOLS & AUXILIARY CONTROLS
+   ============================================================ */
+.estimate-tools {
+  background: var(--neo-bg-alt) !important;
+  border-radius: var(--neo-radius-sm) !important;
+  padding: 0.85rem !important;
+  margin-bottom: 1.25rem !important;
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 0.5rem !important;
+  box-shadow: var(--neo-shadow-inset) !important;
+}
+
+.estimate-tools .tools-label {
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  color: var(--neo-text-muted) !important;
+  width: 100% !important;
+  margin-top: 0.25rem !important;
+}
+
+.estimate-tools .tools-label:first-child {
+  margin-top: 0 !important;
+}
+
+.estimate-tools button {
+  background: var(--neo-surface) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  border-radius: var(--neo-radius-pill) !important;
+  box-shadow: var(--neo-shadow-raised-sm) !important;
+  color: var(--neo-text-muted) !important;
+  font-weight: 600 !important;
+  font-size: 0.82rem !important;
+  padding: 0.45rem 1rem !important;
+  min-height: 42px !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+}
+
+.estimate-tools button:hover {
+  color: var(--neo-blue-start) !important;
+}
+
+.estimate-tools button[aria-pressed=true] {
+  background: var(--neo-blue-grad) !important;
+  color: #FFFFFF !important;
+  box-shadow: var(--neo-blue-shadow) !important;
+  font-weight: 700 !important;
+}
+
+/* Result Action Buttons (Copy, Share, Print) */
+.calc-actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 0.5rem !important;
+  margin-top: 1.25rem !important;
+}
+
+.calc-action {
+  background: var(--neo-surface) !important;
+  border: 1px solid rgba(255, 255, 255, 0.85) !important;
+  border-radius: var(--neo-radius-pill) !important;
+  box-shadow: var(--neo-shadow-raised-sm) !important;
+  color: var(--neo-text) !important;
+  font-weight: 600 !important;
+  font-size: 0.82rem !important;
+  padding: 0.5rem 1rem !important;
+  min-height: 44px !important;
+  cursor: pointer !important;
+  transition: all 0.15s ease !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calc-action:hover {
+  color: var(--neo-blue-start) !important;
+  transform: translateY(-1px);
+  box-shadow: var(--neo-shadow-raised) !important;
+}
+
+.calc-action:active {
+  transform: translateY(2px);
+  box-shadow: var(--neo-shadow-inset) !important;
+}
+
+/* Bottom sheet handle for mobile */
+.bottom-sheet-handle {
+  width: 100% !important;
+  background: var(--neo-surface) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.9) !important;
+  border-radius: var(--neo-radius-sm) !important;
+  box-shadow: var(--neo-shadow-raised-sm) !important;
+  padding: 0.85rem 1.15rem !important;
+  cursor: pointer !important;
+  text-align: left !important;
+  margin-bottom: 1rem !important;
+  transition: all 0.2s ease;
+}
+
+.bottom-sheet-handle:active {
+  box-shadow: var(--neo-shadow-inset) !important;
+}
+
+.bottom-sheet-peek {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.bottom-sheet-primary {
+  font-family: var(--font-mono) !important;
+  font-size: 1.4rem !important;
+  font-weight: 800 !important;
+  color: var(--neo-orange-start) !important;
+}
+
+.bottom-sheet-cta {
+  background: linear-gradient(135deg, #FF6A00 0%, #E65100 100%) !important;
+  color: #FFFFFF !important;
+  padding: 0.45rem 0.95rem !important;
+  border-radius: var(--neo-radius-pill) !important;
+  font-size: 0.8rem !important;
+  font-weight: 700 !important;
+  box-shadow: var(--neo-orange-shadow) !important;
+}
+
+/* ============================================================
+   11. RESPONSIVE & MOBILE USABILITY (< 900px, < 768px, < 480px)
+   ============================================================ */
+@media (max-width: 900px) {
+  .desktop-nav {
+    display: none !important;
+  }
+  
+  .nav-toggle {
+    display: flex !important;
+  }
+  
+  .island-nav,
+  .site-header .nav-inner {
+    padding: 0.45rem 0.85rem !important;
+  }
+  
+  .hero {
+    padding: 3.5rem 1rem 2.5rem !important;
+    min-height: 400px !important;
+  }
+  
+  .hero h1, .page-hero h1 {
+    font-size: 2.2rem !important;
+  }
+  
+  .hero p, .hero-desc, .page-hero p {
+    font-size: 1.05rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .calc-body {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    padding: 1rem !important;
+  }
+  
+  .calc-inputs {
+    padding: 0 !important;
+  }
+  
+  .calc-results {
+    padding: 1.25rem !important;
+  }
+  
+  .input-set > div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
+  
+  .calc-inputs input[type=text],
+  .calc-inputs input[type=number],
+  .calc-inputs select {
+    font-size: 16px !important; /* Prevents auto-zoom on iOS */
+    min-height: 50px !important;
+  }
+  
+  .calc-btn,
+  .reset-btn {
+    min-height: 50px !important;
+    font-size: 1rem !important;
+  }
+  
+  .thickness-chips {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    width: 100% !important;
+  }
+  
+  .thickness-chip {
+    flex: 1 1 calc(50% - 6px) !important;
+    min-width: 70px !important;
+    text-align: center !important;
+  }
+  
+  .formula-screen-box {
+    padding: 0.85rem 1rem !important;
+  }
+  
+  .formula-eq-line {
+    font-size: 0.85rem !important;
+  }
+  
+  .formula-live-sub {
+    font-size: 0.8rem !important;
+  }
+  
+  .bottom-sheet-handle {
+    display: block !important;
+  }
+  
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .ref-table th, 
+  .ref-table td {
+    padding: 0.75rem 0.6rem !important;
+    font-size: 0.82rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary {
+    width: 100% !important;
+  }
+  
+  .calc-tabs {
+    width: 100% !important;
+    display: flex !important;
+  }
+  
+  .calc-tab {
+    flex: 1 !important;
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.8rem !important;
+  }
+  
+  .result-card.highlighted .result-card-value {
+    font-size: 2.3rem !important;
+  }
+}

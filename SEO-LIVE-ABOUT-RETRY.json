@@ -1,0 +1,25 @@
+[
+  {
+    "status": 403,
+    "title": "Checking your browser before accessing. Just a moment...",
+    "h1": 1,
+    "schemas": 0,
+    "overflow": []
+  },
+  {
+    "status": 200,
+    "title": "About Bitumen Calculator — Who Runs It",
+    "h1": 1,
+    "schemas": 1,
+    "canonical": "https://www.bitumencalc.com/about-us/",
+    "overflow": []
+  },
+  {
+    "status": 200,
+    "title": "About Bitumen Calculator — Who Runs It",
+    "h1": 1,
+    "schemas": 1,
+    "canonical": "https://www.bitumencalc.com/about-us/",
+    "overflow": []
+  }
+]

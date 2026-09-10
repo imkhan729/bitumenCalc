@@ -1,0 +1,6 @@
+# Deploy mirrors — generated from root at release time, not edited directly
+/hostinger-public/
+/bitumencalc-hostinger-static/
+*.zip
+tmp/
+/*.png

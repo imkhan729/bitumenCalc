@@ -1,0 +1,18 @@
+{
+  "tests": [
+    "Application rate: all three modes",
+    "Measurement: area, length, weight, density",
+    "Removal: 12 tonnes",
+    "Repair: pothole, crack, area",
+    "Road: 86.4 tonnes",
+    "Roofing: 450 kg",
+    "Reverse thickness: 50 mm",
+    "All seven currency displays",
+    "All mix presets produce visible results",
+    "Mobile menu opens, Escape closes and restores focus",
+    "FAQ keyboard-native disclosure",
+    "Reference tabs: arrow key selection",
+    "Populated results at all eight breakpoints"
+  ],
+  "status": "PASS"
+}

@@ -179,18 +179,7 @@ h2 { font-size: clamp(1.55rem, 3vw, 2.25rem); letter-spacing: -.025em; }
 
 .site-footer { background: #172033; }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
-@media print {
-  .site-header, .mobile-menu, .hero, .trust-bar, .page-hero, .site-footer,
-  .scroll-top, .nav-cta, .calc-tabs, .calc-btn, .reset-btn, .calc-actions,
-  .ad-container, ins.adsbygoogle, .related-tools, .section-alt { display: none !important; }
-  body, .calc-section, .calc-wrap, .calc-inputs, .calc-results { background: #fff !important; color: #111827 !important; }
-  .calc-section { padding: 0 !important; }
-  .calc-wrap { box-shadow: none !important; border: 0 !important; }
-  .calc-body { display: grid !important; grid-template-columns: 1fr 1fr !important; }
-  .calc-inputs, .calc-results { padding: 1rem !important; border: 1px solid #cbd5e1 !important; }
-  .result-card, .breakdown-bar { break-inside: avoid; box-shadow: none !important; }
-  a[href]::after { content: " (" attr(href) ")"; font-size: .8em; color: #475569; }
-}
+
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: .01ms !important; } }
 @media (max-width: 768px) {
   .hero { padding: 2.25rem 0; }
