@@ -243,6 +243,8 @@
 
 
 
+
+
 <link rel="stylesheet" href="/css/site.css?v=20260909c">
 </head>
 
@@ -418,304 +420,566 @@
         <strong>Quick Answer:</strong> Asphalt quantity is calculated by multiplying paved surface area by compacted layer depth and mix density (typically <strong>2,300–2,400 kg/m³</strong> or <strong>145 lb/ft³</strong> for dense-graded hot mix asphalt). Liquid bitumen binder accounts for <strong>5.0% to 6.0%</strong> of the total mix weight, while mineral aggregate accounts for the remaining 94–95%. Enter your dimensions below to calculate exact compacted volume, total asphalt tonnage, binder takeoff, and material cost.
       </div>
 
-      <div class="calc-wrap" id="calcResults">
+            <div class="calc-exact-container has-results" id="calcResults">
         
-        <!-- Segmented Mode Tabs -->
-        <div class="calc-tabs-header">
-          <div class="calc-tabs">
-            <button class="calc-tab active" type="button">Standard Pavement</button>
-            <button class="calc-tab" type="button">With Cost Estimate</button>
+        <!-- TOP CONTROL & STATUS BAR -->
+        <div class="calc-top-bar">
+          <div class="calc-top-bar-left">
+            <div class="calc-mode-tabs" role="tablist" aria-label="Calculation Mode">
+              <button class="calc-mode-btn active" id="modeStandard" type="button" role="tab" aria-selected="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+                <span>Standard Tonnage</span>
+              </button>
+              <button class="calc-mode-btn" id="modeCost" type="button" role="tab" aria-selected="false">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+                <span>With Project Cost</span>
+              </button>
+            </div>
+
+            <label class="calc-cost-toggle-check" for="includeCostEstimate">
+              <input type="checkbox" id="includeCostEstimate" />
+              <div class="toggle-text-wrap">
+                <span class="toggle-title">Include Cost Estimate</span>
+                <span class="toggle-desc">Calculate material costs and total project cost</span>
+              </div>
+            </label>
           </div>
-          <div style="font-size:0.85rem; color:var(--muted-text); font-weight:500;">
-            Civil Engineering Calculation Engine v2.4
+
+          <div class="calc-engine-badge">
+            <span class="engine-dot"></span>
+            <span>Civil Engine v2.4 Active</span>
           </div>
         </div>
 
-        <!-- ── LIVE INTERACTIVE FORMULA BAR ────────── -->
-        <div class="formula-bar-container">
-          <div class="formula-bar-wrap" id="liveFormulaBar">
-            <div class="formula-bar-header">
-              <div class="formula-bar-title">
-                <svg fill="none" height="15" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="15"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-                <span>Active Mathematical Formula</span>
+        <!-- ACTIVE MATHEMATICAL FORMULA CARD -->
+        <div class="calc-formula-card">
+          <div class="calc-formula-card-header">
+            <div class="calc-tile-icon blue">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="2" width="16" height="20" rx="2"></rect>
+                <line x1="8" y1="6" x2="16" y2="6"></line>
+                <line x1="16" y1="14" x2="16" y2="14"></line>
+                <line x1="16" y1="18" x2="16" y2="18"></line>
+                <line x1="8" y1="10" x2="8" y2="10"></line>
+                <line x1="12" y1="10" x2="12" y2="10"></line>
+                <line x1="16" y1="10" x2="16" y2="10"></line>
+                <line x1="8" y1="14" x2="8" y2="14"></line>
+                <line x1="12" y1="14" x2="12" y2="14"></line>
+                <line x1="8" y1="18" x2="8" y2="18"></line>
+                <line x1="12" y1="18" x2="12" y2="18"></line>
+              </svg>
+            </div>
+            <div class="calc-formula-header-text">
+              <h2>Active Mathematical Formula</h2>
+              <p>The calculator uses the following formula to determine asphalt volume and material quantities.</p>
+            </div>
+          </div>
+
+          <div class="calc-formula-card-body">
+            <!-- Left: Formula Display Box -->
+            <div class="formula-display-cream" id="formulaDisplayBox">
+              <div class="eq-formula" id="formulaMainEq">
+                <span class="eq-target">Volume (m³)</span> <span class="eq-op">=</span> <span class="eq-var">Length</span> <span class="eq-op">×</span> <span class="eq-var">Width</span> <span class="eq-op">×</span> <span class="eq-var">Thickness</span>
               </div>
-              <div aria-label="Calculation steps" class="formula-step-chips" role="tablist">
-                <button class="formula-step-chip active" data-step="volume" type="button">1. Volume (m³)</button>
-                <button class="formula-step-chip" data-step="mass" type="button">2. Mix Mass (t)</button>
-                <button class="formula-step-chip" data-step="binder" type="button">3. Binder (t)</button>
-                <button class="formula-step-chip" data-step="aggregate" type="button">4. Aggregate (t)</button>
+              <div class="eq-example" id="formulaExampleLine">
+                <span class="eq-ex-lbl">Example:</span> <span id="formulaExCalc">100.0 m × 7.5 m × 0.050 m</span> <span class="eq-op">=</span> <span class="eq-res-green" id="formulaExResult">37.500 m³</span>
               </div>
             </div>
-            
-            <div class="formula-screen-box">
-              <div class="formula-eq-line" id="formulaEqLine">
-                <span class="formula-res">Volume (m³)</span> = <span class="formula-var">Length</span> <span class="formula-op">×</span> <span class="formula-var">Width</span> <span class="formula-op">×</span> <span class="formula-var">Thickness</span>
-              </div>
-              <div class="formula-live-sub" id="formulaLiveSub">
-                <span>Live Math:</span>
-                <span class="sub-accent" id="formulaSubDetails">(100.0 m × 7.5 m × 0.050 m)</span>
-                <span>=</span>
-                <span class="sub-res" id="formulaSubResult">37.500 m³</span>
-              </div>
+
+            <!-- Right: 4-Step Process Flow -->
+            <div class="calc-process-chain" role="tablist" aria-label="Calculation steps">
+              <button class="process-step-chip active" data-step="volume" type="button" role="tab" aria-selected="true">
+                <div class="process-step-top">
+                  <span class="process-step-badge">1</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                  </svg>
+                </div>
+                <div class="process-step-title">Volume (m³)</div>
+                <div class="process-step-sub">L × W × T</div>
+              </button>
+
+              <span class="process-step-arrow" aria-hidden="true">›</span>
+
+              <button class="process-step-chip" data-step="mass" type="button" role="tab" aria-selected="false">
+                <div class="process-step-top">
+                  <span class="process-step-badge">2</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 2v7.31L4.1 19.35A2 2 0 0 0 5.8 22h12.4a2 2 0 0 0 1.7-2.65L14 9.31V2"></path>
+                  </svg>
+                </div>
+                <div class="process-step-title">Mix Mass (t)</div>
+                <div class="process-step-sub">Volume × Density</div>
+              </button>
+
+              <span class="process-step-arrow" aria-hidden="true">›</span>
+
+              <button class="process-step-chip" data-step="binder" type="button" role="tab" aria-selected="false">
+                <div class="process-step-top">
+                  <span class="process-step-badge">3</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                  </svg>
+                </div>
+                <div class="process-step-title">Binder (t)</div>
+                <div class="process-step-sub">Mix Mass × %</div>
+              </button>
+
+              <span class="process-step-arrow" aria-hidden="true">›</span>
+
+              <button class="process-step-chip" data-step="aggregate" type="button" role="tab" aria-selected="false">
+                <div class="process-step-top">
+                  <span class="process-step-badge">4</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="7" r="3.5"></circle>
+                    <circle cx="7" cy="16" r="3.5"></circle>
+                    <circle cx="17" cy="16" r="3.5"></circle>
+                  </svg>
+                </div>
+                <div class="process-step-title">Aggregate (t)</div>
+                <div class="process-step-sub">Mix Mass − Binder</div>
+              </button>
             </div>
           </div>
         </div>
 
-        <!-- ── CALCULATOR BODY (55/45 PROPORTION) ────────── -->
-        <div class="calc-body">
+        <!-- MAIN 2-COLUMN SUITE: INPUTS (LEFT) & RESULTS HUD (RIGHT) -->
+        <div class="calc-two-col-layout">
           
-          <!-- ── LEFT: INPUTS FORM ────────────────────────── -->
-          <form class="calc-inputs" id="calcFormFull" onsubmit="return false;">
+          <!-- LEFT COLUMN: FORM INPUT CARDS -->
+          <form class="calc-inputs-column" id="calcForm" onsubmit="return false;">
             
-            <!-- Group 1: Project Dimensions -->
-            <div class="input-set">
-              <div class="input-set-title">
-                <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16"><rect height="18" rx="2" width="18" x="3" y="3"></rect><line x1="3" x2="21" y1="9" y2="9"></line><line x1="9" x2="9" y1="21" y2="9"></line></svg>
-                1. Project Dimensions
+            <!-- Card 1: Measurement System -->
+            <div class="calc-form-card">
+              <div class="calc-card-header">
+                <div class="calc-tile-icon blue">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21.3 15.3l-6.6 6.6c-.4.4-1 .4-1.4 0l-9.6-9.6a1 1 0 0 1 0-1.4l6.6-6.6c.4-.4 1-.4 1.4 0l9.6 9.6c.4.4.4 1 0 1.4z"></path>
+                    <path d="m7.5 10.5 2 2"></path>
+                    <path d="m10.5 7.5 2 2"></path>
+                    <path d="m13.5 4.5 2 2"></path>
+                    <path d="m4.5 13.5 2 2"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h2 class="calc-card-title">Measurement System</h2>
+                  <p class="calc-card-subtitle">Choose your preferred units for input and results.</p>
+                </div>
               </div>
 
-              <div class="field-grid-2">
-                <!-- Length -->
-                <div class="field">
-                  <label for="lengthFull">Pavement Length</label>
-                  <div class="input-row">
-                    <input autocomplete="off" id="lengthFull" inputmode="decimal" pattern="[0-9]*\.?[0-9]*" placeholder="e.g. 100" type="text"/>
-                    <select aria-label="Length Unit" class="unit-select" id="lengthUnitFull">
-                      <option selected="" value="m">m</option>
-                      <option value="km">km</option>
+              <div class="unit-toggle-segmented" role="group" aria-label="Measurement Units">
+                <button type="button" class="unit-toggle-btn active" id="toggleMetric">Metric (m, mm, t)</button>
+                <button type="button" class="unit-toggle-btn" id="toggleImperial">Imperial (ft, in, ton)</button>
+              </div>
+
+              <div class="presets-group">
+                <div class="presets-header">
+                  <span class="presets-title">Try example dimensions</span>
+                  <span class="presets-sub">Quickly load common project sizes.</span>
+                </div>
+                <div class="presets-row">
+                  <button type="button" class="preset-btn" id="presetDriveway">
+                    <span>🏠</span> <strong>Driveway</strong>
+                  </button>
+                  <button type="button" class="preset-btn" id="presetParking">
+                    <span>🅿️</span> <strong>Parking area</strong>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: 1. Project Dimensions -->
+            <div class="calc-form-card">
+              <div class="calc-card-header">
+                <div class="calc-tile-icon blue">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                    <path d="M3 9h18"></path>
+                    <path d="M9 21V9"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h2 class="calc-card-title">1. Project Dimensions</h2>
+                  <p class="calc-card-subtitle">Enter the dimensions of your pavement area.</p>
+                </div>
+              </div>
+
+              <!-- Length & Width Grid -->
+              <div class="field-grid-2col">
+                <div class="calc-field">
+                  <div class="calc-field-label-wrap">
+                    <label for="length" class="calc-field-label">Pavement Length</label>
+                    <span class="calc-field-sub">Total length of the paved area.</span>
+                  </div>
+                  <div class="calc-field-control-row">
+                    <input id="length" inputmode="decimal" min="0" placeholder="0" step="any" type="number" value="" class="input-measure" required aria-required="true" data-pdf-required="Length" />
+                    <select aria-label="Length unit" id="lengthUnit" class="select-unit">
+                      <option selected value="m">m</option>
                       <option value="ft">ft</option>
-                      <option value="yd">yd</option>
-                      <option value="mi">mi</option>
                     </select>
                   </div>
                 </div>
 
-                <!-- Width -->
-                <div class="field">
-                  <label for="widthFull">Pavement Width</label>
-                  <div class="input-row">
-                    <input autocomplete="off" id="widthFull" inputmode="decimal" pattern="[0-9]*\.?[0-9]*" placeholder="e.g. 7.5" type="text"/>
-                    <select aria-label="Width Unit" class="unit-select" id="widthUnitFull">
-                      <option selected="" value="m">m</option>
+                <div class="calc-field">
+                  <div class="calc-field-label-wrap">
+                    <label for="width" class="calc-field-label">Pavement Width</label>
+                    <span class="calc-field-sub">Total width of the paved area.</span>
+                  </div>
+                  <div class="calc-field-control-row">
+                    <input id="width" inputmode="decimal" min="0" placeholder="0" step="any" type="number" value="" class="input-measure" required aria-required="true" data-pdf-required="Width" />
+                    <select aria-label="Width unit" id="widthUnit" class="select-unit">
+                      <option selected value="m">m</option>
                       <option value="ft">ft</option>
-                      <option value="yd">yd</option>
                     </select>
                   </div>
                 </div>
               </div>
 
-              <!-- Thickness -->
-              <div class="field">
-                <label for="thicknessFull">Compacted Thickness</label>
-                <div class="input-row">
-                  <input autocomplete="off" id="thicknessFull" inputmode="decimal" pattern="[0-9]*\.?[0-9]*" placeholder="e.g. 50" type="text" value="50"/>
-                  <select aria-label="Thickness Unit" class="unit-select" id="thicknessUnitFull">
-                    <option selected="" value="mm">mm</option>
+              <!-- Compacted Thickness -->
+              <div class="calc-field" style="margin-top: 14px;">
+                <div class="calc-field-label-wrap">
+                  <label for="thickness" class="calc-field-label">Compacted Thickness (Depth)</label>
+                  <span class="calc-field-sub">Final compacted thickness of asphalt layer.</span>
+                </div>
+                <div class="calc-field-control-row">
+                  <input id="thickness" inputmode="decimal" min="0" placeholder="0" step="any" type="number" value="" class="input-measure" required aria-required="true" data-pdf-required="Compacted thickness" />
+                  <select aria-label="Thickness unit" id="thicknessUnit" class="select-unit">
+                    <option selected value="mm">mm</option>
                     <option value="cm">cm</option>
                     <option value="in">in</option>
-                    <option value="ft">ft</option>
                   </select>
                 </div>
+              </div>
 
-                <!-- Quick Thickness Chips -->
-                <div aria-label="Quick thickness presets" class="thickness-chips" role="group">
-                  <button class="thickness-chip" data-mm="30" type="button">30 mm</button>
-                  <button class="thickness-chip" data-mm="40" type="button">40 mm</button>
-                  <button class="thickness-chip active" data-mm="50" type="button">50 mm</button>
-                  <button class="thickness-chip" data-mm="75" type="button">75 mm</button>
-                </div>
-                <div class="field-hint">Wearing Course: 40–50 mm · Binder Course: 50–75 mm · Heavy / Structural: 75–100 mm</div>
+              <!-- Typical Ranges Callout -->
+              <div class="calc-ranges-box">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span><strong>Typical ranges:</strong> Wearing Course: 40–50 mm &nbsp;|&nbsp; Binder: 60–80 mm &nbsp;|&nbsp; Base: 100–150 mm</span>
               </div>
             </div>
 
-            <!-- Group 2: Mix Properties & Density -->
-            <div class="input-set">
-              <div class="input-set-title">
-                <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                2. Mix Properties &amp; Density
+            <!-- Card 3: 2. Mix Properties & Density -->
+            <div class="calc-form-card">
+              <div class="calc-card-header">
+                <div class="calc-tile-icon blue">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M10 2v7.31L4.1 19.35A2 2 0 0 0 5.8 22h12.4a2 2 0 0 0 1.7-2.65L14 9.31V2"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h2 class="calc-card-title">2. Mix Properties &amp; Density</h2>
+                  <p class="calc-card-subtitle">Select the asphalt mix type to automatically load typical properties.</p>
+                </div>
               </div>
 
-              <!-- Full-width Mix Specification -->
-              <div class="field">
-                <label for="mixTypeFull">Asphalt Mix Specification</label>
-                <select id="mixTypeFull">
-                  <option selected="" value="dense">Dense-Graded HMA (Standard Highway Pavement)</option>
-                  <option value="sma">SMA (Stone Mastic Asphalt - High Durability)</option>
-                  <option value="ogfc">OGFC (Open-Graded Friction Course - Porous)</option>
-                  <option value="porous">Porous Permeable Asphalt (Drainage Surface)</option>
-                  <option value="wma">Warm Mix Asphalt (Low Carbon WMA)</option>
-                  <option value="rap">RAP / Recycled Asphalt Pavement</option>
-                  <option value="custom">Custom Parameters</option>
+              <div class="calc-field">
+                <label for="mixType" class="calc-field-label">Asphalt Mix Specification</label>
+                <select id="mixType" class="calc-full-select">
+                  <option selected value="dense">Dense-Graded HMA (Standard Highway Pavement)</option>
+                  <option value="sma">Stone Mastic Asphalt (SMA) - Heavy Duty</option>
+                  <option value="ogfc">Open-Graded Friction Course (OGFC)</option>
+                  <option value="porous">Porous Asphalt - High Drainage</option>
+                  <option value="rap">RAP Recycled Mix (20-30% Reclaimed)</option>
+                  <option value="custom">Custom Mix Design</option>
                 </select>
-                <div class="field-hint">Selecting a preset automatically populates optimal binder % and compacted density.</div>
+                <span class="calc-field-sub" style="margin-top: 4px;">Preselects recommended binder % and laboratory compacted density based on industry standards.</span>
               </div>
 
-              <!-- 2 Equal Columns for Binder % and Density -->
-              <div class="field-grid-2">
-                <div class="field">
-                  <label for="bitumenContentFull">Binder % (by mass)</label>
-                  <input id="bitumenContentFull" inputmode="decimal" max="15" min="1" pattern="[0-9]*\.?[0-9]*" step="0.1" type="text" value="5.5"/>
-                  <div class="field-hint">Typical range: 4.5% – 6.5%</div>
+              <div class="field-grid-2col" style="margin-top: 14px;">
+                <div class="calc-field">
+                  <label for="bitumenContent" class="calc-field-label">Bitumen Content (%)</label>
+                  <input id="bitumenContent" inputmode="decimal" max="15" min="1" step="0.1" type="number" value="5.5" class="calc-clean-input" />
                 </div>
 
-                <div class="field">
-                  <label for="densityFull">Compacted Density</label>
-                  <div class="input-row">
-                    <input id="densityFull" inputmode="decimal" max="3000" min="1000" pattern="[0-9]*\.?[0-9]*" step="10" type="text" value="2300"/>
-                    <select aria-label="Density Unit" class="unit-select" id="densityUnitFull">
-                      <option selected="" value="kg/m3">kg/m³</option>
-                      <option value="lb/ft3">lb/ft³</option>
+                <div class="calc-field">
+                  <label for="density" class="calc-field-label">Compacted Density</label>
+                  <div class="calc-field-control-row">
+                    <input id="density" inputmode="decimal" max="3000" min="1000" step="10" type="number" value="2300" class="input-measure" />
+                    <select aria-label="Density unit" id="densityUnit" class="select-unit">
+                      <option selected value="kg/m3">kg/m³</option>
                       <option value="t/m3">t/m³</option>
+                      <option value="lb/ft3">lb/ft³</option>
                     </select>
                   </div>
-                  <div class="field-hint">Standard HMA: 2300–2400 kg/m³</div>
                 </div>
               </div>
             </div>
 
-            <!-- Group 3: Optional Cost Estimation -->
-            <div class="input-set cost-field-group">
-              <div class="input-set-title">
-                <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="16"><line x1="12" x2="12" y1="1" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
-                3. Material Cost Estimation (Optional)
+            <!-- Card 4: 3. Commercial Cost Estimation (Initially Hidden, Revealed on Cost Mode) -->
+            <div class="calc-form-card" id="costEstimationCard" style="display: none;">
+              <div class="calc-card-header">
+                <div class="calc-tile-icon green">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="1" x2="12" y2="23"></line>
+                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h2 class="calc-card-title">3. Commercial Cost Estimation</h2>
+                  <p class="calc-card-subtitle">Enter local material pricing and delivery budget.</p>
+                </div>
               </div>
 
-              <div class="field">
-                <label for="priceFull">Material Price per Tonne</label>
-                <div class="input-row">
-                  <input id="priceFull" inputmode="decimal" min="0" pattern="[0-9]*\.?[0-9]*" placeholder="0.00" type="text"/>
-                  <select aria-label="Currency" class="unit-select" id="currencyFull">
-                    <option selected="" value="USD">USD ($)</option>
-                    <option value="AUD">AUD (A$)</option>
-                    <option value="CAD">CAD (C$)</option>
-                    <option value="NZD">NZD (NZ$)</option>
-                    <option value="GBP">GBP (£)</option>
-                    <option value="EUR">EUR (€)</option>
-                    <option value="INR">INR (₹)</option>
+              <div class="field-grid-2col">
+                <div class="calc-field">
+                  <label for="price" class="calc-field-label">Asphalt Mixture Price</label>
+                  <div class="calc-field-control-row">
+                    <input id="price" inputmode="decimal" min="0" placeholder="0" step="any" type="number" value="" class="input-measure" />
+                    <select aria-label="Currency" id="currency" class="select-unit select-currency">
+                      <option selected value="USD">USD ($)</option>
+                      <option value="AUD">AUD (A$)</option>
+                      <option value="CAD">CAD (C$)</option>
+                      <option value="NZD">NZD (NZ$)</option>
+                      <option value="GBP">GBP (£)</option>
+                      <option value="EUR">EUR (€)</option>
+                      <option value="ZAR">ZAR (R)</option>
+                      <option value="INR">₹ (INR)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="calc-field">
+                  <label for="priceUnit" class="calc-field-label">Quote Unit</label>
+                  <select id="priceUnit" class="calc-full-select">
+                    <option selected value="tonne">Per metric tonne (1,000 kg)</option>
+                    <option value="short-ton">Per US short ton (2,000 lb)</option>
                   </select>
                 </div>
               </div>
             </div>
 
-            <!-- Buttons Row -->
-            <div class="calc-actions-row">
-              <button class="calc-btn" id="calcBtnFull" style="flex:1;" type="button">
+            <!-- Submit Actions Row -->
+            <div class="calc-submit-row">
+              <button class="calc-btn-primary" id="calcBtn" type="button">
                 <span>⚡ Calculate Material Takeoff</span>
               </button>
-              <button class="reset-btn" id="resetBtnFull" type="button">
+              <button class="calc-btn-reset" id="resetBtn" type="button">
                 ↺ Reset
               </button>
             </div>
 
           </form>
 
-          <!-- ── RIGHT: LIVE RESULTS PANEL ────────────────── -->
-          <div aria-live="polite" class="calc-results" id="calcResultsFull">
+          <!-- RIGHT COLUMN: RESULTS TELEMETRY HUD -->
+          <div aria-live="polite" class="results-hud-card">
             
-            <!-- Mobile Sticky Bottom Sheet Handle -->
-            <button aria-label="Toggle full results panel" class="bottom-sheet-handle" id="bottomSheetHandle" style="display:none;" type="button">
-              <div class="bottom-sheet-peek">
+            <!-- HUD Header -->
+            <div class="results-hud-top">
+              <div class="results-hud-top-left">
+                <div class="calc-tile-icon blue">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="20" x2="18" y2="10"></line>
+                    <line x1="12" y1="20" x2="12" y2="4"></line>
+                    <line x1="6" y1="20" x2="6" y2="14"></line>
+                  </svg>
+                </div>
                 <div>
-                  <div class="result-card-label">Estimated Asphalt Mix</div>
-                  <div class="bottom-sheet-primary" id="bottomSheetPrimary">—</div>
+                  <h3 class="results-hud-title">Estimation Results</h3>
+                  <p class="results-hud-subtitle">Calculated material quantities based on your inputs.</p>
                 </div>
-                <span class="bottom-sheet-cta">View Results</span>
               </div>
-            </button>
-
-            <div class="results-header">
-              <h3>Estimation Results</h3>
+              <div class="results-badge-calculated">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+                <span>Results calculated</span>
+              </div>
             </div>
 
-            <!-- Empty Placeholder -->
-            <div class="result-placeholder" id="results-empty-full">
-              <div class="result-placeholder-icon">
-                <svg fill="none" height="40" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="40"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
-              </div>
-              <p style="font-size:0.95rem; font-weight:600; color:var(--primary-ink); margin-bottom:4px;">Your estimate appears here</p>
-              <p style="font-size:0.85rem; color:var(--muted-text); margin:0;">
-                Enter project dimensions on the left to compute mix tonnage and binder takeoff.
-              </p>
-            </div>
-
-            <!-- Data Stream Results -->
-            <div id="results-data-full" style="display:none; flex-direction:column; gap:1.25rem;">
+            <!-- Results Data Container -->
+            <div id="results-data" class="results-data-stream">
               
-              <!-- Primary Highlight Card: Total Required Mix Weight -->
-              <div class="result-card highlighted">
-                <div class="result-card-label">Estimated Asphalt Quantity</div>
-                <div class="result-card-value font-mono" id="resWeightFull">—</div>
-                <div class="result-card-sub font-mono" id="resWeightSubFull"></div>
+              <!-- Hero Highlight Card: Estimated Asphalt (Mix Mass) -->
+              <div class="hud-hero-highlight">
+                <div class="hud-hero-left">
+                  <div class="hud-hero-icon-square">
+                    <svg width="34" height="34" viewBox="0 0 32 32" fill="none">
+                      <polygon points="16,4 23,15 9,15" fill="#92400E" opacity="0.95"/>
+                      <polygon points="8,17 14,27 2,27" fill="#B45309" opacity="0.9"/>
+                      <polygon points="24,17 30,27 18,27" fill="#B45309" opacity="0.9"/>
+                      <circle cx="16" cy="20" r="3.5" fill="#78350F"/>
+                      <circle cx="10" cy="24" r="2.5" fill="#78350F"/>
+                      <circle cx="22" cy="24" r="2.5" fill="#78350F"/>
+                    </svg>
+                  </div>
+                  <div class="hud-hero-label">Estimated Asphalt (Mix Mass)</div>
+                  <div class="hud-hero-val-row">
+                    <span class="hud-hero-number" id="resWeight">0.00</span>
+                    <span class="hud-hero-unit">t</span>
+                  </div>
+                  <div class="hud-hero-sub" id="resWeightSub">Total asphalt mixture required for this project.</div>
+                </div>
+
+                <!-- Watermark illustration right -->
+                <div class="hud-hero-watermark">
+                  <div class="watermark-stack">
+                    <div class="watermark-text">
+                      BUILD<br/>BETTER<br/>ROADS
+                    </div>
+                    <svg width="130" height="70" viewBox="0 0 140 75" fill="none">
+                      <polygon points="15,46 45,16 75,46" fill="#FDE68A" opacity="0.6"/>
+                      <polygon points="50,48 78,12 108,48" fill="#FDE68A" opacity="0.8"/>
+                      <path d="M12 52 L68 52 L64 34 L18 34 Z" fill="#FBBF24" opacity="0.85"/>
+                      <path d="M72 52 L100 52 L100 36 L88 36 L82 42 L72 42 Z" fill="#F59E0B" opacity="0.9"/>
+                      <circle cx="28" cy="56" r="6.5" fill="#D97706"/>
+                      <circle cx="48" cy="56" r="6.5" fill="#D97706"/>
+                      <circle cx="88" cy="56" r="6.5" fill="#D97706"/>
+                    </svg>
+                  </div>
+                </div>
               </div>
 
-              <!-- Secondary Telemetry Grid -->
-              <div class="result-grid-2x2">
-                <div class="result-card">
-                  <div class="result-card-label">Total Surface Area</div>
-                  <div class="result-card-value font-mono" id="resAreaFull">—</div>
+              <!-- 2x2 Bento Results Grid -->
+              <div class="hud-bento-grid">
+                <!-- Tile 1: Area -->
+                <div class="hud-bento-card">
+                  <div class="hud-bento-top">
+                    <div class="hud-bento-icon blue">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                        <line x1="3" y1="9" x2="21" y2="9"></line>
+                        <line x1="3" y1="15" x2="21" y2="15"></line>
+                        <line x1="9" y1="3" x2="9" y2="21"></line>
+                        <line x1="15" y1="3" x2="15" y2="21"></line>
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="hud-bento-title">Area</div>
+                      <div class="hud-bento-sub">Total surface area<br/>(Length × Width)</div>
+                    </div>
+                  </div>
+                  <div class="hud-bento-val" id="resArea">0.00 m²</div>
                 </div>
 
-                <div class="result-card">
-                  <div class="result-card-label">Compacted Volume</div>
-                  <div class="result-card-value font-mono" id="resVolumeFull">—</div>
+                <!-- Tile 2: Volume -->
+                <div class="hud-bento-card">
+                  <div class="hud-bento-top">
+                    <div class="hud-bento-icon green">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="hud-bento-title">Volume</div>
+                      <div class="hud-bento-sub">Pavement volume<br/>(L × W × T)</div>
+                    </div>
+                  </div>
+                  <div class="hud-bento-val" id="resVolume">0.000 m³</div>
                 </div>
 
-                <div class="result-card">
-                  <div class="result-card-label">Pure Bitumen Binder</div>
-                  <div class="result-card-value font-mono" id="resBitumenFull" style="color:#D97706;">—</div>
-                  <div class="result-card-sub font-mono" id="resBitumenSubFull"></div>
+                <!-- Tile 3: Binder (Bitumen) -->
+                <div class="hud-bento-card warm">
+                  <div class="hud-bento-top">
+                    <div class="hud-bento-icon amber">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="hud-bento-title">Binder (Bitumen)</div>
+                      <div class="hud-bento-sub" id="resBitumenSub">Typically 5–7% of mix mass<br/>(Assuming 5.5%)</div>
+                    </div>
+                  </div>
+                  <div class="hud-bento-val" id="resBitumen" style="color: #B45309;">0.00 t</div>
                 </div>
 
-                <div class="result-card">
-                  <div class="result-card-label">Crushed Aggregate</div>
-                  <div class="result-card-value font-mono" id="resAggregateFull" style="color:var(--primary-ink);">—</div>
-                  <div class="result-card-sub font-mono" id="resAggregateSubFull"></div>
+                <!-- Tile 4: Aggregate -->
+                <div class="hud-bento-card">
+                  <div class="hud-bento-top">
+                    <div class="hud-bento-icon slate">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="7" r="3.5"></circle>
+                        <circle cx="7" cy="16" r="3.5"></circle>
+                        <circle cx="17" cy="16" r="3.5"></circle>
+                      </svg>
+                    </div>
+                    <div>
+                      <div class="hud-bento-title">Aggregate</div>
+                      <div class="hud-bento-sub" id="resAggregateSub">Total aggregate (mix mass − binder)<br/>(Assuming 5.5% binder)</div>
+                    </div>
+                  </div>
+                  <div class="hud-bento-val" id="resAggregate">0.00 t</div>
                 </div>
               </div>
 
-              <!-- Mix Proportion Bar -->
-              <div class="breakdown-bar">
-                <div style="display:flex; justify-content:space-between; font-size:0.82rem; font-weight:700;">
-                  <span id="bitLegendPctFull" style="color:#D97706;">5.5% Bitumen Binder</span>
-                  <span id="aggLegendPctFull" style="color:var(--primary-ink);">94.5% Crushed Aggregate</span>
+              <!-- Commercial Cost Breakdown Card (Initially hidden in Standard mode) -->
+              <div class="hud-cost-panel" id="resCostCard" style="display: none;">
+                <div>
+                  <div class="hud-cost-label">Estimated Commercial Cost</div>
+                  <div class="hud-cost-amount font-mono" id="resCost">$0.00</div>
+                  <div class="hud-cost-sub" id="resCostDetail">Based on 0.00 tonnes @ $0.00 / tonne</div>
                 </div>
+                <div>
+                  <span class="hud-cost-badge">Material Only</span>
+                </div>
+              </div>
+
+              <!-- Mix Composition Visual Progress Bar (Initially hidden in Standard mode) -->
+              <div class="breakdown-bar" id="mixBreakdownWrap" style="display: none; margin-top: 14px;">
+                <div class="breakdown-bar-label">Mix Composition Breakdown</div>
                 <div class="breakdown-track">
-                  <div class="breakdown-fill-bitumen" id="bitPctBarFull" style="width:5.5%;"></div>
+                  <div class="breakdown-fill-bitumen" id="bitPctBar" style="width: 5.5%;"></div>
+                  <div class="breakdown-fill-aggregate"></div>
                 </div>
-              </div>
-
-              <!-- Estimated Cost Result Card -->
-              <div class="result-card highlighted" id="resCostCardFull" style="display:none; border-color:var(--brand-blue);">
-                <div class="result-card-label" style="color:var(--brand-blue);">Estimated Procurement Cost</div>
-                <div class="result-card-value font-mono" id="resCostFull" style="color:var(--brand-blue);">—</div>
-              </div>
-
-              <!-- Actions Row: Copy & Download PDF -->
-              <div class="hud-actions-row" style="display:flex; gap:10px; flex-wrap:wrap; margin-top:14px;">
-                <button type="button" class="btn-hud-secondary" id="btnCopySummary" style="flex:1; min-height:44px; display:inline-flex; align-items:center; justify-content:center; gap:8px;">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                  </svg>
-                  <span>Copy Summary</span>
-                </button>
-                <button type="button" class="btn-hud-dark" id="btnPrintEstimate" style="flex:1; min-height:44px; display:inline-flex; align-items:center; justify-content:center; gap:8px;">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                    <polyline points="7 10 12 15 17 10"></polyline>
-                    <line x1="12" y1="15" x2="12" y2="3"></line>
-                  </svg>
-                  <span>Download PDF Report</span>
-                </button>
+                <div class="breakdown-legend">
+                  <div class="legend-item"><div class="legend-dot orange"></div><span id="bitLegendPct">5.5% Bitumen Binder</span></div>
+                  <div class="legend-item"><div class="legend-dot blue"></div><span id="aggLegendPct">94.5% Mineral Aggregate</span></div>
+                </div>
               </div>
 
             </div>
 
-          </div><!-- /calc-results -->
+            <!-- Bottom Action Buttons Bar -->
+            <div class="hud-actions-row">
+              <button type="button" class="btn-hud-secondary" id="btnCopySummary">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+                <span>Copy Summary</span>
+              </button>
+              <button type="button" class="btn-hud-secondary" id="btnShareEstimate">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="18" cy="5" r="3"></circle>
+                  <circle cx="6" cy="12" r="3"></circle>
+                  <circle cx="18" cy="19" r="3"></circle>
+                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                </svg>
+                <span>Share Estimate</span>
+              </button>
+              <button type="button" class="btn-hud-dark" id="btnPrintEstimate">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                  <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                  <rect x="6" y="14" width="12" height="8"></rect>
+                </svg>
+                <span>Download PDF Report</span>
+              </button>
+            </div>
 
-        </div><!-- /calc-body -->
+          </div>
 
-      </div><!-- /calc-wrap -->
+        </div>
+
+      </div>
 
     </div>
   </section>
@@ -971,6 +1235,9 @@
   <!-- =========================================================
        REFERENCE TABLES (Mix, Density, Coverage)
        ========================================================= -->
+    <!-- =========================================================
+       REFERENCE TABLES (Mix, Density, Coverage)
+       ========================================================= -->
   <section class="section" id="reference-tables">
     <div class="container">
       <div class="section-header">
@@ -980,76 +1247,88 @@
       </div>
 
       <div class="table-tabs-wrap">
-        <div class="table-tabs">
-          <button class="table-tab active" data-tab="mix" type="button">Mix Types &amp; Binder %</button>
-          <button class="table-tab" data-tab="density" type="button">Compacted Density Reference</button>
-          <button class="table-tab" data-tab="coverage" type="button">Theoretical Coverage Rates</button>
+        <div class="table-tabs" role="tablist" aria-label="Reference Tables">
+          <button class="table-tab active" data-tab="mix" id="tab-mix" role="tab" aria-selected="true" aria-controls="panel-mix" type="button">Mix Types &amp; Binder %</button>
+          <button class="table-tab" data-tab="density" id="tab-density" role="tab" aria-selected="false" aria-controls="panel-density" type="button">Compacted Density Reference</button>
+          <button class="table-tab" data-tab="coverage" id="tab-coverage" role="tab" aria-selected="false" aria-controls="panel-coverage" type="button">Theoretical Coverage Rates</button>
         </div>
 
-        <!-- Panel 1: Mix Types -->
-        <div class="table-panel active" data-panel="mix">
-          <table class="ref-table">
-            <thead>
-              <tr>
-                <th scope="col">Mix Type</th>
-                <th scope="col">Bitumen Content (%)</th>
-                <th scope="col">Compacted Density (kg/m³)</th>
-                <th scope="col">Typical Highway Application</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Dense-Graded HMA</td><td class="highlight">5.0–6.5%</td><td>2,300–2,450</td><td>General wearing and binder course</td></tr>
-              <tr><td>SMA (Stone Mastic Asphalt)</td><td class="highlight">6.0–7.5%</td><td>2,250–2,380</td><td>Heavy arterial motorways &amp; intersections</td></tr>
-              <tr><td>OGFC (Open-Graded Friction)</td><td class="highlight">5.5–7.0%</td><td>1,900–2,150</td><td>Noise-reducing, water-dispersing surface</td></tr>
-              <tr><td>WMA (Warm Mix Asphalt)</td><td class="highlight">5.0–6.5%</td><td>2,280–2,400</td><td>Lower production temperature paving</td></tr>
-              <tr><td>Porous Permeable Asphalt</td><td class="highlight">4.0–5.5%</td><td>1,800–2,100</td><td>Permeable car parks &amp; sustainable drainage</td></tr>
-              <tr><td>RAP / Recycled Asphalt</td><td class="highlight">4.0–5.5%</td><td>2,200–2,350</td><td>Pavement overlay &amp; structural sub-base</td></tr>
-            </tbody>
-          </table>
-        </div>
+        <div class="table-card-container">
+          
+          <!-- Panel 1: Mix Types -->
+          <div class="table-panel active" id="panel-mix" role="tabpanel" aria-labelledby="tab-mix" data-panel="mix" style="display: block;">
+            <div class="table-responsive-wrapper">
+              <table class="ref-table">
+                <caption class="sr-only">Asphalt Mix Types, Binder Content and Compacted Densities</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Mix Type</th>
+                    <th scope="col">Bitumen Content (%)</th>
+                    <th scope="col">Compacted Density (kg/m³)</th>
+                    <th scope="col">Typical Highway Application</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>Dense-Graded HMA</strong></td><td><span class="badge-pill-amber">5.0–6.5%</span></td><td><span class="badge-pill-blue">2,300–2,450 kg/m³</span></td><td>General wearing and binder course</td></tr>
+                  <tr><td><strong>SMA (Stone Mastic Asphalt)</strong></td><td><span class="badge-pill-amber">6.0–7.5%</span></td><td><span class="badge-pill-blue">2,250–2,380 kg/m³</span></td><td>Heavy arterial motorways &amp; intersections</td></tr>
+                  <tr><td><strong>OGFC (Open-Graded Friction)</strong></td><td><span class="badge-pill-amber">5.5–7.0%</span></td><td><span class="badge-pill-blue">1,900–2,150 kg/m³</span></td><td>Noise-reducing, water-dispersing surface</td></tr>
+                  <tr><td><strong>WMA (Warm Mix Asphalt)</strong></td><td><span class="badge-pill-amber">5.0–6.5%</span></td><td><span class="badge-pill-blue">2,280–2,400 kg/m³</span></td><td>Lower production temperature paving</td></tr>
+                  <tr><td><strong>Porous Permeable Asphalt</strong></td><td><span class="badge-pill-amber">4.0–5.5%</span></td><td><span class="badge-pill-blue">1,800–2,100 kg/m³</span></td><td>Permeable car parks &amp; sustainable drainage</td></tr>
+                  <tr><td><strong>RAP / Recycled Asphalt</strong></td><td><span class="badge-pill-amber">4.0–5.5%</span></td><td><span class="badge-pill-blue">2,200–2,350 kg/m³</span></td><td>Pavement overlay &amp; structural sub-base</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
 
-        <!-- Panel 2: Density Reference -->
-        <div class="table-panel" data-panel="density">
-          <table class="ref-table">
-            <thead>
-              <tr>
-                <th scope="col">Material Designation</th>
-                <th scope="col">Density (kg/m³)</th>
-                <th scope="col">Density (t/m³)</th>
-                <th scope="col">Compaction State &amp; Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>Dense-Graded Asphalt (HMA)</td><td class="highlight">2,300–2,450</td><td>2.30–2.45</td><td>Fully compacted in-place (Marshall / Superpave)</td></tr>
-              <tr><td>Stone Mastic Asphalt (SMA)</td><td class="highlight">2,250–2,380</td><td>2.25–2.38</td><td>High stone-on-stone skeletal contact</td></tr>
-              <tr><td>Open-Graded Friction Course</td><td class="highlight">1,900–2,150</td><td>1.90–2.15</td><td>Air void content ~18–22%</td></tr>
-              <tr><td>Cold Mix Patching Asphalt</td><td class="highlight">2,100–2,300</td><td>2.10–2.30</td><td>Lower initial compaction for maintenance</td></tr>
-              <tr><td>Compacted Crushed Roadbase</td><td class="highlight">1,800–2,100</td><td>1.80–2.10</td><td>Unbound granular sub-base layer</td></tr>
-            </tbody>
-          </table>
-        </div>
+          <!-- Panel 2: Density Reference -->
+          <div class="table-panel" id="panel-density" role="tabpanel" aria-labelledby="tab-density" data-panel="density" style="display: none;">
+            <div class="table-responsive-wrapper">
+              <table class="ref-table">
+                <caption class="sr-only">Compacted Bitumen and Aggregate Density Benchmarks</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Material Designation</th>
+                    <th scope="col">Density (kg/m³)</th>
+                    <th scope="col">Density (t/m³)</th>
+                    <th scope="col">Compaction State &amp; Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>Dense-Graded Asphalt (HMA)</strong></td><td><span class="badge-pill-blue">2,300–2,450 kg/m³</span></td><td><span class="badge-pill-amber">2.30–2.45 t/m³</span></td><td>Fully compacted in-place (Marshall / Superpave)</td></tr>
+                  <tr><td><strong>Stone Mastic Asphalt (SMA)</strong></td><td><span class="badge-pill-blue">2,250–2,380 kg/m³</span></td><td><span class="badge-pill-amber">2.25–2.38 t/m³</span></td><td>High stone-on-stone skeletal contact</td></tr>
+                  <tr><td><strong>Open-Graded Friction Course</strong></td><td><span class="badge-pill-blue">1,900–2,150 kg/m³</span></td><td><span class="badge-pill-amber">1.90–2.15 t/m³</span></td><td>Air void content ~18–22%</td></tr>
+                  <tr><td><strong>Cold Mix Patching Asphalt</strong></td><td><span class="badge-pill-blue">2,100–2,300 kg/m³</span></td><td><span class="badge-pill-amber">2.10–2.30 t/m³</span></td><td>Lower initial compaction for maintenance</td></tr>
+                  <tr><td><strong>Compacted Crushed Roadbase</strong></td><td><span class="badge-pill-blue">1,800–2,100 kg/m³</span></td><td><span class="badge-pill-amber">1.80–2.10 t/m³</span></td><td>Unbound granular sub-base layer</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
 
-        <!-- Panel 3: Coverage Rates -->
-        <div class="table-panel" data-panel="coverage">
-          <table class="ref-table">
-            <thead>
-              <tr>
-                <th scope="col">Compacted Thickness</th>
-                <th scope="col">Yield Coverage (m²/tonne)</th>
-                <th scope="col">Tonnage per 100 m²</th>
-                <th scope="col">Recommended Layer Function</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>30 mm (1.2 in)</td><td class="highlight">14.5 m²/t</td><td>6.9 t</td><td>Ultra-thin preservation overlay</td></tr>
-              <tr><td>40 mm (1.6 in)</td><td class="highlight">10.9 m²/t</td><td>9.2 t</td><td>Residential street wearing course</td></tr>
-              <tr><td>50 mm (2.0 in)</td><td class="highlight">8.7 m²/t</td><td>11.5 t</td><td>Commercial wearing surface</td></tr>
-              <tr><td>75 mm (3.0 in)</td><td class="highlight">5.8 m²/t</td><td>17.3 t</td><td>Structural intermediate binder course</td></tr>
-              <tr><td>100 mm (4.0 in)</td><td class="highlight">4.3 m²/t</td><td>23.0 t</td><td>Heavy highway structural base course</td></tr>
-            </tbody>
-          </table>
-        </div>
+          <!-- Panel 3: Coverage Rates -->
+          <div class="table-panel" id="panel-coverage" role="tabpanel" aria-labelledby="tab-coverage" data-panel="coverage" style="display: none;">
+            <div class="table-responsive-wrapper">
+              <table class="ref-table">
+                <caption class="sr-only">Theoretical Asphalt Coverage Rates and Compacted Yield</caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Compacted Thickness</th>
+                    <th scope="col">Yield Coverage (m²/tonne)</th>
+                    <th scope="col">Tonnage per 100 m²</th>
+                    <th scope="col">Recommended Layer Function</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>30 mm (1.2 in)</strong></td><td><span class="badge-pill-green">14.5 m²/t</span></td><td><span class="badge-pill-blue">6.9 t</span></td><td>Ultra-thin preservation overlay</td></tr>
+                  <tr><td><strong>40 mm (1.6 in)</strong></td><td><span class="badge-pill-green">10.9 m²/t</span></td><td><span class="badge-pill-blue">9.2 t</span></td><td>Residential street wearing course</td></tr>
+                  <tr><td><strong>50 mm (2.0 in)</strong></td><td><span class="badge-pill-green">8.7 m²/t</span></td><td><span class="badge-pill-blue">11.5 t</span></td><td>Commercial wearing surface</td></tr>
+                  <tr><td><strong>75 mm (3.0 in)</strong></td><td><span class="badge-pill-green">5.8 m²/t</span></td><td><span class="badge-pill-blue">17.3 t</span></td><td>Structural intermediate binder course</td></tr>
+                  <tr><td><strong>100 mm (4.0 in)</strong></td><td><span class="badge-pill-green">4.3 m²/t</span></td><td><span class="badge-pill-blue">23.0 t</span></td><td>Heavy highway structural base course</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
 
+        </div>
       </div>
     </div>
   </section>
@@ -1337,180 +1616,477 @@
 </footer>
 
 <!-- Core Application Engine Scripts -->
+<!-- Toast Notification -->
+<div class="calc-toast-notification" id="calcToast"></div>
+
+<!-- Core Application Engine Scripts -->
 <script src="/js/app.min.js?v=10"></script>
 
 <!-- =========================================================
-     INTERACTIVE BRIDGE SCRIPT
+     STANDARDIZED HOMEPAGE CALCULATOR & TABLES CONTROLLER
      ========================================================= -->
 <script>
-(function(){
-  // Thickness quick-select chips
-  var thicknessInp = document.getElementById('thicknessFull');
-  var thicknessSel = document.getElementById('thicknessUnitFull');
-  var chips = document.querySelectorAll('.thickness-chip');
-  var conv = { mm: 1, cm: 10, m: 1000, in: 25.4, ft: 304.8 };
+(function() {
+  'use strict';
 
-  chips.forEach(function(chip){
-    chip.addEventListener('click', function(){
-      var mm = Number(chip.dataset.mm);
-      var factor = conv[thicknessSel.value] || 1;
-      thicknessInp.value = Number((mm / factor).toPrecision(10));
-      chips.forEach(function(c){ c.classList.remove('active'); });
-      chip.classList.add('active');
-      thicknessInp.dispatchEvent(new Event('input', { bubbles: true }));
-    });
-  });
-
-  // Calculate & Reset Actions
-  var calcBtn = document.getElementById('calcBtnFull');
-  if (calcBtn) {
-    calcBtn.addEventListener('click', function(){
-      if (window.BitCalc) window.BitCalc.run();
-      updateLiveFormula();
-      syncBottomSheet();
-    });
-  }
-
-  var resetBtn = document.getElementById('resetBtnFull');
-  if (resetBtn) {
-    resetBtn.addEventListener('click', function(){
-      document.getElementById('calcFormFull').reset();
-      chips.forEach(function(c){ c.classList.remove('active'); });
-      if (chips[2]) chips[2].classList.add('active'); // default 50mm
-      if (window.BitCalc) window.BitCalc.reset();
-      updateLiveFormula();
-      syncBottomSheet();
-    });
-  }
-
-  var btnCopy = document.getElementById('btnCopySummary');
-  if (btnCopy) {
-    btnCopy.addEventListener('click', function(){
-      var w = document.getElementById('resWeightFull') ? document.getElementById('resWeightFull').textContent.trim() : '—';
-      var a = document.getElementById('resAreaFull') ? document.getElementById('resAreaFull').textContent.trim() : '—';
-      var v = document.getElementById('resVolumeFull') ? document.getElementById('resVolumeFull').textContent.trim() : '—';
-      var b = document.getElementById('resBitumenFull') ? document.getElementById('resBitumenFull').textContent.trim() : '—';
-      var agg = document.getElementById('resAggregateFull') ? document.getElementById('resAggregateFull').textContent.trim() : '—';
-      var costEl = document.getElementById('resCostFull');
-      var costCard = document.getElementById('resCostCardFull');
-      var costText = (costCard && costCard.style.display !== 'none' && costEl) ? ('\n• Cost: ' + costEl.textContent.trim()) : '';
-      var text = 'Bitumen Takeoff Summary:\n' +
-        '• Asphalt Quantity: ' + w + '\n' +
-        '• Total Surface Area: ' + a + '\n' +
-        '• Compacted Volume: ' + v + '\n' +
-        '• Pure Bitumen: ' + b + '\n' +
-        '• Crushed Aggregate: ' + agg +
-        costText + '\n\nCalculated via https://www.bitumencalc.com/';
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(function(){
-          var span = btnCopy.querySelector('span');
-          if (span) {
-            var orig = span.textContent;
-            span.textContent = 'Copied!';
-            setTimeout(function(){ span.textContent = orig; }, 2000);
-          }
+  // 1. REFERENCE TABLES TAB CONTROLLER
+  function initReferenceTables() {
+    var wrap = document.querySelector('.table-tabs-wrap');
+    if (!wrap) return;
+    var tabs = wrap.querySelectorAll('.table-tab');
+    var panels = wrap.querySelectorAll('.table-panel');
+    
+    tabs.forEach(function(tab, i) {
+      tab.addEventListener('click', function(e) {
+        e.preventDefault();
+        tabs.forEach(function(t) {
+          t.classList.remove('active');
+          t.setAttribute('aria-selected', 'false');
         });
+        panels.forEach(function(p) {
+          p.classList.remove('active');
+          p.style.display = 'none';
+        });
+        
+        tab.classList.add('active');
+        tab.setAttribute('aria-selected', 'true');
+        var target = tab.getAttribute('data-tab');
+        var panel = wrap.querySelector('.table-panel[data-panel="' + target + '"]');
+        if (panel) {
+          panel.classList.add('active');
+          panel.style.display = 'block';
+        }
+      });
+      
+      tab.addEventListener('keydown', function(e) {
+        var nextIndex = null;
+        if (e.key === 'ArrowRight') nextIndex = (i + 1) % tabs.length;
+        else if (e.key === 'ArrowLeft') nextIndex = (i - 1 + tabs.length) % tabs.length;
+        if (nextIndex !== null) {
+          e.preventDefault();
+          tabs[nextIndex].click();
+          tabs[nextIndex].focus();
+        }
+      });
+    });
+  }
+
+  // 2. UNIFIED CALCULATOR ENGINE CONTROLLER
+  function initUnifiedCalculator() {
+    var isImperial = false;
+    var isCostMode = false;
+    var currentStep = 'volume';
+
+    var toM = { m: 1, ft: 0.3048 };
+    var toThickM = { mm: 0.001, cm: 0.01, in: 0.0254 };
+    var toDensityKg = { 'kg/m3': 1, 't/m3': 1000, 'lb/ft3': 16.018463 };
+    var currSyms = { USD: '
+, AUD: 'A
+, CAD: 'C
+, NZD: 'NZ
+, GBP: '£', EUR: '€', ZAR: 'R', INR: '₹' };
+
+    var mixSpecs = {
+      dense:  { name: 'Dense-Graded HMA',  bitumen: 5.5, density: 2300 },
+      sma:    { name: 'Stone Mastic Asphalt', bitumen: 6.5, density: 2350 },
+      ogfc:   { name: 'OGFC Porous Friction', bitumen: 6.0, density: 2050 },
+      porous: { name: 'Porous Asphalt Drainage', bitumen: 5.0, density: 2000 },
+      rap:    { name: 'RAP Recycled Asphalt', bitumen: 4.5, density: 2250 },
+      custom: { name: 'Custom Mix Design', bitumen: null, density: null }
+    };
+
+    // DOM Elements
+    var modeStandardBtn = document.getElementById('modeStandard');
+    var modeCostBtn = document.getElementById('modeCost');
+    var includeCostCheck = document.getElementById('includeCostEstimate');
+    var costCard = document.getElementById('costEstimationCard');
+    var resCostCard = document.getElementById('resCostCard');
+    var mixBreakdownWrap = document.getElementById('mixBreakdownWrap');
+
+    var toggleMetric = document.getElementById('toggleMetric');
+    var toggleImperial = document.getElementById('toggleImperial');
+    var presetDriveway = document.getElementById('presetDriveway');
+    var presetParking = document.getElementById('presetParking');
+
+    var lengthInput = document.getElementById('length');
+    var lengthUnit = document.getElementById('lengthUnit');
+    var widthInput = document.getElementById('width');
+    var widthUnit = document.getElementById('widthUnit');
+    var thicknessInput = document.getElementById('thickness');
+    var thicknessUnit = document.getElementById('thicknessUnit');
+
+    var mixTypeSelect = document.getElementById('mixType');
+    var bitumenInput = document.getElementById('bitumenContent');
+    var densityInput = document.getElementById('density');
+    var densityUnit = document.getElementById('densityUnit');
+
+    var priceInput = document.getElementById('price');
+    var currencySelect = document.getElementById('currency');
+    var priceUnit = document.getElementById('priceUnit');
+
+    var calcBtn = document.getElementById('calcBtn');
+    var resetBtn = document.getElementById('resetBtn');
+
+    // Telemetry display elements
+    var resWeight = document.getElementById('resWeight');
+    var resWeightSub = document.getElementById('resWeightSub');
+    var resArea = document.getElementById('resArea');
+    var resVolume = document.getElementById('resVolume');
+    var resBitumen = document.getElementById('resBitumen');
+    var resBitumenSub = document.getElementById('resBitumenSub');
+    var resAggregate = document.getElementById('resAggregate');
+    var resAggregateSub = document.getElementById('resAggregateSub');
+    var resCost = document.getElementById('resCost');
+    var resCostDetail = document.getElementById('resCostDetail');
+
+    var bitPctBar = document.getElementById('bitPctBar');
+    var bitLegendPct = document.getElementById('bitLegendPct');
+    var aggLegendPct = document.getElementById('aggLegendPct');
+
+    var formulaMainEq = document.getElementById('formulaMainEq');
+    var formulaExCalc = document.getElementById('formulaExCalc');
+    var formulaExResult = document.getElementById('formulaExResult');
+    var stepChips = document.querySelectorAll('.process-step-chip');
+
+    // Cost Mode Toggles
+    function setCostMode(active) {
+      isCostMode = active;
+      if (includeCostCheck) includeCostCheck.checked = active;
+      if (modeCostBtn && modeStandardBtn) {
+        modeCostBtn.classList.toggle('active', active);
+        modeCostBtn.setAttribute('aria-selected', active);
+        modeStandardBtn.classList.toggle('active', !active);
+        modeStandardBtn.setAttribute('aria-selected', !active);
+      }
+      if (costCard) costCard.style.display = active ? 'block' : 'none';
+      if (resCostCard) resCostCard.style.display = active ? 'block' : 'none';
+      if (mixBreakdownWrap) mixBreakdownWrap.style.display = active ? 'block' : 'none';
+      recalculate();
+    }
+
+    if (modeStandardBtn) modeStandardBtn.addEventListener('click', function() { setCostMode(false); });
+    if (modeCostBtn) modeCostBtn.addEventListener('click', function() { setCostMode(true); });
+    if (includeCostCheck) {
+      includeCostCheck.addEventListener('change', function() {
+        setCostMode(includeCostCheck.checked);
+      });
+    }
+
+    // Step Chips (Formula Bar)
+    stepChips.forEach(function(chip) {
+      chip.addEventListener('click', function() {
+        stepChips.forEach(function(c) {
+          c.classList.remove('active');
+          c.setAttribute('aria-selected', 'false');
+        });
+        chip.classList.add('active');
+        chip.setAttribute('aria-selected', 'true');
+        currentStep = chip.getAttribute('data-step') || 'volume';
+        updateFormulaBanner();
+      });
+    });
+
+    // Measurement Unit Toggles
+    function setUnitSystem(imperial) {
+      if (isImperial === imperial) return;
+      isImperial = imperial;
+
+      if (toggleMetric && toggleImperial) {
+        toggleMetric.classList.toggle('active', !imperial);
+        toggleImperial.classList.toggle('active', imperial);
+      }
+
+      if (imperial) {
+        if (lengthUnit) lengthUnit.value = 'ft';
+        if (widthUnit) widthUnit.value = 'ft';
+        if (thicknessUnit) thicknessUnit.value = 'in';
+        if (densityUnit) densityUnit.value = 'lb/ft3';
+        if (densityInput && densityInput.value === '2300') densityInput.value = '145';
+        if (priceUnit) priceUnit.value = 'short-ton';
+
+        if (lengthInput && lengthInput.value) {
+          lengthInput.value = (parseFloat(lengthInput.value) * 3.28084).toFixed(1);
+        }
+        if (widthInput && widthInput.value) {
+          widthInput.value = (parseFloat(widthInput.value) * 3.28084).toFixed(1);
+        }
+        if (thicknessInput && thicknessInput.value) {
+          thicknessInput.value = (parseFloat(thicknessInput.value) / 25.4).toFixed(1);
+        }
+      } else {
+        if (lengthUnit) lengthUnit.value = 'm';
+        if (widthUnit) widthUnit.value = 'm';
+        if (thicknessUnit) thicknessUnit.value = 'mm';
+        if (densityUnit) densityUnit.value = 'kg/m3';
+        if (densityInput && densityInput.value === '145') densityInput.value = '2300';
+        if (priceUnit) priceUnit.value = 'tonne';
+
+        if (lengthInput && lengthInput.value) {
+          lengthInput.value = (parseFloat(lengthInput.value) / 3.28084).toFixed(1);
+        }
+        if (widthInput && widthInput.value) {
+          widthInput.value = (parseFloat(widthInput.value) / 3.28084).toFixed(1);
+        }
+        if (thicknessInput && thicknessInput.value) {
+          thicknessInput.value = Math.round(parseFloat(thicknessInput.value) * 25.4);
+        }
+      }
+
+      recalculate();
+    }
+
+    if (toggleMetric) toggleMetric.addEventListener('click', function() { setUnitSystem(false); });
+    if (toggleImperial) toggleImperial.addEventListener('click', function() { setUnitSystem(true); });
+
+    // Presets
+    if (presetDriveway) {
+      presetDriveway.addEventListener('click', function() {
+        if (isImperial) {
+          if (lengthInput) lengthInput.value = 40;
+          if (widthInput) widthInput.value = 12;
+          if (thicknessInput) thicknessInput.value = 2;
+        } else {
+          if (lengthInput) lengthInput.value = 12;
+          if (widthInput) widthInput.value = 3.5;
+          if (thicknessInput) thicknessInput.value = 50;
+        }
+        recalculate();
+      });
+    }
+
+    if (presetParking) {
+      presetParking.addEventListener('click', function() {
+        if (isImperial) {
+          if (lengthInput) lengthInput.value = 100;
+          if (widthInput) widthInput.value = 65;
+          if (thicknessInput) thicknessInput.value = 3;
+        } else {
+          if (lengthInput) lengthInput.value = 30;
+          if (widthInput) widthInput.value = 20;
+          if (thicknessInput) thicknessInput.value = 75;
+        }
+        recalculate();
+      });
+    }
+
+    // Mix Type Presets
+    if (mixTypeSelect) {
+      mixTypeSelect.addEventListener('change', function() {
+        var spec = mixSpecs[mixTypeSelect.value];
+        if (spec && spec.bitumen !== null) {
+          if (bitumenInput) bitumenInput.value = spec.bitumen;
+          if (densityInput) {
+            var val = isImperial ? Math.round(spec.density / 16.0185) : spec.density;
+            densityInput.value = val;
+          }
+        }
+        recalculate();
+      });
+    }
+
+    function recalculate() {
+      var l = parseFloat(lengthInput ? lengthInput.value : 0) || 0;
+      var lu = lengthUnit ? lengthUnit.value : 'm';
+      var w = parseFloat(widthInput ? widthInput.value : 0) || 0;
+      var wu = widthUnit ? widthUnit.value : 'm';
+      var t = parseFloat(thicknessInput ? thicknessInput.value : 0) || 0;
+      var tu = thicknessUnit ? thicknessUnit.value : 'mm';
+      var dens = parseFloat(densityInput ? densityInput.value : 0) || (isImperial ? 145 : 2300);
+      var du = densityUnit ? densityUnit.value : 'kg/m3';
+      var bitPct = parseFloat(bitumenInput ? bitumenInput.value : 0) || 5.5;
+      var pr = parseFloat(priceInput ? priceInput.value : 0) || 0;
+      var curr = currencySelect ? currencySelect.value : 'USD';
+      var prU = priceUnit ? priceUnit.value : 'tonne';
+
+      var lM = l * (toM[lu] || 1);
+      var wM = w * (toM[wu] || 1);
+      var tM = t * (toThickM[tu] || 0.001);
+      var dKg = dens * (toDensityKg[du] || 1);
+
+      var area = lM * wM;
+      var vol = area * tM;
+      var massKg = vol * dKg;
+      var massT = massKg / 1000;
+      var bitT = massT * (bitPct / 100);
+      var aggT = massT - bitT;
+
+      if (resWeight) resWeight.textContent = massT.toFixed(2);
+      if (resWeightSub) {
+        var st = massT / 0.90718474;
+        resWeightSub.textContent = st.toFixed(2) + ' US short tons · ' + Math.round(massKg).toLocaleString() + ' kg';
+      }
+      if (resArea) resArea.textContent = isImperial ? (area * 10.7639).toFixed(2) + ' sq ft' : area.toFixed(2) + ' m²';
+      if (resVolume) resVolume.textContent = isImperial ? (vol * 1.30795).toFixed(3) + ' cu yd' : vol.toFixed(3) + ' m³';
+      if (resBitumen) resBitumen.textContent = bitT.toFixed(2) + ' t';
+      if (resBitumenSub) resBitumenSub.textContent = 'Typically 5–7% of mix mass (Assuming ' + bitPct.toFixed(1) + '%)';
+      if (resAggregate) resAggregate.textContent = aggT.toFixed(2) + ' t';
+      if (resAggregateSub) resAggregateSub.textContent = 'Total aggregate (mix mass − binder) (Assuming ' + bitPct.toFixed(1) + '% binder)';
+
+      var sym = currSyms[curr] || '
+;
+      var billableT = prU === 'short-ton' ? (massT / 0.90718474) : massT;
+      var totalCost = billableT * pr;
+
+      if (resCost) resCost.textContent = sym + totalCost.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      if (resCostDetail) {
+        resCostDetail.textContent = 'Based on ' + billableT.toFixed(2) + ' ' + (prU === 'short-ton' ? 'short tons' : 'tonnes') + ' @ ' + sym + pr.toFixed(2) + ' / ' + (prU === 'short-ton' ? 'ton' : 'tonne');
+      }
+
+      if (bitPctBar) bitPctBar.style.width = Math.min(100, Math.max(0, bitPct)) + '%';
+      if (bitLegendPct) bitLegendPct.textContent = bitPct.toFixed(1) + '% Bitumen Binder';
+      if (aggLegendPct) aggLegendPct.textContent = (100 - bitPct).toFixed(1) + '% Mineral Aggregate';
+
+      updateFormulaBanner();
+    }
+
+    function updateFormulaBanner() {
+      if (!formulaMainEq || !formulaExCalc || !formulaExResult) return;
+      var l = parseFloat(lengthInput ? lengthInput.value : 0) || (isImperial ? 328 : 100);
+      var lu = lengthUnit ? lengthUnit.value : (isImperial ? 'ft' : 'm');
+      var w = parseFloat(widthInput ? widthInput.value : 0) || (isImperial ? 25 : 7.5);
+      var wu = widthUnit ? widthUnit.value : (isImperial ? 'ft' : 'm');
+      var t = parseFloat(thicknessInput ? thicknessInput.value : 0) || (isImperial ? 2 : 50);
+      var tu = thicknessUnit ? thicknessUnit.value : (isImperial ? 'in' : 'mm');
+      var dens = parseFloat(densityInput ? densityInput.value : 0) || (isImperial ? 145 : 2300);
+      var du = densityUnit ? densityUnit.value : (isImperial ? 'lb/ft3' : 'kg/m3');
+      var bitPct = parseFloat(bitumenInput ? bitumenInput.value : 0) || 5.5;
+
+      var lM = l * (toM[lu] || 1);
+      var wM = w * (toM[wu] || 1);
+      var tM = t * (toThickM[tu] || 0.001);
+      var dKg = dens * (toDensityKg[du] || 1);
+
+      var vol = lM * wM * tM;
+      var massT = (vol * dKg) / 1000;
+      var bitT = massT * (bitPct / 100);
+      var aggT = massT - bitT;
+
+      if (currentStep === 'volume') {
+        formulaMainEq.innerHTML = '<span class="eq-target">Volume (m³)</span> <span class="eq-op">=</span> <span class="eq-var">Length</span> <span class="eq-op">×</span> <span class="eq-var">Width</span> <span class="eq-op">×</span> <span class="eq-var">Thickness</span>';
+        formulaExCalc.textContent = lM.toFixed(1) + ' m × ' + wM.toFixed(1) + ' m × ' + tM.toFixed(3) + ' m';
+        formulaExResult.textContent = vol.toFixed(3) + ' m³';
+      } else if (currentStep === 'mass') {
+        formulaMainEq.innerHTML = '<span class="eq-target">Mix Mass (t)</span> <span class="eq-op">=</span> [ <span class="eq-var">Volume (m³)</span> <span class="eq-op">×</span> <span class="eq-var">Density (kg/m³)</span> ] <span class="eq-op">÷</span> 1,000';
+        formulaExCalc.textContent = '[ ' + vol.toFixed(3) + ' m³ × ' + Math.round(dKg) + ' kg/m³ ] ÷ 1,000';
+        formulaExResult.textContent = massT.toFixed(3) + ' t';
+      } else if (currentStep === 'binder') {
+        formulaMainEq.innerHTML = '<span class="eq-target">Binder Mass (t)</span> <span class="eq-op">=</span> <span class="eq-var">Mix Mass (t)</span> <span class="eq-op">×</span> [ <span class="eq-var">Binder %</span> <span class="eq-op">÷</span> 100 ]';
+        formulaExCalc.textContent = massT.toFixed(3) + ' t × (' + bitPct.toFixed(1) + '% ÷ 100)';
+        formulaExResult.textContent = bitT.toFixed(3) + ' t (' + Math.round(bitT * 1000) + ' kg)';
+      } else if (currentStep === 'aggregate') {
+        formulaMainEq.innerHTML = '<span class="eq-target">Aggregate Mass (t)</span> <span class="eq-op">=</span> <span class="eq-var">Mix Mass (t)</span> <span class="eq-op">−</span> <span class="eq-var">Binder Mass (t)</span>';
+        formulaExCalc.textContent = massT.toFixed(3) + ' t − ' + bitT.toFixed(3) + ' t';
+        formulaExResult.textContent = aggT.toFixed(3) + ' t';
+      }
+    }
+
+    [lengthInput, widthInput, thicknessInput, densityInput, bitumenInput, priceInput].forEach(function(inp) {
+      if (inp) {
+        inp.addEventListener('input', recalculate);
+        inp.addEventListener('change', recalculate);
       }
     });
-  }
 
-  // ── LIVE FORMULA BAR SYNCHRONIZATION ────────────────────────
-  var activeStep = 'volume';
-  var stepChips = document.querySelectorAll('.formula-step-chip');
-  var eqLine = document.getElementById('formulaEqLine');
-  var subDetails = document.getElementById('formulaSubDetails');
-  var subResult = document.getElementById('formulaSubResult');
-
-  stepChips.forEach(function(chip){
-    chip.addEventListener('click', function(){
-      stepChips.forEach(function(c){ c.classList.remove('active'); });
-      chip.classList.add('active');
-      activeStep = chip.dataset.step || 'volume';
-      updateLiveFormula();
+    [lengthUnit, widthUnit, thicknessUnit, densityUnit, currencySelect, priceUnit].forEach(function(sel) {
+      if (sel) sel.addEventListener('change', recalculate);
     });
-  });
 
-  var toM_len = { m: 1, ft: 0.3048, km: 1000, yd: 0.9144, mi: 1609.344 };
-  var toM_wid = { m: 1, ft: 0.3048, yd: 0.9144 };
-  var toM_thk = { mm: 0.001, cm: 0.01, m: 1, in: 0.0254, ft: 0.3048 };
-  var toD_dens = { 'kg/m3': 1, 'lb/ft3': 16.0185, 't/m3': 1000 };
-
-  function updateLiveFormula() {
-    if (!eqLine || !subDetails || !subResult) return;
-
-    var l = parseFloat(document.getElementById('lengthFull')?.value) || 100;
-    var lu = document.getElementById('lengthUnitFull')?.value || 'm';
-    var w = parseFloat(document.getElementById('widthFull')?.value) || 7.5;
-    var wu = document.getElementById('widthUnitFull')?.value || 'm';
-    var t = parseFloat(document.getElementById('thicknessFull')?.value) || 50;
-    var tu = document.getElementById('thicknessUnitFull')?.value || 'mm';
-    var d = parseFloat(document.getElementById('densityFull')?.value) || 2300;
-    var du = document.getElementById('densityUnitFull')?.value || 'kg/m3';
-    var b = parseFloat(document.getElementById('bitumenContentFull')?.value) || 5.5;
-
-    var lM = l * (toM_len[lu] || 1);
-    var wM = w * (toM_wid[wu] || 1);
-    var tM = t * (toM_thk[tu] || 0.001);
-    var dKg = d * (toD_dens[du] || 1);
-
-    var vol = lM * wM * tM;
-    var massT = (vol * dKg) / 1000;
-    var bitT = massT * (b / 100);
-    var aggT = massT - bitT;
-
-    if (activeStep === 'volume') {
-      eqLine.innerHTML = '<span class="formula-res">Volume (m³)</span> = <span class="formula-var">Length</span> <span class="formula-op">×</span> <span class="formula-var">Width</span> <span class="formula-op">×</span> <span class="formula-var">Thickness</span>';
-      subDetails.textContent = '(' + lM.toFixed(1) + ' m × ' + wM.toFixed(1) + ' m × ' + tM.toFixed(3) + ' m)';
-      subResult.textContent = vol.toFixed(3) + ' m³';
-    } else if (activeStep === 'mass') {
-      eqLine.innerHTML = '<span class="formula-res">Mix Mass (t)</span> = [ <span class="formula-var">Volume (m³)</span> <span class="formula-op">×</span> <span class="formula-var">Density (kg/m³)</span> ] <span class="formula-op">÷</span> 1,000';
-      subDetails.textContent = '[ ' + vol.toFixed(3) + ' m³ × ' + Math.round(dKg) + ' kg/m³ ] ÷ 1,000';
-      subResult.textContent = massT.toFixed(3) + ' t';
-    } else if (activeStep === 'binder') {
-      eqLine.innerHTML = '<span class="formula-res">Binder Mass (t)</span> = <span class="formula-var">Mix Mass (t)</span> <span class="formula-op">×</span> [ <span class="formula-var">Binder %</span> <span class="formula-op">÷</span> 100 ]';
-      subDetails.textContent = massT.toFixed(3) + ' t × (' + b.toFixed(1) + '% ÷ 100)';
-      subResult.textContent = bitT.toFixed(3) + ' t (' + Math.round(bitT * 1000) + ' kg)';
-    } else if (activeStep === 'aggregate') {
-      eqLine.innerHTML = '<span class="formula-res">Aggregate Mass (t)</span> = <span class="formula-var">Mix Mass (t)</span> <span class="formula-op">−</span> <span class="formula-var">Binder Mass (t)</span>';
-      subDetails.textContent = massT.toFixed(3) + ' t − ' + bitT.toFixed(3) + ' t';
-      subResult.textContent = aggT.toFixed(3) + ' t (' + Math.round(aggT * 1000) + ' kg)';
+    if (calcBtn) calcBtn.addEventListener('click', recalculate);
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function() {
+        if (lengthInput) lengthInput.value = '';
+        if (widthInput) widthInput.value = '';
+        if (thicknessInput) thicknessInput.value = '';
+        if (priceInput) priceInput.value = '';
+        if (mixTypeSelect) mixTypeSelect.value = 'dense';
+        if (bitumenInput) bitumenInput.value = '5.5';
+        if (densityInput) densityInput.value = '2300';
+        recalculate();
+      });
     }
-  }
 
-  function syncBottomSheet() {
-    var primary = document.getElementById('bottomSheetPrimary');
-    var resW = document.getElementById('resWeightFull');
-    if (primary && resW && resW.textContent.trim() !== '—') {
-      primary.textContent = resW.textContent.trim();
+    var toastEl = document.getElementById('calcToast');
+    function showToast(msg) {
+      if (!toastEl) return;
+      toastEl.textContent = msg;
+      toastEl.classList.add('visible');
+      setTimeout(function() { toastEl.classList.remove('visible'); }, 2500);
     }
+
+    var btnCopy = document.getElementById('btnCopySummary');
+    if (btnCopy) {
+      btnCopy.addEventListener('click', function() {
+        var summary = 'Asphalt Estimate Summary:
+' +
+          '• Total Mix Weight: ' + (resWeight ? resWeight.textContent : '0') + ' tonnes
+' +
+          '• Surface Area: ' + (resArea ? resArea.textContent : '0') + '
+' +
+          '• Compacted Volume: ' + (resVolume ? resVolume.textContent : '0') + '
+' +
+          '• Binder Takeoff: ' + (resBitumen ? resBitumen.textContent : '0') + '
+' +
+          '• Aggregate: ' + (resAggregate ? resAggregate.textContent : '0');
+        if (isCostMode && resCost) {
+          summary += '\n• Estimated Material Cost: ' + resCost.textContent;
+        }
+        summary += '\nCalculated via BitumenCalc (bitumencalc.com)';
+        navigator.clipboard.writeText(summary).then(function() {
+          showToast('Estimate summary copied to clipboard!');
+        }).catch(function() {
+          showToast('Summary copied!');
+        });
+      });
+    }
+
+    var btnShare = document.getElementById('btnShareEstimate');
+    if (btnShare) {
+      btnShare.addEventListener('click', function() {
+        if (navigator.share) {
+          navigator.share({
+            title: 'Asphalt Estimate - BitumenCalc',
+            text: 'Check out this asphalt takeoff: ' + (resWeight ? resWeight.textContent : '0') + ' tonnes',
+            url: window.location.href
+          }).catch(function(){});
+        } else {
+          navigator.clipboard.writeText(window.location.href).then(function() {
+            showToast('Page link copied to clipboard!');
+          });
+        }
+      });
+    }
+
+    var btnPrint = document.getElementById('btnPrintEstimate');
+    if (btnPrint) {
+      btnPrint.addEventListener('click', function(e) {
+        e.preventDefault();
+        if (typeof window.downloadPdfReport === 'function') {
+          window.downloadPdfReport();
+        } else {
+          window.print();
+        }
+      });
+    }
+
+    // Connect with window.BitCalc
+    if (window.BitCalc) {
+      window.BitCalc.setDefaults({ bitumenContent: 5.5, density: 2300, currency: 'USD' });
+    }
+
+    // Initial zero state calculation
+    recalculate();
   }
 
-  // Mobile Bottom Sheet Click
-  var bottomSheet = document.getElementById('bottomSheetHandle');
-  if (bottomSheet) {
-    bottomSheet.addEventListener('click', function(){
-      var resultsEl = document.getElementById('calcResultsFull');
-      if (resultsEl) resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      initReferenceTables();
+      initUnifiedCalculator();
     });
+  } else {
+    initReferenceTables();
+    initUnifiedCalculator();
   }
-
-  // Listen to input changes on form
-  var form = document.getElementById('calcFormFull');
-  if (form) {
-    form.addEventListener('input', function(){
-      updateLiveFormula();
-      setTimeout(syncBottomSheet, 250);
-    });
-    form.addEventListener('change', function(){
-      updateLiveFormula();
-      setTimeout(syncBottomSheet, 250);
-    });
-  }
-
-  // Initial calculation preview
-  updateLiveFormula();
 })();
 </script>
-
 </body>
 </html>
