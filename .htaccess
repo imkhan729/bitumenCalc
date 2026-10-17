@@ -8,6 +8,11 @@ Options +FollowSymLinks
 
 RewriteEngine On
 
+# ── 0. Mediavine Journey: ads.txt served from Mediavine's servers ──
+# Recommended by Mediavine: 301 redirect to their hosted file so their
+# partner list stays current without touching this repo again.
+RewriteRule ^ads\.txt$ https://adstxt.journeymv.com/sites/c5b39b48-6a5a-4003-a3a6-173ec79a19ae/ads.txt [R=301,L]
+
 # SEO recovery legacy blog redirects: exact article equivalents.
 RewriteRule ^blog/how-to-calculate-quantity-of-bitumen-for-road/?$ https://www.bitumencalc.com/blog/how-to-calculate-bitumen-quantity-for-road/ [R=301,L]
 RewriteRule ^blog/modified-bitumen-roof-calculator/?$ https://www.bitumencalc.com/blog/modified-bitumen-roofing-calculator/ [R=301,L]
