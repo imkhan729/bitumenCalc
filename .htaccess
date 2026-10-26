@@ -79,6 +79,11 @@ RedirectMatch 301 ^/asphalt-thickness-calculator/?$ /calculators/asphalt-thickne
 RedirectMatch 301 ^/asphalt-tonnage-calculator/?$   /calculators/asphalt-tonnage-calculator/
 RedirectMatch 301 ^/tack-coat-calculator/?$         /calculators/tack-coat-calculator/
 RedirectMatch 301 ^/road-construction-calculator/?$ /calculators/road-asphalt-calculator/
+# GSC 404 (last crawled 2026-10-13): this calculator never existed; the
+# chip-seal guide used to link to it. Its CTAs were already retargeted to
+# the tack-coat calculator, which has a Spray Rate input, so redirect here
+# rather than to the guide.
+RedirectMatch 301 ^/calculators/bitumen-spray-rate-calculator/?$ /calculators/tack-coat-calculator/
 
 RedirectMatch 301 ^/cost-calculator/?$  /calculators/asphalt-cost-calculator/
 RedirectMatch 301 ^/material/?$         /calculators/asphalt-material-calculator/
