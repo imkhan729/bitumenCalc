@@ -30,10 +30,26 @@ RewriteRule ^(.*)$ https://www.bitumencalc.com/$1 [L,R=301]
 RewriteCond %{THE_REQUEST} \s/+index(?:\.html)?(?:[?\s]) [NC]
 RewriteRule ^index(?:\.html)?$ https://www.bitumencalc.com/ [R=301,L]
 
+# ── 2b. Sub-directory index aliases (duplicate-page fix, 2026-10-26) ──
+# Without this, /about-us/index.html 301s (via the generic .html rule below)
+# to /about-us/index, which then serves the same page with a 200 — a
+# duplicate of the canonical /about-us/. That is the "Alternate page with
+# proper canonical tag" class in Search Console. Redirect every
+# <section>/index and <section>/index.html to <section>/ instead.
+# THE_REQUEST prevents a loop when Apache internally serves index.html for /.
+RewriteCond %{THE_REQUEST} \s/(.+)/index(?:\.html)?(?:[?\s]) [NC]
+RewriteRule ^(.+)/index(?:\.html)?$ https://www.bitumencalc.com/$1/ [R=301,L]
+
 # ── 3. Remove .html extension (clean URLs) ─────────────────
 # Redirect requests ending in .html to clean URL
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
 RewriteRule ^ /%1 [R=301,NE,L]
+
+# The /404 page must actually return a 404, not a 200 (soft 404).
+# The generic rule above sends /404.html -> /404, which the internal-serve
+# rule below then served as a 200 "Page Not Found" page. Force a real 404
+# here; Apache then serves ErrorDocument 404 (/404.html) with that status.
+RewriteRule ^404$ - [R=404,L]
 
 # Internally serve .html when no file/dir found
 RewriteCond %{REQUEST_FILENAME} !-d
